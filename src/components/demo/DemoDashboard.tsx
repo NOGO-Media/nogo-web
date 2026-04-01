@@ -9,6 +9,7 @@ import DemoFleetOverview from "./DemoFleetOverview";
 import DemoRouteOptimization from "./DemoRouteOptimization";
 import DemoTimeline from "./DemoTimeline";
 import DemoSettings from "./DemoSettings";
+import DemoStatistics from "./DemoStatistics";
 
 const DemoMap = dynamic(() => import("./DemoMap"), { ssr: false });
 
@@ -19,6 +20,7 @@ const viewLabels: Record<ViewId, string> = {
   orders: "Ordrar",
   vehicles: "Fordon",
   routes: "Rutter",
+  statistics: "Statistik",
   settings: "Inställningar",
 };
 
@@ -150,6 +152,9 @@ export default function DemoDashboard() {
               <DemoTimeline />
             </>
           )}
+
+          {/* ── Statistics ── */}
+          {activeView === "statistics" && <DemoStatistics />}
 
           {/* ── Settings ── */}
           {activeView === "settings" && <DemoSettings />}

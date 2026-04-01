@@ -6,6 +6,7 @@ import {
   ClipboardList,
   Truck,
   Route,
+  BarChart3,
   Settings,
   LogOut,
 } from "lucide-react";
@@ -15,6 +16,7 @@ const menuItems = [
   { icon: ClipboardList, label: "Ordrar", id: "orders" },
   { icon: Truck, label: "Fordon", id: "vehicles" },
   { icon: Route, label: "Rutter", id: "routes" },
+  { icon: BarChart3, label: "Statistik", id: "statistics" },
   { icon: Settings, label: "Inställningar", id: "settings" },
 ] as const;
 
