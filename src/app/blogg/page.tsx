@@ -3,6 +3,15 @@ import { ArrowRight } from "lucide-react";
 
 const articles = [
   {
+    title: "AI Trafikledning 2026 – Så kan svenska åkerier spara miljoner",
+    description:
+      "AI-agenter för transportbranschen är inte längre framtidsteknik. Här går vi igenom hur svenska åkerier kan automatisera 85–95% av manuellt trafikledningsarbete — med ROI-räknare.",
+    category: "AI & Automation",
+    readTime: "12 min",
+    slug: "ai-trafikledning-2026",
+    featured: true,
+  },
+  {
     title: "Vad kostar manuell transportplanering egentligen?",
     description:
       "En trafikledare lägger 12 min per bokning. Med 40 bokningar/dag blir det 8 timmar. Vi räknar på vad manuell planering kostar ert åkeri.",
@@ -82,11 +91,10 @@ export default function BloggPage() {
       <section className="pb-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-6">
-            {articles.map((article) => (
-              <article
-                key={article.title}
-                className="group bg-gray-50 rounded-2xl p-8 border border-transparent hover:border-gray-200 hover:shadow-sm transition-all cursor-pointer"
-              >
+            {articles.map((article) => {
+              const slug = "slug" in article ? (article as { slug: string }).slug : null;
+              const inner = (
+                <>
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-xs font-medium bg-white border border-gray-200 px-3 py-1 rounded-full">
                     {article.category}
@@ -104,8 +112,15 @@ export default function BloggPage() {
                 <div className="flex items-center gap-1.5 text-sm font-medium text-gray-900 group-hover:gap-2.5 transition-all">
                   Läs artikel <ArrowRight size={14} />
                 </div>
-              </article>
-            ))}
+                </>
+              );
+              const className = "group bg-gray-50 rounded-2xl p-8 border border-transparent hover:border-gray-200 hover:shadow-sm transition-all cursor-pointer block";
+              return slug ? (
+                <Link key={article.title} href={`/blogg/${slug}`} className={className}>{inner}</Link>
+              ) : (
+                <div key={article.title} className={className}>{inner}</div>
+              );
+            })}
           </div>
         </div>
       </section>
