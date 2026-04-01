@@ -167,22 +167,8 @@ export default function DispatchWorkflow() {
   let nodeIndex = 0;
 
   return (
-    <section ref={sectionRef} className="py-24 md:py-32">
+    <section ref={sectionRef} className="pb-24 md:pb-32">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="max-w-2xl mb-16">
-          <p className="text-sm font-medium text-gray-400 mb-4">
-            Systemöversikt
-          </p>
-          <h2 className="text-3xl md:text-4xl font-medium tracking-tight leading-[1.1]">
-            Så fungerar{" "}
-            <span className="text-gray-400">NOGO Dispatch.</span>
-          </h2>
-          <p className="mt-4 text-gray-500 leading-relaxed">
-            Från orderimport till leverans — se hur automation hanterar varje
-            steg i transportkedjan.
-          </p>
-        </div>
-
         {/* Workflow diagram */}
         <div ref={containerRef} className="relative">
           <ConnectionLines
