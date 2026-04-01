@@ -113,19 +113,24 @@ function BarChart({ data, colorClass }: {
 }) {
   const maxCount = Math.max(...data.map((d) => d.count), 1);
   return (
-    <div className="flex items-end gap-3 h-40 px-4">
-      {data.map((d) => (
-        <div key={d.range} className="flex-1 flex flex-col items-center gap-1">
-          <span className="text-[10px] font-medium text-gray-600">{d.count || ""}</span>
-          <div className="w-full flex items-end" style={{ height: "100px" }}>
-            <div
-              className={`w-full rounded-t ${colorClass} transition-all`}
-              style={{ height: `${Math.max((d.count / maxCount) * 100, d.count ? 8 : 0)}%` }}
-            />
+    <div className="flex items-end gap-3 px-4">
+      {data.map((d) => {
+        const barPct = Math.max((d.count / maxCount) * 100, d.count ? 8 : 0);
+        return (
+          <div key={d.range} className="flex-1 flex flex-col items-center">
+            <div className="w-full flex flex-col items-center justify-end" style={{ height: "120px" }}>
+              <span className="text-[10px] font-medium text-gray-600 mb-1">
+                {d.count || ""}
+              </span>
+              <div
+                className={`w-full rounded-t ${colorClass}`}
+                style={{ height: `${barPct}%` }}
+              />
+            </div>
+            <span className="text-[10px] text-gray-400 whitespace-nowrap mt-2">{d.range}</span>
           </div>
-          <span className="text-[10px] text-gray-400 whitespace-nowrap">{d.range}</span>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
