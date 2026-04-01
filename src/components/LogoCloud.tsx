@@ -1,10 +1,13 @@
 const partners = [
   "Opter",
-  "AddSecure",
+  "Barkfors (T5)",
+  "TransPA",
+  "Fortnox",
   "Hogia",
-  "Volvo",
+  "ABAX",
   "Scania",
-  "Sveriges Åkeriföretag",
+  "Volvo",
+  "nShift",
 ];
 
 export default function LogoCloud() {
