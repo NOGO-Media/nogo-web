@@ -8,6 +8,7 @@ import {
   Zap,
   Settings,
 } from "lucide-react";
+import DispatchWorkflow from "@/components/dispatch-workflow/DispatchWorkflow";
 
 const solutions = [
   {
@@ -86,6 +87,9 @@ export default function LosningarPage() {
           </div>
         </div>
       </section>
+
+      {/* Workflow Diagram */}
+      <DispatchWorkflow />
 
       {/* Solutions */}
       <section className="pb-24">
