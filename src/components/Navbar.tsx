@@ -46,6 +46,12 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
+            href="/demo"
+            className="text-sm border border-gray-200 px-5 py-2.5 rounded-full hover:bg-gray-50 transition-colors"
+          >
+            Demo
+          </Link>
+          <Link
             href="/kontakt"
             className="text-sm bg-black text-white px-5 py-2.5 rounded-full hover:bg-gray-800 transition-colors"
           >
@@ -76,8 +82,15 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
+            href="/demo"
+            className="block mt-2 text-center border border-gray-200 px-5 py-2.5 rounded-full"
+            onClick={() => setMobileOpen(false)}
+          >
+            Demo
+          </Link>
+          <Link
             href="/kontakt"
-            className="block mt-4 text-center bg-black text-white px-5 py-2.5 rounded-full"
+            className="block mt-2 text-center bg-black text-white px-5 py-2.5 rounded-full"
             onClick={() => setMobileOpen(false)}
           >
             Boka strategi-samtal
