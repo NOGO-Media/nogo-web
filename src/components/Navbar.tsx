@@ -8,7 +8,6 @@ const navigation = [
   { name: "Lösningar", href: "/losningar" },
   { name: "Blogg", href: "/blogg" },
   { name: "Om oss", href: "/om-oss" },
-  { name: "Kontakt", href: "/kontakt" },
 ];
 
 export default function Navbar() {
