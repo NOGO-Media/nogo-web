@@ -10,8 +10,6 @@ import {
   Zap,
   Settings,
 } from "lucide-react";
-import DispatchWorkflow from "@/components/dispatch-workflow/DispatchWorkflow";
-
 export const metadata: Metadata = {
   title: "Lösningar — Ruttoptimering, TMS-integration & trafikledning",
   description:
@@ -102,9 +100,6 @@ export default function LosningarPage() {
           </div>
         </div>
       </section>
-
-      {/* Workflow Diagram */}
-      <DispatchWorkflow />
 
       {/* Solutions */}
       <section className="pb-24">

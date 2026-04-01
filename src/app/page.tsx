@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import LogoCloud from "@/components/LogoCloud";
+import DispatchWorkflow from "@/components/dispatch-workflow/DispatchWorkflow";
 import {
   FeatureGrid1,
   FeatureRealtime,
@@ -18,6 +19,8 @@ export default function Home() {
     <>
       <Hero />
       <LogoCloud />
+
+      <DispatchWorkflow />
 
       <FeatureGrid1 />
 
