@@ -22,20 +22,13 @@ export default function Home() {
       <FeatureGrid1 />
 
       <Testimonial
-        quote="Vårt team sparar timmar varje dag. Istället för att manuellt matcha förare och fordon kan vi nu fokusera på det som faktiskt kräver vår erfarenhet."
-        author="Jörgen R."
-        role="Trafikledare"
-        company="Rosenlunds Åkeri"
+        quote="Efter flera år i transportbranschen såg vi att det är en väldigt komplex bransch med väldigt omoderna verktyg och system som gör trafikledarna väldigt låsta. Då fick vi idén att utveckla ett verktyg som pratar med alla transportsystem."
+        author="Hugo Svensson"
+        role="VD & Grundare"
+        company="NOGO Media"
       />
 
       <FeatureRealtime />
-
-      <Testimonial
-        quote="Vi hade prövat att bygga egna lösningar, optimera i Excel, köra med appar. NOGO var det enda som faktiskt fungerade i vår befintliga miljö."
-        author="Marcus T."
-        role="Transportchef"
-        company="C4 Transport"
-      />
 
       <FeatureTeam />
       <FeatureSecurity />
