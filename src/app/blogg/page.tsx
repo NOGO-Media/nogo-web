@@ -1,5 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Blogg — Insikter för svenska transportföretag",
+  description:
+    "Guider, analyser och praktiska tips om trafikledning, digitalisering och AI-automation i åkeribranschen. Från NOGO Media.",
+  alternates: { canonical: "/blogg" },
+  openGraph: {
+    title: "Blogg — Insikter för svenska transportföretag",
+    description:
+      "Guider, analyser och praktiska tips om trafikledning, digitalisering och AI-automation i åkeribranschen.",
+    url: "/blogg",
+  },
+};
 
 const articles = [
   {

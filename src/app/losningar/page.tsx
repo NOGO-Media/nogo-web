@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   Route,
@@ -10,6 +11,19 @@ import {
   Settings,
 } from "lucide-react";
 import DispatchWorkflow from "@/components/dispatch-workflow/DispatchWorkflow";
+
+export const metadata: Metadata = {
+  title: "Lösningar — Ruttoptimering, TMS-integration & trafikledning",
+  description:
+    "AI-automation anpassad för svensk transport. Ruttoptimering, TMS-integration och automatiserad trafikledning — utan att ni byter system.",
+  alternates: { canonical: "/losningar" },
+  openGraph: {
+    title: "Lösningar — Ruttoptimering, TMS-integration & trafikledning",
+    description:
+      "AI-automation anpassad för svensk transport. Ruttoptimering, TMS-integration och automatiserad trafikledning.",
+    url: "/losningar",
+  },
+};
 
 const solutions = [
   {

@@ -1,5 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, MapPin, Target, Lightbulb } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Om oss — NOGO Media, Norrköping",
+  description:
+    "NOGO Media bygger AI-automation för svenska åkerier och transportbolag. Baserade i Norrköping. Grundat av Hugo Svensson.",
+  alternates: { canonical: "/om-oss" },
+  openGraph: {
+    title: "Om oss — NOGO Media, Norrköping",
+    description:
+      "NOGO Media bygger AI-automation för svenska åkerier och transportbolag. Baserade i Norrköping.",
+    url: "/om-oss",
+  },
+};
 
 export default function OmOssPage() {
   return (

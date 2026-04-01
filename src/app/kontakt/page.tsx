@@ -1,5 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Mail, MapPin, ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Kontakt — Boka ett kostnadsfritt strategisamtal",
+  description:
+    "Boka ett 30-minuters strategisamtal med NOGO Media. Vi visar hur AI-automation kan spara tid och pengar i just ert åkeri. Norrköping, Sverige.",
+  alternates: { canonical: "/kontakt" },
+  openGraph: {
+    title: "Kontakt — Boka ett kostnadsfritt strategisamtal",
+    description:
+      "Boka ett 30-minuters strategisamtal med NOGO Media. Vi visar hur AI-automation kan spara tid och pengar i just ert åkeri.",
+    url: "/kontakt",
+  },
+};
 
 export default function KontaktPage() {
   return (
