@@ -126,9 +126,6 @@ export default function Hero() {
               </div>
             </div>
           </div>
-
-          {/* Fade bottom edge into background */}
-          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent pointer-events-none" />
         </div>
       </div>
     </section>
