@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="currentColor">
+  <!-- Symbol: dot -->
+  <circle cx="8.5" cy="11" r="5.5"/>
+  <!-- Symbol: diagonal pill -->
+  <rect x="5" y="5" width="11" height="36" rx="5.5" transform="rotate(-30 10.5 23)"/>
+  <!-- Text -->
+  <text x="52" y="38" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="40" font-weight="800" letter-spacing="-1">NOGO</text>
+</svg>

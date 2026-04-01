@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "./Logo";
 
 const footerLinks = {
   Lösningar: [
@@ -26,19 +27,9 @@ export default function Footer() {
         <div className="grid md:grid-cols-5 gap-12 pb-12 border-b border-gray-800">
           {/* Brand */}
           <div className="md:col-span-2">
-            <svg viewBox="0 0 140 40" className="h-7 text-white mb-4" fill="none">
-              <text
-                x="0"
-                y="30"
-                fontFamily="system-ui, -apple-system, sans-serif"
-                fontSize="28"
-                fontWeight="300"
-                letterSpacing="6"
-                fill="currentColor"
-              >
-                NOGO
-              </text>
-            </svg>
+            <div className="mb-4 invert">
+              <Logo className="h-7" />
+            </div>
             <p className="text-sm leading-relaxed max-w-xs">
               AI-automation för svenska åkerier och transportbolag. Vi
               effektiviserar trafikledning utan att ni byter system.

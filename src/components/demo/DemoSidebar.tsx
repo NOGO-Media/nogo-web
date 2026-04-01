@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Logo from "../Logo";
 import {
   LayoutDashboard,
   ClipboardList,
@@ -44,9 +45,7 @@ export default function DemoSidebar({
           href="/"
           className="h-14 flex items-center px-5 border-b border-gray-100 hover:bg-gray-50 transition-colors"
         >
-          <svg viewBox="0 0 140 40" className="h-7 text-black" fill="none">
-            <text x="0" y="30" fontFamily="system-ui, -apple-system, sans-serif" fontSize="28" fontWeight="300" letterSpacing="6" fill="currentColor">NOGO</text>
-          </svg>
+          <Logo className="h-6" />
           <span className="ml-2 text-[10px] font-medium text-gray-400 uppercase tracking-wider">Dispatch</span>
         </Link>
 
@@ -83,9 +82,7 @@ export default function DemoSidebar({
       {/* Mobile top bar */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-[70] bg-white border-b border-gray-200 px-4 h-14 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <svg viewBox="0 0 140 40" className="h-6 text-black" fill="none">
-            <text x="0" y="30" fontFamily="system-ui, -apple-system, sans-serif" fontSize="28" fontWeight="300" letterSpacing="6" fill="currentColor">NOGO</text>
-          </svg>
+          <Logo className="h-5" />
           <span className="text-[10px] font-medium text-gray-400 uppercase tracking-wider">Dispatch</span>
         </Link>
         <button onClick={() => setMobileOpen(!mobileOpen)} className="p-2">
