@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     q: "Hur många fordon behöver vi ha?",
-    a: "Vi jobbar vanligtvis med åkerier som har 10–100 fordon. Det är i den storleken som effekten av automation blir tydlig och mätbar.",
+    a: "Vi jobbar med allt från mindre åkerier med ett fåtal fordon till stora flottor med hundratals ekipage. Vår automation skalas efter era behov — oavsett storlek.",
   },
   {
     q: "Kan automationen hantera ADR-transporter?",
