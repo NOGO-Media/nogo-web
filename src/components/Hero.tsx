@@ -40,7 +40,7 @@ export default function Hero() {
             <ArrowRight size={16} />
           </Link>
           <Link
-            href="/losningar"
+            href="/demo"
             className="inline-flex items-center justify-center gap-2 border border-gray-200 px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors"
           >
             <Play size={14} />
