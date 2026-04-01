@@ -106,7 +106,7 @@ const sections = [
 
 export default function DemoSettings() {
   return (
-    <div className="max-w-2xl space-y-6">
+    <div className="grid grid-cols-2 gap-6">
       {sections.map((section) => (
         <div
           key={section.title}
