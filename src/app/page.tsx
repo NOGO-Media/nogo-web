@@ -9,6 +9,7 @@ import {
   MoreFeatures,
 } from "@/components/FeatureSection";
 import Testimonial from "@/components/Testimonial";
+import SocialProof from "@/components/SocialProof";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 
@@ -33,6 +34,7 @@ export default function Home() {
       <FeatureSecurity />
       <IntegrationSection />
       <MoreFeatures />
+      <SocialProof />
 
       <div id="faq">
         <FAQSection />
