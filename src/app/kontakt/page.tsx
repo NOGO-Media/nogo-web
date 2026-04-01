@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Mail, MapPin, ArrowRight } from "lucide-react";
 
 export default function KontaktPage() {
   return (
@@ -21,7 +21,6 @@ export default function KontaktPage() {
             <div className="mt-12 space-y-6">
               {[
                 { icon: Mail, label: "E-post", value: "hugo@nogomedia.se" },
-                { icon: Phone, label: "Telefon", value: "Anges vid bokning" },
                 { icon: MapPin, label: "Plats", value: "Norrköping, Sverige" },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-4">
