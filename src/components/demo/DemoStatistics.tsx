@@ -11,84 +11,84 @@ const tabs = [
 ] as const;
 
 const planresultat = [
-  { label: "EKIPAGE", value: "24", sub: "av 88 max" },
-  { label: "ORDRAR I PLAN", value: "99", sub: "av 99 körbara" },
-  { label: "FYLLNAD UT", value: "89.0%", sub: "406.9 / 456.6 flm" },
-  { label: "ARBETSTID", value: "88.1%", sub: "260/295h" },
-  { label: "ÖVERTID", value: "1", sub: null, alert: true },
-  { label: "TOTAL KM", value: "13 980", sub: "idag pass" },
+  { label: "EKIPAGE", value: "62", sub: "av 88 tillgängliga" },
+  { label: "ORDRAR I PLAN", value: "244", sub: "av 251 körbara" },
+  { label: "FYLLNAD UT", value: "92.3%", sub: "856.4 / 927.8 flm" },
+  { label: "ARBETSTID", value: "91.7%", sub: "538/587h" },
+  { label: "ÖVERTID", value: "2", sub: null, alert: true },
+  { label: "TOTAL KM", value: "36 420", sub: "62 planerade pass" },
 ];
 
 const godsflode = [
-  { label: "UT: LEVERANS-FLM", value: "409.9", sub: "171 flm/pass", color: "text-blue-600" },
-  { label: "UT: FYLLNAD", value: "89.0%", sub: "snitt per pass", color: "text-blue-600" },
-  { label: "IN: RETUR-FLM", value: "0.0", sub: "0 av 24 pass", color: "text-green-600" },
-  { label: "IN: FYLLNAD", value: "0.0%", sub: "24 utan retur", color: "text-green-600" },
+  { label: "UT: LEVERANS-FLM", value: "856.4", sub: "13.8 flm/pass", color: "text-blue-600" },
+  { label: "UT: FYLLNAD", value: "92.3%", sub: "snitt per pass", color: "text-blue-600" },
+  { label: "IN: RETUR-FLM", value: "124.6", sub: "18 av 62 pass", color: "text-green-600" },
+  { label: "IN: FYLLNAD", value: "68.4%", sub: "44 utan retur", color: "text-green-600" },
 ];
 
 const resurser = [
-  { label: "MULTITRIP", value: "2", sub: "sparar 2 ekipage", color: "text-blue-600" },
-  { label: "RETUR", value: "0", sub: "0% av pass", color: "text-green-600" },
-  { label: "LEDIG TID", value: "36h", sub: "1.5h/pass", color: "text-amber-600" },
-  { label: "SNITT KM/PASS", value: "583", sub: null, color: "text-gray-600" },
-  { label: "SNITT ORDRAR/PASS", value: "4.1", sub: "1 planerade pass", color: "text-gray-600" },
+  { label: "MULTITRIP", value: "8", sub: "sparar 8 ekipage", color: "text-blue-600" },
+  { label: "RETUR", value: "18", sub: "29% av pass", color: "text-green-600" },
+  { label: "LEDIG TID", value: "49h", sub: "0.8h/pass", color: "text-amber-600" },
+  { label: "SNITT KM/PASS", value: "587", sub: null, color: "text-gray-600" },
+  { label: "SNITT ORDRAR/PASS", value: "3.9", sub: "62 planerade pass", color: "text-gray-600" },
 ];
 
 const fyllnadsData = [
-  { range: "<60%", count: 0, pct: 0 },
-  { range: "60-70%", count: 2, pct: 8 },
-  { range: "70-80%", count: 4, pct: 17 },
-  { range: "80-90%", count: 10, pct: 42 },
-  { range: "90-95%", count: 5, pct: 21 },
-  { range: ">95%", count: 3, pct: 13 },
+  { range: "<60%", count: 1, pct: 2 },
+  { range: "60-70%", count: 3, pct: 5 },
+  { range: "70-80%", count: 7, pct: 11 },
+  { range: "80-90%", count: 19, pct: 31 },
+  { range: "90-95%", count: 22, pct: 35 },
+  { range: ">95%", count: 10, pct: 16 },
 ];
 
 const arbetstidData = [
   { range: "0-4h", count: 0, pct: 0 },
-  { range: "4-6h", count: 3, pct: 13 },
-  { range: "6-8h", count: 10, pct: 42 },
-  { range: "8-10h", count: 7, pct: 29 },
-  { range: "10-12h", count: 3, pct: 13 },
-  { range: "12h+", count: 1, pct: 4 },
+  { range: "4-6h", count: 4, pct: 6 },
+  { range: "6-8h", count: 21, pct: 34 },
+  { range: "8-10h", count: 26, pct: 42 },
+  { range: "10-12h", count: 9, pct: 15 },
+  { range: "12h+", count: 2, pct: 3 },
 ];
 
 const ekipageData = [
-  { label: "B+F+S", pct: 100, count: 24, color: "#6366f1" },
-  { label: "B+S", pct: 0, count: 0, color: "#22c55e" },
-  { label: "B+F", pct: 0, count: 0, color: "#eab308" },
+  { label: "B+F+S", pct: 72.6, count: 45, color: "#6366f1" },
+  { label: "B+S", pct: 17.7, count: 11, color: "#22c55e" },
+  { label: "B+F", pct: 9.7, count: 6, color: "#eab308" },
 ];
 
 const orderStatus = {
   summary: [
-    { label: "I SNITT", value: "336", color: "text-gray-900" },
-    { label: "KÖRBARA IDAG", value: "99", color: "text-blue-600" },
-    { label: "EJ UPPHÄMTADE", value: "237", color: "text-amber-600" },
-    { label: "TILLDELADE", value: "99", color: "text-green-600" },
-    { label: "EJ TILLDELADE", value: "0", color: "text-red-600" },
+    { label: "TOTALT", value: "268", color: "text-gray-900" },
+    { label: "KÖRBARA IDAG", value: "251", color: "text-blue-600" },
+    { label: "EJ UPPHÄMTADE", value: "17", color: "text-amber-600" },
+    { label: "TILLDELADE", value: "244", color: "text-green-600" },
+    { label: "EJ TILLDELADE", value: "7", color: "text-red-600" },
     { label: "MAKULERADE", value: "0", color: "text-gray-400" },
   ],
   metrics: [
-    { label: "FLM I PLAN", value: "409.9" },
-    { label: "FLM KÖRBART", value: "444.6" },
-    { label: "SNITT FLM/ORDER", value: "4.14" },
-    { label: "SNITT VIKT/ORDER", value: "3 881 kg" },
+    { label: "FLM I PLAN", value: "856.4" },
+    { label: "FLM KÖRBART", value: "878.2" },
+    { label: "SNITT FLM/ORDER", value: "3.51" },
+    { label: "SNITT VIKT/ORDER", value: "4 120 kg" },
   ],
 };
 
 const topDestinationer = [
-  { name: "Jönköping", count: 7, pct: 100 },
-  { name: "Norrköping", count: 5, pct: 71 },
-  { name: "Örebro", count: 4, pct: 57 },
-  { name: "Rosersberg", count: 3, pct: 43 },
-  { name: "Vetlanda", count: 3, pct: 43 },
+  { name: "Stockholm", count: 34, pct: 100 },
+  { name: "Jönköping", count: 28, pct: 82 },
+  { name: "Norrköping", count: 24, pct: 71 },
+  { name: "Örebro", count: 19, pct: 56 },
+  { name: "Linköping", count: 16, pct: 47 },
 ];
 
 const topLinjer = [
-  { name: "38 → 600", info: "2 pass · 6 ordrar · 882 km", fyllnad: "90.4%", pct: 90 },
-  { name: "40 → 350", info: "3 pass · 3 ordrar · 766 km", fyllnad: "110.2%", pct: 100 },
-  { name: "28 → 600", info: "1 pass · 7 ordrar · 544 km", fyllnad: "82.8%", pct: 83 },
-  { name: "28 → 700", info: "1 pass · 1 order · 703 km", fyllnad: "100.0%", pct: 100 },
-  { name: "28 → 190", info: "1 pass · 6 ordrar · 815 km", fyllnad: "85.1%", pct: 85 },
+  { name: "Nkpg → Sthlm", info: "8 pass · 34 ordrar · 1 320 km", fyllnad: "94.2%", pct: 94 },
+  { name: "Lkpg → Jkpg", info: "6 pass · 22 ordrar · 768 km", fyllnad: "91.8%", pct: 92 },
+  { name: "Sthlm → Örebro", info: "5 pass · 19 ordrar · 1 010 km", fyllnad: "88.5%", pct: 89 },
+  { name: "Nkpg → Gbg", info: "4 pass · 16 ordrar · 1 240 km", fyllnad: "93.1%", pct: 93 },
+  { name: "Nyköping → Nkpg", info: "3 pass · 12 ordrar · 285 km", fyllnad: "86.7%", pct: 87 },
 ];
 
 // ── Components ────────────────────────────────────────────
@@ -219,8 +219,8 @@ export default function DemoStatistics() {
             <span className="text-[10px] text-gray-400 uppercase tracking-wider">{s.label}</span>
           </div>
         ))}
-        <span className="ml-auto text-xs text-amber-600 font-medium">
-          2 senare dagar inaktuella
+        <span className="ml-auto text-xs text-green-600 font-medium">
+          97% tilldelningsgrad
         </span>
       </div>
 
