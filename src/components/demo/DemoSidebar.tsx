@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
   LayoutDashboard,
   ClipboardList,
@@ -31,7 +32,10 @@ export default function DemoSidebar({
   return (
     <aside className="w-56 bg-white border-r border-gray-200 flex flex-col shrink-0">
       {/* Logo */}
-      <div className="h-14 flex items-center px-5 border-b border-gray-100">
+      <Link
+        href="/"
+        className="h-14 flex items-center px-5 border-b border-gray-100 hover:bg-gray-50 transition-colors"
+      >
         <svg viewBox="0 0 140 40" className="h-7 text-black" fill="none">
           <text
             x="0"
@@ -48,7 +52,7 @@ export default function DemoSidebar({
         <span className="ml-2 text-[10px] font-medium text-gray-400 uppercase tracking-wider">
           Dispatch
         </span>
-      </div>
+      </Link>
 
       {/* Navigation */}
       <nav className="flex-1 px-3 py-4 space-y-1">
