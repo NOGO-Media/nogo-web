@@ -11,9 +11,9 @@ export default function Logo({
     <Image
       src={variant === "light" ? "/logo-white.png" : "/logo.png"}
       alt="NOGO"
-      width={200}
-      height={48}
-      className={className}
+      width={1827}
+      height={390}
+      className={`${className} w-auto`}
       priority
     />
   );
