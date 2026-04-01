@@ -197,25 +197,25 @@ export default function DemoStatistics() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="bg-white rounded-xl border border-gray-200 p-5 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <h2 className="text-lg font-medium">Statistik för tis 1 april</h2>
+      <div className="bg-white rounded-xl border border-gray-200 p-4 md:p-5 flex flex-col md:flex-row md:items-center justify-between gap-3">
+        <div className="flex flex-wrap items-center gap-2 md:gap-3">
+          <h2 className="text-base md:text-lg font-medium">Statistik för tis 1 april</h2>
           <span className="inline-flex items-center gap-1 bg-green-100 text-green-700 text-xs font-medium px-2 py-0.5 rounded-full">
             <Check size={12} /> Planerad
           </span>
           <span className="text-xs text-gray-400">2026-04-01 20:00</span>
         </div>
-        <button className="inline-flex items-center gap-2 border border-gray-200 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
+        <button className="inline-flex items-center justify-center gap-2 border border-gray-200 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
           <Download size={14} />
-          Exportera Excel
+          Exportera
         </button>
       </div>
 
       {/* Summary bar */}
-      <div className="bg-white rounded-xl border border-gray-200 px-5 py-3 flex items-center gap-6">
+      <div className="bg-white rounded-xl border border-gray-200 px-4 md:px-5 py-3 flex flex-wrap items-center gap-4 md:gap-6">
         {orderStatus.summary.slice(0, 4).map((s) => (
           <div key={s.label} className="flex items-baseline gap-1.5">
-            <span className={`text-lg font-semibold ${s.color}`}>{s.value}</span>
+            <span className={`text-base md:text-lg font-semibold ${s.color}`}>{s.value}</span>
             <span className="text-[10px] text-gray-400 uppercase tracking-wider">{s.label}</span>
           </div>
         ))}
@@ -246,7 +246,7 @@ export default function DemoStatistics() {
         <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-3">
           Planresultat
         </p>
-        <div className="grid grid-cols-6 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
           {planresultat.map((s) => (
             <StatCard key={s.label} {...s} />
           ))}
@@ -258,7 +258,7 @@ export default function DemoStatistics() {
         <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-3">
           Godsflöde (planerade pass)
         </p>
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {godsflode.map((s) => (
             <StatCard key={s.label} {...s} />
           ))}
@@ -270,7 +270,7 @@ export default function DemoStatistics() {
         <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-3">
           Resurser
         </p>
-        <div className="grid grid-cols-5 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
           {resurser.map((s) => (
             <StatCard key={s.label} {...s} />
           ))}
@@ -278,7 +278,7 @@ export default function DemoStatistics() {
       </div>
 
       {/* Charts row */}
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
         {/* Fyllnadsfördelning */}
         <div className="bg-white rounded-xl border border-gray-200 p-5">
           <h3 className="text-sm font-medium mb-4">Fyllnadsfördelning</h3>
@@ -293,7 +293,7 @@ export default function DemoStatistics() {
       </div>
 
       {/* Ekipage + Orderstatus */}
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
         {/* Ekipagefördelning */}
         <div className="bg-white rounded-xl border border-gray-200 p-5">
           <h3 className="text-sm font-medium mb-4">Ekipagefördelning</h3>
@@ -303,15 +303,15 @@ export default function DemoStatistics() {
         {/* Orderstatus */}
         <div className="bg-white rounded-xl border border-gray-200 p-5">
           <h3 className="text-sm font-medium mb-4">Orderstatus</h3>
-          <div className="flex gap-4 mb-4">
+          <div className="flex flex-wrap gap-3 md:gap-4 mb-4">
             {orderStatus.summary.map((s) => (
               <div key={s.label} className="text-center">
-                <p className={`text-lg font-semibold ${s.color}`}>{s.value}</p>
+                <p className={`text-base md:text-lg font-semibold ${s.color}`}>{s.value}</p>
                 <p className="text-[9px] text-gray-400 uppercase tracking-wider">{s.label}</p>
               </div>
             ))}
           </div>
-          <div className="border-t border-gray-100 pt-3 grid grid-cols-4 gap-3">
+          <div className="border-t border-gray-100 pt-3 grid grid-cols-2 md:grid-cols-4 gap-3">
             {orderStatus.metrics.map((m) => (
               <div key={m.label} className="text-center">
                 <p className="text-sm font-semibold">{m.value}</p>
@@ -323,7 +323,7 @@ export default function DemoStatistics() {
       </div>
 
       {/* Top 5 */}
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
         {/* Top 5 destinationer */}
         <div className="bg-white rounded-xl border border-gray-200 p-5">
           <h3 className="text-sm font-medium mb-4">Top 5 destinationer</h3>
