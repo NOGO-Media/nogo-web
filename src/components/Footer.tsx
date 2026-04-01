@@ -27,8 +27,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-5 gap-12 pb-12 border-b border-gray-800">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="mb-4 invert">
-              <Logo className="h-7" />
+            <div className="mb-4">
+              <Logo className="h-7" variant="light" />
             </div>
             <p className="text-sm leading-relaxed max-w-xs">
               AI-automation för svenska åkerier och transportbolag. Vi
