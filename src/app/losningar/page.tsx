@@ -5,6 +5,7 @@ import {
   Truck,
   BarChart3,
   ArrowRight,
+  Play,
   Zap,
   Settings,
 } from "lucide-react";
@@ -164,12 +165,21 @@ export default function LosningarPage() {
             Boka ett kostnadsfritt strategisamtal. Vi visar hur automation kan
             effektivisera just ert åkeri.
           </p>
-          <Link
-            href="/kontakt"
-            className="inline-flex items-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
-          >
-            Boka strategi-samtal <ArrowRight size={16} />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/kontakt"
+              className="inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
+            >
+              Boka strategi-samtal <ArrowRight size={16} />
+            </Link>
+            <Link
+              href="/demo"
+              className="inline-flex items-center justify-center gap-2 border border-gray-200 px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors"
+            >
+              <Play size={14} />
+              Testa demo
+            </Link>
+          </div>
         </div>
       </section>
     </>
