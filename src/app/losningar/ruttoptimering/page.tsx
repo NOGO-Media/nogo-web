@@ -174,11 +174,7 @@ const steps = [
     icon: FileInput,
     step: "01",
     title: "Importera ordrar",
-
-    desc: "Ordrar hämtas automatiskt från ert TMS — Opter, AddSecure, Hogia, Barkfors eller via API. Ingen manuell inmatning krävs.",
-
     desc: "Ordrar hämtas automatiskt från ert TMS — Opter, AddSecure, Hogia med eller utan API. Ingen manuell inmatning krävs.",
-
   },
   {
     icon: Cpu,
