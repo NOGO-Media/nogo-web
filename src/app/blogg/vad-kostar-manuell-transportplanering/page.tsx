@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const metadata: Metadata = {
   title: "Vad kostar manuell transportplanering egentligen?",
@@ -30,7 +31,15 @@ const costRows = [
 
 export default function ManuellTransportplaneringArticle() {
   return (
-    <article className="pt-32 pb-24 md:pt-44">
+    <>
+      <ArticleJsonLd
+        title="Vad kostar manuell transportplanering egentligen?"
+        description="Räkneexempel för svenska åkerier: lön, arbetsgivarkostnad, kostnad per bokning och effekten av tomkörning."
+        url="/blogg/vad-kostar-manuell-transportplanering"
+        publishedTime="2026-04-02T00:00:00Z"
+        tags={["transportplanering", "trafikledare", "åkeri", "kostnad"]}
+      />
+      <article className="pt-32 pb-24 md:pt-44">
       <div className="max-w-3xl mx-auto px-6">
         <Link
           href="/blogg"
@@ -171,5 +180,6 @@ export default function ManuellTransportplaneringArticle() {
         </div>
       </div>
     </article>
+    </>
   );
 }

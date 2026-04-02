@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const metadata: Metadata = {
   title: "Så räknar du ROI på automation i transport",
@@ -15,6 +16,8 @@ export const metadata: Metadata = {
     description:
       "En konkret kalkylmodell för att räkna ut vad automation kan spara ert åkeri — med siffror ni kan sätta in själva.",
     url: "/artiklar/roi-automation-transport-kalkyl",
+    publishedTime: "2026-04-02T00:00:00Z",
+    authors: ["NOGO Media AB"],
     tags: [
       "Kostnadsanalys",
       "ROI automation transport",
@@ -26,7 +29,15 @@ export const metadata: Metadata = {
 
 export default function RoiAutomationTransportKalkylPage() {
   return (
-    <article className="pt-32 pb-24 md:pt-44">
+    <>
+      <ArticleJsonLd
+        title="Så räknar du ROI på automation i transport"
+        description="Konkret kalkylmodell för att räkna ut vad automation kan spara ert åkeri."
+        url="/artiklar/roi-automation-transport-kalkyl"
+        publishedTime="2026-04-02T00:00:00Z"
+        tags={["ROI automation transport", "lönsamhet automation åkeri"]}
+      />
+      <article className="pt-32 pb-24 md:pt-44">
       <div className="max-w-3xl mx-auto px-6">
         <Link
           href="/blogg"
@@ -499,5 +510,6 @@ export default function RoiAutomationTransportKalkylPage() {
         </div>
       </div>
     </article>
+    </>
   );
 }

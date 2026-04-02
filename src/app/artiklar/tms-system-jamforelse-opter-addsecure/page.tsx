@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const metadata: Metadata = {
   title: "Opter, AddSecure eller eget? Så väljer du TMS",
@@ -15,6 +16,8 @@ export const metadata: Metadata = {
     description:
       "En neutral jämförelse av TMS-system på den svenska marknaden. Styrkor, svagheter och vad som passar vilket åkeri — utan säljsnack.",
     url: "/artiklar/tms-system-jamforelse-opter-addsecure",
+    publishedTime: "2026-04-02T00:00:00Z",
+    authors: ["NOGO Media AB"],
     tags: [
       "Jämförelse",
       "TMS system åkeri",
@@ -27,7 +30,15 @@ export const metadata: Metadata = {
 
 export default function TmsSystemJamforelseOpterAddsecurePage() {
   return (
-    <article className="pt-32 pb-24 md:pt-44">
+    <>
+      <ArticleJsonLd
+        title="Opter, AddSecure eller eget? Så väljer du TMS"
+        description="Neutral jämförelse av TMS-system på den svenska marknaden."
+        url="/artiklar/tms-system-jamforelse-opter-addsecure"
+        publishedTime="2026-04-02T00:00:00Z"
+        tags={["TMS system åkeri", "TMS jämförelse Sverige"]}
+      />
+      <article className="pt-32 pb-24 md:pt-44">
       <div className="max-w-3xl mx-auto px-6">
         <Link
           href="/blogg"
@@ -503,5 +514,6 @@ export default function TmsSystemJamforelseOpterAddsecurePage() {
         </div>
       </div>
     </article>
+    </>
   );
 }

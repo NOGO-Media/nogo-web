@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const metadata: Metadata = {
   title: "Minska tomkörningar — 5 konkreta åtgärder",
@@ -15,6 +16,8 @@ export const metadata: Metadata = {
     description:
       "Fem praktiska åtgärder för att minska tomkörningar i åkeri med bättre planering, returlass och tydlig uppföljning.",
     url: "/artiklar/minska-tomkorningar-konkreta-atgarder",
+    publishedTime: "2026-04-02T00:00:00Z",
+    authors: ["NOGO Media AB"],
     tags: [
       "Praktiska tips",
       "minska tomkörningar",
@@ -68,7 +71,15 @@ const faqSchema = {
 
 export default function MinskaTomkorningarArticle() {
   return (
-    <article className="pt-32 pb-24 md:pt-44">
+    <>
+      <ArticleJsonLd
+        title="Minska tomkörningar — 5 konkreta åtgärder"
+        description="Fem praktiska åtgärder som minskar tomkörningarna i ert åkeri."
+        url="/artiklar/minska-tomkorningar-konkreta-atgarder"
+        publishedTime="2026-04-02T00:00:00Z"
+        tags={["minska tomkörningar", "ruttoptimering lastbil", "returlass transport"]}
+      />
+      <article className="pt-32 pb-24 md:pt-44">
       <div className="max-w-3xl mx-auto px-6">
         <Link
           href="/blogg"
@@ -365,5 +376,6 @@ export default function MinskaTomkorningarArticle() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
     </article>
+    </>
   );
 }
