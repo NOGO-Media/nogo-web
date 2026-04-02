@@ -61,7 +61,7 @@ export default function Hero() {
               </div>
             </div>
             {/* Dashboard mock content */}
-            <div className="p-6 md:p-8 space-y-4">
+            <div className="p-4 md:p-8 space-y-4">
               {/* Header row */}
               <div className="flex items-center justify-between">
                 <div>
@@ -75,37 +75,39 @@ export default function Hero() {
               </div>
 
               {/* Table mock */}
-              <div className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden">
-                {/* Table header */}
-                <div className="grid grid-cols-5 gap-4 px-4 py-3 border-b border-gray-800">
-                  {["Order", "Förare", "Rutt", "Status", "Tid"].map((h) => (
-                    <div key={h} className="text-xs text-gray-500 font-medium">
-                      {h}
+              <div className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden overflow-x-auto">
+                <div className="min-w-[480px]">
+                  {/* Table header */}
+                  <div className="grid grid-cols-5 gap-4 px-4 py-3 border-b border-gray-800">
+                    {["Order", "Förare", "Rutt", "Status", "Tid"].map((h) => (
+                      <div key={h} className="text-xs text-gray-500 font-medium">
+                        {h}
+                      </div>
+                    ))}
+                  </div>
+                  {/* Table rows */}
+                  {[
+                    { order: "ORD-2847", driver: "Erik L.", route: "Sthlm → Gbg", status: "Tilldelad", statusColor: "bg-green-500" },
+                    { order: "ORD-2848", driver: "Maria K.", route: "Malmö → Nkpg", status: "På väg", statusColor: "bg-blue-500" },
+                    { order: "ORD-2849", driver: "—", route: "Gbg → Sthlm", status: "Väntar", statusColor: "bg-amber-500" },
+                    { order: "ORD-2850", driver: "Johan S.", route: "Nkpg → Sthlm", status: "Tilldelad", statusColor: "bg-green-500" },
+                    { order: "ORD-2851", driver: "Anna B.", route: "Sthlm → Malmö", status: "Levererad", statusColor: "bg-gray-500" },
+                  ].map((row) => (
+                    <div
+                      key={row.order}
+                      className="grid grid-cols-5 gap-4 px-4 py-3 border-b border-gray-800/50 hover:bg-gray-800/30"
+                    >
+                      <div className="text-xs text-gray-300 font-mono">{row.order}</div>
+                      <div className="text-xs text-gray-300">{row.driver}</div>
+                      <div className="text-xs text-gray-400">{row.route}</div>
+                      <div className="flex items-center gap-1.5">
+                        <div className={`w-1.5 h-1.5 rounded-full ${row.statusColor}`} />
+                        <span className="text-xs text-gray-400">{row.status}</span>
+                      </div>
+                      <div className="text-xs text-gray-500">Just nu</div>
                     </div>
                   ))}
                 </div>
-                {/* Table rows */}
-                {[
-                  { order: "ORD-2847", driver: "Erik L.", route: "Sthlm → Gbg", status: "Tilldelad", statusColor: "bg-green-500" },
-                  { order: "ORD-2848", driver: "Maria K.", route: "Malmö → Nkpg", status: "På väg", statusColor: "bg-blue-500" },
-                  { order: "ORD-2849", driver: "—", route: "Gbg → Sthlm", status: "Väntar", statusColor: "bg-amber-500" },
-                  { order: "ORD-2850", driver: "Johan S.", route: "Nkpg → Sthlm", status: "Tilldelad", statusColor: "bg-green-500" },
-                  { order: "ORD-2851", driver: "Anna B.", route: "Sthlm → Malmö", status: "Levererad", statusColor: "bg-gray-500" },
-                ].map((row) => (
-                  <div
-                    key={row.order}
-                    className="grid grid-cols-5 gap-4 px-4 py-3 border-b border-gray-800/50 hover:bg-gray-800/30"
-                  >
-                    <div className="text-xs text-gray-300 font-mono">{row.order}</div>
-                    <div className="text-xs text-gray-300">{row.driver}</div>
-                    <div className="text-xs text-gray-400">{row.route}</div>
-                    <div className="flex items-center gap-1.5">
-                      <div className={`w-1.5 h-1.5 rounded-full ${row.statusColor}`} />
-                      <span className="text-xs text-gray-400">{row.status}</span>
-                    </div>
-                    <div className="text-xs text-gray-500">Just nu</div>
-                  </div>
-                ))}
               </div>
 
               {/* Bottom stats */}
