@@ -84,6 +84,10 @@ export const metadata: Metadata = {
     },
   },
   verification: {},
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/icon-192.png",
+  },
 };
 
 function OrganizationJsonLd() {
