@@ -46,7 +46,7 @@ export default function DemoSidebar({
           className="h-14 flex items-center px-5 border-b border-gray-100 hover:bg-gray-50 transition-colors"
         >
           <Logo className="h-6" />
-          <span className="ml-2 text-[10px] font-medium text-gray-400 uppercase tracking-wider">Dispatch</span>
+          <span className="ml-2 text-[10px] font-medium text-gray-500 uppercase tracking-wider">Dispatch</span>
         </Link>
 
         <nav className="flex-1 px-3 py-4 space-y-1">
@@ -72,9 +72,9 @@ export default function DemoSidebar({
             <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-xs font-medium text-gray-600">HS</div>
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium truncate">Hugo S.</p>
-              <p className="text-xs text-gray-400 truncate">Trafikledare</p>
+              <p className="text-xs text-gray-500 truncate">Trafikledare</p>
             </div>
-            <button className="text-gray-400 hover:text-gray-600"><LogOut size={16} /></button>
+            <button className="text-gray-500 hover:text-gray-600"><LogOut size={16} /></button>
           </div>
         </div>
       </aside>
@@ -83,7 +83,7 @@ export default function DemoSidebar({
       <div className="md:hidden fixed top-0 left-0 right-0 z-[70] bg-white border-b border-gray-200 px-4 h-14 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Logo className="h-5" />
-          <span className="text-[10px] font-medium text-gray-400 uppercase tracking-wider">Dispatch</span>
+          <span className="text-[10px] font-medium text-gray-500 uppercase tracking-wider">Dispatch</span>
         </Link>
         <button onClick={() => setMobileOpen(!mobileOpen)} className="p-2">
           {mobileOpen ? <X size={20} /> : <Menu size={20} />}

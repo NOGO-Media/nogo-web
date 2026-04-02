@@ -127,7 +127,7 @@ export default function DemoSettings() {
               <div key={t.label} className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium">{t.label}</p>
-                  <p className="text-xs text-gray-400">{t.desc}</p>
+                  <p className="text-xs text-gray-500">{t.desc}</p>
                 </div>
                 <div
                   className={`w-9 h-5 rounded-full relative cursor-pointer transition-colors ${

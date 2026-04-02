@@ -46,7 +46,7 @@ export default function DemoOrderTable() {
                 (h) => (
                   <th
                     key={h}
-                    className="text-left text-xs font-medium text-gray-400 px-5 py-3"
+                    className="text-left text-xs font-medium text-gray-500 px-5 py-3"
                   >
                     {h}
                   </th>

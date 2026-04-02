@@ -65,7 +65,7 @@ const orderStatus = {
     { label: "EJ UPPHÄMTADE", value: "17", color: "text-amber-600" },
     { label: "TILLDELADE", value: "244", color: "text-green-600" },
     { label: "EJ TILLDELADE", value: "7", color: "text-red-600" },
-    { label: "MAKULERADE", value: "0", color: "text-gray-400" },
+    { label: "MAKULERADE", value: "0", color: "text-gray-500" },
   ],
   metrics: [
     { label: "FLM I PLAN", value: "856.4" },
@@ -98,11 +98,11 @@ function StatCard({ label, value, sub, alert, color }: {
 }) {
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
-      <p className={`text-[10px] font-semibold tracking-wider mb-2 ${alert ? "text-red-500" : color || "text-gray-400"}`}>
+      <p className={`text-[10px] font-semibold tracking-wider mb-2 ${alert ? "text-red-500" : color || "text-gray-500"}`}>
         {label}
       </p>
       <p className={`text-2xl font-semibold ${alert ? "text-red-600" : ""}`}>{value}</p>
-      {sub && <p className="text-xs text-gray-400 mt-1">{sub}</p>}
+      {sub && <p className="text-xs text-gray-500 mt-1">{sub}</p>}
     </div>
   );
 }
@@ -127,7 +127,7 @@ function BarChart({ data, colorClass }: {
                 style={{ height: `${barPct}%` }}
               />
             </div>
-            <span className="text-[10px] text-gray-400 whitespace-nowrap mt-2">{d.range}</span>
+            <span className="text-[10px] text-gray-500 whitespace-nowrap mt-2">{d.range}</span>
           </div>
         );
       })}
@@ -164,7 +164,7 @@ function DonutChart({ segments }: { segments: typeof ekipageData }) {
             <div className="w-2.5 h-2.5 rounded-sm shrink-0" style={{ backgroundColor: s.color }} />
             <span className="text-gray-600">{s.label}</span>
             <span className="ml-auto font-medium">{s.count}</span>
-            <span className="text-gray-400 w-12 text-right">{s.pct.toFixed(1)}%</span>
+            <span className="text-gray-500 w-12 text-right">{s.pct.toFixed(1)}%</span>
           </div>
         ))}
       </div>
@@ -203,7 +203,7 @@ export default function DemoStatistics() {
           <span className="inline-flex items-center gap-1 bg-green-100 text-green-700 text-xs font-medium px-2 py-0.5 rounded-full">
             <Check size={12} /> Planerad
           </span>
-          <span className="text-xs text-gray-400">2026-04-01 20:00</span>
+          <span className="text-xs text-gray-500">2026-04-01 20:00</span>
         </div>
         <button className="inline-flex items-center justify-center gap-2 border border-gray-200 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
           <Download size={14} />
@@ -216,7 +216,7 @@ export default function DemoStatistics() {
         {orderStatus.summary.slice(0, 4).map((s) => (
           <div key={s.label} className="flex items-baseline gap-1.5">
             <span className={`text-base md:text-lg font-semibold ${s.color}`}>{s.value}</span>
-            <span className="text-[10px] text-gray-400 uppercase tracking-wider">{s.label}</span>
+            <span className="text-[10px] text-gray-500 uppercase tracking-wider">{s.label}</span>
           </div>
         ))}
         <span className="ml-auto text-xs text-green-600 font-medium">
@@ -243,7 +243,7 @@ export default function DemoStatistics() {
 
       {/* Planresultat */}
       <div>
-        <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-3">
+        <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-3">
           Planresultat
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
@@ -255,7 +255,7 @@ export default function DemoStatistics() {
 
       {/* Godsflöde */}
       <div>
-        <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-3">
+        <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-3">
           Godsflöde (planerade pass)
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -267,7 +267,7 @@ export default function DemoStatistics() {
 
       {/* Resurser */}
       <div>
-        <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-3">
+        <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-3">
           Resurser
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
@@ -307,7 +307,7 @@ export default function DemoStatistics() {
             {orderStatus.summary.map((s) => (
               <div key={s.label} className="text-center">
                 <p className={`text-base md:text-lg font-semibold ${s.color}`}>{s.value}</p>
-                <p className="text-[9px] text-gray-400 uppercase tracking-wider">{s.label}</p>
+                <p className="text-[9px] text-gray-500 uppercase tracking-wider">{s.label}</p>
               </div>
             ))}
           </div>
@@ -315,7 +315,7 @@ export default function DemoStatistics() {
             {orderStatus.metrics.map((m) => (
               <div key={m.label} className="text-center">
                 <p className="text-sm font-semibold">{m.value}</p>
-                <p className="text-[9px] text-gray-400 uppercase tracking-wider">{m.label}</p>
+                <p className="text-[9px] text-gray-500 uppercase tracking-wider">{m.label}</p>
               </div>
             ))}
           </div>
@@ -358,7 +358,7 @@ export default function DemoStatistics() {
                     />
                   </div>
                 </div>
-                <p className="text-[10px] text-gray-400 mt-0.5">{l.info}</p>
+                <p className="text-[10px] text-gray-500 mt-0.5">{l.info}</p>
               </div>
             ))}
           </div>

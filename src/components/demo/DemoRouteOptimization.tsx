@@ -34,7 +34,7 @@ export default function DemoRouteOptimization() {
 
       {state === "idle" && (
         <>
-          <p className="text-xs text-gray-400 mb-4 leading-relaxed">
+          <p className="text-xs text-gray-500 mb-4 leading-relaxed">
             Kör AI-optimering på alla planerade och aktiva rutter för att
             minimera körsträcka och maximera fyllnadsgrad.
           </p>
@@ -66,7 +66,7 @@ export default function DemoRouteOptimization() {
         <div className="flex-1 flex flex-col items-center justify-center py-6">
           <div className="w-12 h-12 rounded-full border-2 border-gray-200 border-t-black animate-spin mb-4" />
           <p className="text-sm font-medium mb-1">Optimerar...</p>
-          <p className="text-xs text-gray-400 mb-4">
+          <p className="text-xs text-gray-500 mb-4">
             Analyserar {55} rutter med AI
           </p>
           <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
@@ -75,7 +75,7 @@ export default function DemoRouteOptimization() {
               style={{ width: `${progress}%` }}
             />
           </div>
-          <span className="text-xs text-gray-400 mt-2">{progress}%</span>
+          <span className="text-xs text-gray-500 mt-2">{progress}%</span>
         </div>
       )}
 
@@ -87,7 +87,7 @@ export default function DemoRouteOptimization() {
             </div>
             <div>
               <p className="text-sm font-medium">Optimering klar</p>
-              <p className="text-xs text-gray-400">55 rutter optimerade</p>
+              <p className="text-xs text-gray-500">55 rutter optimerade</p>
             </div>
           </div>
 

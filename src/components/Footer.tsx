@@ -61,13 +61,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+        <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
           <div>&copy; {new Date().getFullYear()} NOGO Media AB. Alla rättigheter reserverade.</div>
           <div className="flex gap-6">
-            <Link href="/kontakt" className="hover:text-gray-400">
+            <Link href="/kontakt" className="hover:text-white">
               Integritetspolicy
             </Link>
-            <Link href="/kontakt" className="hover:text-gray-400">
+            <Link href="/kontakt" className="hover:text-white">
               Villkor
             </Link>
           </div>

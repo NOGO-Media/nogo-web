@@ -64,7 +64,7 @@ export default function DemoKPICards() {
             </div>
             <span
               className={`inline-flex items-center gap-0.5 text-xs font-medium ${
-                kpi.trend === "up" ? "text-green-600" : "text-gray-500"
+                kpi.trend === "up" ? "text-green-700" : "text-gray-500"
               }`}
             >
               {kpi.trend === "up" ? (
@@ -78,7 +78,7 @@ export default function DemoKPICards() {
           <div className="text-2xl font-semibold tracking-tight">
             {kpi.value}
           </div>
-          <div className="text-xs text-gray-400 mt-1">{kpi.label}</div>
+          <div className="text-xs text-gray-500 mt-1">{kpi.label}</div>
         </div>
       ))}
     </div>

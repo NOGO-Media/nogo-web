@@ -230,15 +230,15 @@ export default function DemoMap() {
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1.5">
             <div className="w-2.5 h-0.5 bg-blue-500 rounded" />
-            <span className="text-[10px] text-gray-400">Aktiv rutt</span>
+            <span className="text-[10px] text-gray-500">Aktiv rutt</span>
           </div>
           <div className="flex items-center gap-1.5">
             <div className="w-2.5 h-2.5 rounded-full bg-blue-500 border border-white" />
-            <span className="text-[10px] text-gray-400">Upphämtning</span>
+            <span className="text-[10px] text-gray-500">Upphämtning</span>
           </div>
           <div className="flex items-center gap-1.5">
             <div className="w-2.5 h-2.5 rounded-full bg-green-500 border border-white" />
-            <span className="text-[10px] text-gray-400">Avlämning</span>
+            <span className="text-[10px] text-gray-500">Avlämning</span>
           </div>
         </div>
       </div>
