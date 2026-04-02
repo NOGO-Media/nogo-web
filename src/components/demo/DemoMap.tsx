@@ -1,5 +1,6 @@
 "use client";
 
+import "maplibre-gl/dist/maplibre-gl.css";
 import { useEffect, useRef } from "react";
 import { routes, stops, vehicles } from "./mockData";
 

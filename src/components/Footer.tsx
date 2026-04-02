@@ -43,7 +43,7 @@ export default function Footer() {
           {/* Links */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
-              <h4 className="text-white text-sm font-medium mb-4">{title}</h4>
+              <p className="text-white text-sm font-medium mb-4">{title}</p>
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.name}>
@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
+        <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
           <div>&copy; {new Date().getFullYear()} NOGO Media AB. Alla rättigheter reserverade.</div>
           <div className="flex gap-6">
             <Link href="/kontakt" className="hover:text-gray-400">

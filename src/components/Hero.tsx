@@ -80,7 +80,7 @@ export default function Hero() {
                   {/* Table header */}
                   <div className="grid grid-cols-5 gap-4 px-4 py-3 border-b border-gray-800">
                     {["Order", "Förare", "Rutt", "Status", "Tid"].map((h) => (
-                      <div key={h} className="text-xs text-gray-500 font-medium">
+                      <div key={h} className="text-xs text-gray-400 font-medium">
                         {h}
                       </div>
                     ))}
@@ -104,7 +104,7 @@ export default function Hero() {
                         <div className={`w-1.5 h-1.5 rounded-full ${row.statusColor}`} />
                         <span className="text-xs text-gray-400">{row.status}</span>
                       </div>
-                      <div className="text-xs text-gray-500">Just nu</div>
+                      <div className="text-xs text-gray-400">Just nu</div>
                     </div>
                   ))}
                 </div>
@@ -122,7 +122,7 @@ export default function Hero() {
                     className="bg-gray-900 rounded-xl border border-gray-800 p-3 md:p-4 overflow-hidden"
                   >
                     <div className="text-xl md:text-2xl font-semibold text-white">{stat.value}</div>
-                    <div className="text-[10px] md:text-xs text-gray-500 mt-1 truncate">{stat.label}</div>
+                    <div className="text-[10px] md:text-xs text-gray-400 mt-1 truncate">{stat.label}</div>
                   </div>
                 ))}
               </div>

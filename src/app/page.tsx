@@ -1,6 +1,9 @@
+import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
 import LogoCloud from "@/components/LogoCloud";
-import DispatchWorkflow from "@/components/dispatch-workflow/DispatchWorkflow";
+const DispatchWorkflow = dynamic(
+  () => import("@/components/dispatch-workflow/DispatchWorkflow")
+);
 import {
   FeatureGrid1,
   FeatureRealtime,

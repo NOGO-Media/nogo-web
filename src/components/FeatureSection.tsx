@@ -234,7 +234,7 @@ export function FeatureSecurity() {
     <section className="py-24 md:py-32 bg-gray-950 text-white dark-grid-pattern">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto">
-          <p className="text-sm font-medium text-gray-500 mb-4">
+          <p className="text-sm font-medium text-gray-400 mb-4">
             Säkerhet & regelefterlevnad
           </p>
           <h2 className="text-3xl md:text-4xl font-medium tracking-tight">
@@ -261,7 +261,7 @@ export function FeatureSecurity() {
                 <item.icon size={20} className="text-gray-300" />
               </div>
               <h3 className="font-medium mb-1">{item.title}</h3>
-              <p className="text-sm text-gray-500">{item.desc}</p>
+              <p className="text-sm text-gray-400">{item.desc}</p>
             </div>
           ))}
         </div>
