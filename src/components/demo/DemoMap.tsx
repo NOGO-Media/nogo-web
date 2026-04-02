@@ -12,7 +12,9 @@ async function fetchRoadRoute(
 ): Promise<Coordinate[] | null> {
   if (coordinates.length < 2) return null;
 
-  const coordinateString = coordinates
+  const startAndEndCoordinates = [coordinates[0], coordinates[coordinates.length - 1]];
+
+  const coordinateString = startAndEndCoordinates
     .map(([lng, lat]) => `${lng},${lat}`)
     .join(";");
 
