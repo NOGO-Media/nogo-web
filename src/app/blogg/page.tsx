@@ -71,6 +71,7 @@ const articles = [
       "En konkret kalkylmodell för att räkna ut vad automation kan spara er — med siffror ni kan sätta in själva.",
     category: "Kostnadsanalys",
     readTime: "8 min",
+    href: "/artiklar/roi-automation-transport-kalkyl",
   },
   {
     title: "eFTI och digitala fraktdokument — är ditt åkeri redo?",
