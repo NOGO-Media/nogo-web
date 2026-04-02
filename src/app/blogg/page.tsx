@@ -47,6 +47,7 @@ const articles = [
       "Praktisk guide för små och medelstora åkerier som vill digitalisera. Steg-för-steg utan buzzwords.",
     category: "Guide",
     readTime: "7 min",
+    slug: "digitalisering-akerinaring-var-borjar-man",
   },
   {
     title: "Minska tomkörningar — 5 konkreta åtgärder",
@@ -108,7 +109,11 @@ export default function BloggPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-6">
             {articles.map((article) => {
-              const slug = "slug" in article ? (article as { slug: string }).slug : null;
+              const href = "href" in article
+                ? (article as { href: string }).href
+                : "slug" in article
+                  ? `/blogg/${(article as { slug: string }).slug}`
+                  : null;
               const inner = (
                 <>
                 <div className="flex items-center gap-3 mb-4">
@@ -131,8 +136,8 @@ export default function BloggPage() {
                 </>
               );
               const className = "group bg-gray-50 rounded-2xl p-8 border border-transparent hover:border-gray-200 hover:shadow-sm transition-all cursor-pointer block";
-              return slug ? (
-                <Link key={article.title} href={`/blogg/${slug}`} className={className}>{inner}</Link>
+              return href ? (
+                <Link key={article.title} href={href} className={className}>{inner}</Link>
               ) : (
                 <div key={article.title} className={className}>{inner}</div>
               );
