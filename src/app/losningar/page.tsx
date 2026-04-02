@@ -42,7 +42,7 @@ const solutions = [
     slug: "tms-integration",
     subtitle: "Automatisera utan att byta system",
     description:
-      "Vi bygger automation som arbetar direkt i ert befintliga TMS — Opter, AddSecure, Hogia, Barkfors eller andra system. Med API eller utan — vi integrerar via databasanslutning, filimport eller skärmautomation. Ni slipper migration, omträning och stillestånd.",
+      "Vi bygger automation som arbetar direkt i ert befintliga TMS — Opter, AddSecure, Hogia, Barkfors eller andra system. Med öppet API, stängt API eller helt utan — vi hittar alltid en väg in. Ni slipper migration, omträning och stillestånd.",
     stats: [
       { value: "0", label: "Systembyte" },
       { value: "2–4 v", label: "Implementation" },

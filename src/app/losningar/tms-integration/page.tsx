@@ -142,7 +142,7 @@ const features = [
   {
     icon: Plug,
     title: "Med eller utan API",
-    desc: "Har ert system ett API? Perfekt, då kopplar vi direkt. Saknar det API? Vi integrerar via databasanslutning, filimport (CSV/XML) eller skärmautomation.",
+    desc: "Öppet API? Vi kopplar direkt. Stängt eller odokumenterat API? Vi går via databasanslutning, filimport (CSV/XML) eller skärmautomation. Inget system är för låst.",
   },
   {
     icon: RefreshCw,
@@ -398,13 +398,15 @@ export default function TMSIntegrationPage() {
                 utan att ni behöver byta plattform.
               </p>
               <p>
-                Många åkerier oroar sig för att deras system saknar moderna
-                API:er. Det spelar ingen roll. Vi integrerar med eller utan API
-                — via REST, SOAP, databasanslutningar, filimport (CSV, XML,
-                EDI) eller skärmautomation. Oavsett om ni kör Opter, AddSecure,
-                Hogia Transport, Barkfors eller ett egenutvecklat system hittar vi
-                en väg in. Era trafikledare och förare fortsätter arbeta i det
-                system de redan kan.
+                Många åkerier oroar sig för att deras TMS saknar öppna
+                API:er — eller har API:er som leverantören inte ger tillgång
+                till. Det hindrar oss inte. Vi integrerar via REST, SOAP,
+                databasanslutningar, filimport (CSV, XML, EDI) eller
+                skärmautomation. Oavsett om ni kör Opter, AddSecure, Hogia
+                Transport, Barkfors eller ett egenutvecklat system hittar vi en
+                väg in — även när leverantören inte delar sitt API. Era
+                trafikledare och förare fortsätter arbeta i det system de
+                redan kan.
               </p>
             </div>
           </div>

@@ -21,8 +21,8 @@ const faqs = [
     a: "Ja. Ordrar, fordonspositioner och statusuppdateringar synkas i realtid via API eller webhooks. Inga manuella exporter eller importer behövs.",
   },
   {
-    q: "Kan ni integrera med system som saknar API?",
-    a: "Ja, absolut. Många åkerier kör äldre system utan moderna API:er — det hindrar oss inte. Vi integrerar via databasanslutningar, filimport (CSV, XML, EDI) eller skärmautomation. Vi har gjort det förut och hittar alltid en väg in, oavsett hur ert system är byggt.",
+    q: "Kan ni integrera med system som saknar API eller inte ger ut det?",
+    a: "Ja. Vissa TMS-leverantörer har API:er men delar inte åtkomst med tredjeparter, andra saknar API helt. Vi kringgår det via databasanslutningar, filimport (CSV, XML, EDI) eller skärmautomation. Vi har gjort det förut och hittar alltid en väg in — oavsett hur låst systemet verkar.",
   },
   {
     q: "Vem ansvarar för driften av integrationen?",
