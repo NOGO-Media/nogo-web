@@ -30,14 +30,16 @@ const articles = [
     description:
       "En trafikledare lägger 12 min per bokning. Med 40 bokningar/dag blir det 8 timmar. Vi räknar på vad manuell planering kostar ert åkeri.",
     category: "Kostnadsanalys",
-    readTime: "6 min",
+    readTime: "8 min",
+    slug: "vad-kostar-manuell-transportplanering",
   },
   {
     title: "TMS-system 2026: Komplett guide för svenska åkerier",
     description:
       "Vad är ett TMS? Vilka system finns i Sverige? Opter, AddSecure, Cargoson — vi jämför funktioner, pris och när du behöver ett.",
     category: "Guide",
-    readTime: "10 min",
+    readTime: "11 min",
+    slug: "tms-system-2026-guide-svenska-akerier",
   },
   {
     title: "Digitalisering i åkerinäringen — var börjar man?",
@@ -49,7 +51,7 @@ const articles = [
   {
     title: "Minska tomkörningar — 5 konkreta åtgärder",
     description:
-      "19% av alla lastbilskilometer i Sverige körs tomma. Här är fem praktiska sätt att minska tomkörningarna i ert åkeri.",
+      "17% av alla lastbilskilometer i Sverige körs tomma. Här är fem praktiska sätt att minska tomkörningarna i ert åkeri.",
     category: "Praktiska tips",
     readTime: "5 min",
   },
