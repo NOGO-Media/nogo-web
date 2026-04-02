@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     q: "Kan ni integrera med system som saknar API eller inte ger ut det?",
-    a: "Ja. Vissa TMS-leverantörer har API:er men delar inte åtkomst med tredjeparter, andra saknar API helt. Vi kringgår det via databasanslutningar, filimport (CSV, XML, EDI) eller skärmautomation. Vi har gjort det förut och hittar alltid en väg in — oavsett hur låst systemet verkar.",
+    a: "Ja. Vissa TMS-leverantörer har API:er men delar inte åtkomst med tredjeparter, andra saknar API helt. Vi har lösningen — vi integrerar via databasanslutningar, filimport (CSV, XML, EDI) eller skärmautomation. Vi har gjort det förut och hittar alltid en väg in, oavsett hur låst systemet verkar.",
   },
   {
     q: "Vem ansvarar för driften av integrationen?",
