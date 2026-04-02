@@ -29,7 +29,7 @@ const RouteOptFAQ = dynamic(
 const SITE_URL = "https://nogomedia.se";
 
 export const metadata: Metadata = {
-  title: "Ruttoptimering för åkerier — AI-optimerade rutter",
+  title: "Ruttoptimering för åkerier — Minska körsträckan med 23%",
   description:
     "Minska körsträckan med 23% och öka leveranserna med 18% per dag. AI-driven ruttoptimering för svenska åkerier — med hänsyn till tidsfönster, ADR-krav och kör- och vilotider.",
   keywords: [
@@ -235,6 +235,31 @@ export default function RuttoptimeringPage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Key takeaway — optimized for AI snippet extraction */}
+      <section className="pb-8">
+        <div className="max-w-7xl mx-auto px-6">
+          <aside className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 max-w-3xl">
+            <p className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">
+              Sammanfattning
+            </p>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              <strong>Ruttoptimering</strong> innebär att använda AI för att
+              automatiskt beräkna de mest effektiva rutterna för en hel
+              fordonsflotta. NOGO:s ruttoptimering tar hänsyn till tidsfönster,
+              ADR-krav, kapacitet och kör- och vilotider. Resultatet är i
+              genomsnitt 23% kortare körsträcka och 18% fler leveranser per
+              dag — utan att byta TMS-system.
+            </p>
+            <ul className="mt-4 space-y-1.5 text-sm text-gray-600">
+              <li>Optimering av 100+ stopp på under 2 minuter</li>
+              <li>Integreras med Opter, AddSecure, Hogia, Barkfors m.fl.</li>
+              <li>Fungerar med eller utan API</li>
+              <li>Implementation på 2–4 veckor</li>
+            </ul>
+          </aside>
         </div>
       </section>
 

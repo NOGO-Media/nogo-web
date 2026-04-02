@@ -29,7 +29,7 @@ const TMSIntegrationFAQ = dynamic(
 const SITE_URL = "https://nogomedia.se";
 
 export const metadata: Metadata = {
-  title: "TMS-integration — Automatisera utan att byta system",
+  title: "TMS-integration för åkerier — Automatisera utan att byta system",
   description:
     "Integrera AI-automation direkt i ert befintliga TMS — med eller utan API. Opter, AddSecure, Hogia, Barkfors eller egenutvecklat. Vi integrerar via API, databas, filimport eller skärmautomation. Utan migration eller stillestånd.",
   keywords: [
@@ -250,6 +250,30 @@ export default function TMSIntegrationPage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Key takeaway — optimized for AI snippet extraction */}
+      <section className="pb-8">
+        <div className="max-w-7xl mx-auto px-6">
+          <aside className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 max-w-3xl">
+            <p className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">
+              Sammanfattning
+            </p>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              <strong>TMS-integration</strong> betyder att lägga ett lager av
+              AI-automation ovanpå ert befintliga transporthanteringssystem.
+              NOGO integrerar med Opter, AddSecure, Hogia, Barkfors och
+              egenutvecklade system — med öppet API, stängt API eller helt
+              utan API. Ingen migration, omträning eller stillestånd krävs.
+            </p>
+            <ul className="mt-4 space-y-1.5 text-sm text-gray-600">
+              <li>Integration via API, databas, filimport (CSV/XML) eller skärmautomation</li>
+              <li>Realtidssynkronisering av ordrar och fordon</li>
+              <li>Implementation på 2–4 veckor</li>
+              <li>Ni fortsätter arbeta i det system ni redan kan</li>
+            </ul>
+          </aside>
         </div>
       </section>
 

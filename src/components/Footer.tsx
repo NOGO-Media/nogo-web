@@ -3,9 +3,9 @@ import Logo from "./Logo";
 
 const footerLinks = {
   Lösningar: [
-    { name: "Ruttoptimering", href: "/losningar" },
-    { name: "TMS-integration", href: "/losningar" },
-    { name: "Trafikledning", href: "/losningar" },
+    { name: "Ruttoptimering", href: "/losningar/ruttoptimering" },
+    { name: "TMS-integration", href: "/losningar/tms-integration" },
+    { name: "Trafikledning", href: "/losningar/trafikledning" },
     { name: "Orderhantering", href: "/losningar" },
   ],
   Resurser: [

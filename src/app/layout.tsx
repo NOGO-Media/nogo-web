@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: "AI-automation för åkerier & transport | NOGO Media",
-    template: "%s | NOGO Media",
+    template: "%s | AI-automation | NOGO Media",
   },
   description:
     "AI-automation som ger era trafikledare timmar tillbaka — varje dag. Ruttoptimering, orderhantering och fordonstilldelning utan att byta system. NOGO Media, Norrköping.",
@@ -105,9 +105,17 @@ function OrganizationJsonLd() {
       streetAddress: "Demogatan 7",
       addressLocality: "Norrköping",
       postalCode: "602 23",
+      addressRegion: "Östergötland",
       addressCountry: "SE",
     },
     email: "hugo@nogomedia.se",
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "hugo@nogomedia.se",
+      contactType: "sales",
+      availableLanguage: ["Swedish", "English"],
+      areaServed: "SE",
+    },
     foundingDate: "2024",
     founders: [
       {
@@ -119,7 +127,70 @@ function OrganizationJsonLd() {
       "@type": "Country",
       name: "Sweden",
     },
-    sameAs: [],
+    sameAs: [
+      "https://www.linkedin.com/company/nogomedia",
+    ],
+    knowsAbout: [
+      "AI-automation för transport",
+      "Ruttoptimering",
+      "Trafikledning",
+      "TMS-integration",
+      "Logistik-automation",
+      "AI-agenter för åkerier",
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+function ServiceJsonLd() {
+  const services = [
+    {
+      "@type": "Service",
+      name: "AI-agenter för transport",
+      description:
+        "AI-agenter som automatiserar trafikledning, orderhantering och förartilldelning för svenska åkerier. Agentbaserad automation som arbetar i ert befintliga TMS.",
+      provider: { "@type": "Organization", name: "NOGO Media AB" },
+      serviceType: "AI Automation",
+      areaServed: { "@type": "Country", name: "Sweden" },
+      url: `${SITE_URL}/losningar/trafikledning`,
+    },
+    {
+      "@type": "Service",
+      name: "Logistik-automation",
+      description:
+        "Automatiserad ruttoptimering, fordonstilldelning och orderhantering för svenska åkerier och transportbolag. Minskar körsträckan med 23% och frigör 3+ timmar per dag.",
+      provider: { "@type": "Organization", name: "NOGO Media AB" },
+      serviceType: "Logistics Automation",
+      areaServed: { "@type": "Country", name: "Sweden" },
+      url: `${SITE_URL}/losningar/ruttoptimering`,
+    },
+    {
+      "@type": "Service",
+      name: "TMS-integration",
+      description:
+        "Integration av AI-automation i befintliga TMS-system som Opter, AddSecure, Hogia och Barkfors. Med eller utan API — vi integrerar via databas, filimport eller skärmautomation.",
+      provider: { "@type": "Organization", name: "NOGO Media AB" },
+      serviceType: "System Integration",
+      areaServed: { "@type": "Country", name: "Sweden" },
+      url: `${SITE_URL}/losningar/tms-integration`,
+    },
+  ];
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "NOGO Media — Tjänster",
+    itemListElement: services.map((service, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: service,
+    })),
   };
 
   return (
@@ -185,6 +256,7 @@ export default function RootLayout({
       <head>
         <OrganizationJsonLd />
         <LocalBusinessJsonLd />
+        <ServiceJsonLd />
       </head>
       <body className="min-h-full flex flex-col">
         <Navbar />
