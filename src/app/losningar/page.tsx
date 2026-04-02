@@ -120,18 +120,10 @@ export default function LosningarPage() {
                     {sol.description}
                   </p>
                   <Link
-                    href={
-                      sol.slug === "ruttoptimering" || sol.slug === "tms-integration"
-                        ? `/losningar/${sol.slug}`
-                        : "/kontakt"
-                    }
+                    href={`/losningar/${sol.slug}`}
                     className="inline-flex items-center gap-1.5 mt-6 text-sm font-medium hover:gap-2.5 transition-all"
                   >
-                    {sol.slug === "ruttoptimering"
-                      ? "Läs mer om ruttoptimering"
-                      : sol.slug === "tms-integration"
-                      ? "Läs mer om TMS-integration"
-                      : "Boka strategi-samtal"}{" "}
+                    Läs mer om {sol.title.toLowerCase()}{" "}
                     <ArrowRight size={14} />
                   </Link>
                 </div>
