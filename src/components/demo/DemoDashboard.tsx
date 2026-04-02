@@ -35,7 +35,7 @@ export default function DemoDashboard() {
   ];
 
   return (
-    <div className="fixed inset-0 z-[60] flex bg-gray-50">
+    <div className="fixed inset-0 z-[60] flex bg-gray-50" role="main">
       <DemoSidebar activeView={activeView} onViewChange={setActiveView} />
 
       <div className="flex-1 overflow-auto pt-14 md:pt-0">
@@ -43,7 +43,7 @@ export default function DemoDashboard() {
         <div className="sticky top-0 z-10 bg-gray-50/80 backdrop-blur-sm border-b border-gray-200 px-4 md:px-6 py-3 flex items-center justify-between">
           <div>
             <h1 className="text-lg font-medium">{viewLabels[activeView]}</h1>
-            <p className="text-xs text-gray-400">
+            <p className="text-xs text-gray-500">
               Tisdag 1 april 2026 — 10:32
             </p>
           </div>
@@ -126,7 +126,7 @@ export default function DemoDashboard() {
                       ))}
                     </div>
                     <div className="mt-4 pt-4 border-t border-gray-100">
-                      <div className="flex justify-between text-xs text-gray-400 mb-1">
+                      <div className="flex justify-between text-xs text-gray-500 mb-1">
                         <span>Beläggning</span>
                         <span>75%</span>
                       </div>

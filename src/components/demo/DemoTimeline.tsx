@@ -18,7 +18,7 @@ export default function DemoTimeline() {
           {(["driving", "loading", "break"] as const).map((type) => (
             <div key={type} className="flex items-center gap-1.5">
               <div className={`w-2.5 h-2.5 rounded-sm ${scheduleColor[type]}`} />
-              <span className="text-xs text-gray-400">{scheduleLabel[type]}</span>
+              <span className="text-xs text-gray-500">{scheduleLabel[type]}</span>
             </div>
           ))}
         </div>
@@ -29,13 +29,13 @@ export default function DemoTimeline() {
           {/* Time header */}
           <div className="flex border-b border-gray-100">
             <div className="w-36 shrink-0 px-5 py-2">
-              <span className="text-xs text-gray-400">Fordon</span>
+              <span className="text-xs text-gray-500">Fordon</span>
             </div>
             <div className="flex-1 flex">
               {hours.map((h) => (
                 <div
                   key={h}
-                  className="text-xs text-gray-400 text-center"
+                  className="text-xs text-gray-500 text-center"
                   style={{ width: `${100 / TOTAL_HOURS}%` }}
                 >
                   {String(h).padStart(2, "0")}:00
@@ -56,7 +56,7 @@ export default function DemoTimeline() {
                 {/* Vehicle label */}
                 <div className="w-36 shrink-0 px-5 py-3">
                   <div className="text-sm font-medium">{v.reg}</div>
-                  <div className="text-xs text-gray-400">{v.driver}</div>
+                  <div className="text-xs text-gray-500">{v.driver}</div>
                 </div>
 
                 {/* Timeline bar */}
