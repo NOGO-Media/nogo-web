@@ -42,7 +42,7 @@ const solutions = [
     slug: "tms-integration",
     subtitle: "Automatisera utan att byta system",
     description:
-      "Vi bygger automation som arbetar direkt i ert befintliga TMS — Opter, AddSecure, Hogia eller andra system. Ni slipper migration, omträning och stillestånd. Era processer förstärks, inte ersätts.",
+      "Vi bygger automation som arbetar direkt i ert befintliga TMS — Opter, AddSecure, Hogia, Barkfors eller andra system. Med öppet API, stängt API eller helt utan — vi hittar alltid en väg in. Ni slipper migration, omträning och stillestånd.",
     stats: [
       { value: "0", label: "Systembyte" },
       { value: "2–4 v", label: "Implementation" },
@@ -120,10 +120,18 @@ export default function LosningarPage() {
                     {sol.description}
                   </p>
                   <Link
-                    href={sol.slug === "ruttoptimering" ? `/losningar/${sol.slug}` : "/kontakt"}
+                    href={
+                      sol.slug === "ruttoptimering" || sol.slug === "tms-integration"
+                        ? `/losningar/${sol.slug}`
+                        : "/kontakt"
+                    }
                     className="inline-flex items-center gap-1.5 mt-6 text-sm font-medium hover:gap-2.5 transition-all"
                   >
-                    {sol.slug === "ruttoptimering" ? "Läs mer om ruttoptimering" : "Boka strategi-samtal"}{" "}
+                    {sol.slug === "ruttoptimering"
+                      ? "Läs mer om ruttoptimering"
+                      : sol.slug === "tms-integration"
+                      ? "Läs mer om TMS-integration"
+                      : "Boka strategi-samtal"}{" "}
                     <ArrowRight size={14} />
                   </Link>
                 </div>

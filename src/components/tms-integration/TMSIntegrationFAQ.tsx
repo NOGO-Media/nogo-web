@@ -5,28 +5,28 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
-    q: "Fungerar ruttoptimeringen med vårt befintliga TMS?",
-    a: "Ja. Vi integrerar direkt med Opter, AddSecure, Hogia, Barkfors och andra vanliga TMS-system i Sverige. Ni behöver inte byta system — automationen läser ordrar och levererar optimerade rutter tillbaka till ert befintliga arbetsflöde.",
+    q: "Behöver vi byta TMS-system?",
+    a: "Nej. Vår automation byggs ovanpå ert befintliga TMS — oavsett om ni använder Opter, AddSecure, Hogia, Barkfors eller ett egenutvecklat system. Ni behöver inte byta, migrera eller stänga ner något.",
   },
   {
-    q: "Hur hanteras ADR-transporter vid ruttoptimering?",
-    a: "Automationen tar full hänsyn till ADR-klassificering, tunnelkoder och samlastregler. Rutter planeras så att farligt gods hanteras korrekt — inklusive vilka fordon som får köra vilka klasser och vilka vägar som är tillåtna.",
+    q: "Hur lång tid tar en integration?",
+    a: "En typisk integration tar 2–4 veckor. Vi börjar med att kartlägga era arbetsflöden, konfigurerar anslutningen och testar i en sandboxmiljö innan vi går live. Ni kan använda ert TMS som vanligt under hela processen.",
   },
   {
-    q: "Hur lång tid tar det att implementera ruttoptimeringen?",
-    a: "En typisk implementation tar 2–4 veckor. Vi börjar med ett avgränsat flöde — ofta en depå eller ett specifikt uppdragsslag — mäter resultat och skalar därifrån.",
+    q: "Vad händer om vi byter TMS i framtiden?",
+    a: "Vår automation är systemoberoende. Om ni byter TMS anpassar vi integrationen till ert nya system. Ni behåller alla konfigurationer, regler och optimeringar.",
   },
   {
-    q: "Vad händer om förutsättningarna ändras under dagen?",
-    a: "Automationen kan köras om i realtid. Om en order läggs till, ett fordon faller bort eller ett tidsfönster ändras kan ni köra en ny optimering som tar hänsyn till det uppdaterade läget — på under två minuter.",
+    q: "Har ni stöd för realtidssynkronisering?",
+    a: "Ja. Ordrar, fordonspositioner och statusuppdateringar synkas i realtid via API eller webhooks. Inga manuella exporter eller importer behövs.",
   },
   {
-    q: "Kan vi köra optimering flera gånger per dag?",
-    a: "Ja, obegränsat antal gånger. Många åkerier kör en grundoptimering på morgonen och sedan löpande omoptimeringar under dagen när nya ordrar kommer in eller förutsättningar ändras.",
+    q: "Kan ni integrera med system som saknar API eller inte ger ut det?",
+    a: "Ja. Vissa TMS-leverantörer har API:er men delar inte åtkomst med tredjeparter, andra saknar API helt. Vi har lösningen — vi integrerar via databasanslutningar, filimport (CSV, XML, EDI) eller skärmautomation. Vi har gjort det förut och hittar alltid en väg in, oavsett hur låst systemet verkar.",
   },
   {
-    q: "Tar optimeringen hänsyn till kör- och vilotider?",
-    a: "Absolut. Rutter planeras med hänsyn till EU:s kör- och vilotidsregler. Automationen säkerställer att inga fordon överskrider maximal körtid och att pauser schemaläggs korrekt.",
+    q: "Vem ansvarar för driften av integrationen?",
+    a: "Vi övervakar integrationen löpande och hanterar eventuella avbrott eller uppdateringar. Ni kontaktar oss direkt om något behöver justeras — ni behöver inte ha egen IT-personal för detta.",
   },
 ];
 
@@ -51,7 +51,7 @@ function FAQJsonLd() {
   );
 }
 
-export default function RouteOptFAQ() {
+export default function TMSIntegrationFAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
@@ -60,10 +60,10 @@ export default function RouteOptFAQ() {
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-medium tracking-tight">
-            Vanliga frågor om ruttoptimering
+            Vanliga frågor om TMS-integration
           </h2>
           <p className="mt-4 text-gray-500">
-            Svar på de vanligaste frågorna om vår AI-drivna ruttoptimering.
+            Svar på det åkerier oftast undrar om vår integrationslösning.
           </p>
         </div>
 

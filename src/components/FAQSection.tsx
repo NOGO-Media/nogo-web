@@ -6,7 +6,7 @@ import { Plus, Minus } from "lucide-react";
 const faqs = [
   {
     q: "Behöver vi byta TMS-system?",
-    a: "Nej. Vår automation byggs ovanpå ert befintliga system — oavsett om ni använder Opter, AddSecure, Hogia eller ett eget system. Ni behöver inte byta något.",
+    a: "Nej. Vår automation byggs ovanpå ert befintliga system — oavsett om ni använder Opter, AddSecure, Hogia, Barkfors eller ett eget system. Ni behöver inte byta något.",
   },
   {
     q: "Hur många fordon behöver vi ha?",

@@ -4,57 +4,59 @@ import dynamic from "next/dynamic";
 import {
   ArrowRight,
   Play,
-  Clock,
-  Shield,
-  RefreshCw,
-  Layers,
-  Truck,
-  Timer,
   ChevronRight,
-  FileInput,
-  Cpu,
+  Settings,
+  Plug,
+  RefreshCw,
+  Shield,
+  Clock,
+  Layers,
+  Workflow,
+  Database,
   CheckCircle2,
 } from "lucide-react";
 
-const RouteOptimizationDemo = dynamic(
-  () => import("@/components/route-optimization/RouteOptimizationDemo"),
+const IntegrationFlowDemo = dynamic(
+  () => import("@/components/tms-integration/IntegrationFlowDemo"),
 );
-const ROICalculator = dynamic(
-  () => import("@/components/route-optimization/ROICalculator"),
+const CompatibilityChecker = dynamic(
+  () => import("@/components/tms-integration/CompatibilityChecker"),
 );
-const RouteOptFAQ = dynamic(
-  () => import("@/components/route-optimization/RouteOptFAQ"),
+const TMSIntegrationFAQ = dynamic(
+  () => import("@/components/tms-integration/TMSIntegrationFAQ"),
 );
 
 const SITE_URL = "https://nogomedia.se";
 
 export const metadata: Metadata = {
-  title: "Ruttoptimering för åkerier — AI-optimerade rutter",
+  title: "TMS-integration — Automatisera utan att byta system",
   description:
-    "Minska körsträckan med 23% och öka leveranserna med 18% per dag. AI-driven ruttoptimering för svenska åkerier — med hänsyn till tidsfönster, ADR-krav och kör- och vilotider.",
+    "Integrera AI-automation direkt i ert befintliga TMS — med eller utan API. Opter, AddSecure, Hogia, Barkfors eller egenutvecklat. Vi integrerar via API, databas, filimport eller skärmautomation. Utan migration eller stillestånd.",
   keywords: [
-    "ruttoptimering",
-    "ruttoptimering åkeri",
-    "ruttplanering transport",
-    "optimera körsträcka",
-    "AI ruttoptimering",
-    "ruttoptimering Sverige",
-    "ruttoptimering lastbil",
-    "leveransplanering",
-    "transportplanering",
-    "ruttplanering åkeri",
-    "minska körsträcka åkeri",
-    "effektivisera transporter",
-    "fordonsplanering",
-    "logistikoptimering",
-    "ADR transport ruttplanering",
+    "TMS-integration",
+    "TMS-system åkeri",
+    "TMS integration Sverige",
+    "Opter integration",
+    "AddSecure integration",
+    "Hogia Transport integration",
+    "Barkfors integration",
+    "transporthanteringssystem",
+    "automatisera TMS",
+    "åkeri automation integration",
+    "TMS API integration",
+    "TMS integration utan API",
+    "integrera äldre TMS system",
+    "digitalisera åkeri",
+    "transportplanering system",
+    "TMS systemintegration",
+    "automatisera orderhantering transport",
   ],
-  alternates: { canonical: "/losningar/ruttoptimering" },
+  alternates: { canonical: "/losningar/tms-integration" },
   openGraph: {
-    title: "Ruttoptimering för åkerier — AI-optimerade rutter | NOGO Media",
+    title: "TMS-integration — Automatisera utan att byta system | NOGO Media",
     description:
-      "Minska körsträckan med 23% och öka leveranserna med 18% per dag. AI-driven ruttoptimering för svenska åkerier.",
-    url: "/losningar/ruttoptimering",
+      "Integrera AI-automation direkt i ert befintliga TMS. Utan migration, omträning eller stillestånd.",
+    url: "/losningar/tms-integration",
     type: "website",
     locale: "sv_SE",
     siteName: "NOGO Media",
@@ -63,15 +65,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "NOGO Media — Ruttoptimering för åkerier",
+        alt: "NOGO Media — TMS-integration för åkerier",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ruttoptimering för åkerier — AI-optimerade rutter | NOGO Media",
+    title: "TMS-integration — Automatisera utan att byta system | NOGO Media",
     description:
-      "Minska körsträckan med 23% och öka leveranserna med 18% per dag.",
+      "Integrera AI-automation direkt i ert befintliga TMS. Utan migration eller stillestånd.",
     images: ["/og-image.png"],
   },
 };
@@ -90,8 +92,8 @@ function BreadcrumbJsonLd() {
       {
         "@type": "ListItem",
         position: 2,
-        name: "Ruttoptimering",
-        item: `${SITE_URL}/losningar/ruttoptimering`,
+        name: "TMS-integration",
+        item: `${SITE_URL}/losningar/tms-integration`,
       },
     ],
   };
@@ -107,11 +109,11 @@ function SoftwareJsonLd() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "NOGO Ruttoptimering",
+    name: "NOGO TMS-integration",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
     description:
-      "AI-driven ruttoptimering för svenska åkerier. Minskar körsträckan med 23% och ökar leveranser per dag med 18%.",
+      "AI-automation som integreras direkt i befintliga TMS-system. Opter, AddSecure, Hogia, Barkfors och fler. Ingen migration krävs.",
     offers: {
       "@type": "Offer",
       price: "0",
@@ -138,63 +140,72 @@ function SoftwareJsonLd() {
 
 const features = [
   {
-    icon: Clock,
-    title: "Tidsfönster",
-    desc: "Planerar rutter som respekterar leveranstider, hämttider och kundspecifika krav — ner till minutnivå.",
-  },
-  {
-    icon: Shield,
-    title: "ADR-klassificering",
-    desc: "Automatisk hänsyn till farligt gods, tunnelkoder och samlastregler. Rätt fordon på rätt rutt.",
-  },
-  {
-    icon: Timer,
-    title: "Kör- och vilotider",
-    desc: "Rutter som respekterar EU:s regelverk. Pauser planeras automatiskt utan att förare överskrider maximal körtid.",
-  },
-  {
-    icon: Truck,
-    title: "Kapacitetsoptimering",
-    desc: "Fyllnadsgrad, viktbegränsningar och lastbärare — automationen maximerar varje fordons kapacitet.",
-  },
-  {
-    icon: Layers,
-    title: "Flerzonsplanering",
-    desc: "Optimering över flera depåer, zoner och regioner. Hanterar även ordrar som korsar zonsgränser.",
+    icon: Plug,
+    title: "Med eller utan API",
+    desc: "Öppet API? Vi kopplar direkt. Stängt eller odokumenterat API? Vi går via databasanslutning, filimport (CSV/XML) eller skärmautomation. Inget system är för låst.",
   },
   {
     icon: RefreshCw,
-    title: "Realtidsuppdateringar",
-    desc: "Kör om optimeringen under dagen när nya ordrar kommer in eller förutsättningar ändras.",
+    title: "Realtidssynk",
+    desc: "Ordrar, fordon och statusar synkas i realtid. Inga manuella exporter, inga fördröjningar.",
+  },
+  {
+    icon: Shield,
+    title: "Säker datahantering",
+    desc: "All data krypteras i transit och vila. Lagring i Sverige/EU. Fullständig GDPR-efterlevnad.",
+  },
+  {
+    icon: Layers,
+    title: "Flera system samtidigt",
+    desc: "Kör flera TMS-integrationer parallellt. Perfekt för åkerier med olika system på olika depåer.",
+  },
+  {
+    icon: Workflow,
+    title: "Anpassade flöden",
+    desc: "Konfigurera vilken data som synkas, hur ofta, och vilka regler som gäller. Ert sätt att arbeta, vår automation.",
+  },
+  {
+    icon: Clock,
+    title: "Snabb implementation",
+    desc: "2–4 veckor från start till produktion. Vi testar i sandboxmiljö innan ni går live.",
   },
 ];
 
 const steps = [
   {
-    icon: FileInput,
+    icon: Database,
     step: "01",
-    title: "Importera ordrar",
-
-    desc: "Ordrar hämtas automatiskt från ert TMS — Opter, AddSecure, Hogia, Barkfors eller via API. Ingen manuell inmatning krävs.",
-
-    desc: "Ordrar hämtas automatiskt från ert TMS — Opter, AddSecure, Hogia med eller utan API. Ingen manuell inmatning krävs.",
-
+    title: "Kartläggning",
+    desc: "Vi analyserar ert nuvarande TMS, era arbetsflöden och identifierar var automation ger störst effekt.",
   },
   {
-    icon: Cpu,
+    icon: Settings,
     step: "02",
-    title: "AI optimerar",
-    desc: "Vår AI analyserar tidsfönster, kapacitet, ADR-krav, kör- och vilotider samt geografi. Optimering av 100+ stopp tar under 2 minuter.",
+    title: "Konfiguration",
+    desc: "Vi bygger integrationen, konfigurerar dataflöden och testar i en säker sandboxmiljö med er verkliga data.",
   },
   {
     icon: CheckCircle2,
     step: "03",
-    title: "Klart att köra",
-    desc: "Optimerade rutter skickas tillbaka till ert TMS och ut till förarnas enheter. Trafikledaren godkänner med ett klick.",
+    title: "Go live",
+    desc: "Integrationen aktiveras i produktion. Vi övervakar och finjusterar tills allt rullar felfritt.",
   },
 ];
 
-export default function RuttoptimeringPage() {
+const supportedSystems = [
+  "Opter",
+  "AddSecure (Vehco)",
+  "Hogia Transport",
+  "Barkfors",
+  "Winking / Wise Systems",
+  "Egenutvecklade system",
+  "REST / SOAP API",
+  "Databasanslutning",
+  "Filimport (CSV / XML / EDI)",
+  "Skärmautomation",
+];
+
+export default function TMSIntegrationPage() {
   return (
     <>
       <BreadcrumbJsonLd />
@@ -204,23 +215,23 @@ export default function RuttoptimeringPage() {
       <section className="pt-32 pb-12 md:pt-44 md:pb-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
-            {/* Breadcrumb */}
             <nav className="flex items-center gap-1.5 text-sm text-gray-400 mb-6">
               <Link href="/losningar" className="hover:text-gray-600 transition-colors">
                 Lösningar
               </Link>
               <ChevronRight size={14} />
-              <span className="text-gray-600">Ruttoptimering</span>
+              <span className="text-gray-600">TMS-integration</span>
             </nav>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1]">
-              Ruttoptimering som minskar{" "}
-              <span className="text-gray-400">körsträckan med 23%.</span>
+              Automatisera utan att{" "}
+              <span className="text-gray-400">byta system.</span>
             </h1>
             <p className="mt-6 text-lg text-gray-500 max-w-2xl leading-relaxed">
-              AI-driven ruttplanering för svenska åkerier. Automatisk beräkning
-              av optimala rutter med hänsyn till tidsfönster, kapacitet,
-              ADR-krav och kör- och vilotider — utan att ni byter TMS.
+              Vi bygger AI-automation som arbetar direkt i ert befintliga TMS —
+              Opter, AddSecure, Hogia, Barkfors eller andra system. Med API
+              eller utan — vi hittar alltid en väg in. Ingen migration, ingen
+              omträning, inget stillestånd.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -247,9 +258,9 @@ export default function RuttoptimeringPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              { value: "−23%", label: "Körsträcka", sub: "Genomsnittlig minskning" },
-              { value: "+18%", label: "Leveranser/dag", sub: "Fler stopp med samma resurser" },
-              { value: "<2 min", label: "Optimeringstid", sub: "100+ stopp" },
+              { value: "0", label: "Systembyte", sub: "Behåll ert befintliga TMS" },
+              { value: "2–4 v", label: "Implementation", sub: "Från kartläggning till go live" },
+              { value: "100%", label: "Realtidssynk", sub: "Ordrar och fordon i realtid" },
             ].map((stat) => (
               <div
                 key={stat.label}
@@ -269,16 +280,14 @@ export default function RuttoptimeringPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-2xl mb-10">
             <h2 className="text-3xl font-medium tracking-tight mb-4">
-              Se skillnaden — före och efter optimering
+              Se hur integrationen fungerar
             </h2>
             <p className="text-gray-500 leading-relaxed">
-              Manuellt planerade rutter korsar ofta varandra och missar
-              möjligheter att gruppera leveranser geografiskt. Vår AI
-              omstrukturerar rutterna för kortare körsträcka och fler
-              leveranser.
+              Välj ert TMS-system och se hur data flödar mellan ert system och
+              NOGO:s automationsplattform — i realtid.
             </p>
           </div>
-          <RouteOptimizationDemo />
+          <IntegrationFlowDemo />
         </div>
       </section>
 
@@ -287,12 +296,11 @@ export default function RuttoptimeringPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-2xl mb-12">
             <h2 className="text-3xl font-medium tracking-tight mb-4">
-              Så fungerar ruttoptimeringen
+              Från kartläggning till go live
             </h2>
             <p className="text-gray-500 leading-relaxed">
-              Från order till optimerad rutt — i tre steg. Automationen arbetar
-              i bakgrunden medan era trafikledare fokuserar på det som kräver
-              erfarenhet.
+              Implementationen sker i tre steg. Ni kan använda ert TMS som
+              vanligt under hela processen — ingen nertid.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
@@ -320,11 +328,11 @@ export default function RuttoptimeringPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-2xl mb-12">
             <h2 className="text-3xl font-medium tracking-tight mb-4">
-              Byggt för verkligheten
+              Byggt för svenska TMS-system
             </h2>
             <p className="text-gray-500 leading-relaxed">
-              Ruttoptimering som tar hänsyn till alla de begränsningar och regler
-              som svenska åkerier hanterar varje dag.
+              Vi har erfarenhet av de system som svenska åkerier faktiskt
+              använder — och bygger integrationer som fungerar i verkligheten.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -342,34 +350,81 @@ export default function RuttoptimeringPage() {
         </div>
       </section>
 
-      {/* ROI Calculator */}
+      {/* Compatibility checker */}
       <section className="pb-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-2xl mb-10">
             <h2 className="text-3xl font-medium tracking-tight mb-4">
-              Vad kan ni spara?
+              Stöder vi ert system?
             </h2>
             <p className="text-gray-500 leading-relaxed">
-              Justera parametrarna för att beräkna den uppskattade besparingen
-              baserat på er flottas storlek och körmönster.
+              Vi integrerar med de vanligaste TMS-systemen i Sverige. Välj ert
+              system för att se vilka funktioner som stöds.
             </p>
           </div>
-          <ROICalculator />
+          <CompatibilityChecker />
+        </div>
+      </section>
+
+      {/* Supported systems (SEO text) */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl font-medium tracking-tight mb-6">
+              TMS-system vi integrerar med
+            </h2>
+            <div className="flex flex-wrap gap-2 mb-8">
+              {supportedSystems.map((sys) => (
+                <span
+                  key={sys}
+                  className="bg-white border border-gray-200 px-4 py-2 rounded-full text-sm"
+                >
+                  {sys}
+                </span>
+              ))}
+            </div>
+            <div className="prose prose-gray max-w-none text-gray-500 text-sm leading-relaxed space-y-4">
+              <p>
+                De flesta svenska åkerier använder ett transporthanteringssystem
+                (TMS) för att hantera ordrar, fordon och rutter. Problemet är
+                att många av dessa system saknar avancerad automation —
+                ruttoptimering, automatisk ordertilldelning och
+                realtidsbeslutsstöd.
+              </p>
+              <p>
+                NOGO:s integration löser det genom att lägga ett lager av
+                AI-automation ovanpå ert befintliga system. Vi läser data från
+                ert TMS, kör optimeringar och skickar tillbaka resultatet —
+                utan att ni behöver byta plattform.
+              </p>
+              <p>
+                Många åkerier oroar sig för att deras TMS saknar öppna
+                API:er — eller har API:er som leverantören inte ger tillgång
+                till. Det hindrar oss inte. Vi integrerar via REST, SOAP,
+                databasanslutningar, filimport (CSV, XML, EDI) eller
+                skärmautomation. Oavsett om ni kör Opter, AddSecure, Hogia
+                Transport, Barkfors eller ett egenutvecklat system hittar vi en
+                väg in — även när leverantören inte delar sitt API. Era
+                trafikledare och förare fortsätter arbeta i det system de
+                redan kan.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <RouteOptFAQ />
+      <TMSIntegrationFAQ />
 
       {/* CTA */}
       <section className="py-24">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-medium tracking-tight mb-4">
-            Redo att minska körsträckan?
+            Redo att automatisera ert TMS?
           </h2>
           <p className="text-gray-500 mb-8">
-            Boka ett kostnadsfritt strategisamtal. Vi visar hur ruttoptimeringen
-            fungerar med just era förutsättningar.
+            Boka ett kostnadsfritt strategisamtal. Vi visar hur integrationen
+            fungerar med just ert system.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
