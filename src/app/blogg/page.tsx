@@ -55,6 +55,7 @@ const articles = [
       "17% av alla lastbilskilometer i Sverige körs tomma. Här är fem praktiska sätt att minska tomkörningarna i ert åkeri.",
     category: "Praktiska tips",
     readTime: "5 min",
+    href: "/artiklar/minska-tomkorningar-konkreta-atgarder",
   },
   {
     title: "Trafikledarbrist i Sverige — hur teknik kan avlasta",
