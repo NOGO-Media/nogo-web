@@ -79,6 +79,7 @@ const articles = [
       "EU kräver digitala fraktdokument senast 2027. Här är vad ni behöver veta och göra redan nu.",
     category: "Regelverk",
     readTime: "5 min",
+    href: "/artiklar/efti-digitala-fraktdokument-akeri",
   },
   {
     title: "Opter, AddSecure eller eget? Så väljer du TMS",
