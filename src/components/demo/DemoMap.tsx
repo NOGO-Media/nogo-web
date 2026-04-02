@@ -39,6 +39,35 @@ async function fetchRoadRoute(
   }
 }
 
+function getSquaredDistance(a: Coordinate, b: Coordinate): number {
+  const dx = a[0] - b[0];
+  const dy = a[1] - b[1];
+
+  return dx * dx + dy * dy;
+}
+
+function findClosestCoordinate(
+  target: Coordinate,
+  candidates: Coordinate[],
+): Coordinate | null {
+  if (candidates.length === 0) return null;
+
+  let closest = candidates[0];
+  let shortestDistance = getSquaredDistance(target, closest);
+
+  for (let i = 1; i < candidates.length; i += 1) {
+    const candidate = candidates[i];
+    const distance = getSquaredDistance(target, candidate);
+
+    if (distance < shortestDistance) {
+      shortestDistance = distance;
+      closest = candidate;
+    }
+  }
+
+  return closest;
+}
+
 export default function DemoMap() {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<unknown>(null);
@@ -74,10 +103,14 @@ export default function DemoMap() {
       mapRef.current = map;
 
       map.on("load", async () => {
+        const routeCoordinatesByVehicleId = new Map<string, Coordinate[]>();
+
         // Add routes
         for (const route of routes) {
           const roadCoordinates =
             (await fetchRoadRoute(route.coordinates)) ?? route.coordinates;
+
+          routeCoordinatesByVehicleId.set(route.vehicleId, roadCoordinates);
 
           map.addSource(`route-${route.vehicleId}`, {
             type: "geojson",
@@ -150,24 +183,34 @@ export default function DemoMap() {
         // Add vehicle markers
         const activeVehicles = vehicles.filter((v) => v.status === "I trafik");
         activeVehicles.forEach((v) => {
+          const routeCoordinates = routeCoordinatesByVehicleId.get(v.id) ?? [];
+          const snappedPosition =
+            findClosestCoordinate(v.position, routeCoordinates) ?? v.position;
+
           const el = document.createElement("div");
+          el.className = "-translate-x-1/2 -translate-y-1/2";
           el.innerHTML = `
             <div style="
+              width: 18px;
+              height: 18px;
+              border-radius: 4px;
               background: ${v.color};
-              color: white;
-              font-size: 10px;
-              font-weight: 600;
-              padding: 3px 8px;
-              border-radius: 6px;
               border: 2px solid white;
               box-shadow: 0 2px 6px rgba(0,0,0,0.25);
-              white-space: nowrap;
-              cursor: pointer;
-            ">${v.reg}</div>
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            ">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M3 6h10v8h8v-4l-3-4h-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="7" cy="17" r="2" fill="white"/>
+                <circle cx="17" cy="17" r="2" fill="white"/>
+              </svg>
+            </div>
           `;
 
           new maplibregl.Marker({ element: el })
-            .setLngLat(v.position)
+            .setLngLat(snappedPosition)
             .addTo(map);
         });
       });
