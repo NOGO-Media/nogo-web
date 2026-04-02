@@ -53,6 +53,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${SITE_URL}/blogg/tms-system-2026-guide-svenska-akerier`,
+      lastModified: new Date("2026-04-02"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${SITE_URL}/blogg/vad-kostar-manuell-transportplanering`,
+      lastModified: new Date("2026-04-02"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${SITE_URL}/blogg/digitalisering-akerinaring-var-borjar-man`,
+      lastModified: new Date("2026-04-02"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${SITE_URL}/artiklar/trafikledarbrist-sverige-teknik-avlastar`,
       lastModified: new Date("2026-04-02"),
       changeFrequency: "monthly",
@@ -66,6 +84,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${SITE_URL}/artiklar/tms-system-jamforelse-opter-addsecure`,
+      lastModified: new Date("2026-04-02"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${SITE_URL}/artiklar/minska-tomkorningar-konkreta-atgarder`,
+      lastModified: new Date("2026-04-02"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${SITE_URL}/artiklar/roi-automation-transport-kalkyl`,
+      lastModified: new Date("2026-04-02"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${SITE_URL}/artiklar/digitalisering-akerinaring-var-borjar-man`,
       lastModified: new Date("2026-04-02"),
       changeFrequency: "monthly",
       priority: 0.7,

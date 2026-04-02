@@ -80,9 +80,61 @@ const additionalCapabilities = [
   },
 ];
 
+const SITE_URL = "https://nogomedia.se";
+
+function CollectionJsonLd() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Lösningar — AI-automation för svensk transport",
+    description:
+      "AI-automation anpassad för svensk transport. Ruttoptimering, TMS-integration och automatiserad trafikledning — utan att ni byter system.",
+    url: `${SITE_URL}/losningar`,
+    provider: {
+      "@type": "Organization",
+      name: "NOGO Media AB",
+      url: SITE_URL,
+    },
+    hasPart: [
+      {
+        "@type": "SoftwareApplication",
+        name: "Ruttoptimering",
+        url: `${SITE_URL}/losningar/ruttoptimering`,
+        description:
+          "Automatisk beräkning av optimala rutter. Minskar körsträckan med 23% och ökar leveranser med 18%.",
+      },
+      {
+        "@type": "SoftwareApplication",
+        name: "TMS-integration",
+        url: `${SITE_URL}/losningar/tms-integration`,
+        description:
+          "AI-automation direkt i ert befintliga TMS. Med eller utan API — vi hittar alltid en väg in.",
+      },
+      {
+        "@type": "SoftwareApplication",
+        name: "Trafikledning",
+        url: `${SITE_URL}/losningar/trafikledning`,
+        description:
+          "Automatiserad orderhantering och förartilldelning. Minskar manuellt arbete med 60%.",
+      },
+    ],
+    areaServed: {
+      "@type": "Country",
+      name: "Sweden",
+    },
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
 export default function LosningarPage() {
   return (
     <>
+      <CollectionJsonLd />
       {/* Hero */}
       <section className="pt-32 pb-8 md:pt-44 md:pb-12">
         <div className="max-w-7xl mx-auto px-6">
