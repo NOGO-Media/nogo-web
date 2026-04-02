@@ -1,3 +1,5 @@
+import Logo from "./Logo";
+
 interface TestimonialProps {
   quote: string;
   author: string;
@@ -14,16 +16,9 @@ export default function Testimonial({
   return (
     <section className="py-20 md:py-28">
       <div className="max-w-4xl mx-auto px-6 text-center">
-        {/* Company badge */}
-        <div className="inline-flex items-center gap-2 mb-8">
-          <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
-            <span className="text-xs font-bold text-gray-400">
-              {company.charAt(0)}
-            </span>
-          </div>
-          <span className="text-sm font-medium text-gray-400">
-            {company}
-          </span>
+        {/* Company logo */}
+        <div className="flex justify-center mb-8">
+          <Logo className="h-8" variant="dark" />
         </div>
 
         {/* Quote */}
