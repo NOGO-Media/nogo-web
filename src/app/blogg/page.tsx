@@ -63,6 +63,7 @@ const articles = [
       "Det blir allt svårare att rekrytera trafikledare. Automation kan avlasta befintlig personal och minska beroendet av nyanställningar.",
     category: "Branschanalys",
     readTime: "6 min",
+    href: "/artiklar/trafikledarbrist-sverige-teknik-avlastar",
   },
   {
     title: "Så räknar du ROI på automation i transport",
