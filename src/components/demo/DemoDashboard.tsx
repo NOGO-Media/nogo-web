@@ -35,7 +35,7 @@ export default function DemoDashboard() {
   ];
 
   return (
-    <div className="fixed inset-0 z-[60] flex bg-gray-50" role="main">
+    <div className="fixed inset-0 z-[60] flex bg-gray-50">
       <DemoSidebar activeView={activeView} onViewChange={setActiveView} />
 
       <div className="flex-1 overflow-auto pt-14 md:pt-0">
