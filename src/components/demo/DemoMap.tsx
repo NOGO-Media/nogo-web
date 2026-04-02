@@ -151,19 +151,27 @@ export default function DemoMap() {
         const activeVehicles = vehicles.filter((v) => v.status === "I trafik");
         activeVehicles.forEach((v) => {
           const el = document.createElement("div");
+          el.className = "flex flex-col items-center";
           el.innerHTML = `
             <div style="
+              width: 26px;
+              height: 26px;
               background: ${v.color};
-              color: white;
-              font-size: 10px;
-              font-weight: 600;
-              padding: 3px 8px;
-              border-radius: 6px;
+              border-radius: 9999px;
               border: 2px solid white;
               box-shadow: 0 2px 6px rgba(0,0,0,0.25);
-              white-space: nowrap;
+              display: flex;
+              align-items: center;
+              justify-content: center;
               cursor: pointer;
-            ">${v.reg}</div>
+            ">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M5.4 16.5a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8Zm13.2 0a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8ZM4 15.2h16.2c.4 0 .8-.4.8-.8V12c0-.8-.6-1.4-1.4-1.4h-.7l-1.4-3.3a2.2 2.2 0 0 0-2-1.3H8.5c-.9 0-1.7.5-2 1.3L5 10.6h-.6C3.6 10.6 3 11.2 3 12v2.4c0 .4.4.8.8.8H4Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
           `;
 
           new maplibregl.Marker({ element: el })
