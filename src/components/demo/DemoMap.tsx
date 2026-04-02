@@ -5,36 +5,10 @@ import { routes, stops, vehicles } from "./mockData";
 
 type Coordinate = [number, number];
 
-const OSRM_BASE_URL = "https://router.project-osrm.org/route/v1/driving";
+function getDirectRoute(coordinates: Coordinate[]): Coordinate[] {
+  if (coordinates.length < 2) return coordinates;
 
-async function fetchRoadRoute(
-  coordinates: Coordinate[],
-): Promise<Coordinate[] | null> {
-  if (coordinates.length < 2) return null;
-
-  const coordinateString = coordinates
-    .map(([lng, lat]) => `${lng},${lat}`)
-    .join(";");
-
-  const url = `${OSRM_BASE_URL}/${coordinateString}?overview=full&geometries=geojson`;
-
-  try {
-    const response = await fetch(url);
-    if (!response.ok) return null;
-
-    const data = (await response.json()) as {
-      code?: string;
-      routes?: Array<{
-        geometry?: { coordinates?: Coordinate[] };
-      }>;
-    };
-
-    if (data.code !== "Ok") return null;
-
-    return data.routes?.[0]?.geometry?.coordinates ?? null;
-  } catch {
-    return null;
-  }
+  return [coordinates[0], coordinates[coordinates.length - 1]];
 }
 
 export default function DemoMap() {
@@ -71,11 +45,10 @@ export default function DemoMap() {
 
       mapRef.current = map;
 
-      map.on("load", async () => {
+      map.on("load", () => {
         // Add routes
         for (const route of routes) {
-          const roadCoordinates =
-            (await fetchRoadRoute(route.coordinates)) ?? route.coordinates;
+          const roadCoordinates = getDirectRoute(route.coordinates);
 
           map.addSource(`route-${route.vehicleId}`, {
             type: "geojson",
