@@ -63,7 +63,7 @@ export function WorkflowNode({
       >
         <Icon size={18} className={style.iconColor} />
       </div>
-      <h4 className="text-sm font-medium leading-tight">{title}</h4>
+      <p className="text-sm font-medium leading-tight">{title}</p>
       <p className="text-xs text-gray-400 mt-0.5 leading-tight">{subtitle}</p>
     </motion.div>
   );
