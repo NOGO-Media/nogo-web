@@ -11,12 +11,12 @@ import {
   Settings,
 } from "lucide-react";
 export const metadata: Metadata = {
-  title: "Lösningar — Ruttoptimering, TMS-integration & trafikledning",
+  title: "Lösningar — Ruttoptimering, TMS-integration & AI-trafikledning",
   description:
     "AI-automation anpassad för svensk transport. Ruttoptimering, TMS-integration och automatiserad trafikledning — utan att ni byter system.",
   alternates: { canonical: "/losningar" },
   openGraph: {
-    title: "Lösningar — Ruttoptimering, TMS-integration & trafikledning",
+    title: "Lösningar — Ruttoptimering, TMS-integration & AI-trafikledning",
     description:
       "AI-automation anpassad för svensk transport. Ruttoptimering, TMS-integration och automatiserad trafikledning.",
     url: "/losningar",

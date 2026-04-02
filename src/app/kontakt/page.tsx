@@ -56,29 +56,29 @@ export default function KontaktPage() {
             </div>
 
             <div className="mt-12 p-6 bg-gray-50 rounded-2xl border border-gray-100">
-              <h3 className="font-medium mb-2">
+              <h2 className="font-medium mb-2">
                 Vad händer efter ni hör av er?
-              </h3>
-              <div className="space-y-3 text-sm text-gray-500">
-                <div className="flex gap-3">
+              </h2>
+              <ol className="space-y-3 text-sm text-gray-500 list-none">
+                <li className="flex gap-3">
                   <span className="w-6 h-6 bg-black text-white rounded-full flex items-center justify-center text-xs shrink-0">
                     1
                   </span>
                   Vi svarar inom 24 timmar
-                </div>
-                <div className="flex gap-3">
+                </li>
+                <li className="flex gap-3">
                   <span className="w-6 h-6 bg-black text-white rounded-full flex items-center justify-center text-xs shrink-0">
                     2
                   </span>
                   30 min strategisamtal — vi kartlägger era flöden
-                </div>
-                <div className="flex gap-3">
+                </li>
+                <li className="flex gap-3">
                   <span className="w-6 h-6 bg-black text-white rounded-full flex items-center justify-center text-xs shrink-0">
                     3
                   </span>
                   Ni får ett konkret förslag med ROI-beräkning
-                </div>
-              </div>
+                </li>
+              </ol>
             </div>
           </div>
 

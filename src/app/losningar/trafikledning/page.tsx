@@ -29,7 +29,7 @@ const TrafikledningFAQ = dynamic(
 const SITE_URL = "https://nogomedia.se";
 
 export const metadata: Metadata = {
-  title: "Automatiserad trafikledning — Frigör 3+ timmar per dag",
+  title: "AI-trafikledning för åkerier — Frigör 3+ timmar per dag",
   description:
     "AI-driven trafikledning som automatiserar orderhantering, förartilldelning och fordonsplanering. Minska manuellt arbete med 60% — era trafikledare fokuserar på det som kräver erfarenhet.",
   keywords: [
@@ -239,6 +239,31 @@ export default function TrafikledningPage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Key takeaway — optimized for AI snippet extraction */}
+      <section className="pb-8">
+        <div className="max-w-7xl mx-auto px-6">
+          <aside className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 max-w-3xl">
+            <p className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">
+              Sammanfattning
+            </p>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              <strong>Automatiserad trafikledning</strong> innebär att en AI
+              matchar förare, fordon och ordrar baserat på körkort,
+              ADR-behörighet, kapacitet, position och tidsfönster —
+              automatiskt. NOGO:s trafikledning minskar manuellt arbete med
+              60% och frigör 3+ timmar per dag. Trafikledaren behåller
+              kontrollen och fokuserar på undantag och relationer.
+            </p>
+            <ul className="mt-4 space-y-1.5 text-sm text-gray-600">
+              <li>Automatisk förartilldelning på under 5 sekunder</li>
+              <li>Regelefterlevnad: kör/vilotider, ADR, kundpreferenser</li>
+              <li>Undantag flaggas — trafikledaren beslutar</li>
+              <li>Integreras med ert befintliga TMS</li>
+            </ul>
+          </aside>
         </div>
       </section>
 
