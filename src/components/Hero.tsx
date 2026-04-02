@@ -63,12 +63,12 @@ export default function Hero() {
             {/* Dashboard mock content */}
             <div className="p-4 md:p-8 space-y-4">
               {/* Header row */}
-              <div className="flex items-center justify-between">
-                <div>
-                  <div className="h-4 w-48 bg-gray-800 rounded" />
-                  <div className="h-3 w-32 bg-gray-800/60 rounded mt-2" />
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <div className="min-w-0">
+                  <div className="h-4 w-48 max-w-full bg-gray-800 rounded" />
+                  <div className="h-3 w-32 max-w-full bg-gray-800/60 rounded mt-2" />
                 </div>
-                <div className="flex gap-2">
+                <div className="flex gap-2 shrink-0">
                   <div className="h-8 w-24 bg-gray-800 rounded-lg" />
                   <div className="h-8 w-8 bg-gray-800 rounded-lg" />
                 </div>
@@ -111,7 +111,7 @@ export default function Hero() {
               </div>
 
               {/* Bottom stats */}
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 gap-2 md:gap-4">
                 {[
                   { label: "Aktiva ordrar", value: "47" },
                   { label: "Fyllnadsgrad", value: "89%" },
@@ -119,10 +119,10 @@ export default function Hero() {
                 ].map((stat) => (
                   <div
                     key={stat.label}
-                    className="bg-gray-900 rounded-xl border border-gray-800 p-4"
+                    className="bg-gray-900 rounded-xl border border-gray-800 p-3 md:p-4 overflow-hidden"
                   >
-                    <div className="text-2xl font-semibold text-white">{stat.value}</div>
-                    <div className="text-xs text-gray-500 mt-1">{stat.label}</div>
+                    <div className="text-xl md:text-2xl font-semibold text-white">{stat.value}</div>
+                    <div className="text-[10px] md:text-xs text-gray-500 mt-1 truncate">{stat.label}</div>
                   </div>
                 ))}
               </div>
