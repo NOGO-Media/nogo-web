@@ -84,9 +84,10 @@ const articles = [
   {
     title: "Opter, AddSecure eller eget? Så väljer du TMS",
     description:
-      "En neutral jämförelse av TMS-system på den svenska marknaden — styrkor, svagheter och vad som passar vem.",
+      "En neutral jämförelse av TMS-system på den svenska marknaden — styrkor, svagheter och vad som passar vilket åkeri.",
     category: "Jämförelse",
     readTime: "9 min",
+    href: "/artiklar/tms-system-jamforelse-opter-addsecure",
   },
 ];
 
