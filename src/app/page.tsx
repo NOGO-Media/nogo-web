@@ -25,7 +25,7 @@ export default function Home() {
       <FeatureGrid1 />
 
       <Testimonial
-        quote="Efter flera år i transportbranschen såg vi att det är en väldigt komplex bransch med väldigt omoderna verktyg och system som gör trafikledarna väldigt låsta. Då fick vi idén att utveckla ett verktyg som pratar med alla transportsystem."
+        quote="Efter flera år i transportbranschen såg vi att det är en väldigt komplex bransch med väldigt omoderna system som gör trafikledarna väldigt låsta. Då fick vi idén att utveckla ett verktyg som pratar med alla transportsystem."
         author="Hugo Svensson"
         role="VD & Grundare"
         company="NOGO Media"
