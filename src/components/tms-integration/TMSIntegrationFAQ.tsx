@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     q: "Kan ni integrera med system som saknar API?",
-    a: "Ja. Vi har erfarenhet av att bygga integrationer mot äldre system via databasanslutningar, filimport (CSV/XML) och skärmautomation. Vi hittar alltid en väg in.",
+    a: "Ja, absolut. Många åkerier kör äldre system utan moderna API:er — det hindrar oss inte. Vi integrerar via databasanslutningar, filimport (CSV, XML, EDI) eller skärmautomation. Vi har gjort det förut och hittar alltid en väg in, oavsett hur ert system är byggt.",
   },
   {
     q: "Vem ansvarar för driften av integrationen?",

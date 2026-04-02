@@ -38,7 +38,7 @@ const systems = [
     name: "Eget / egenutvecklat",
     status: "custom" as const,
     features: ["Orderimport", "Ruttexport", "Fordonsdata", "Anpassade flöden"],
-    note: "Vi bygger skräddarsydd integration mot ert API eller databas.",
+    note: "Vi bygger skräddarsydd integration — via API, databasanslutning, filimport (CSV/XML) eller skärmautomation. Inget API krävs.",
   },
 ];
 

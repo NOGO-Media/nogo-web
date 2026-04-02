@@ -31,7 +31,7 @@ const SITE_URL = "https://nogomedia.se";
 export const metadata: Metadata = {
   title: "TMS-integration — Automatisera utan att byta system",
   description:
-    "Integrera AI-automation direkt i ert befintliga TMS. Opter, AddSecure, Hogia, Barkfors eller egenutvecklat — vi bygger automation som förstärker era processer utan migration eller stillestånd.",
+    "Integrera AI-automation direkt i ert befintliga TMS — med eller utan API. Opter, AddSecure, Hogia, Barkfors eller egenutvecklat. Vi integrerar via API, databas, filimport eller skärmautomation. Utan migration eller stillestånd.",
   keywords: [
     "TMS-integration",
     "TMS-system åkeri",
@@ -44,6 +44,8 @@ export const metadata: Metadata = {
     "automatisera TMS",
     "åkeri automation integration",
     "TMS API integration",
+    "TMS integration utan API",
+    "integrera äldre TMS system",
     "digitalisera åkeri",
     "transportplanering system",
     "TMS systemintegration",
@@ -139,8 +141,8 @@ function SoftwareJsonLd() {
 const features = [
   {
     icon: Plug,
-    title: "Plug & play",
-    desc: "Anslut ert TMS med vår färdiga integration. Ingen egen utveckling krävs — vi hanterar hela kopplingen.",
+    title: "Med eller utan API",
+    desc: "Har ert system ett API? Perfekt, då kopplar vi direkt. Saknar det API? Vi integrerar via databasanslutning, filimport (CSV/XML) eller skärmautomation.",
   },
   {
     icon: RefreshCw,
@@ -197,7 +199,10 @@ const supportedSystems = [
   "Barkfors",
   "Winking / Wise Systems",
   "Egenutvecklade system",
-  "REST/SOAP API",
+  "REST / SOAP API",
+  "Databasanslutning",
+  "Filimport (CSV / XML / EDI)",
+  "Skärmautomation",
 ];
 
 export default function TMSIntegrationPage() {
@@ -224,7 +229,8 @@ export default function TMSIntegrationPage() {
             </h1>
             <p className="mt-6 text-lg text-gray-500 max-w-2xl leading-relaxed">
               Vi bygger AI-automation som arbetar direkt i ert befintliga TMS —
-              Opter, AddSecure, Hogia, Barkfors eller andra system. Ingen migration, ingen
+              Opter, AddSecure, Hogia, Barkfors eller andra system. Med API
+              eller utan — vi hittar alltid en väg in. Ingen migration, ingen
               omträning, inget stillestånd.
             </p>
 
@@ -389,14 +395,16 @@ export default function TMSIntegrationPage() {
                 NOGO:s integration löser det genom att lägga ett lager av
                 AI-automation ovanpå ert befintliga system. Vi läser data från
                 ert TMS, kör optimeringar och skickar tillbaka resultatet —
-                utan att ni behöver byta plattform. Era trafikledare och förare
-                fortsätter arbeta i det system de redan kan.
+                utan att ni behöver byta plattform.
               </p>
               <p>
-                Oavsett om ni använder Opter, AddSecure, Hogia Transport, Barkfors eller
-                ett egenutvecklat system kan vi bygga en integration. Vi har
-                erfarenhet av API-integrationer, databasanslutningar och
-                filbaserade flöden (CSV, XML, EDI).
+                Många åkerier oroar sig för att deras system saknar moderna
+                API:er. Det spelar ingen roll. Vi integrerar med eller utan API
+                — via REST, SOAP, databasanslutningar, filimport (CSV, XML,
+                EDI) eller skärmautomation. Oavsett om ni kör Opter, AddSecure,
+                Hogia Transport, Barkfors eller ett egenutvecklat system hittar vi
+                en väg in. Era trafikledare och förare fortsätter arbeta i det
+                system de redan kan.
               </p>
             </div>
           </div>

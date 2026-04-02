@@ -178,9 +178,9 @@ export default function IntegrationFlowDemo() {
           {step === "idle" && (
             <>
               <p className="text-sm text-gray-500 leading-relaxed mb-6">
-                Vår automation ansluter direkt till ert befintliga TMS. Ingen
-                migration, ingen omträning — era arbetsflöden förstärks, inte
-                ersätts.
+                Vår automation ansluter direkt till ert befintliga TMS — via
+                API, databasanslutning eller filimport. Inget API krävs. Ingen
+                migration, ingen omträning.
               </p>
               <div className="space-y-3 mb-6">
                 <div className="flex items-center justify-between text-sm">
