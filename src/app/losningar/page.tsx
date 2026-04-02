@@ -42,7 +42,7 @@ const solutions = [
     slug: "tms-integration",
     subtitle: "Automatisera utan att byta system",
     description:
-      "Vi bygger automation som arbetar direkt i ert befintliga TMS — Opter, AddSecure, Hogia eller andra system. Ni slipper migration, omträning och stillestånd. Era processer förstärks, inte ersätts.",
+      "Vi bygger automation som arbetar direkt i ert befintliga TMS — Opter, AddSecure, Hogia, Barkfors eller andra system. Ni slipper migration, omträning och stillestånd. Era processer förstärks, inte ersätts.",
     stats: [
       { value: "0", label: "Systembyte" },
       { value: "2–4 v", label: "Implementation" },

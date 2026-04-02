@@ -6,7 +6,7 @@ import { Plus, Minus } from "lucide-react";
 const faqs = [
   {
     q: "Fungerar ruttoptimeringen med vårt befintliga TMS?",
-    a: "Ja. Vi integrerar direkt med Opter, AddSecure, Hogia och andra vanliga TMS-system i Sverige. Ni behöver inte byta system — automationen läser ordrar och levererar optimerade rutter tillbaka till ert befintliga arbetsflöde.",
+    a: "Ja. Vi integrerar direkt med Opter, AddSecure, Hogia, Barkfors och andra vanliga TMS-system i Sverige. Ni behöver inte byta system — automationen läser ordrar och levererar optimerade rutter tillbaka till ert befintliga arbetsflöde.",
   },
   {
     q: "Hur hanteras ADR-transporter vid ruttoptimering?",

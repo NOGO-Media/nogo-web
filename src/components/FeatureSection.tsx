@@ -277,7 +277,7 @@ export function IntegrationSection() {
     { name: "Opter", desc: "Marknadsledande TMS i Norden" },
     { name: "AddSecure", desc: "Fleet management & TMS" },
     { name: "Hogia", desc: "Transport & logistik" },
-    { name: "Cargoson", desc: "Fraktbokning & jämförelse" },
+    { name: "Barkfors", desc: "TMS för svenska åkerier" },
     { name: "Fortnox", desc: "Ekonomi & fakturering" },
     { name: "Eget system", desc: "API-integration möjlig" },
   ];

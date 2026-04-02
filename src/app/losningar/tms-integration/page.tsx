@@ -31,7 +31,7 @@ const SITE_URL = "https://nogomedia.se";
 export const metadata: Metadata = {
   title: "TMS-integration — Automatisera utan att byta system",
   description:
-    "Integrera AI-automation direkt i ert befintliga TMS. Opter, AddSecure, Hogia eller egenutvecklat — vi bygger automation som förstärker era processer utan migration eller stillestånd.",
+    "Integrera AI-automation direkt i ert befintliga TMS. Opter, AddSecure, Hogia, Barkfors eller egenutvecklat — vi bygger automation som förstärker era processer utan migration eller stillestånd.",
   keywords: [
     "TMS-integration",
     "TMS-system åkeri",
@@ -39,6 +39,7 @@ export const metadata: Metadata = {
     "Opter integration",
     "AddSecure integration",
     "Hogia Transport integration",
+    "Barkfors integration",
     "transporthanteringssystem",
     "automatisera TMS",
     "åkeri automation integration",
@@ -110,7 +111,7 @@ function SoftwareJsonLd() {
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
     description:
-      "AI-automation som integreras direkt i befintliga TMS-system. Opter, AddSecure, Hogia och fler. Ingen migration krävs.",
+      "AI-automation som integreras direkt i befintliga TMS-system. Opter, AddSecure, Hogia, Barkfors och fler. Ingen migration krävs.",
     offers: {
       "@type": "Offer",
       price: "0",
@@ -193,6 +194,7 @@ const supportedSystems = [
   "Opter",
   "AddSecure (Vehco)",
   "Hogia Transport",
+  "Barkfors",
   "Winking / Wise Systems",
   "Egenutvecklade system",
   "REST/SOAP API",
@@ -222,7 +224,7 @@ export default function TMSIntegrationPage() {
             </h1>
             <p className="mt-6 text-lg text-gray-500 max-w-2xl leading-relaxed">
               Vi bygger AI-automation som arbetar direkt i ert befintliga TMS —
-              Opter, AddSecure, Hogia eller andra system. Ingen migration, ingen
+              Opter, AddSecure, Hogia, Barkfors eller andra system. Ingen migration, ingen
               omträning, inget stillestånd.
             </p>
 
@@ -391,7 +393,7 @@ export default function TMSIntegrationPage() {
                 fortsätter arbeta i det system de redan kan.
               </p>
               <p>
-                Oavsett om ni använder Opter, AddSecure, Hogia Transport eller
+                Oavsett om ni använder Opter, AddSecure, Hogia Transport, Barkfors eller
                 ett egenutvecklat system kan vi bygga en integration. Vi har
                 erfarenhet av API-integrationer, databasanslutningar och
                 filbaserade flöden (CSV, XML, EDI).

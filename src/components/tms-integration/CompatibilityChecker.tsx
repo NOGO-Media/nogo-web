@@ -23,6 +23,12 @@ const systems = [
     note: "Integration via Hogia Transport API. 3 veckors implementation.",
   },
   {
+    name: "Barkfors",
+    status: "full" as const,
+    features: ["Orderimport", "Ruttexport", "Fordonsdata", "Kundregister"],
+    note: "Fullständig integration med Barkfors TMS. 2–3 veckors implementation.",
+  },
+  {
     name: "Winking (Wise Systems)",
     status: "partial" as const,
     features: ["Orderimport", "Ruttexport", "Fordonsdata"],

@@ -8,6 +8,7 @@ const tmsystems = [
   { name: "Opter", color: "#2563eb" },
   { name: "AddSecure", color: "#7c3aed" },
   { name: "Hogia", color: "#059669" },
+  { name: "Barkfors", color: "#dc2626" },
   { name: "Eget system", color: "#d97706" },
 ];
 
