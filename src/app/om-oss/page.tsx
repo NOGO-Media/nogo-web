@@ -107,20 +107,23 @@ const team = [
   {
     name: "Hugo Svensson",
     role: "VD & grundare",
+    email: "hugo@nogomedia.se",
     description:
       "Bakgrund inom både tech och operativ transport. Hugo har flerårig erfarenhet från transportbranschen och leder affärsutveckling och kundrelationer. Han förstår vardagen på ett åkeri — och vet var tekniken kan göra störst skillnad.",
   },
   {
     name: "Wille Hellström",
     role: "Medgrundare & teknik",
+    email: "wille@nogomedia.se",
     description:
       "Ansvarig för plattformen och AI-automationen. Wille bygger systemen som optimerar rutter, automatiserar tilldelning och integrerar med befintliga TMS — med eller utan API.",
   },
   {
     name: "Jonathan Lindman",
     role: "Marknad & strategi",
+    email: "jonathan@nogomedia.se",
     description:
-      "Ansvarig för marknadsföring och strategisk riktning. Jonathan ser till att rätt åkerier hittar NOGO och att budskapet når fram — tydligt och utan buzzwords.",
+      "Ansvarig för marknad och strategi. Jonathan ser till att rätt åkerier hittar NOGO och att vi växer i rätt riktning.",
   },
 ];
 
@@ -275,9 +278,15 @@ export default function OmOssPage() {
                 </div>
                 <h3 className="text-lg font-medium">{member.name}</h3>
                 <p className="text-sm text-gray-400 mb-3">{member.role}</p>
-                <p className="text-sm text-gray-500 leading-relaxed">
+                <p className="text-sm text-gray-500 leading-relaxed mb-3">
                   {member.description}
                 </p>
+                <a
+                  href={`mailto:${member.email}`}
+                  className="text-xs text-gray-400 hover:text-gray-600 transition-colors"
+                >
+                  {member.email}
+                </a>
               </div>
             ))}
           </div>
