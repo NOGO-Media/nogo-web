@@ -11,21 +11,23 @@ import {
   Settings,
 } from "lucide-react";
 export const metadata: Metadata = {
-  title: "Lösningar — Ruttoptimering, TMS-integration & AI-trafikledning",
+  title: "Lösningar — Ruttoptimering, TMS-integration, trafikledning & analys",
   description:
-    "AI-automation anpassad för svensk transport. Ruttoptimering, TMS-integration och automatiserad trafikledning — utan att ni byter system.",
+    "AI-automation anpassad för svensk transport. Ruttoptimering, TMS-integration, automatiserad trafikledning och realtidsanalys — utan att ni byter system.",
   keywords: [
     "ruttoptimering åkeri",
     "TMS-integration",
     "AI trafikledning",
     "åkeri automation",
     "transportplanering",
+    "rapport analys transport",
+    "fyllnadsgrad",
   ],
   alternates: { canonical: "/losningar" },
   openGraph: {
-    title: "Lösningar — Ruttoptimering, TMS-integration & AI-trafikledning",
+    title: "Lösningar — Ruttoptimering, TMS-integration, trafikledning & analys",
     description:
-      "AI-automation anpassad för svensk transport. Ruttoptimering, TMS-integration och automatiserad trafikledning.",
+      "AI-automation anpassad för svensk transport. Ruttoptimering, TMS-integration, trafikledning och realtidsanalys.",
     url: "/losningar",
   },
 };
@@ -67,6 +69,18 @@ const solutions = [
       { value: "3h+", label: "Sparad tid/dag" },
     ],
   },
+  {
+    icon: BarChart3,
+    title: "Rapport & analys",
+    slug: "rapport-och-analys",
+    subtitle: "Full insyn i din transportplanering",
+    description:
+      "Realtidsstatistik inbyggd direkt i planeringsgränssnittet. Fyllnadsgrad, arbetstid, returflöden, linjeanalys och ekipagestatistik — utan separat BI-lösning eller manuell Excel-export.",
+    stats: [
+      { value: "10", label: "Analysvyer" },
+      { value: "50+", label: "Nyckeltal" },
+    ],
+  },
 ];
 
 const additionalCapabilities = [
@@ -77,8 +91,8 @@ const additionalCapabilities = [
   },
   {
     icon: BarChart3,
-    title: "Rapporter & analys",
-    desc: "Fyllnadsgrad, beläggning, kostnader per uppdrag — data för bättre beslut.",
+    title: "Beläggningsöversikt",
+    desc: "Realtidsöversikt av beläggning per förare, fordon och zon. Identifiera ledig kapacitet direkt.",
   },
   {
     icon: Zap,
@@ -123,6 +137,13 @@ function CollectionJsonLd() {
         url: `${SITE_URL}/losningar/trafikledning`,
         description:
           "Automatiserad orderhantering och förartilldelning. Minskar manuellt arbete med 60%.",
+      },
+      {
+        "@type": "SoftwareApplication",
+        name: "Rapport & analys",
+        url: `${SITE_URL}/losningar/rapport-och-analys`,
+        description:
+          "Realtidsstatistik för transportplanering. Tio analysvyer med över 50 nyckeltal, direkt i planeringsgränssnittet.",
       },
     ],
     areaServed: {
