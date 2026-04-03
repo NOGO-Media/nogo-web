@@ -8,6 +8,12 @@ export const metadata: Metadata = {
     "Digitalisering av åkeri i siffror — så långt har svenska åkerier kommit 2026",
   description:
     "Nyckeltal, mognadsnivåer och branschjämförelse: var står svenska åkerier i digitaliseringen 2026? Benchmarka ert åkeri med konkreta KPI:er.",
+  keywords: [
+    "digitalisering åkeri",
+    "digitalisering transport",
+    "nyckeltal åkeri",
+    "benchmark transport",
+  ],
   alternates: { canonical: "/blogg/digitalisering-akeri-2026" },
   openGraph: {
     type: "article",

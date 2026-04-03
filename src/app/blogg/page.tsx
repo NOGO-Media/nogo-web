@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "Blogg — Insikter för svenska transportföretag",
   description:
     "Guider, analyser och praktiska tips om trafikledning, digitalisering och AI-automation i åkeribranschen. Från NOGO Media.",
+  keywords: [
+    "åkeri blogg",
+    "trafikledning",
+    "ruttoptimering",
+    "digitalisering åkeri",
+    "AI transport",
+  ],
   alternates: { canonical: "/blogg" },
   openGraph: {
     title: "Blogg — Insikter för svenska transportföretag",
