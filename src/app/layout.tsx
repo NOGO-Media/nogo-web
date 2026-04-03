@@ -116,7 +116,7 @@ function OrganizationJsonLd() {
       availableLanguage: ["Swedish", "English"],
       areaServed: "SE",
     },
-    foundingDate: "2024",
+    foundingDate: "2025",
     founders: [
       {
         "@type": "Person",
@@ -129,6 +129,7 @@ function OrganizationJsonLd() {
     },
     sameAs: [
       "https://www.linkedin.com/company/nogomedia",
+      "https://www.linkedin.com/in/hugo-svensson-7723263b0",
     ],
     knowsAbout: [
       "AI-automation för transport",
