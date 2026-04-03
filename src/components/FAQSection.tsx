@@ -57,6 +57,14 @@ export default function FAQSection() {
   return (
     <section className="py-24 md:py-32 bg-gray-50">
       <FAQJsonLd />
+      <div className="sr-only" aria-hidden="true">
+        {faqs.map((faq) => (
+          <div key={`static-${faq.q}`}>
+            <h3>{faq.q}</h3>
+            <p>{faq.a}</p>
+          </div>
+        ))}
+      </div>
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-medium tracking-tight">

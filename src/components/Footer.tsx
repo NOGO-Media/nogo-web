@@ -3,15 +3,15 @@ import Logo from "./Logo";
 
 const footerLinks = {
   Lösningar: [
-    { name: "Ruttoptimering", href: "/losningar/ruttoptimering" },
-    { name: "TMS-integration", href: "/losningar/tms-integration" },
-    { name: "Trafikledning", href: "/losningar/trafikledning" },
-    { name: "Rapport & analys", href: "/losningar/rapport-och-analys" },
+    { name: "Ruttoptimering", href: "/losningar#ruttoptimering" },
+    { name: "TMS-integration", href: "/losningar#tms-integration" },
+    { name: "Trafikledning", href: "/losningar#trafikledning" },
+    { name: "Orderhantering", href: "/losningar#orderhantering" },
   ],
   Resurser: [
     { name: "Blogg", href: "/blogg" },
     { name: "Vanliga frågor", href: "/#faq" },
-    { name: "Kundcase", href: "/losningar" },
+    { name: "Kundcase", href: "/losningar#kundcase" },
   ],
   Företag: [
     { name: "Om oss", href: "/om-oss" },
@@ -64,10 +64,10 @@ export default function Footer() {
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
           <div>&copy; {new Date().getFullYear()} NOGO Media AB. Alla rättigheter reserverade.</div>
           <div className="flex gap-6">
-            <Link href="/kontakt" className="hover:text-white">
+            <Link href="/integritetspolicy" className="hover:text-white">
               Integritetspolicy
             </Link>
-            <Link href="/kontakt" className="hover:text-white">
+            <Link href="/villkor" className="hover:text-white">
               Villkor
             </Link>
           </div>
