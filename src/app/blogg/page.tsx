@@ -59,7 +59,7 @@ const articles = [
   {
     title: "Digitalisering i åkerinäringen — var börjar man?",
     description:
-      "Praktisk guide för små och medelstora åkerier som vill digitalisera. Steg-för-steg utan buzzwords.",
+      "Praktisk guide för små och medelstora åkerier som vill digitalisera. Steg-för-steg utan krångel.",
     category: "Guide",
     readTime: "7 min",
     slug: "digitalisering-akerinaring-var-borjar-man",

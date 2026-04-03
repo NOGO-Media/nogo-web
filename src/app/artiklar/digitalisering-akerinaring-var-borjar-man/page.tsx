@@ -6,7 +6,7 @@ import ArticleJsonLd from "@/components/ArticleJsonLd";
 export const metadata: Metadata = {
   title: "Digitalisering i åkerinäringen — var börjar man?",
   description:
-    "Praktisk guide för små och medelstora åkerier som vill digitalisera. Steg-för-steg utan buzzwords. Lär dig var du ska börja och vad som faktiskt ger resultat.",
+    "Praktisk guide för små och medelstora åkerier som vill digitalisera. Steg-för-steg utan krångel. Lär dig var du ska börja och vad som faktiskt ger resultat.",
   alternates: {
     canonical: "/artiklar/digitalisering-akerinaring-var-borjar-man",
   },
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: "article",
     title: "Digitalisering i åkerinäringen — var börjar man?",
     description:
-      "Praktisk guide för små och medelstora åkerier som vill digitalisera. Steg-för-steg utan buzzwords.",
+      "Praktisk guide för små och medelstora åkerier som vill digitalisera. Steg-för-steg utan krångel.",
     url: "/artiklar/digitalisering-akerinaring-var-borjar-man",
     publishedTime: "2026-04-02T00:00:00Z",
     authors: ["NOGO Media AB"],
@@ -57,7 +57,7 @@ export default function DigitaliseringAkerinaringenArticle() {
             Många åkerier vet att de behöver ta tag i digitalisering åkerinäringen,
             men fastnar mellan fulla körscheman, gamla rutiner och otydliga
             systemlöften. Den här guiden visar en rak väg från nuläge till första
-            resultat, utan buzzwords och utan att ni behöver byta allt på en gång.
+            resultat, utan krångel och utan att ni behöver byta allt på en gång.
           </p>
         </header>
 
