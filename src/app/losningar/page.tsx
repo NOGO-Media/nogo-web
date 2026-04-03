@@ -9,13 +9,16 @@ import {
   Play,
   Zap,
   Settings,
+  FileSpreadsheet,
 } from "lucide-react";
 export const metadata: Metadata = {
-  title: "Lösningar — Ruttoptimering, TMS-integration, trafikledning & analys",
+  title:
+    "Lösningar — Ruttoptimering, orderhantering, TMS-integration, trafikledning & analys",
   description:
-    "AI-automation anpassad för svensk transport. Ruttoptimering, TMS-integration, automatiserad trafikledning och realtidsanalys — utan att ni byter system.",
+    "AI-automation anpassad för svensk transport. Ruttoptimering, automatisk orderhantering, TMS-integration, trafikledning och realtidsanalys — utan att ni byter system.",
   keywords: [
     "ruttoptimering åkeri",
+    "automatisk orderhantering",
     "TMS-integration",
     "AI trafikledning",
     "åkeri automation",
@@ -25,9 +28,10 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/losningar" },
   openGraph: {
-    title: "Lösningar — Ruttoptimering, TMS-integration, trafikledning & analys",
+    title:
+      "Lösningar — Ruttoptimering, orderhantering, TMS-integration, trafikledning & analys",
     description:
-      "AI-automation anpassad för svensk transport. Ruttoptimering, TMS-integration, trafikledning och realtidsanalys.",
+      "AI-automation anpassad för svensk transport. Ruttoptimering, automatisk orderhantering, TMS-integration, trafikledning och realtidsanalys.",
     url: "/losningar",
   },
 };
@@ -55,6 +59,18 @@ const solutions = [
     stats: [
       { value: "0", label: "Systembyte" },
       { value: "2–4 v", label: "Implementation" },
+    ],
+  },
+  {
+    icon: FileSpreadsheet,
+    title: "Automatisk orderhantering",
+    slug: "automatisk-orderhantering",
+    subtitle: "Från Excel till färdig plan på sekunder",
+    description:
+      "Ladda upp samma Excel-format som ni redan exporterar. AI:n tolkar orderdata, geokodar adresser, klassificerar prioritet och optimerar pass med rätt ekipage, fyllnad och arbetstid.",
+    stats: [
+      { value: "2–4h", label: "Sparad planeringstid/dag" },
+      { value: "90%+", label: "Fyllnadsgrad i körningar" },
     ],
   },
   {
@@ -109,7 +125,7 @@ function CollectionJsonLd() {
     "@type": "CollectionPage",
     name: "Lösningar — AI-automation för svensk transport",
     description:
-      "AI-automation anpassad för svensk transport. Ruttoptimering, TMS-integration och automatiserad trafikledning — utan att ni byter system.",
+      "AI-automation anpassad för svensk transport. Ruttoptimering, automatisk orderhantering, TMS-integration och automatiserad trafikledning — utan att ni byter system.",
     url: `${SITE_URL}/losningar`,
     provider: {
       "@type": "Organization",
@@ -130,6 +146,13 @@ function CollectionJsonLd() {
         url: `${SITE_URL}/losningar/tms-integration`,
         description:
           "AI-automation direkt i ert befintliga TMS. Med eller utan API — vi hittar alltid en väg in.",
+      },
+      {
+        "@type": "SoftwareApplication",
+        name: "Automatisk orderhantering",
+        url: `${SITE_URL}/losningar/automatisk-orderhantering`,
+        description:
+          "Ladda upp Excel och få en färdig körplan med pass, ekipage, fyllnad och arbetstider på sekunder.",
       },
       {
         "@type": "SoftwareApplication",
