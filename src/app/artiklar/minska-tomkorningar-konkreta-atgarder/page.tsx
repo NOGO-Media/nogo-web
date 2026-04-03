@@ -201,6 +201,12 @@ export default function MinskaTomkorningarArticle() {
               faktiskt utfall på 20–30 körningar. Om avvikelsen är stor har ni ett
               planeringsproblem, inte ett chaufförsproblem.
             </p>
+            <p className="mt-3">
+              Vill ni se vad manuell planering faktiskt kostar i kronor?{" "}
+              <Link className="underline" href="/blogg/vad-kostar-manuell-transportplanering">
+                Läs vår kostnadskalkyl för trafikledning.
+              </Link>
+            </p>
           </section>
 
           <section>
@@ -225,6 +231,12 @@ export default function MinskaTomkorningarArticle() {
               En tumregel i tomkörningar åkeri: om mer än 30% av veckans uppdrag
               planeras samma dag ökar risken för tomkörning snabbt. Sätt mål att minst
               70% ska ligga planerade 24 timmar i förväg.
+            </p>
+            <p className="mt-3">
+              Funderar ni på vilket systemstöd som passar er planering?{" "}
+              <Link className="underline" href="/blogg/tms-system-2026-guide-svenska-akerier">
+                Läs vår guide till TMS-system för svenska åkerier.
+              </Link>
             </p>
           </section>
 
