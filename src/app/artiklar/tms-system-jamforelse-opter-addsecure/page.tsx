@@ -110,13 +110,95 @@ export default function TmsSystemJamforelseOpterAddsecurePage() {
               Jämförelsetabell — TMS-system på den svenska marknaden
             </h2>
             <div className="rounded-xl border border-gray-200 bg-white p-4 overflow-x-auto">
-              <pre className="text-sm leading-6 whitespace-pre-wrap">
-{`| System | Passar bäst för | Prisindikation | API/integrationer | Styrka | Svaghet |
-|---|---|---|---|---|---|
-| Opter TMS | Små till medelstora åkerier med behov av snabb driftstart | Vanligtvis abonnemang per användare/fordon, ofta nivåbaserat (prissättning på förfrågan) | Integrationer mot ekonomi, telematik och kundflöden; API-möjlighet beroende på avtal | Tydligt arbetsflöde för daglig planering och uppföljning | Kan kräva processdisciplin för att ge full effekt |
-| AddSecure Transport | Åkerier med större flottor eller höga krav på fordonsdata och compliance | Ofta paket + tilläggsmoduler + hårdvarukomponenter (prissättning på förfrågan) | Stark koppling mot fordons-/telematikdata samt partnerintegrationer | Helhet med transport + uppkopplad fordonsmiljö | Komplexitet och implementationstid kan bli högre |
-| Eget system / egenutvecklat TMS | Åkerier med unika processer och intern produkt-/utvecklingsförmåga | Hög initial investering + löpande utvecklings- och driftkostnad | Full frihet, men allt ansvar för API, säkerhet och förvaltning ligger hos er | Exakt anpassning till era affärsregler | Hög risk, lång ledtid och beroende av nyckelpersoner |`}
-              </pre>
+              <table className="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+                <thead>
+                  <tr className="bg-gray-50">
+                    <th className="text-left px-4 py-3 font-medium border-b border-gray-200">
+                      System
+                    </th>
+                    <th className="text-left px-4 py-3 font-medium border-b border-gray-200">
+                      Passar bäst för
+                    </th>
+                    <th className="text-left px-4 py-3 font-medium border-b border-gray-200">
+                      Prisindikation
+                    </th>
+                    <th className="text-left px-4 py-3 font-medium border-b border-gray-200">
+                      API/integrationer
+                    </th>
+                    <th className="text-left px-4 py-3 font-medium border-b border-gray-200">
+                      Styrka
+                    </th>
+                    <th className="text-left px-4 py-3 font-medium border-b border-gray-200">
+                      Svaghet
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-white">
+                    <td className="px-4 py-3 font-medium border-b border-gray-100">Opter TMS</td>
+                    <td className="px-4 py-3 border-b border-gray-100">
+                      Små till medelstora åkerier med behov av snabb driftstart
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-100">
+                      Vanligtvis abonnemang per användare/fordon, ofta nivåbaserat
+                      (prissättning på förfrågan)
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-100">
+                      Integrationer mot ekonomi, telematik och kundflöden; API-möjlighet
+                      beroende på avtal
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-100">
+                      Tydligt arbetsflöde för daglig planering och uppföljning
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-100">
+                      Kan kräva processdisciplin för att ge full effekt
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="px-4 py-3 font-medium border-b border-gray-100">
+                      AddSecure Transport
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-100">
+                      Åkerier med större flottor eller höga krav på fordonsdata och
+                      compliance
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-100">
+                      Ofta paket + tilläggsmoduler + hårdvarukomponenter (prissättning på
+                      förfrågan)
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-100">
+                      Stark koppling mot fordons-/telematikdata samt partnerintegrationer
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-100">
+                      Helhet med transport + uppkopplad fordonsmiljö
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-100">
+                      Komplexitet och implementationstid kan bli högre
+                    </td>
+                  </tr>
+                  <tr className="bg-white">
+                    <td className="px-4 py-3 font-medium border-b border-gray-100">
+                      Eget system / egenutvecklat TMS
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-100">
+                      Åkerier med unika processer och intern produkt-/utvecklingsförmåga
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-100">
+                      Hög initial investering + löpande utvecklings- och driftkostnad
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-100">
+                      Full frihet, men allt ansvar för API, säkerhet och förvaltning ligger
+                      hos er
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-100">
+                      Exakt anpassning till era affärsregler
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-100">
+                      Hög risk, lång ledtid och beroende av nyckelpersoner
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
             <p className="mt-3 text-sm text-gray-600">
               Tabellen är en TMS jämförelse Sverige på strategisk nivå. Exakt funktion och
@@ -376,6 +458,10 @@ export default function TmsSystemJamforelseOpterAddsecurePage() {
                 <strong>Om ni växer snabbt</strong> och planerar fler depåer,
                 prioritera skalbarhet, rollstyrning och integrationsförmåga över
                 kortsiktigt lägsta licenspris.
+                {" "}Vill ni också minska tomkörningarna när ni väl har rätt system på plats?{" "}
+                <Link href="/artiklar/minska-tomkorningar-konkreta-atgarder" className="text-black underline underline-offset-2">
+                  Läs våra 5 konkreta åtgärder mot tomkörning.
+                </Link>
               </li>
               <li>
                 <strong>Om ni har höga krav på telematik/compliance</strong>,
@@ -408,7 +494,11 @@ export default function TmsSystemJamforelseOpterAddsecurePage() {
             <p className="mt-3">
               Lägg dessutom in en produktionssvacka under uppstart, vanligtvis 2–8 veckor,
               där effektiviteten tillfälligt sjunker medan teamet lär sig nya rutiner.
-              Den kostnaden missas ofta i kalkylen men påverkar helheten.
+              {" "}Funderar ni på hur ni avlastar trafikledningen under och efter bytet?{" "}
+              <Link href="/artiklar/trafikledarbrist-sverige-teknik-avlastar" className="text-black underline underline-offset-2">
+                Läs vår analys om trafikledarbrist och automation.
+              </Link>
+              {" "}Den kostnaden missas ofta i kalkylen men påverkar helheten.
             </p>
             <p className="mt-3">
               Ett enkelt sätt att budgetera är att dela upp bytet i fyra block:
