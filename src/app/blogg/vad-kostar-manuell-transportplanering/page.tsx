@@ -68,7 +68,7 @@ export default function ManuellTransportplaneringArticle() {
         <div className="space-y-8 text-gray-700 leading-relaxed">
           <section>
             <h2 className="text-2xl font-medium text-black mb-3">
-              1) Lönedata: trafikledare i Sverige (2024)
+              Vad tjänar en trafikledare i Sverige? (2024)
             </h2>
             <p>
               SCB-baserad statistik visar en medellön på <strong>40 200 kr/mån</strong>{" "}
@@ -83,7 +83,7 @@ export default function ManuellTransportplaneringArticle() {
 
           <section>
             <h2 className="text-2xl font-medium text-black mb-3">
-              2) Total arbetsgivarkostnad: inte bara bruttolön
+              Den verkliga arbetsgivarkostnaden per trafikledare
             </h2>
             <p>
               En realistisk kalkyl behöver inkludera semesterlön,
@@ -113,7 +113,7 @@ export default function ManuellTransportplaneringArticle() {
 
           <section>
             <h2 className="text-2xl font-medium text-black mb-3">
-              3) Räkneexempel: 12 minuter × 40 bokningar per dag
+              Vad kostar en enskild bokning när planering sker manuellt?
             </h2>
             <ul className="list-disc pl-6 space-y-1">
               <li>12 minuter per bokning</li>
@@ -134,7 +134,7 @@ export default function ManuellTransportplaneringArticle() {
 
           <section>
             <h2 className="text-2xl font-medium text-black mb-3">
-              4) Tomkörning förstärker kostnadsproblemet
+              Hur tomkörning driver upp kostnaden ytterligare
             </h2>
             <p>
               Trafikanalys visar att cirka <strong>17 %</strong> av lastbilskilometer i
