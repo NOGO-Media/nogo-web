@@ -29,7 +29,7 @@ const articles = [
       "AI-agenter för transportbranschen är inte längre framtidsteknik. Här går vi igenom hur svenska åkerier kan automatisera 85–95% av manuellt trafikledningsarbete — med ROI-räknare.",
     category: "AI & Automation",
     readTime: "12 min",
-    slug: "ai-trafikledning-2026",
+    href: "/artiklar/ai-trafikledning-2026",
     featured: true,
   },
   {
