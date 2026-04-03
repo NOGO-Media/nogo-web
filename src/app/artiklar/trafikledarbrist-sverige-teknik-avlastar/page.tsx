@@ -222,6 +222,13 @@ export default function TrafikledarbristArticle() {
               att slippa bygga första rutten manuellt. Samtidigt blir planeringen
               jämnare mellan olika medarbetare.
             </p>
+            <p className="mt-3">
+              Funderar ni på vilket system som passar er flotta?
+              <span> </span>
+              <Link className="underline" href="/blogg/tms-system-2026-guide-svenska-akerier">
+                Läs vår guide till TMS-system för svenska åkerier.
+              </Link>
+            </p>
 
             <h3 className="text-xl font-medium text-black mt-6 mb-2">
               Orderhantering och bekräftelser
@@ -326,6 +333,13 @@ export default function TrafikledarbristArticle() {
               Lägg till rekryteringskostnad när någon slutar: annonsering,
               introduktion, produktionsbortfall och intern upplärning. Då blir det
               tydligt att &quot;att avvakta&quot; också är ett aktivt val med hög prislapp.
+            </p>
+            <p className="mt-3">
+              Vill ni se hela kostnadsbilden för manuell trafikledning i kronor?
+              <span> </span>
+              <Link className="underline" href="/blogg/vad-kostar-manuell-transportplanering">
+                Läs vår kalkyl för trafikledarkostnad per bokning.
+              </Link>
             </p>
             <p className="mt-3">
               Om ni vill börja strukturerat med digitalisering kan ni läsa:
