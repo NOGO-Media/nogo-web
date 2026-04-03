@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "NOGO Dispatch — Demo",
   description:
     "Interaktiv demo av NOGO Dispatch — ruttplanering och disponering för svenska åkerier.",
+  keywords: ["dispatch demo", "ruttplanering demo", "åkeri demo", "NOGO dispatch"],
   alternates: { canonical: "/demo" },
   openGraph: {
     title: "NOGO Dispatch — Interaktiv demo",

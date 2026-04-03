@@ -14,6 +14,13 @@ export const metadata: Metadata = {
   title: "Lösningar — Ruttoptimering, TMS-integration & AI-trafikledning",
   description:
     "AI-automation anpassad för svensk transport. Ruttoptimering, TMS-integration och automatiserad trafikledning — utan att ni byter system.",
+  keywords: [
+    "ruttoptimering åkeri",
+    "TMS-integration",
+    "AI trafikledning",
+    "åkeri automation",
+    "transportplanering",
+  ],
   alternates: { canonical: "/losningar" },
   openGraph: {
     title: "Lösningar — Ruttoptimering, TMS-integration & AI-trafikledning",

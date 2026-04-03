@@ -1,5 +1,20 @@
+import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
+
+export const metadata: Metadata = {
+  title: "AI-automation för åkerier & transport | NOGO Media",
+  description:
+    "NOGO Media bygger AI-automation för svenska åkerier. Ruttoptimering, trafikledning och TMS-integration — utan att ni byter system. Baserade i Norrköping.",
+  keywords: [
+    "AI-automation åkeri",
+    "ruttoptimering",
+    "trafikledning",
+    "TMS-integration",
+    "åkeri automation Sverige",
+    "NOGO Media",
+  ],
+};
 import LogoCloud from "@/components/LogoCloud";
 const DispatchWorkflow = dynamic(
   () => import("@/components/dispatch-workflow/DispatchWorkflow")

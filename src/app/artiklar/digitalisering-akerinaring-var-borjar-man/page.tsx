@@ -214,8 +214,8 @@ export default function DigitaliseringAkerinaringenArticle() {
               order, saknar en gemensam sanningskälla och lägger mycket tid på
               avstämning mellan drift och ekonomi. Läs gärna grunderna här:
               <span> </span>
-              <Link className="underline" href="/artiklar/vad-ar-tms">
-                [LINK: /artiklar/vad-ar-tms]
+              <Link className="underline" href="/artiklar/tms-system-jamforelse-opter-addsecure">
+                Så väljer du rätt TMS-system
               </Link>
               .
             </p>

@@ -6,6 +6,12 @@ export const metadata: Metadata = {
   title: "Kontakt — Boka ett kostnadsfritt strategisamtal",
   description:
     "Boka ett 30-minuters strategisamtal med NOGO Media. Vi visar hur AI-automation kan spara tid och pengar i just ert åkeri. Norrköping, Sverige.",
+  keywords: [
+    "kontakt NOGO Media",
+    "boka strategisamtal",
+    "AI-automation åkeri",
+    "Norrköping",
+  ],
   alternates: { canonical: "/kontakt" },
   openGraph: {
     title: "Kontakt — Boka ett kostnadsfritt strategisamtal",
