@@ -14,6 +14,21 @@ export const metadata: Metadata = {
     "åkeri automation Sverige",
     "NOGO Media",
   ],
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "AI-automation för åkerier & transport | NOGO Media",
+    description:
+      "AI-automation för svenska åkerier. Ruttoptimering, trafikledning och TMS-integration — utan att ni byter system.",
+    url: "/",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "NOGO Media — AI-automation för svenska åkerier",
+      },
+    ],
+  },
 };
 import LogoCloud from "@/components/LogoCloud";
 const DispatchWorkflow = dynamic(
