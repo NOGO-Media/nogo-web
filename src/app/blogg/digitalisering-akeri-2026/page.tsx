@@ -228,7 +228,7 @@ export default function DigitaliseringAkeri2026Article() {
             {/* Section 1 */}
             <section>
               <h2 className="text-2xl font-medium mb-4">
-                1. Digitaliseringsgraden i svensk åkerinäring — en realistisk bild
+                Digitaliseringsgraden i svensk åkerinäring — en realistisk bild
               </h2>
               <p className="mb-4">
                 Sverige har cirka <strong>10 000 åkeriföretag</strong>, varav
@@ -293,7 +293,7 @@ export default function DigitaliseringAkeri2026Article() {
             {/* Section 2 */}
             <section>
               <h2 className="text-2xl font-medium mb-4">
-                2. Fem nyckeltal som avslöjar ert digitaliseringsläge
+                Fem nyckeltal som avslöjar ert digitaliseringsläge
               </h2>
               <p className="mb-6">
                 Istället för att gissa kan ni mäta. Här är fem KPI:er som visar
@@ -344,7 +344,7 @@ export default function DigitaliseringAkeri2026Article() {
             {/* Section 3 */}
             <section>
               <h2 className="text-2xl font-medium mb-4">
-                3. Vad driver digitaliseringen 2026 — och vad bromsar
+                Vad driver digitaliseringen 2026 — och vad bromsar
               </h2>
 
               <h3 className="text-xl font-medium mb-3">Tre pådrivare</h3>
@@ -391,7 +391,7 @@ export default function DigitaliseringAkeri2026Article() {
             {/* Section 4 */}
             <section>
               <h2 className="text-2xl font-medium mb-4">
-                4. Branschjämförelse — åkerier vs. andra sektorer
+                Branschjämförelse — åkerier vs. andra sektorer
               </h2>
               <p className="mb-6">
                 Åkerinäringen ligger efter de flesta andra sektorer i
@@ -443,7 +443,7 @@ export default function DigitaliseringAkeri2026Article() {
             {/* Section 5 */}
             <section>
               <h2 className="text-2xl font-medium mb-4">
-                5. Tre åkerier, tre digitaliseringsnivåer
+                Tre åkerier, tre digitaliseringsnivåer
               </h2>
               <p className="mb-6">
                 Här är tre anonymiserade men representativa exempel som visar
@@ -509,7 +509,7 @@ export default function DigitaliseringAkeri2026Article() {
             {/* Section 6 */}
             <section>
               <h2 className="text-2xl font-medium mb-4">
-                6. Vad händer de nästa 24 månaderna
+                Vad händer de nästa 24 månaderna
               </h2>
 
               <h3 className="text-xl font-medium mb-3">
@@ -559,7 +559,7 @@ export default function DigitaliseringAkeri2026Article() {
             {/* Section 7: FAQ */}
             <section>
               <h2 className="text-2xl font-medium mb-6">
-                7. Vanliga frågor om digitalisering av åkeri
+                Vanliga frågor om digitalisering av åkeri
               </h2>
               <div className="space-y-6">
                 {faqItems.map((faq) => (
