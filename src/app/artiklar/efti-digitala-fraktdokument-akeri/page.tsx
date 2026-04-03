@@ -185,6 +185,12 @@ export default function EftiDigitalaFraktdokumentAkeriArticle() {
               Om svaret är oklart: be om skriftlig roadmap och kontrollera aktuell
               status på Transportstyrelsen.
             </p>
+            <p className="mt-3">
+              Vill ni se vilka TMS-system som finns på den svenska marknaden?{" "}
+              <Link className="underline" href="/blogg/tms-system-2026-guide-svenska-akerier">
+                Läs vår guide till TMS-system för svenska åkerier.
+              </Link>
+            </p>
           </section>
 
           <section>
@@ -216,6 +222,13 @@ export default function EftiDigitalaFraktdokumentAkeriArticle() {
               Exakta nationella detaljer kan uppdateras. Kontrollera därför alltid
               senaste informationen hos Transportstyrelsen och relevanta EU-källor
               innan ni låser er plan.
+            </p>
+            <p className="mt-3">
+              Vill ni se hur långt svenska åkerier kommit i digitaliseringen inför
+              2027?{" "}
+              <Link className="underline" href="/blogg/digitalisering-akeri-2026">
+                Läs vår branschanalys om digitalisering av åkeri 2026.
+              </Link>
             </p>
           </section>
 
