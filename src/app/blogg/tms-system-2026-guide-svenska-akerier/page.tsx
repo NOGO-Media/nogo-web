@@ -25,26 +25,36 @@ const systems = [
     name: "Opter",
     fit: "Små till medelstora nordiska åkerier",
     strength: "Komplett order-till-faktura och starka svenska ekonomiintegrationer",
+    weakness:
+      "Begränsad funktionalitet för last mile och e-handelsflöden. Passar bättre för åkerier än för rena avsändarorganisationer.",
   },
   {
     name: "AddSecure FleetVision",
     fit: "Medelstora till stora fordonsflottor",
     strength: "Kombinerar TMS med telematik, färdskrivardata och compliance",
+    weakness:
+      "Mer komplex implementation och högre ingångskostnad. Kan vara överdimensionerat för åkerier under 20 fordon.",
   },
   {
     name: "Cargoson",
     fit: "Avsändare och transportköpare",
     strength: "Transparent prisbild och brett transportörsnätverk",
+    weakness:
+      "Passar avsändare bättre än åkerier med egen flotta. Begränsat stöd för intern trafikledning och ruttoptimering.",
   },
   {
     name: "nShift",
     fit: "E-handel och retail",
     strength: "Mycket starkt TA-ekosystem och stor transportörstäckning",
+    weakness:
+      "Primärt byggt för e-handel och retail — inte optimerat för komplexa transportflöden med egna fordon.",
   },
   {
     name: "pinDeliver",
     fit: "Last mile och distributionsflöden",
     strength: "AI-driven ruttoptimering och kundavisering i realtid",
+    weakness:
+      "Fokuserat på last mile. Passar sämre för långdistans eller bulk-transport utan tydlig leveranspunkt.",
   },
 ];
 
@@ -107,12 +117,15 @@ export default function TMSGuideArticle() {
             <div className="space-y-3">
               {systems.map((system) => (
                 <div key={system.name} className="rounded-xl border border-gray-200 p-4">
-                  <p className="font-medium text-black">{system.name}</p>
+                  <h3 className="font-medium text-black">{system.name}</h3>
                   <p className="text-sm mt-1">
                     <span className="font-medium">Passar för:</span> {system.fit}
                   </p>
                   <p className="text-sm mt-1">
                     <span className="font-medium">Styrka:</span> {system.strength}
+                  </p>
+                  <p className="text-sm mt-1">
+                    <span className="font-medium">Svaghet:</span> {system.weakness}
                   </p>
                 </div>
               ))}
@@ -153,23 +166,47 @@ export default function TMSGuideArticle() {
               <div>
                 <h3 className="font-medium text-black">Behöver ett litet åkeri TMS?</h3>
                 <p>
-                  Ja, ofta tidigare än man tror. Redan vid återkommande manuella
-                  flaskhalsar i orderflödet kan ett enklare TMS ge tydlig effekt.
+                  Ja, ofta tidigare än man tror. Redan vid 15–20 dagliga ordrar
+                  börjar manuell hantering skapa flaskhalsar som kostar mer än ett
+                  enklare TMS. Många leverantörer erbjuder skalbar prissättning
+                  anpassad för mindre flotter.
                 </p>
               </div>
               <div>
-                <h3 className="font-medium text-black">Vad kostar ett TMS-system?</h3>
+                <h3 className="font-medium text-black">Vad kostar ett TMS-system för ett svenskt åkeri?</h3>
                 <p>
-                  Pris varierar kraftigt beroende på funktioner och volym.
-                  Vissa leverantörer har offentlig prislista, andra offertbaserad
-                  modell.
+                  Enklare molnbaserade system börjar runt 500–1 500 kr/månad för
+                  små flotter. Medelstora åkerier med 10–30 fordon bör räkna med
+                  2 000–8 000 kr/månad beroende på funktioner och integrationer.
+                  Större implementationer med EDI, telematik och optimeringsmotor
+                  kan kosta 15 000–50 000 kr/månad eller mer. Kontakta respektive
+                  leverantör för exakt offert.
                 </p>
               </div>
               <div>
                 <h3 className="font-medium text-black">Vad är skillnaden mellan TMS och WMS?</h3>
                 <p>
-                  TMS fokuserar på transportplanering och utförande, medan WMS
-                  fokuserar på lagerprocesser.
+                  TMS (Transport Management System) hanterar planering och
+                  genomförande av transporter. WMS (Warehouse Management System)
+                  hanterar lagerprocesser som inleverans, plockning och inventering.
+                  Många företag behöver båda, men de löser olika problem.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-medium text-black">Hur lång tid tar det att implementera ett TMS?</h3>
+                <p>
+                  Enklare molnsystem kan vara igång på 2–4 veckor. Fullständiga
+                  implementationer med integrationer mot ekonomisystem, EDI och
+                  telematik tar vanligtvis 2–6 månader. Räkna med utbildningstid
+                  för trafikledare utöver teknisk driftsättning.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-medium text-black">Kan man integrera ett TMS med befintliga system som Fortnox eller Visma?</h3>
+                <p>
+                  Ja, de flesta moderna TMS-system har färdiga integrationer mot
+                  svenska ekonomisystem som Fortnox och Visma. Kontrollera alltid
+                  vilka integrationer som ingår i grundpaketet och vad som kostar extra.
                 </p>
               </div>
             </div>
@@ -178,10 +215,27 @@ export default function TMSGuideArticle() {
           <section>
             <h2 className="text-2xl font-medium text-black mb-3">Sammanfattning</h2>
             <p>
-              För svenska åkerier 2026 handlar TMS-valet mindre om &quot;vilket system
-              är störst&quot; och mer om <strong>vilket system som passar ert trafikflöde</strong>.
-              Börja med en tydlig nulägesanalys, mät före/efter och välj leverantör
-              utifrån verkliga driftbehov.
+              För svenska åkerier 2026 handlar TMS-valet om att matcha system
+              mot trafikflöde — inte om att välja det största eller mest kända
+              namnet.
+              <br />
+              <br />
+              Tumregler:
+              <br />
+              - Liten flotta med svenska ekonomiintegrationer → Opter
+              <br />
+              - Medelstor flotta med telematikbehov → AddSecure FleetVision
+              <br />
+              - Avsändare som vill jämföra priser → Cargoson
+              <br />
+              - E-handel och retail med många leveranspunkter → nShift
+              <br />
+              - Last mile och distributionsflöden → pinDeliver
+              <br />
+              <br />
+              Börja med en nulägesanalys av era största flaskhalsar. Mät
+              planeringstid, tomkörningsprocent och leveransprecision innan
+              ni väljer system — annars vet ni inte vad ni ska utvärdera mot.
             </p>
           </section>
         </div>
