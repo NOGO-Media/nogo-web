@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const metadata: Metadata = {
   title: "Trafikledarbrist i Sverige — hur teknik kan avlasta",
@@ -15,6 +16,8 @@ export const metadata: Metadata = {
     description:
       "Branschanalys: varför trafikledarbrist växer och hur automation kan avlasta utan att ersätta den mänskliga trafikledaren.",
     url: "/artiklar/trafikledarbrist-sverige-teknik-avlastar",
+    publishedTime: "2026-04-02T00:00:00Z",
+    authors: ["NOGO Media AB"],
     tags: [
       "Branschanalys",
       "trafikledarbrist",
@@ -68,7 +71,15 @@ const faqSchema = {
 
 export default function TrafikledarbristArticle() {
   return (
-    <article className="pt-32 pb-24 md:pt-44">
+    <>
+      <ArticleJsonLd
+        title="Trafikledarbrist i Sverige — hur teknik kan avlasta"
+        description="Så kan automation avlasta befintliga trafikledare och minska beroendet av nyanställningar."
+        url="/artiklar/trafikledarbrist-sverige-teknik-avlastar"
+        publishedTime="2026-04-02T00:00:00Z"
+        tags={["trafikledarbrist", "AI trafikledning", "automation åkeri"]}
+      />
+      <article className="pt-32 pb-24 md:pt-44">
       <div className="max-w-3xl mx-auto px-6">
         <Link
           href="/blogg"
@@ -399,5 +410,6 @@ export default function TrafikledarbristArticle() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
     </article>
+    </>
   );
 }

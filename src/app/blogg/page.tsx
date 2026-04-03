@@ -42,6 +42,14 @@ const articles = [
     slug: "tms-system-2026-guide-svenska-akerier",
   },
   {
+    title: "Digitalisering av åkeri i siffror — så långt har svenska åkerier kommit 2026",
+    description:
+      "Nyckeltal, mognadsnivåer och branschjämförelse: var står svenska åkerier i digitaliseringen? Benchmarka ert åkeri med konkreta KPI:er.",
+    category: "Branschanalys",
+    readTime: "10 min",
+    slug: "digitalisering-akeri-2026",
+  },
+  {
     title: "Digitalisering i åkerinäringen — var börjar man?",
     description:
       "Praktisk guide för små och medelstora åkerier som vill digitalisera. Steg-för-steg utan buzzwords.",

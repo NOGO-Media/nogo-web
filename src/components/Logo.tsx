@@ -10,12 +10,13 @@ export default function Logo({
   return (
     <Image
       src={variant === "light" ? "/logo-white.png" : "/logo.png"}
-      alt="NOGO"
-      width={300}
-      height={64}
+      alt="NOGO Media — AI-automation för svenska åkerier"
+      width={150}
+      height={32}
       sizes="150px"
       className={`${className} w-auto`}
       priority
+      unoptimized
     />
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const metadata: Metadata = {
   title: "Digitalisering i åkerinäringen — var börjar man?",
@@ -15,13 +16,23 @@ export const metadata: Metadata = {
     description:
       "Praktisk guide för små och medelstora åkerier som vill digitalisera. Steg-för-steg utan buzzwords.",
     url: "/artiklar/digitalisering-akerinaring-var-borjar-man",
+    publishedTime: "2026-04-02T00:00:00Z",
+    authors: ["NOGO Media AB"],
     tags: ["Guide", "digitalisering åkerinäringen", "TMS system åkeri"],
   },
 };
 
 export default function DigitaliseringAkerinaringenArticle() {
   return (
-    <article className="pt-32 pb-24 md:pt-44">
+    <>
+      <ArticleJsonLd
+        title="Digitalisering i åkerinäringen — var börjar man?"
+        description="Praktisk guide för små och medelstora åkerier som vill digitalisera."
+        url="/artiklar/digitalisering-akerinaring-var-borjar-man"
+        publishedTime="2026-04-02T00:00:00Z"
+        tags={["digitalisering åkerinäringen", "TMS system åkeri"]}
+      />
+      <article className="pt-32 pb-24 md:pt-44">
       <div className="max-w-3xl mx-auto px-6">
         <Link
           href="/blogg"
@@ -358,5 +369,6 @@ export default function DigitaliseringAkerinaringenArticle() {
         </div>
       </div>
     </article>
+    </>
   );
 }

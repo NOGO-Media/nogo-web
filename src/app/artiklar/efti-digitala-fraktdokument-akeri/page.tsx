@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const metadata: Metadata = {
   title: "eFTI och digitala fraktdokument — är ditt åkeri redo?",
@@ -15,6 +16,8 @@ export const metadata: Metadata = {
     description:
       "EU kräver digitala fraktdokument senast 2027. Konkret guide för svenska åkerier om eFTI och hur ni förbereder er.",
     url: "/artiklar/efti-digitala-fraktdokument-akeri",
+    publishedTime: "2026-04-02T00:00:00Z",
+    authors: ["NOGO Media AB"],
     tags: [
       "Regelverk",
       "eFTI",
@@ -27,7 +30,15 @@ export const metadata: Metadata = {
 
 export default function EftiDigitalaFraktdokumentAkeriArticle() {
   return (
-    <article className="pt-32 pb-24 md:pt-44">
+    <>
+      <ArticleJsonLd
+        title="eFTI och digitala fraktdokument — är ditt åkeri redo?"
+        description="EU kräver digitala fraktdokument senast 2027. Guide för svenska åkerier om eFTI-förordningen."
+        url="/artiklar/efti-digitala-fraktdokument-akeri"
+        publishedTime="2026-04-02T00:00:00Z"
+        tags={["eFTI", "digitala fraktdokument", "EU transportregler 2027"]}
+      />
+      <article className="pt-32 pb-24 md:pt-44">
       <div className="max-w-3xl mx-auto px-6">
         <Link
           href="/blogg"
@@ -342,5 +353,6 @@ export default function EftiDigitalaFraktdokumentAkeriArticle() {
         </div>
       </div>
     </article>
+    </>
   );
 }

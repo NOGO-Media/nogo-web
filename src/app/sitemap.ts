@@ -65,6 +65,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${SITE_URL}/blogg/digitalisering-akeri-2026`,
+      lastModified: new Date("2026-04-02"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${SITE_URL}/blogg/digitalisering-akerinaring-var-borjar-man`,
       lastModified: new Date("2026-04-02"),
       changeFrequency: "monthly",
