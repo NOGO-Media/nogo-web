@@ -55,7 +55,7 @@ export default function RoiAutomationTransportKalkylPage() {
           </div>
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.15]">
-            Så räknar du ROI automation transport
+            Så räknar du ROI på automation i transport
           </h1>
 
           <p className="mt-6 text-lg text-gray-500 leading-relaxed">
@@ -156,6 +156,11 @@ export default function RoiAutomationTransportKalkylPage() {
               Antag 2 disponenter, 2,5 manuella timmar per dag och timkostnad 380 kr.
               Med 230 arbetsdagar blir kalkylen: 2 × 2,5 × 380 × 230 = 437 000 kr/år.
               Det är bara den administrativa delen, inte planeringskvalitet eller kundservice.
+              Vill ni förstå varför trafikledarbrist förstärker den här
+              kostnaden ytterligare?{" "}
+              <a href="/artiklar/trafikledarbrist-sverige-teknik-avlastar">
+                Läs vår analys om trafikledarbrist och automation.
+              </a>
             </p>
             <p className="mt-3">
               Om automation minskar manuell tid med 35 % får ni en beräknad besparing på
@@ -487,10 +492,6 @@ export default function RoiAutomationTransportKalkylPage() {
                 </p>
               </div>
             </div>
-            <p className="mt-4 text-sm text-gray-600">
-              Tips för schema-läsbarhet: behåll formatet Fråga/Svar, en fråga per rubrik
-              och ett kort, konkret svar med siffror eller tydligt nästa steg.
-            </p>
           </section>
 
           <section className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
