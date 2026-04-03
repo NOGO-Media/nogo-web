@@ -5,7 +5,7 @@ export { default } from "@/app/artiklar/digitalisering-akerinaring-var-borjar-ma
 export const metadata: Metadata = {
   title: "Digitalisering i åkerinäringen — var börjar man?",
   description:
-    "Praktisk guide för små och medelstora åkerier som vill digitalisera. Steg-för-steg utan buzzwords. Lär dig var du ska börja och vad som faktiskt ger resultat.",
+    "Praktisk guide för små och medelstora åkerier som vill digitalisera. Steg-för-steg utan krångel. Lär dig var du ska börja och vad som faktiskt ger resultat.",
   alternates: { canonical: "/blogg/digitalisering-akerinaring-var-borjar-man" },
   openGraph: {
     type: "article",
