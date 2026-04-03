@@ -6,7 +6,7 @@ const footerLinks = {
     { name: "Ruttoptimering", href: "/losningar/ruttoptimering" },
     { name: "TMS-integration", href: "/losningar/tms-integration" },
     { name: "Trafikledning", href: "/losningar/trafikledning" },
-    { name: "Orderhantering", href: "/losningar" },
+    { name: "Rapport & analys", href: "/losningar/rapport-och-analys" },
   ],
   Resurser: [
     { name: "Blogg", href: "/blogg" },

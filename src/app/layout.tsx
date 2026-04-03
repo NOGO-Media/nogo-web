@@ -139,6 +139,7 @@ function OrganizationJsonLd() {
       "TMS-integration",
       "Logistik-automation",
       "AI-agenter för åkerier",
+      "Rapport och analys för transport",
     ],
   };
 
@@ -181,6 +182,16 @@ function ServiceJsonLd() {
       serviceType: "System Integration",
       areaServed: { "@type": "Country", name: "Sweden" },
       url: `${SITE_URL}/losningar/tms-integration`,
+    },
+    {
+      "@type": "Service",
+      name: "Rapport & analys",
+      description:
+        "AI-driven rapport och analys för transportplanering. Tio analysvyer med över 50 nyckeltal — realtidsstatistik direkt i planeringsgränssnittet utan separat BI-lösning.",
+      provider: { "@type": "Organization", name: "NOGO Media AB" },
+      serviceType: "Business Analytics",
+      areaServed: { "@type": "Country", name: "Sweden" },
+      url: `${SITE_URL}/losningar/rapport-och-analys`,
     },
   ];
 
