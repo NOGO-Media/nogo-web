@@ -46,11 +46,28 @@ function AboutPageJsonLd() {
       url: SITE_URL,
       foundingDate: "2025",
       founders: [
-        { "@type": "Person", name: "Hugo Svensson", jobTitle: "VD" },
+        {
+          "@type": "Person",
+          name: "Hugo Svensson",
+          jobTitle: "VD & grundare",
+          email: "hugo@nogomedia.se",
+          worksFor: { "@type": "Organization", name: "NOGO Media AB" },
+        },
         {
           "@type": "Person",
           name: "Wille Hellström",
-          jobTitle: "CTO",
+          jobTitle: "Medgrundare & teknik",
+          email: "wille@nogomedia.se",
+          worksFor: { "@type": "Organization", name: "NOGO Media AB" },
+        },
+      ],
+      employee: [
+        {
+          "@type": "Person",
+          name: "Jonathan Lindman",
+          jobTitle: "Marknad & strategi",
+          email: "jonathan@nogomedia.se",
+          worksFor: { "@type": "Organization", name: "NOGO Media AB" },
         },
       ],
       address: {
@@ -271,19 +288,19 @@ export default function OmOssPage() {
             {team.map((member) => (
               <div
                 key={member.name}
-                className="p-8 rounded-2xl bg-white border border-gray-100"
+                className="p-8 rounded-2xl bg-white border border-gray-100 flex flex-col"
               >
                 <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mb-5">
                   <User size={20} className="text-gray-500" />
                 </div>
                 <h3 className="text-lg font-medium">{member.name}</h3>
                 <p className="text-sm text-gray-400 mb-3">{member.role}</p>
-                <p className="text-sm text-gray-500 leading-relaxed mb-3">
+                <p className="text-sm text-gray-500 leading-relaxed">
                   {member.description}
                 </p>
                 <a
                   href={`mailto:${member.email}`}
-                  className="text-xs text-gray-400 hover:text-gray-600 transition-colors"
+                  className="mt-auto pt-4 text-xs text-gray-400 hover:text-gray-600 transition-colors"
                 >
                   {member.email}
                 </a>

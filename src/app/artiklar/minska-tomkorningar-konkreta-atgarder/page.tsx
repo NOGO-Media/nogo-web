@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const metadata: Metadata = {
@@ -251,7 +251,7 @@ export default function MinskaTomkorningarArticle() {
               Vill ni ta nästa steg med digitalt arbetssätt kan ni läsa:
               <span> </span>
               <Link className="underline" href="/artiklar/digitalisering-akerinaring-var-borjar-man">
-                [LINK: /artiklar/digitalisering-akerinaring-var-borjar-man]
+                Digitalisering i åkerinäringen — var börjar man?
               </Link>
               .
             </p>
@@ -365,7 +365,7 @@ export default function MinskaTomkorningarArticle() {
               href="/kontakt"
               className="inline-flex items-center rounded-full bg-white text-black px-5 py-2.5 text-sm font-medium hover:bg-gray-200 transition-colors"
             >
-              [LINK: /kontakt]
+              Boka strategi-samtal <ArrowRight className="w-4 h-4" />
             </Link>
           </section>
         </div>
