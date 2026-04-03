@@ -84,11 +84,12 @@ export default function FAQSection() {
                   <Plus size={16} className="text-gray-400 shrink-0" />
                 )}
               </button>
-              {open === i && (
-                <div className="px-6 pb-5 text-sm text-gray-500 leading-relaxed">
-                  {faq.a}
-                </div>
-              )}
+              <div
+                className="px-6 pb-5 text-sm text-gray-500 leading-relaxed"
+                hidden={open !== i}
+              >
+                {faq.a}
+              </div>
             </div>
           ))}
         </div>

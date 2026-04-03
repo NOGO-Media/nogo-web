@@ -187,6 +187,7 @@ export default function LosningarPage() {
           {solutions.map((sol) => (
             <div
               key={sol.slug}
+              id={sol.slug}
               className="bg-gray-50 rounded-2xl p-8 md:p-12 border border-transparent hover:border-gray-200 transition-colors"
             >
               <div className="grid md:grid-cols-3 gap-8">
@@ -234,6 +235,7 @@ export default function LosningarPage() {
             {additionalCapabilities.map((cap) => (
               <div
                 key={cap.title}
+                id={cap.title === "Automatisk orderhantering" ? "orderhantering" : undefined}
                 className="bg-white rounded-xl border border-gray-200 p-6"
               >
                 <cap.icon size={20} className="text-gray-500 mb-4" />
@@ -246,7 +248,7 @@ export default function LosningarPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24">
+      <section id="kundcase" className="py-24">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-medium tracking-tight mb-4">
             Vill ni veta mer?
