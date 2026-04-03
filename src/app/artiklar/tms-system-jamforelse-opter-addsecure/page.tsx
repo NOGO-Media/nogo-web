@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const metadata: Metadata = {
@@ -386,7 +386,7 @@ export default function TmsSystemJamforelseOpterAddsecurePage() {
             <p className="mt-4">
               Vill ni börja enkelt finns en bra grundguide här:{" "}
               <Link href="/artiklar/digitalisering-akerinaring-var-borjar-man" className="text-black underline underline-offset-2">
-                [LINK: /artiklar/digitalisering-akerinaring-var-borjar-man]
+                Digitalisering i åkerinäringen — var börjar man?
               </Link>
               .
             </p>
@@ -430,7 +430,7 @@ export default function TmsSystemJamforelseOpterAddsecurePage() {
             <p className="mt-3">
               För en egen ROI-bedömning kan ni använda den här modellen:{" "}
               <Link href="/artiklar/roi-automation-transport-kalkyl" className="text-black underline underline-offset-2">
-                [LINK: /artiklar/roi-automation-transport-kalkyl]
+                Så räknar du ROI på automation i transport
               </Link>
               .
             </p>
@@ -506,8 +506,8 @@ export default function TmsSystemJamforelseOpterAddsecurePage() {
               börja med ett kort nulägesmöte och en enkel beslutsmatris.
             </p>
             <p className="mt-3">
-              <Link href="/kontakt" className="text-black underline underline-offset-2">
-                [LINK: /kontakt]
+              <Link href="/kontakt" className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors">
+                Boka strategi-samtal <ArrowRight className="w-4 h-4" />
               </Link>
             </p>
           </section>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const metadata: Metadata = {
@@ -416,12 +416,12 @@ export default function RoiAutomationTransportKalkylPage() {
               Vill ni först få grepp om ert nuläge, börja här:
               <span> </span>
               <Link href="/artiklar/digitalisering-akerinaring-var-borjar-man" className="underline">
-                [LINK: /artiklar/digitalisering-akerinaring-var-borjar-man]
+                Digitalisering i åkerinäringen — var börjar man?
               </Link>
               . För att räkna mer på tomkörning kan ni använda:
               <span> </span>
               <Link href="/artiklar/minska-tomkorningar-konkreta-atgarder" className="underline">
-                [LINK: /artiklar/minska-tomkorningar-konkreta-atgarder]
+                Minska tomkörningar — 5 konkreta åtgärder
               </Link>
               .
             </p>
@@ -502,8 +502,8 @@ export default function RoiAutomationTransportKalkylPage() {
               att använda i budget, inköp och uppföljning.
             </p>
             <p className="mt-3">
-              <Link href="/kontakt" className="underline font-medium">
-                [LINK: /kontakt]
+              <Link href="/kontakt" className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors">
+                Boka strategi-samtal <ArrowRight className="w-4 h-4" />
               </Link>
             </p>
           </section>

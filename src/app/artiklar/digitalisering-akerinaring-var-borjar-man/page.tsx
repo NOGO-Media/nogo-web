@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
 
 export const metadata: Metadata = {
@@ -361,8 +361,8 @@ export default function DigitaliseringAkerinaringenArticle() {
               Få ett konkret förslag på nästa steg utifrån er trafik, era kunder och
               er organisation.
               <span> </span>
-              <Link className="underline" href="/kontakt">
-                [LINK: /kontakt]
+              <Link href="/kontakt" className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors">
+                Boka strategi-samtal <ArrowRight className="w-4 h-4" />
               </Link>
             </p>
           </section>
