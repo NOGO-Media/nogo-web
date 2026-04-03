@@ -1,6 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, ChevronRight, Play } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronRight,
+  Play,
+  FileSpreadsheet,
+  MapPinned,
+  Clock3,
+  AlertTriangle,
+  ShieldCheck,
+  Route,
+  CheckCircle2,
+  Repeat,
+  Users,
+} from "lucide-react";
 
 const SITE_URL = "https://nogomedia.se";
 
@@ -80,60 +93,184 @@ function BreadcrumbJsonLd() {
   );
 }
 
-const uploadHighlights = [
-  "Tar emot standard-Excel från ert nuvarande trafikledningssystem — ingen omformatering krävs.",
-  "Tolkar ordernummer, adresser, ruttkod, flakmeter, vikt, volym, pallplatser, kunddata och meddelanden automatiskt.",
-  "Beräknar effektiv flakmeter via deklarerad data eller fallback från volym/vikt för robust kapacitetsplanering.",
-  "Geokodar avsändare och mottagare asynkront med progress, cache och lastbilsanpassade ruttberäkningar.",
+function ServiceJsonLd() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Automatisk orderhantering för åkerier",
+    serviceType: "Transportplanering och orderhantering",
+    description:
+      "AI-driven orderhantering som omvandlar Excel-underlag till färdig körplan med pass, ekipage, fyllnad, arbetstid och varningar.",
+    areaServed: {
+      "@type": "Country",
+      name: "Sweden",
+    },
+    provider: {
+      "@type": "Organization",
+      name: "NOGO Media AB",
+      url: SITE_URL,
+    },
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "SEK",
+      description: "Kostnadsfritt strategimöte",
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+function FaqJsonLd() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Behöver vi byta trafikledningssystem för att använda lösningen?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Nej. Lösningen tar emot samma Excel-format som ni redan exporterar i dag. Ni kan börja utan systembyte och utan ombyggnad av processer.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Hur hanterar systemet ordrar med ofullständig data?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Om deklarerad flakmeter saknas räknar systemet fram ett realistiskt värde från volym eller vikt. Det gör att även ofullständiga orderrader kan planeras korrekt.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Kan trafikledaren fortfarande göra manuella ändringar?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Ja. Planen är ett förslag. Trafikledaren kan flytta gods mellan pass, ångra steg för steg och godkänna först när planen känns rätt.",
+        },
+      },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+const kpiCards = [
+  { value: "2–4 h", label: "Mindre manuell planering per dag" },
+  { value: "90%+", label: "Fyllnadsgrad i verkliga körningar" },
+  { value: "0", label: "Timmar övertid i optimerade planer" },
+  { value: "7–13", label: "Färre ekipage jämfört med maxflotta" },
 ];
 
-const automationCapabilities = [
+const flowSteps = [
   {
-    title: "Dubblettdetektering",
-    description:
-      "Identiska ordrar markeras direkt med varningsflagga så att trafikledaren kan verifiera dubbletter innan planering.",
+    icon: FileSpreadsheet,
+    title: "Ladda upp dagens underlag",
+    desc: "Samma Excel-format som ni redan exporterar från trafikledningen. Ingen handpåläggning.",
   },
   {
-    title: "Prioritetsklassificering",
-    description:
-      "Ordrar klassas automatiskt i prioritet baserat på kundnamn, kundkod och skapare: prioritet, normal och låg prioritet.",
+    icon: MapPinned,
+    title: "Systemet läser och kartlägger",
+    desc: "Adresser, rutter, vikt, volym och flakmeter tolkas automatiskt. Saknade värden fylls med rimliga beräkningar.",
   },
   {
-    title: "Shipment-integritet",
-    description:
-      "Ordrar som tillhör samma shipment hålls ihop på samma pass. Individuella flyttar blockeras för att undvika splittring.",
+    icon: Route,
+    title: "Planen byggs automatiskt",
+    desc: "Gods läggs i rätt pass och rätt ekipage med hänsyn till arbetstid, riktning och kundprioritet.",
   },
   {
-    title: "Dag-för-dag-kedjning",
-    description:
-      "Systemet planerar i rätt ordning mellan dagar och markerar senare dagar som inaktuella vid omplanering.",
+    icon: CheckCircle2,
+    title: "Trafikledaren godkänner",
+    desc: "Granska varningar, justera vid behov och godkänn med ett klick.",
   },
 ];
 
-const optimizationSteps = [
-  "Ruttgruppering i utgående och returflöden, med automatisk parning av returgods till rätt ekipage.",
-  "Riktningsklustering som separerar gods med motriktade destinationer för att undvika omvägar.",
-  "Constraint programming (OR-Tools CP-SAT) för packning i rätt ekipage: 7,2 / 12,0 / 19,2 flakmeter.",
-  "Arbetstidskontroll per linje med nolltolerans för övertid och automatisk omlastning via terminal vid behov.",
-  "Konsolidering av låg fyllnad, multitrip för korta pass och stoppordning med nearest-neighbor.",
-  "Pickup-planering inom 30 km radie med deadline-kontroll och kundspecifika specialregler.",
+const transportTerms = [
+  {
+    title: "Smart lastpussel i stället för teknisk jargong",
+    description:
+      "I praktiken betyder det att systemet fyller bil, flak och släp så tätt som möjligt, utan att bryta regler eller överlasta pass.",
+  },
+  {
+    title: "Rätt ekipage till rätt körning",
+    description:
+      "Systemet väljer minsta möjliga ekipage som ändå klarar godset: bil+flak, bil+släp eller fullstor kombination.",
+  },
+  {
+    title: "Samma språk som i trafikledningen",
+    description:
+      "Vi använder ord som pass, fyllnad, returgods, omlastning, avgångstid och upphämtning — inte utvecklarspråk.",
+  },
 ];
 
-const qualityControls = [
-  "Hårda stopp vid regelbrott, exempelvis ej tilldelad prioritetskund eller splittrat shipment.",
-  "Underlagsvarningar för shipment-konflikter och potentiella dubbletter.",
-  "Planeringsvarningar för övertid, låg fyllnad och riktningsfel i pass.",
-  "Full ruttkontroll per pass med stopp-typ, ETA, kapacitetsförändring och Google Maps-länk.",
+const planningHighlights = [
+  "Dubbletter markeras direkt innan planering startar.",
+  "Prioritetskunder tilldelas alltid först.",
+  "Gods i samma shipment hålls ihop i samma pass.",
+  "Returgods matchas med ekipage som ändå kör i området.",
+  "Låg fyllnad slås ihop när det går utan omvägar.",
+  "Kortare pass kan få extra vända för bättre kapacitetsnyttjande.",
+  "Upphämtningar nära leveransområde plockas in automatiskt.",
+  "Senare planeringsdagar spärras tills tidigare dag är klar.",
+];
+
+const warningLevels = [
+  {
+    icon: ShieldCheck,
+    title: "Röda stopp",
+    desc: "Planen stoppas om viktiga regler bryts, till exempel splittrat shipment eller prioriterad kund utan tilldelning.",
+  },
+  {
+    icon: AlertTriangle,
+    title: "Gula varningar",
+    desc: "Flaggar underlagsproblem som dubbletter och konflikter i shipment så att trafikledaren ser vad som behöver granskas.",
+  },
+  {
+    icon: Clock3,
+    title: "Passvarningar",
+    desc: "Visar pass med låg fyllnad eller risk för tidsproblem så att ni kan justera innan godkännande.",
+  },
+];
+
+const faq = [
+  {
+    question: "Kan vi använda lösningen för partigods och styckegods?",
+    answer:
+      "Ja. Sidan är byggd för daglig planering av blandat gods där vikt, volym, pallplatser och flakmeter varierar mellan ordrar.",
+  },
+  {
+    question: "Fungerar det för flera dagar i samma fil?",
+    answer:
+      "Ja. Underlag kan läsas dag för dag från olika flikar, och systemet håller reda på vad som redan hämtats upp mellan dagarna.",
+  },
+  {
+    question: "Måste allt vara helt automatiskt?",
+    answer:
+      "Nej. Automationen gör grovjobbet, men trafikledaren kan alltid finjustera pass manuellt innan planen godkänns.",
+  },
 ];
 
 export default function AutomatiskOrderhanteringPage() {
   return (
     <>
       <BreadcrumbJsonLd />
+      <ServiceJsonLd />
+      <FaqJsonLd />
 
       <section className="pt-32 pb-12 md:pt-44 md:pb-16">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-4xl">
+          <div className="max-w-5xl">
             <nav className="flex items-center gap-1.5 text-sm text-gray-400 mb-6">
               <Link
                 href="/losningar"
@@ -148,14 +285,13 @@ export default function AutomatiskOrderhanteringPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1]">
               Automatisk orderhantering —{" "}
               <span className="text-gray-400">
-                från Excel till färdig plan på sekunder.
+                från Excel till färdig körplan på sekunder.
               </span>
             </h1>
-            <p className="mt-6 text-lg text-gray-500 max-w-3xl leading-relaxed">
-              Trafikledaren börjar dagen med hundratals orderrader i Excel.
-              NOGO tolkar underlaget, geokodar adresser, klassificerar
-              prioritet och bygger en komplett körplan med rätt ekipage, fyllnad
-              och arbetstider — utan manuellt pussel.
+            <p className="mt-6 text-lg text-gray-500 max-w-4xl leading-relaxed">
+              För svenska åkerier som vill minska manuellt planeringsarbete.
+              NOGO läser orderrader, föreslår pass och säkrar att rätt gods går
+              med rätt ekipage, i rätt ordning, inom rätt arbetstid.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -174,61 +310,14 @@ export default function AutomatiskOrderhanteringPage() {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section className="pb-10">
-        <div className="max-w-7xl mx-auto px-6">
-          <aside className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 max-w-4xl">
-            <p className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">
-              Snabb sammanfattning
-            </p>
-            <p className="text-sm text-gray-700 leading-relaxed">
-              <strong>Automatisk orderhantering</strong> innebär att ni laddar
-              upp ert befintliga Excel-underlag och får tillbaka en färdig plan
-              med pass, ekipage, stopptider och kvalitetsvarningar. Systemet
-              hanterar även ofullständig data, shipment-regler, arbetstider och
-              kedjning mellan planeringsdagar.
-            </p>
-          </aside>
-        </div>
-      </section>
-
-      <section className="py-14">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10">
-          <div>
-            <h2 className="text-3xl font-medium tracking-tight mb-5">
-              Från uppladdning till strukturerad orderdata
-            </h2>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              Plattformen läser samma filformat som ert system redan exporterar.
-              Varje orderrad omvandlas automatiskt till en strukturerad profil
-              med all data som krävs för planering, validering och uppföljning.
-            </p>
-            <ul className="space-y-3 text-sm text-gray-600">
-              {uploadHighlights.map((item) => (
-                <li key={item} className="flex gap-3">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-gray-900 shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8">
-            <h3 className="text-xl font-medium mb-4">Ordervyn i gränssnittet</h3>
-            <p className="text-sm text-gray-600 leading-relaxed mb-4">
-              En sökbar och filtrerbar tabell ger full kontroll över underlaget.
-              Statuschips visar bland annat Alla, Körbara idag, Ej upphämtade,
-              Tilldelade och Ej tilldelade. Trafikledaren kan filtrera på rutt,
-              söka i realtid och öppna en detaljpanel per order.
-            </p>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              I detaljpanelen visas rutt, full adress, kapacitetsdata,
-              kundinformation, shipment, tilldelat pass samt
-              avgångs-/ankomsttider. Mottagaradressen öppnas direkt i Google
-              Maps med ett klick.
-            </p>
+          <div className="grid md:grid-cols-4 gap-4 mt-10">
+            {kpiCards.map((kpi) => (
+              <div key={kpi.label} className="bg-gray-50 border border-gray-200 rounded-2xl p-5">
+                <p className="text-2xl font-semibold">{kpi.value}</p>
+                <p className="text-sm text-gray-500 mt-1">{kpi.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -236,18 +325,76 @@ export default function AutomatiskOrderhanteringPage() {
       <section className="py-14 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-medium tracking-tight mb-8">
-            Intelligens före optimering
+            Så fungerar det i trafikledningen
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {automationCapabilities.map((capability) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {flowSteps.map((step, index) => (
               <article
-                key={capability.title}
-                className="bg-white border border-gray-200 rounded-2xl p-6"
+                key={step.title}
+                className="bg-white rounded-2xl border border-gray-200 p-6"
               >
-                <h3 className="font-medium mb-2">{capability.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  {capability.description}
-                </p>
+                <div className="w-10 h-10 rounded-xl bg-gray-50 border border-gray-200 flex items-center justify-center mb-4">
+                  <step.icon size={18} className="text-gray-700" />
+                </div>
+                <p className="text-xs text-gray-400 mb-2">Steg {index + 1}</p>
+                <h3 className="font-medium mb-2">{step.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{step.desc}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-3xl font-medium tracking-tight mb-5">
+              Branschspråk i stället för tekniska termer
+            </h2>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Vi har ersatt utvecklarord med ord från verkligheten på åkeriet.
+              I stället för att prata om avancerade algoritmer beskriver vi vad
+              som faktiskt händer: hur godset packas i ekipage och hur pass
+              byggs utan att köra halvtomt.
+            </p>
+            <div className="space-y-4">
+              {transportTerms.map((item) => (
+                <div
+                  key={item.title}
+                  className="border border-gray-200 rounded-xl p-5 bg-white"
+                >
+                  <h3 className="font-medium mb-2">{item.title}</h3>
+                  <p className="text-sm text-gray-600">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-black text-white rounded-2xl p-8">
+            <h3 className="text-2xl font-medium mb-4">Vad systemet gör varje dag</h3>
+            <ul className="space-y-3 text-sm text-white/80">
+              {planningHighlights.map((item) => (
+                <li key={item} className="flex gap-3">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-white shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl font-medium tracking-tight mb-8">
+            Varningar och kvalitet innan ni godkänner
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {warningLevels.map((item) => (
+              <article key={item.title} className="bg-white border border-gray-200 rounded-2xl p-6">
+                <item.icon size={18} className="text-gray-700 mb-4" />
+                <h3 className="font-medium mb-2">{item.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
               </article>
             ))}
           </div>
@@ -256,22 +403,30 @@ export default function AutomatiskOrderhanteringPage() {
 
       <section className="py-14">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-medium tracking-tight mb-4">
-            Optimering i 13 steg — från order till pass
+          <h2 className="text-3xl font-medium tracking-tight mb-6">
+            Byggd för svenska transportflöden
           </h2>
           <p className="text-gray-600 leading-relaxed max-w-4xl mb-8">
-            När trafikledaren klickar på Optimera kör systemet en
-            flerstegspipeline för att skapa en körbar plan med maximal fyllnad
-            och korrekt arbetstid. Planen innehåller även pickups, returflöden,
-            konsolidering och stoppordning.
+            Lösningen används för trafikledning i hela Sverige — från lokala
+            distributionsupplägg till längre linjer mellan terminaler. Fokus är
+            samma varje dag: hög fyllnad, tydliga pass, rätt arbetstid och färre
+            manuella moment.
           </p>
-          <div className="grid lg:grid-cols-2 gap-4">
-            {optimizationSteps.map((step) => (
+
+          <div className="grid md:grid-cols-3 gap-4">
+            {[
+              "Stockholm och Mälardalen",
+              "Göteborg och Västsverige",
+              "Malmö och Skåne",
+              "Jönköping och Småland",
+              "Örebro och Bergslagen",
+              "Dalarna och Norrlandslinjer",
+            ].map((area) => (
               <div
-                key={step}
-                className="border border-gray-200 rounded-xl p-5 bg-white text-sm text-gray-700"
+                key={area}
+                className="border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-700 bg-white"
               >
-                {step}
+                {area}
               </div>
             ))}
           </div>
@@ -279,92 +434,51 @@ export default function AutomatiskOrderhanteringPage() {
       </section>
 
       <section className="py-14 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8">
-          <div>
-            <h2 className="text-3xl font-medium tracking-tight mb-4">
-              Manuell justering med full kontroll
-            </h2>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              AI:n föreslår planen, men trafikledaren har alltid sista ordet.
-              Ordrar kan flyttas mellan pass med direkt uppdatering av fyllnad
-              och arbetstid. Shipment-regler skyddas automatiskt så att helheten
-              inte bryts.
-            </p>
-            <p className="text-gray-600 leading-relaxed">
-              Varje ändring loggas i ångringshistorik och kan rullas tillbaka
-              steg för steg. Vid godkännande visas kontrollsumma med antal pass
-              och antal ordrar innan planen sparas.
-            </p>
-          </div>
-          <div className="bg-white border border-gray-200 rounded-2xl p-6">
-            <h3 className="text-xl font-medium mb-4">
-              Varningar och kvalitetskontroll
-            </h3>
-            <ul className="space-y-3 text-sm text-gray-600">
-              {qualityControls.map((warning) => (
-                <li key={warning} className="flex gap-3">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-gray-900 shrink-0" />
-                  <span>{warning}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-14">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10">
           <div>
-            <h2 className="text-3xl font-medium tracking-tight mb-4">
-              Flottöversikt, persistens och spårbarhet
-            </h2>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              Flottvyn visar dragbilar, flak och släp med status, kapacitet och
-              kopplingar. En bilpositionstabell ger startläge per fordon:
-              slutlossningsort, ledig kapacitet, kvarvarande arbetstid och
-              eventuella spetsbyten.
-            </p>
+            <h2 className="text-3xl font-medium tracking-tight mb-4">Vanliga frågor</h2>
             <p className="text-gray-600 leading-relaxed">
-              Planer, ordrar och manuella ändringar sparas till Supabase med
-              tidsstämplad versionshistorik. Ni kan stänga webbläsaren och
-              fortsätta där ni slutade, med full spårbarhet över vem som ändrade
-              vad och när.
+              Här är svar på frågor vi oftast får från trafikledare och
+              transportchefer.
             </p>
           </div>
-          <div className="bg-black text-white rounded-2xl p-8">
-            <h3 className="text-2xl font-medium mb-4">Varför det spelar roll</h3>
-            <p className="text-white/80 leading-relaxed mb-4">
-              Manuell planering av 200 ordrar per dag tar ofta 2–4 timmar.
-              Automatiseringen reducerar det till minuter: ladda upp, optimera,
-              granska varningar och godkänn.
-            </p>
-            <p className="text-white/80 leading-relaxed">
-              I körningar med verklig data ses fyllnadsgrader över 90%, noll
-              övertid och 7–13 sparade ekipage per dag jämfört med maxflottan.
-            </p>
+
+          <div className="space-y-4">
+            {faq.map((item) => (
+              <article key={item.question} className="bg-white border border-gray-200 rounded-2xl p-6">
+                <h3 className="font-medium mb-2">{item.question}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{item.answer}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="py-20">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-medium tracking-tight mb-4">
-            Så kommer ni igång
-          </h2>
+          <h2 className="text-3xl font-medium tracking-tight mb-4">Så kommer ni igång</h2>
           <p className="text-gray-500 mb-8 leading-relaxed">
-            Vi bygger AI-automation som arbetar direkt i era befintliga system.
-            Ingen integration, ingen ombyggnad och inga nya arbetsflöden —
-            bara resultat.
+            Boka ett kostnadsfritt möte på 30 minuter. Vi går igenom ert
+            orderflöde, visar hur underlaget läses in och ger en konkret plan för
+            hur ni kommer i drift.
           </p>
-          <Link
-            href="/kontakt"
-            className="inline-flex items-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
-          >
-            Boka kostnadsfritt strategimöte (30 min) <ArrowRight size={16} />
-          </Link>
-          <p className="mt-5 text-xs text-gray-400">
-            NOGO Media bygger autonoma AI-agenter för transport och logistik i
-            Sverige.
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link
+              href="/kontakt"
+              className="inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
+            >
+              Boka kostnadsfritt strategimöte <ArrowRight size={16} />
+            </Link>
+            <Link
+              href="/losningar"
+              className="inline-flex items-center justify-center gap-2 border border-gray-200 px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors"
+            >
+              Se alla lösningar <Repeat size={15} />
+            </Link>
+          </div>
+          <p className="mt-5 text-xs text-gray-400 inline-flex items-center gap-1.5">
+            <Users size={12} /> NOGO Media bygger autonoma AI-agenter för
+            transport och logistik i Sverige.
           </p>
         </div>
       </section>
