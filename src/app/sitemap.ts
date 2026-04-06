@@ -41,19 +41,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${SITE_URL}/demo`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
       url: `${SITE_URL}/blogg`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
-      url: `${SITE_URL}/blogg/ai-trafikledning-2026`,
+      url: `${SITE_URL}/artiklar/ai-trafikledning-2026`,
       lastModified: new Date("2026-04-01"),
       changeFrequency: "monthly",
       priority: 0.7,
@@ -72,12 +66,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${SITE_URL}/blogg/digitalisering-akeri-2026`,
-      lastModified: new Date("2026-04-02"),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${SITE_URL}/blogg/digitalisering-akerinaring-var-borjar-man`,
       lastModified: new Date("2026-04-02"),
       changeFrequency: "monthly",
       priority: 0.7,
@@ -129,6 +117,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
+    },
+    {
+      url: `${SITE_URL}/integritetspolicy`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${SITE_URL}/villkor`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
     },
   ];
 }
