@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   title: "AI Trafikledning 2026 – Så kan svenska åkerier spara miljoner",
   description:
     "AI-agenter för transportbranschen är inte längre framtidsteknik. Så kan svenska åkerier automatisera 85–95% av manuellt trafikledningsarbete. Inkl. ROI-räknare.",
-  alternates: { canonical: "/blogg/ai-trafikledning-2026" },
+  alternates: { canonical: "/artiklar/ai-trafikledning-2026" },
   openGraph: {
     type: "article",
     title: "AI Trafikledning 2026 – Så kan svenska åkerier spara miljoner",
     description:
       "Så kan svenska åkerier automatisera 85–95% av manuellt trafikledningsarbete med AI-automation. Inkl. interaktiv ROI-räknare.",
-    url: "/blogg/ai-trafikledning-2026",
+    url: "/artiklar/ai-trafikledning-2026",
     publishedTime: "2026-04-01T00:00:00Z",
     authors: ["NOGO Media AB"],
     tags: ["AI", "trafikledning", "automation", "åkeri", "ROI"],
@@ -34,7 +34,7 @@ export default function ArticleLayout({
       <ArticleJsonLd
         title="AI Trafikledning 2026 – Så kan svenska åkerier spara miljoner"
         description="Så kan svenska åkerier automatisera 85–95% av manuellt trafikledningsarbete med AI-automation."
-        url="/blogg/ai-trafikledning-2026"
+        url="/artiklar/ai-trafikledning-2026"
         publishedTime="2026-04-01T00:00:00Z"
         tags={["AI", "trafikledning", "automation", "åkeri", "ROI"]}
       />

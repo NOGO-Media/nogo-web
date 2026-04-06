@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         destination: "/artiklar/ai-trafikledning-2026",
         permanent: true,
       },
+      {
+        source: "/blogg/digitalisering-akerinaring-var-borjar-man",
+        destination: "/artiklar/digitalisering-akerinaring-var-borjar-man",
+        permanent: true,
+      },
     ];
   },
 };
