@@ -61,15 +61,6 @@ function AboutPageJsonLd() {
           worksFor: { "@type": "Organization", name: "NOGO Media AB" },
         },
       ],
-      employee: [
-        {
-          "@type": "Person",
-          name: "Jonathan Lindman",
-          jobTitle: "Marknad & strategi",
-          email: "jonathan@nogomedia.se",
-          worksFor: { "@type": "Organization", name: "NOGO Media AB" },
-        },
-      ],
       address: {
         "@type": "PostalAddress",
         addressLocality: "Norrköping",
@@ -134,13 +125,6 @@ const team = [
     email: "wille@nogomedia.se",
     description:
       "Ansvarig för plattformen och AI-automationen. Wille bygger systemen som optimerar rutter, automatiserar tilldelning och integrerar med befintliga TMS — med eller utan API.",
-  },
-  {
-    name: "Jonathan Lindman",
-    role: "Marknad & strategi",
-    email: "jonathan@nogomedia.se",
-    description:
-      "Ansvarig för marknad och strategi. Jonathan ser till att rätt åkerier hittar NOGO och att vi växer i rätt riktning.",
   },
 ];
 
@@ -284,7 +268,7 @@ export default function OmOssPage() {
               komplexitet.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {team.map((member) => (
               <div
                 key={member.name}
