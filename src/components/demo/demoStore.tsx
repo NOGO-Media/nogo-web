@@ -84,16 +84,23 @@ function reducer(state: DemoState, action: Action): DemoState {
     case "REOPEN_DAY": {
       const day = state.data.days.find((d) => d.id === action.dayId);
       if (!day || day.status !== "approved") return state;
-      // Cascade: find the next day (strictly after) and mark as stale if planned
+      // Cascade: every later day whose plan was already built (draft or
+      // approved) is now potentially out of date and needs a re-run.
       const idx = state.data.days.findIndex((d) => d.id === action.dayId);
-      const next = state.data.days[idx + 1];
       let data = updateDay(state.data, action.dayId, {
         status: "draft",
         approvedBy: undefined,
         approvedAt: undefined,
       });
-      if (next && (next.status === "draft" || next.status === "approved")) {
-        data = updateDay(data, next.id, { status: "stale" });
+      for (let i = idx + 1; i < state.data.days.length; i++) {
+        const later = data.days[i];
+        if (later.status === "draft" || later.status === "approved") {
+          data = updateDay(data, later.id, {
+            status: "stale",
+            approvedBy: undefined,
+            approvedAt: undefined,
+          });
+        }
       }
       return {
         ...state,
