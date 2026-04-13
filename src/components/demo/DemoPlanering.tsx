@@ -73,7 +73,11 @@ export default function DemoPlanering() {
 
   const canCreatePlan =
     selectedDay.status !== "approved" && selectedDay.status !== "locked";
-  const canApprove = selectedDay.status === "draft";
+  const selectedIdx = state.data.days.findIndex((d) => d.id === selectedDay.id);
+  const earlierDaysAllApproved = state.data.days
+    .slice(0, selectedIdx)
+    .every((d) => d.status === "approved");
+  const canApprove = selectedDay.status === "draft" && earlierDaysAllApproved;
   const canReopen = selectedDay.status === "approved";
   const isDraft = selectedDay.status === "draft";
   const hasExistingPlan =
@@ -157,6 +161,11 @@ export default function DemoPlanering() {
                 >
                   <CheckCircle2 size={14} /> Godkänn
                 </button>
+              )}
+              {selectedDay.status === "draft" && !earlierDaysAllApproved && (
+                <span className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-md px-2.5 py-1.5">
+                  Tidigare dagar måste godkännas först
+                </span>
               )}
               {canReopen && (
                 <button
