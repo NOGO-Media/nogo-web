@@ -7,19 +7,19 @@ const sections = [
     icon: Building2,
     title: "Företagsinformation",
     fields: [
-      { label: "Företagsnamn", value: "NOGO Åkeri" },
-      { label: "Org.nummer", value: "559535-9968" },
-      { label: "Adress", value: "Demogatan 7, 602 23 Norrköping" },
-      { label: "Telefon", value: "011-123 45 67" },
-      { label: "E-post", value: "trafik@nogoakeri.se" },
-      { label: "Ansvarig", value: "Hugo Svensson" },
+      { label: "Företagsnamn", value: "Demo Åkeri AB" },
+      { label: "Org.nummer", value: "559000-0000" },
+      { label: "Adress", value: "Exempelgatan 1" },
+      { label: "Telefon", value: "—" },
+      { label: "E-post", value: "demo@nogomedia.se" },
+      { label: "Ansvarig", value: "Hugo S." },
     ],
   },
   {
     icon: Truck,
     title: "Flottinställningar",
     fields: [
-      { label: "Max ekipage", value: "88" },
+      { label: "Max ekipage", value: "55" },
       { label: "Standard körtidsregel", value: "EU (förordning 561/2006)" },
       { label: "Viktklass-standard", value: "74 ton BK1" },
       { label: "ADR-behörighet krävs", value: "Ja, för farligt gods" },
@@ -73,17 +73,17 @@ const sections = [
     title: "Behörigheter & användare",
     fields: [
       { label: "Roll", value: "Trafikledare" },
-      { label: "Åtkomst", value: "Ordrar, Fordon, Rutter, Statistik, Rapporter" },
+      { label: "Åtkomst", value: "Planering, Ordrar, Fordon, Rutter, Status, Statistik" },
       { label: "Aktiva användare", value: "4 av 10 licenser" },
-      { label: "Senaste inloggning", value: "2026-04-01 08:14" },
+      { label: "Senaste inloggning", value: "2026-04-14 08:14" },
     ],
   },
   {
     icon: Database,
     title: "Integrationer",
     fields: [
-      { label: "TMS-koppling", value: "Opter (aktiv)" },
-      { label: "Senaste synk", value: "2026-04-01 10:28" },
+      { label: "TMS-koppling", value: "Mock-TMS (demo)" },
+      { label: "Senaste synk", value: "2026-04-14 10:28" },
       { label: "API-version", value: "v2.4.1" },
     ],
     toggles: [
