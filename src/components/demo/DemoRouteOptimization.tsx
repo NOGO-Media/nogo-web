@@ -1,154 +1,118 @@
 "use client";
 
-import { useState } from "react";
-import { Zap, Check, Route, Clock, TrendingDown } from "lucide-react";
+import { useMemo } from "react";
+import { ArrowRight, CheckCircle2, AlertTriangle, Clock } from "lucide-react";
+import { useDemoStore } from "./demoStore";
 
 interface Props {
   onGoPlanering?: () => void;
 }
 
+/**
+ * Summary card for the currently-selected day.
+ * The real optimization flow lives in DemoPlanering — this card is a
+ * dashboard-style entry point into it, not a second copy of the pipeline.
+ */
 export default function DemoRouteOptimization({ onGoPlanering }: Props = {}) {
-  const [state, setState] = useState<"idle" | "running" | "done">("idle");
-  const [progress, setProgress] = useState(0);
+  const { state, selectedDay, statusLabel, statusBadge } = useDemoStore();
 
-  const runOptimization = () => {
-    setState("running");
-    setProgress(0);
-
-    const interval = setInterval(() => {
-      setProgress((p) => {
-        if (p >= 100) {
-          clearInterval(interval);
-          setState("done");
-          return 100;
-        }
-        return p + 4;
-      });
-    }, 80);
-  };
-
-  const reset = () => {
-    setState("idle");
-    setProgress(0);
-  };
+  const { dayShifts, unplannedCount, totalStops, avgFill, overtimeCount, isDraft, isUnplanned } = useMemo(() => {
+    const dayShifts = state.data.shifts.filter((s) => s.dayId === selectedDay.id);
+    const dayOrders = state.data.orders.filter((o) => o.dayId === selectedDay.id);
+    const unplannedCount = dayOrders.filter((o) => o.shiftId === null && !o.cancelled).length;
+    const totalStops = dayShifts.reduce((s, sh) => s + sh.stopIds.length, 0);
+    const avgFill =
+      dayShifts.filter((s) => s.flakId).reduce((s, sh) => s + sh.flakFillPct, 0) /
+      Math.max(dayShifts.filter((s) => s.flakId).length, 1);
+    const overtimeCount = dayShifts.filter((sh) => sh.workMinutes > sh.maxWorkMinutes).length;
+    return {
+      dayShifts,
+      unplannedCount,
+      totalStops,
+      avgFill,
+      overtimeCount,
+      isDraft: selectedDay.status === "draft",
+      isUnplanned: selectedDay.status === "unplanned" || selectedDay.status === "stale",
+    };
+  }, [state.data, selectedDay]);
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-5 flex flex-col">
-      <h3 className="text-sm font-medium mb-4">Ruttoptimering</h3>
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-sm font-medium">Dagens plan</h3>
+        <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${statusBadge(selectedDay.status)}`}>
+          {statusLabel(selectedDay.status)}
+        </span>
+      </div>
 
-      {state === "idle" && (
-        <>
-          <p className="text-xs text-gray-500 mb-4 leading-relaxed">
-            Kör AI-optimering på alla planerade och aktiva rutter för att
-            minimera körsträcka och maximera fyllnadsgrad.
-          </p>
-          <div className="space-y-2 mb-5">
-            <div className="flex items-center justify-between text-xs">
-              <span className="text-gray-500">Rutter att optimera</span>
-              <span className="font-medium">55</span>
-            </div>
-            <div className="flex items-center justify-between text-xs">
-              <span className="text-gray-500">Fordon tillgängliga</span>
-              <span className="font-medium">62</span>
-            </div>
-            <div className="flex items-center justify-between text-xs">
-              <span className="text-gray-500">Stopp att fördela</span>
-              <span className="font-medium">89</span>
-            </div>
-          </div>
-          <button
-            onClick={runOptimization}
-            className="mt-auto flex items-center justify-center gap-2 bg-black text-white px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
-          >
-            <Zap size={16} />
-            Optimera rutter
-          </button>
-        </>
-      )}
+      <p className="text-xs text-gray-500 mb-4 leading-relaxed">
+        {isUnplanned
+          ? "Dagen saknar ett planeringsförslag. Generera ett i planeringsvyn — 10-stegs pipeline som partitionerar områden, kör VRP per område och optimerar hook-and-go."
+          : isDraft
+          ? "Ett förslag finns. Justera pass manuellt i planeringsvyn och godkänn när det ser bra ut."
+          : "Dagen är godkänd. Öppna planeringsvyn om du behöver justera i efterhand."}
+      </p>
 
-      {state === "running" && (
-        <div className="flex-1 flex flex-col items-center justify-center py-6">
-          <div className="w-12 h-12 rounded-full border-2 border-gray-200 border-t-black animate-spin mb-4" />
-          <p className="text-sm font-medium mb-1">Optimerar...</p>
-          <p className="text-xs text-gray-500 mb-4">
-            Analyserar {55} rutter med AI
-          </p>
-          <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
-            <div
-              className="h-full bg-black rounded-full transition-all duration-100"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-          <span className="text-xs text-gray-500 mt-2">{progress}%</span>
+      <div className="space-y-2 mb-5">
+        <SummaryRow label="Pass i förslaget" value={dayShifts.length.toString()} />
+        <SummaryRow label="Oplanerade ordrar" value={unplannedCount.toString()} highlight={unplannedCount > 0} />
+        <SummaryRow label="Stopp att köra" value={totalStops.toString()} />
+        <SummaryRow label="Snittfyllnad flak" value={`${avgFill.toFixed(0)}%`} />
+        {overtimeCount > 0 && (
+          <SummaryRow
+            label="Övertidspass"
+            value={overtimeCount.toString()}
+            highlight
+            icon={<AlertTriangle size={12} className="text-red-500" />}
+          />
+        )}
+      </div>
+
+      {onGoPlanering ? (
+        <button
+          onClick={onGoPlanering}
+          className="mt-auto flex items-center justify-center gap-2 bg-black text-white px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
+        >
+          Öppna planering
+          <ArrowRight size={14} />
+        </button>
+      ) : (
+        <div className="mt-auto text-xs text-gray-500 flex items-center gap-1.5">
+          {selectedDay.status === "approved" ? (
+            <>
+              <CheckCircle2 size={12} className="text-green-600" />
+              Godkänd {selectedDay.approvedAt}
+            </>
+          ) : (
+            <>
+              <Clock size={12} className="text-gray-400" />
+              {selectedDay.label}
+            </>
+          )}
         </div>
       )}
+    </div>
+  );
+}
 
-      {state === "done" && (
-        <div className="flex-1 flex flex-col">
-          <div className="flex items-center gap-2 mb-4">
-            <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
-              <Check size={16} className="text-green-600" />
-            </div>
-            <div>
-              <p className="text-sm font-medium">Optimering klar</p>
-              <p className="text-xs text-gray-500">55 rutter optimerade</p>
-            </div>
-          </div>
-
-          <div className="space-y-3 mb-5">
-            <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
-              <Route size={16} className="text-green-600 shrink-0" />
-              <div>
-                <p className="text-sm font-medium text-green-800">
-                  −12% körsträcka
-                </p>
-                <p className="text-xs text-green-600">
-                  347 km sparade totalt
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
-              <Clock size={16} className="text-blue-600 shrink-0" />
-              <div>
-                <p className="text-sm font-medium text-blue-800">
-                  45 min sparad tid
-                </p>
-                <p className="text-xs text-blue-600">
-                  Per fordon i genomsnitt
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 p-3 bg-amber-50 rounded-lg">
-              <TrendingDown size={16} className="text-amber-600 shrink-0" />
-              <div>
-                <p className="text-sm font-medium text-amber-800">
-                  +4% fyllnadsgrad
-                </p>
-                <p className="text-xs text-amber-600">
-                  Från 88% till 92%
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-auto flex items-center gap-2">
-            <button
-              onClick={reset}
-              className="flex-1 flex items-center justify-center gap-2 border border-gray-200 px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors"
-            >
-              Kör igen
-            </button>
-            {onGoPlanering && (
-              <button
-                onClick={onGoPlanering}
-                className="flex-1 flex items-center justify-center gap-2 bg-black text-white px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
-              >
-                Öppna planering
-              </button>
-            )}
-          </div>
-        </div>
-      )}
+function SummaryRow({
+  label,
+  value,
+  highlight,
+  icon,
+}: {
+  label: string;
+  value: string;
+  highlight?: boolean;
+  icon?: React.ReactNode;
+}) {
+  return (
+    <div className="flex items-center justify-between text-xs">
+      <span className="text-gray-500 inline-flex items-center gap-1.5">
+        {icon}
+        {label}
+      </span>
+      <span className={`font-medium ${highlight ? "text-red-600" : ""}`}>{value}</span>
     </div>
   );
 }

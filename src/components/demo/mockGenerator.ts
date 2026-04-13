@@ -366,7 +366,7 @@ export function generateDemoData(seed = 1337, now = new Date("2026-04-14T09:30:0
       const shift: Shift = {
         id: `shift-${day.id}-${s + 1}`,
         dayId: day.id,
-        shiftNo: ((500 + s * 10) % 900 + 100).toString(),
+        shiftNo: String(s + 1).padStart(2, "0"),
         area,
         carId: car.id,
         flakId: isPlanned ? flakReg.id : null,
@@ -397,15 +397,34 @@ export function generateDemoData(seed = 1337, now = new Date("2026-04-14T09:30:0
       const blockId = isInBlock ? isInBlock[0] : null;
 
       let shiftId: string | null = null;
+      let shiftArea: string | null = null;
       if (oi < plannedCount && isPlanned) {
         const shiftIdx = oi % dayShifts.length;
         shiftId = dayShifts[shiftIdx].id;
+        shiftArea = dayShifts[shiftIdx].area;
       }
       oi++;
 
-      const pickupArea = pick(rng, AREAS);
-      let deliveryArea = pick(rng, AREAS);
-      while (deliveryArea === pickupArea) deliveryArea = pick(rng, AREAS);
+      // Orders assigned to a shift must be routed through that shift's area
+      // (outbound: hub → area, return: area → hub). Unplanned orders are free.
+      let pickupArea: string;
+      let deliveryArea: string;
+      if (shiftArea) {
+        // 60 % outbound (hub → area), 40 % return (area → hub).
+        // "Hub" here is a generic origin area not equal to shiftArea.
+        const hub = AREAS.find((a) => a !== shiftArea) || AREAS[0];
+        if (rng() < 0.6) {
+          pickupArea = hub;
+          deliveryArea = shiftArea;
+        } else {
+          pickupArea = shiftArea;
+          deliveryArea = hub;
+        }
+      } else {
+        pickupArea = pick(rng, AREAS);
+        deliveryArea = pick(rng, AREAS);
+        while (deliveryArea === pickupArea) deliveryArea = pick(rng, AREAS);
+      }
 
       const trailerType = pick(rng, TRAILER_TYPES);
       const slapType = pick(rng, SLAP_TYPES);

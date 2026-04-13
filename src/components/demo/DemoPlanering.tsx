@@ -177,32 +177,35 @@ export default function DemoPlanering() {
               </span>
             </div>
 
-            {/* Column headers */}
-            <div className="grid grid-cols-[76px_96px_140px_140px_72px_140px_76px_160px] gap-3 px-4 py-2 border-b border-gray-100 bg-gray-50 text-[10px] font-medium text-gray-500 uppercase tracking-wider">
-              <div>Pass</div>
-              <div>Bil</div>
-              <div>Flak</div>
-              <div>Släp</div>
-              <div className="text-center">Stopp</div>
-              <div>Arbetstid</div>
-              <div className="text-right">Dist</div>
-              <div>FLM</div>
-            </div>
-
             {dayShifts.length === 0 ? (
               <div className="px-4 py-12 text-center text-sm text-gray-500">
                 Inga pass än. Skapa ett planeringsförslag för att komma igång.
               </div>
             ) : (
-              <div className="max-h-[640px] overflow-y-auto">
-                {dayShifts.map((shift) => (
-                  <ShiftRow
-                    key={shift.id}
-                    shift={shift}
-                    isDraft={isDraft}
-                    onClick={() => setOpenShift(shift.id)}
-                  />
-                ))}
+              <div className="overflow-x-auto">
+                <div className="min-w-[940px]">
+                  {/* Column headers */}
+                  <div className="grid grid-cols-[76px_96px_140px_140px_72px_140px_76px_160px] gap-3 px-4 py-2 border-b border-gray-100 bg-gray-50 text-[10px] font-medium text-gray-500 uppercase tracking-wider">
+                    <div>Pass</div>
+                    <div>Bil</div>
+                    <div>Flak</div>
+                    <div>Släp</div>
+                    <div className="text-center">Stopp</div>
+                    <div>Arbetstid</div>
+                    <div className="text-right">Dist</div>
+                    <div>FLM</div>
+                  </div>
+                  <div className="max-h-[640px] overflow-y-auto">
+                    {dayShifts.map((shift) => (
+                      <ShiftRow
+                        key={shift.id}
+                        shift={shift}
+                        isDraft={isDraft}
+                        onClick={() => setOpenShift(shift.id)}
+                      />
+                    ))}
+                  </div>
+                </div>
               </div>
             )}
           </div>

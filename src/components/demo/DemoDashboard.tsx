@@ -110,18 +110,15 @@ function DashboardBody() {
           {/* ── Vehicles ── */}
           {activeView === "vehicles" && <DemoFleetOverview />}
 
-          {/* ── Routes ── */}
+          {/* ── Routes ── (visual: map + timeline, no widgets) */}
           {activeView === "routes" && (
             <>
-              <DemoKPICards />
-              <div className="hidden md:grid grid-cols-3 gap-6">
-                <div className="col-span-2">
-                  <DemoMap />
-                </div>
-                <DemoRouteOptimization onGoPlanering={() => setActiveView("planering")} />
+              <div className="hidden md:block">
+                <DemoMap />
               </div>
-              <div className="md:hidden">
-                <DemoRouteOptimization onGoPlanering={() => setActiveView("planering")} />
+              <div className="md:hidden bg-white rounded-xl border border-gray-200 p-5 text-sm text-gray-500">
+                Kartvyn visas på större skärmar. Öppna demon på desktop för
+                interaktiv karta.
               </div>
               <DemoTimeline />
             </>

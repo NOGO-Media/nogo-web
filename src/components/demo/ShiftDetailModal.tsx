@@ -27,8 +27,6 @@ export default function ShiftDetailModal({ shiftId, onClose }: Props) {
   const shift = state.data.shifts.find((s) => s.id === shiftId);
   const [unitFilter, setUnitFilter] = useState<"all" | "flak" | "slap">("all");
 
-  const isDraft = selectedDay.status === "draft";
-
   const { car, flak, slap, orders, stops, deliveries, pickups } = useMemo(() => {
     if (!shift) {
       return { car: null, flak: null, slap: null, orders: [], stops: [], deliveries: [], pickups: [] };
@@ -183,20 +181,10 @@ export default function ShiftDetailModal({ shiftId, onClose }: Props) {
         </div>
 
         {/* Deliveries table */}
-        <Table
-          title="Leveranser"
-          stops={deliveries}
-          orders={orders}
-          isDraft={isDraft}
-        />
+        <Table title="Leveranser" stops={deliveries} orders={orders} />
 
         {/* Pickups table */}
-        <Table
-          title="Hämtningar"
-          stops={pickups}
-          orders={orders}
-          isDraft={isDraft}
-        />
+        <Table title="Hämtningar" stops={pickups} orders={orders} />
 
         <div className="px-5 py-4 border-t border-gray-100 flex justify-end">
           <button
@@ -215,12 +203,10 @@ function Table({
   title,
   stops,
   orders,
-  isDraft,
 }: {
   title: string;
   stops: { id: string; orderId: string; seq: number; area: string; address: string; flm: number; weightKg: number; unitId: string }[];
   orders: { id: string; pickup: string; delivery: string; shipmentBlockId: string | null }[];
-  isDraft: boolean;
 }) {
   if (stops.length === 0) return null;
 
@@ -240,7 +226,6 @@ function Table({
               <th className="text-left text-[10px] font-medium text-gray-500 px-3 py-2 uppercase tracking-wider">Till</th>
               <th className="text-right text-[10px] font-medium text-gray-500 px-3 py-2 uppercase tracking-wider">FLM</th>
               <th className="text-right text-[10px] font-medium text-gray-500 px-3 py-2 uppercase tracking-wider">Vikt</th>
-              {isDraft && <th className="text-right text-[10px] font-medium text-gray-500 px-3 py-2 uppercase tracking-wider">Åtgärd</th>}
             </tr>
           </thead>
           <tbody>
@@ -265,11 +250,6 @@ function Table({
                   <td className="px-3 py-2 text-xs text-gray-600">{order?.delivery || s.area}</td>
                   <td className="px-3 py-2 text-xs text-right font-medium">{s.flm.toFixed(1)}</td>
                   <td className="px-3 py-2 text-xs text-right text-gray-600">{s.weightKg} kg</td>
-                  {isDraft && (
-                    <td className="px-3 py-2 text-xs text-right">
-                      <button className="text-gray-500 hover:text-gray-900">Flytta</button>
-                    </td>
-                  )}
                 </tr>
               );
             })}

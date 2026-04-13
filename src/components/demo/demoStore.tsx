@@ -105,43 +105,34 @@ function reducer(state: DemoState, action: Action): DemoState {
       if (!order) return state;
       const day = state.data.days.find((d) => d.id === order.dayId);
       if (!day || day.status !== "draft") return state;
-      // Only do anything if it actually changes
       if (order.shiftId === toShiftId) return state;
 
+      // Validate destination shift belongs to the same day
+      if (toShiftId) {
+        const toShift = state.data.shifts.find((s) => s.id === toShiftId);
+        if (!toShift || toShift.dayId !== order.dayId) return state;
+      }
+
+      const stopId = `stop-${orderId}`;
       const orders = state.data.orders.map((o) =>
         o.id === orderId ? { ...o, shiftId: toShiftId } : o
       );
-      // Update stops' shift association: remove old, add new if any
-      const stops = state.data.stops.filter((s) => s.orderId !== orderId);
-      if (toShiftId) {
-        stops.push({
-          id: `stop-${orderId}`,
-          orderId,
-          type: order.stopType === "pickup" ? "pickup" : "delivery",
-          seq: stops.filter((s) => s.unitId && s.orderId !== orderId).length + 1,
-          area: order.delivery,
-          address: order.deliveryAddress,
-          flm: order.flm,
-          weightKg: order.weightKg,
-          unitId: state.data.shifts.find((s) => s.id === toShiftId)?.flakId || "",
-        });
-      }
-      // Update shifts' stopIds for both old and new shift
+
+      // Move the existing stop (if any) between shifts' stopIds lists.
       const shifts = state.data.shifts.map((sh) => {
+        const removed = order.shiftId === sh.id && sh.stopIds.includes(stopId);
+        const added = toShiftId === sh.id && !sh.stopIds.includes(stopId);
+        if (!removed && !added) return sh;
         let stopIds = sh.stopIds;
-        if (order.shiftId === sh.id) {
-          stopIds = stopIds.filter((id) => id !== `stop-${orderId}`);
-        }
-        if (toShiftId === sh.id) {
-          stopIds = [...stopIds, `stop-${orderId}`];
-        }
-        return stopIds === sh.stopIds ? sh : { ...sh, stopIds };
+        if (removed) stopIds = stopIds.filter((id) => id !== stopId);
+        if (added) stopIds = [...stopIds, stopId];
+        return { ...sh, stopIds };
       });
 
       return {
         ...state,
         past: pushHistory(state),
-        data: { ...state.data, orders, stops, shifts },
+        data: { ...state.data, orders, shifts },
       };
     }
 
