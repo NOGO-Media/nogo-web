@@ -10,6 +10,9 @@ import DemoRouteOptimization from "./DemoRouteOptimization";
 import DemoTimeline from "./DemoTimeline";
 import DemoSettings from "./DemoSettings";
 import DemoStatistics from "./DemoStatistics";
+import DemoPlanering from "./DemoPlanering";
+import DemoStatus from "./DemoStatus";
+import { DemoStoreProvider, useDemoStore } from "./demoStore";
 
 const DemoMap = dynamic(() => import("./DemoMap"), { ssr: false });
 
@@ -17,15 +20,35 @@ type BottomTab = "orders" | "fleet" | "timeline";
 
 const viewLabels: Record<ViewId, string> = {
   overview: "Översikt",
+  planering: "Planering",
   orders: "Ordrar",
   vehicles: "Fordon",
   routes: "Rutter",
+  status: "Status",
   statistics: "Statistik",
   settings: "Inställningar",
 };
 
-export default function DemoDashboard() {
-  const [activeView, setActiveView] = useState<ViewId>("overview");
+function TopBar({ activeView }: { activeView: ViewId }) {
+  const { selectedDay } = useDemoStore();
+  return (
+    <div className="sticky top-0 z-10 bg-gray-50/80 backdrop-blur-sm border-b border-gray-200 px-4 md:px-6 py-3 flex items-center justify-between">
+      <div>
+        <h1 className="text-lg font-medium">{viewLabels[activeView]}</h1>
+        <p className="text-xs text-gray-500">
+          {selectedDay.label} · {selectedDay.orderCount} ordrar · {selectedDay.shiftCount} pass
+        </p>
+      </div>
+      <div className="flex items-center gap-1.5">
+        <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+        <span className="text-xs text-gray-500">Live</span>
+      </div>
+    </div>
+  );
+}
+
+function DashboardBody() {
+  const [activeView, setActiveView] = useState<ViewId>("planering");
   const [bottomTab, setBottomTab] = useState<BottomTab>("orders");
 
   const tabs: { id: BottomTab; label: string }[] = [
@@ -39,34 +62,21 @@ export default function DemoDashboard() {
       <DemoSidebar activeView={activeView} onViewChange={setActiveView} />
 
       <div className="flex-1 overflow-auto pt-14 md:pt-0">
-        {/* Top bar */}
-        <div className="sticky top-0 z-10 bg-gray-50/80 backdrop-blur-sm border-b border-gray-200 px-4 md:px-6 py-3 flex items-center justify-between">
-          <div>
-            <h1 className="text-lg font-medium">{viewLabels[activeView]}</h1>
-            <p className="text-xs text-gray-500">
-              Tisdag 1 april 2026 — 10:32
-            </p>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-            <span className="text-xs text-gray-500">Live</span>
-          </div>
-        </div>
+        <TopBar activeView={activeView} />
 
         <div className="p-4 md:p-6 space-y-4 md:space-y-6">
           {/* ── Overview ── */}
           {activeView === "overview" && (
             <>
               <DemoKPICards />
-              {/* Map + Route opt: map hidden on mobile */}
               <div className="hidden md:grid grid-cols-3 gap-6">
                 <div className="col-span-2">
                   <DemoMap />
                 </div>
-                <DemoRouteOptimization />
+                <DemoRouteOptimization onGoPlanering={() => setActiveView("planering")} />
               </div>
               <div className="md:hidden">
-                <DemoRouteOptimization />
+                <DemoRouteOptimization onGoPlanering={() => setActiveView("planering")} />
               </div>
               <div>
                 <div className="flex gap-1 mb-4 overflow-x-auto">
@@ -84,62 +94,21 @@ export default function DemoDashboard() {
                     </button>
                   ))}
                 </div>
-                {bottomTab === "orders" && <DemoOrderTable />}
+                {bottomTab === "orders" && <DemoOrderTable compact />}
                 {bottomTab === "fleet" && <DemoFleetOverview />}
                 {bottomTab === "timeline" && <DemoTimeline />}
               </div>
             </>
           )}
 
+          {/* ── Planering ── */}
+          {activeView === "planering" && <DemoPlanering />}
+
           {/* ── Orders ── */}
-          {activeView === "orders" && (
-            <>
-              <DemoKPICards />
-              <DemoOrderTable />
-            </>
-          )}
+          {activeView === "orders" && <DemoOrderTable />}
 
           {/* ── Vehicles ── */}
-          {activeView === "vehicles" && (
-            <>
-              <DemoKPICards />
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-                <div className="md:col-span-2">
-                  <DemoFleetOverview />
-                </div>
-                <div className="space-y-4 md:space-y-6">
-                  <div className="bg-white rounded-xl border border-gray-200 p-5">
-                    <h3 className="text-sm font-medium mb-4">Flottstatus</h3>
-                    <div className="space-y-3">
-                      {[
-                        { label: "I trafik", count: 6, color: "bg-green-500" },
-                        { label: "Ledig", count: 1, color: "bg-gray-400" },
-                        { label: "Underhåll", count: 1, color: "bg-red-500" },
-                      ].map((s) => (
-                        <div key={s.label} className="flex items-center justify-between">
-                          <div className="flex items-center gap-2">
-                            <div className={`w-2.5 h-2.5 rounded-full ${s.color}`} />
-                            <span className="text-sm text-gray-600">{s.label}</span>
-                          </div>
-                          <span className="text-sm font-medium">{s.count}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="mt-4 pt-4 border-t border-gray-100">
-                      <div className="flex justify-between text-xs text-gray-500 mb-1">
-                        <span>Beläggning</span>
-                        <span>75%</span>
-                      </div>
-                      <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                        <div className="h-full bg-green-500 rounded-full" style={{ width: "75%" }} />
-                      </div>
-                    </div>
-                  </div>
-                  <DemoTimeline />
-                </div>
-              </div>
-            </>
-          )}
+          {activeView === "vehicles" && <DemoFleetOverview />}
 
           {/* ── Routes ── */}
           {activeView === "routes" && (
@@ -149,14 +118,17 @@ export default function DemoDashboard() {
                 <div className="col-span-2">
                   <DemoMap />
                 </div>
-                <DemoRouteOptimization />
+                <DemoRouteOptimization onGoPlanering={() => setActiveView("planering")} />
               </div>
               <div className="md:hidden">
-                <DemoRouteOptimization />
+                <DemoRouteOptimization onGoPlanering={() => setActiveView("planering")} />
               </div>
               <DemoTimeline />
             </>
           )}
+
+          {/* ── Status ── */}
+          {activeView === "status" && <DemoStatus />}
 
           {/* ── Statistics ── */}
           {activeView === "statistics" && <DemoStatistics />}
@@ -166,5 +138,13 @@ export default function DemoDashboard() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function DemoDashboard() {
+  return (
+    <DemoStoreProvider>
+      <DashboardBody />
+    </DemoStoreProvider>
   );
 }

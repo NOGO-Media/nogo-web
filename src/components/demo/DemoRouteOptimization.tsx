@@ -3,7 +3,11 @@
 import { useState } from "react";
 import { Zap, Check, Route, Clock, TrendingDown } from "lucide-react";
 
-export default function DemoRouteOptimization() {
+interface Props {
+  onGoPlanering?: () => void;
+}
+
+export default function DemoRouteOptimization({ onGoPlanering }: Props = {}) {
   const [state, setState] = useState<"idle" | "running" | "done">("idle");
   const [progress, setProgress] = useState(0);
 
@@ -127,12 +131,22 @@ export default function DemoRouteOptimization() {
             </div>
           </div>
 
-          <button
-            onClick={reset}
-            className="mt-auto flex items-center justify-center gap-2 border border-gray-200 px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors"
-          >
-            Kör igen
-          </button>
+          <div className="mt-auto flex items-center gap-2">
+            <button
+              onClick={reset}
+              className="flex-1 flex items-center justify-center gap-2 border border-gray-200 px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors"
+            >
+              Kör igen
+            </button>
+            {onGoPlanering && (
+              <button
+                onClick={onGoPlanering}
+                className="flex-1 flex items-center justify-center gap-2 bg-black text-white px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
+              >
+                Öppna planering
+              </button>
+            )}
+          </div>
         </div>
       )}
     </div>
