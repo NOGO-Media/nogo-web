@@ -66,8 +66,16 @@ function reducer(state: DemoState, action: Action): DemoState {
     }
 
     case "APPROVE_DAY": {
-      const day = state.data.days.find((d) => d.id === action.dayId);
-      if (!day || day.status !== "draft") return state;
+      const idx = state.data.days.findIndex((d) => d.id === action.dayId);
+      if (idx < 0) return state;
+      const day = state.data.days[idx];
+      if (day.status !== "draft") return state;
+      // Enforce chronological approval: you can't sign off on day N while an
+      // earlier day is still open, stale, or unplanned — later days depend on
+      // orphan yard units and driver/vehicle handoffs from the previous day.
+      for (let i = 0; i < idx; i++) {
+        if (state.data.days[i].status !== "approved") return state;
+      }
       const now = new Date();
       const stamp = `${now.toISOString().slice(0, 10)} ${String(now.getHours()).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")}`;
       return {
