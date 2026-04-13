@@ -5,9 +5,11 @@ import Link from "next/link";
 import Logo from "../Logo";
 import {
   LayoutDashboard,
+  CalendarDays,
   ClipboardList,
   Truck,
   Route,
+  Activity,
   BarChart3,
   Settings,
   LogOut,
@@ -17,9 +19,11 @@ import {
 
 const menuItems = [
   { icon: LayoutDashboard, label: "Översikt", id: "overview" },
+  { icon: CalendarDays, label: "Planering", id: "planering" },
   { icon: ClipboardList, label: "Ordrar", id: "orders" },
   { icon: Truck, label: "Fordon", id: "vehicles" },
   { icon: Route, label: "Rutter", id: "routes" },
+  { icon: Activity, label: "Status", id: "status" },
   { icon: BarChart3, label: "Statistik", id: "statistics" },
   { icon: Settings, label: "Inställningar", id: "settings" },
 ] as const;
