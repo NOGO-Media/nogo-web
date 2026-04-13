@@ -54,7 +54,10 @@ function reducer(state: DemoState, action: Action): DemoState {
     case "CREATE_PLAN": {
       const day = state.data.days.find((d) => d.id === action.dayId);
       if (!day) return state;
-      if (day.status !== "unplanned" && day.status !== "stale") return state;
+      // A plan can be (re)generated as long as the day is open — i.e. not
+      // already approved or locked. This includes draft (regenerate) and
+      // stale (refresh after upstream change).
+      if (day.status === "approved" || day.status === "locked") return state;
       return {
         ...state,
         past: pushHistory(state),
