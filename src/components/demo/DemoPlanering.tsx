@@ -71,10 +71,13 @@ export default function DemoPlanering() {
 
   const orphanYardUnits = state.data.yardUnits.filter((u) => u.orphan);
 
-  const canCreatePlan = selectedDay.status === "unplanned" || selectedDay.status === "stale";
+  const canCreatePlan =
+    selectedDay.status !== "approved" && selectedDay.status !== "locked";
   const canApprove = selectedDay.status === "draft";
   const canReopen = selectedDay.status === "approved";
   const isDraft = selectedDay.status === "draft";
+  const hasExistingPlan =
+    selectedDay.status === "draft" || selectedDay.status === "stale";
 
   const handleDragEnd = (ev: DragEndEvent) => {
     const orderId = String(ev.active.id).replace("order-", "");
@@ -143,7 +146,8 @@ export default function DemoPlanering() {
                   onClick={handleCreatePlan}
                   className="inline-flex items-center gap-1.5 bg-black text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-gray-800"
                 >
-                  <Play size={14} /> Skapa planeringsförslag
+                  <Play size={14} />{" "}
+                  {hasExistingPlan ? "Skapa om planeringsförslag" : "Skapa planeringsförslag"}
                 </button>
               )}
               {canApprove && (
