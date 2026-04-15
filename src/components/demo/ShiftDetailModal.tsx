@@ -149,7 +149,7 @@ export default function ShiftDetailModal({ shiftId, onClose }: Props) {
             )}
             {shift.flakOrphan && (
               <span className="inline-flex items-center gap-1.5 bg-red-50 text-red-700 text-xs font-medium px-2.5 py-1 rounded-full">
-                Orphan yard-enhet
+                Ohanterad gårdsenhet
               </span>
             )}
           </div>

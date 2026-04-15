@@ -128,7 +128,7 @@ export default function DemoOrderTable({ compact }: Props) {
                         {o.id}
                         {o.shipmentBlockId && (
                           <span
-                            title="Shipment-block"
+                            title="Samordnad leverans"
                             className="inline-flex items-center gap-0.5 px-1.5 py-0.5 bg-purple-50 text-purple-700 text-[10px] rounded"
                           >
                             <Link2 size={9} /> Block
