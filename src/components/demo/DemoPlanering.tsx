@@ -110,7 +110,7 @@ export default function DemoPlanering() {
             <AlertTriangle size={18} className="text-amber-600 shrink-0 mt-0.5" />
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium text-amber-800">
-                {orphanYardUnits.length} orphan yard-enhet{orphanYardUnits.length > 1 ? "er" : ""}
+                {orphanYardUnits.length} ohanterad gårdsenhet{orphanYardUnits.length > 1 ? "er" : ""}
               </p>
               <p className="text-xs text-amber-700 mt-1">
                 Väntande gårdsenheter från föregående dag som inte har återanvänts i planen:{" "}

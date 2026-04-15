@@ -69,10 +69,10 @@ export default function DemoStatus() {
     { label: "Optimizer-API", status: "ok" as const, detail: "aktiv", icon: Zap },
     { label: "Routing-tjänst", status: "ok" as const, detail: "aktiv (latency 87 ms)", icon: Globe },
     { label: "Geocode-cache", status: "ok" as const, detail: "2 134 entries", icon: Database },
-    { label: "Pipeline-fel senaste körning", status: "ok" as const, detail: "inga", icon: Activity },
+    { label: "Fel i senaste körning", status: "ok" as const, detail: "inga", icon: Activity },
     { label: "Makuleringsgrad", status: "warn" as const, detail: `${cancellationRate.toFixed(1)}%`, icon: AlertTriangle },
     {
-      label: "Orphan yard-enheter",
+      label: "Ohanterade gårdsenheter",
       status: yardPending.filter((u) => u.orphan).length === 0 ? "ok" : "warn",
       detail: `${yardPending.filter((u) => u.orphan).length}`,
       icon: Truck,
@@ -86,17 +86,17 @@ export default function DemoStatus() {
         <div className="flex items-center justify-between mb-3">
           <div>
             <h3 className="text-sm font-medium flex items-center gap-2">
-              <Activity size={15} /> Optimeringspipeline
+              <Activity size={15} /> Optimering
             </h3>
             <p className="text-xs text-gray-500 mt-0.5">
-              Total tid: ~100-145 sekunder · Senast: {state.data.history[0].durationSec}s ({state.data.history[0].status})
+              Typisk körtid: ~2 minuter · Senast: {state.data.history[0].durationSec}s ({state.data.history[0].status})
             </p>
           </div>
           <button
             onClick={() => setShowProgress(true)}
             className="inline-flex items-center gap-1.5 bg-black text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-gray-800"
           >
-            <Play size={13} /> Kör pipeline
+            <Play size={13} /> Kör optimering
           </button>
         </div>
       </div>
@@ -209,7 +209,7 @@ export default function DemoStatus() {
             }
           }}
           onClose={() => setShowProgress(false)}
-          title={`Pipeline körs för ${selectedDay.label}`}
+          title={`Optimering körs för ${selectedDay.label}`}
         />
       )}
     </div>

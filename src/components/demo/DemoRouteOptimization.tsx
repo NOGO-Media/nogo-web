@@ -47,7 +47,7 @@ export default function DemoRouteOptimization({ onGoPlanering }: Props = {}) {
 
       <p className="text-xs text-gray-500 mb-4 leading-relaxed">
         {isUnplanned
-          ? "Dagen saknar ett planeringsförslag. Generera ett i planeringsvyn — 10-stegs pipeline som partitionerar områden, kör VRP per område och optimerar hook-and-go."
+          ? "Dagen saknar ett planeringsförslag. Generera ett i planeringsvyn — optimeringen bygger ett förslag utifrån ordrar, resurser och körtider."
           : isDraft
           ? "Ett förslag finns. Justera pass manuellt i planeringsvyn och godkänn när det ser bra ut."
           : "Dagen är godkänd. Öppna planeringsvyn om du behöver justera i efterhand."}

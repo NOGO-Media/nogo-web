@@ -4,16 +4,16 @@ import { useEffect, useState } from "react";
 import { Check, Loader2, X } from "lucide-react";
 
 export const PIPELINE_STEPS = [
-  { id: 1, label: "Orderinläsning", seconds: 4 },
-  { id: 2, label: "Yard-seed (pre-fyllda gårdsenheter)", seconds: 6 },
-  { id: 3, label: "Shipment-block", seconds: 7 },
-  { id: 4, label: "Områdespartitionering", seconds: 11 },
-  { id: 5, label: "Per-område VRP (parallellt)", seconds: 38 },
-  { id: 6, label: "Förarbyte", seconds: 8 },
-  { id: 7, label: "Hook-and-go-konsolidering", seconds: 9 },
-  { id: 8, label: "Hard 55-cap", seconds: 4 },
-  { id: 9, label: "Validering + enhetstilldelning", seconds: 6 },
-  { id: 10, label: "Parallell TSP + övertidstrimming", seconds: 24 },
+  { id: 1, label: "Läser in ordrar", seconds: 4 },
+  { id: 2, label: "Förbereder resurser", seconds: 6 },
+  { id: 3, label: "Grupperar leveranser", seconds: 7 },
+  { id: 4, label: "Geografisk analys", seconds: 11 },
+  { id: 5, label: "Ruttoptimering", seconds: 38 },
+  { id: 6, label: "Resursfördelning", seconds: 8 },
+  { id: 7, label: "Konsoliderar transporter", seconds: 9 },
+  { id: 8, label: "Tillämpar regler", seconds: 4 },
+  { id: 9, label: "Planvalidering", seconds: 6 },
+  { id: 10, label: "Finjusterar plan", seconds: 24 },
 ];
 
 const TOTAL_ANIMATION_MS = 8500;
@@ -75,7 +75,7 @@ export default function OptimizationProgress({
           <div>
             <h3 className="text-sm font-medium">{title}</h3>
             <p className="text-xs text-gray-500 mt-0.5">
-              {done ? "Klar" : `Kör pipeline · ${Math.round(elapsed)}s / ~${totalSec}s`}
+              {done ? "Klar" : `Optimerar · ${Math.round(elapsed)}s / ~${totalSec}s`}
             </p>
           </div>
           {onClose && (
