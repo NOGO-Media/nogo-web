@@ -23,7 +23,7 @@ export default function CTASection() {
                 className="inline-flex items-center justify-center gap-2 bg-white text-black px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors"
               >
                 Boka strategi-samtal
-                <ArrowRight size={16} />
+                <ArrowRight size={16} aria-hidden="true" />
               </Link>
               <Link
                 href="/losningar"

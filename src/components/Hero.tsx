@@ -37,13 +37,13 @@ export default function Hero() {
             className="inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
           >
             Boka strategi-samtal
-            <ArrowRight size={16} />
+            <ArrowRight size={16} aria-hidden="true" />
           </Link>
           <Link
             href="/demo"
             className="inline-flex items-center justify-center gap-2 border border-gray-200 px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors"
           >
-            <Play size={14} />
+            <Play size={14} aria-hidden="true" />
             Se hur det fungerar
           </Link>
         </div>
