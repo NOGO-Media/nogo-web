@@ -99,17 +99,22 @@ function DonutChart({
   segments: { label: string; value: number; color: string }[];
 }) {
   const total = segments.reduce((s, d) => s + d.value, 0);
-  let cumulative = 0;
   const radius = 40;
   const circumference = 2 * Math.PI * radius;
+
+  const offsets: number[] = [];
+  let running = 0;
+  for (const seg of segments) {
+    offsets.push(running * circumference);
+    running += seg.value / total;
+  }
 
   return (
     <div className="flex items-center gap-6">
       <svg width={100} height={100} viewBox="0 0 100 100">
         {segments.map((seg, i) => {
           const pct = seg.value / total;
-          const offset = cumulative * circumference;
-          cumulative += pct;
+          const offset = offsets[i];
           return (
             <motion.circle
               key={seg.label}

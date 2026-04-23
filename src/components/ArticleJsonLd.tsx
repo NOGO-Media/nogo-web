@@ -5,21 +5,30 @@ export default function ArticleJsonLd({
   description,
   url,
   publishedTime,
+  modifiedTime,
+  image = "/og-image.png",
   tags,
 }: {
   title: string;
   description: string;
   url: string;
   publishedTime: string;
+  modifiedTime?: string;
+  image?: string;
   tags: string[];
 }) {
-  const schema = {
+  const absoluteUrl = `${SITE_URL}${url}`;
+  const absoluteImage = image.startsWith("http") ? image : `${SITE_URL}${image}`;
+
+  const article = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
     description,
-    url: `${SITE_URL}${url}`,
+    url: absoluteUrl,
+    image: [absoluteImage],
     datePublished: publishedTime,
+    dateModified: modifiedTime ?? publishedTime,
     author: {
       "@type": "Organization",
       name: "NOGO Media AB",
@@ -38,14 +47,45 @@ export default function ArticleJsonLd({
     inLanguage: "sv",
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${SITE_URL}${url}`,
+      "@id": absoluteUrl,
     },
   };
 
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Hem",
+        item: SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blogg",
+        item: `${SITE_URL}/blogg`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: title,
+        item: absoluteUrl,
+      },
+    ],
+  };
+
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+    </>
   );
 }

@@ -131,8 +131,6 @@ const connections: Connection[] = [
   { from: "relaplanering", to: "statistik" },
 ];
 
-const allNodes = [...inputNodes, ...coreNodes, ...outputNodes];
-
 export default function DispatchWorkflow() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
