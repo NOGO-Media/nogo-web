@@ -81,7 +81,12 @@ export default function FilterPanel({ value, onChange, onClose }: Props) {
       <div className="bg-white w-full max-w-md h-full overflow-y-auto border-l border-gray-200">
         <div className="sticky top-0 bg-white px-5 py-4 border-b border-gray-100 flex items-center justify-between">
           <h3 className="text-sm font-medium">Filter</h3>
-          <button onClick={onClose} className="text-gray-500 hover:text-gray-600">
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Stäng filter"
+            className="text-gray-500 hover:text-gray-600"
+          >
             <X size={18} />
           </button>
         </div>

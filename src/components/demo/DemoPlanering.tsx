@@ -314,7 +314,7 @@ function UnplannedRow({
           <GripVertical size={14} />
         </button>
       )}
-      <button onClick={onOpen} className="flex-1 min-w-0 text-left">
+      <button type="button" onClick={onOpen} className="flex-1 min-w-0 text-left">
         <div className="flex items-center gap-1.5 mb-0.5">
           <span className="font-mono text-xs font-medium">{order.id}</span>
           {order.priority !== "Normal" && (

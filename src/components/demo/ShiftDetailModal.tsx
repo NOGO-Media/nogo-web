@@ -85,7 +85,12 @@ export default function ShiftDetailModal({ shiftId, onClose }: Props) {
               {slap && <> · Släp {slap.reg}</>}
             </p>
           </div>
-          <button onClick={onClose} className="text-gray-500 hover:text-gray-600 shrink-0">
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Stäng"
+            className="text-gray-500 hover:text-gray-600 shrink-0"
+          >
             <X size={18} />
           </button>
         </div>

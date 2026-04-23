@@ -78,7 +78,13 @@ export default function DemoSidebar({
               <p className="text-sm font-medium truncate">Hugo S.</p>
               <p className="text-xs text-gray-500 truncate">Trafikledare</p>
             </div>
-            <button className="text-gray-500 hover:text-gray-600"><LogOut size={16} /></button>
+            <button
+              type="button"
+              aria-label="Logga ut"
+              className="text-gray-500 hover:text-gray-600"
+            >
+              <LogOut size={16} />
+            </button>
           </div>
         </div>
       </aside>
@@ -89,7 +95,13 @@ export default function DemoSidebar({
           <Logo className="h-5" />
           <span className="text-[10px] font-medium text-gray-500 uppercase tracking-wider">Dispatch</span>
         </Link>
-        <button onClick={() => setMobileOpen(!mobileOpen)} className="p-2">
+        <button
+          type="button"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label={mobileOpen ? "Stäng meny" : "Öppna meny"}
+          aria-expanded={mobileOpen}
+          className="p-2"
+        >
           {mobileOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
