@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Mail, MapPin } from "lucide-react";
 import { KontaktForm } from "./KontaktForm";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Kontakt — Boka ett kostnadsfritt strategisamtal",
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
 export default function KontaktPage() {
   return (
     <section className="pt-32 pb-24 md:pt-44 md:pb-32">
+      <BreadcrumbJsonLd items={[{ name: "Kontakt", path: "/kontakt" }]} />
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16">
           {/* Left — Info */}

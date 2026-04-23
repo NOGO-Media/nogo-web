@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Blogg — Insikter för svenska transportföretag",
@@ -109,6 +110,7 @@ const articles = [
 export default function BloggPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Blogg", path: "/blogg" }]} />
       <section className="pt-32 pb-16 md:pt-44 md:pb-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-2xl">

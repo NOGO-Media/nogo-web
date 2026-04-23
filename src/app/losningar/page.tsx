@@ -11,6 +11,7 @@ import {
   Settings,
   FileSpreadsheet,
 } from "lucide-react";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 export const metadata: Metadata = {
   title:
     "Lösningar — Ruttoptimering, orderhantering, TMS-integration, trafikledning & analys",
@@ -186,6 +187,7 @@ export default function LosningarPage() {
   return (
     <>
       <CollectionJsonLd />
+      <BreadcrumbJsonLd items={[{ name: "Lösningar", path: "/losningar" }]} />
       {/* Hero */}
       <section className="pt-32 pb-8 md:pt-44 md:pb-12">
         <div className="max-w-7xl mx-auto px-6">
