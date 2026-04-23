@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
   title: "Opter, AddSecure eller eget? Så väljer du TMS",
@@ -587,7 +588,9 @@ export default function TmsSystemJamforelseOpterAddsecurePage() {
             </div>
           </section>
 
-          <section className="rounded-2xl border border-gray-200 p-6 bg-white">
+          <RelatedSolutions slugs={["tms-integration", "trafikledning"]} />
+
+          <section className="rounded-2xl border border-gray-200 p-6 bg-white mt-10">
             <h2 className="text-2xl font-medium text-black mb-3">
               Osäker på vilket system som passar er?
             </h2>

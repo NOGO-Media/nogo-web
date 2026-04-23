@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Calculator } from "lucide-react";
+import RelatedSolutions from "@/components/RelatedSolutions";
 
 // ── ROI Calculator ────────────────────────────────────────
 
@@ -267,6 +268,8 @@ export default function AITrafikledningArticle() {
               AI-trafikledning är inte en trend. Det är nästa steg i transportbranschens digitalisering.
             </p>
           </div>
+
+          <RelatedSolutions slugs={["trafikledning", "automatisk-orderhantering"]} />
 
           {/* CTA */}
           <div className="mt-16 bg-gray-950 rounded-2xl p-8 md:p-12 text-center">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
   title: "Så räknar du ROI på automation i transport",
@@ -494,7 +495,9 @@ export default function RoiAutomationTransportKalkylPage() {
             </div>
           </section>
 
-          <section className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+          <RelatedSolutions slugs={["ruttoptimering", "automatisk-orderhantering"]} />
+
+          <section className="rounded-2xl border border-gray-200 bg-gray-50 p-6 mt-10">
             <h2 className="text-2xl font-medium text-black mb-3">
               Vill ni göra kalkylen för ert åkeri tillsammans med oss?
             </h2>
