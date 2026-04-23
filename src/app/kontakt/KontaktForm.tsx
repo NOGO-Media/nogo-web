@@ -60,38 +60,45 @@ export function KontaktForm() {
         <h2 className="text-xl font-medium mb-6">Beskriv er situation</h2>
         <div className="space-y-5">
           <div>
-            <label className="block text-sm font-medium mb-2">Namn</label>
+            <label htmlFor="namn" className="block text-sm font-medium mb-2">Namn</label>
             <input
+              id="namn"
               type="text"
               name="namn"
+              autoComplete="name"
               placeholder="Ert namn"
               className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-gray-400 bg-white"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-2">Företag</label>
+            <label htmlFor="foretag" className="block text-sm font-medium mb-2">Företag</label>
             <input
+              id="foretag"
               type="text"
               name="foretag"
+              autoComplete="organization"
               placeholder="Företagsnamn"
               className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-gray-400 bg-white"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-2">E-post</label>
+            <label htmlFor="email" className="block text-sm font-medium mb-2">E-post</label>
             <input
+              id="email"
               type="email"
               name="email"
               required
+              autoComplete="email"
               placeholder="er@email.se"
               className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-gray-400 bg-white"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-2">
+            <label htmlFor="fordon" className="block text-sm font-medium mb-2">
               Antal fordon
             </label>
             <select
+              id="fordon"
               name="fordon"
               className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-gray-400 bg-white text-gray-500"
             >
@@ -104,10 +111,11 @@ export function KontaktForm() {
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium mb-2">
+            <label htmlFor="meddelande" className="block text-sm font-medium mb-2">
               Beskriv kort vad ni vill lösa
             </label>
             <textarea
+              id="meddelande"
               name="meddelande"
               placeholder="T.ex. Vi vill effektivisera orderhanteringen..."
               rows={4}
