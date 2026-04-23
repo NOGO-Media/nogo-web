@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
   title: "Digitalisering i åkerinäringen — var börjar man?",
@@ -355,7 +356,9 @@ export default function DigitaliseringAkerinaringenArticle() {
             </div>
           </section>
 
-          <section>
+          <RelatedSolutions slugs={["ruttoptimering", "tms-integration"]} />
+
+          <section className="mt-10">
             <h2 className="text-2xl font-medium text-black mb-3">Vill du veta vad som passar just ert åkeri?</h2>
             <p>
               Få ett konkret förslag på nästa steg utifrån er trafik, era kunder och

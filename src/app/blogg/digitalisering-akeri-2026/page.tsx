@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
   title:
@@ -582,7 +583,9 @@ export default function DigitaliseringAkeri2026Article() {
             </section>
 
             {/* CTA */}
-            <section className="bg-gray-950 text-white rounded-2xl p-8 md:p-12">
+            <RelatedSolutions slugs={["rapport-och-analys", "ruttoptimering"]} />
+
+            <section className="bg-gray-950 text-white rounded-2xl p-8 md:p-12 mt-10">
               <h2 className="text-2xl md:text-3xl font-medium mb-4">
                 Vill ni veta var ert åkeri står — och vad nästa steg är?
               </h2>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
   title: "Vad kostar manuell transportplanering egentligen?",
@@ -163,7 +164,9 @@ export default function ManuellTransportplaneringArticle() {
           </section>
         </div>
 
-        <div className="mt-16 bg-gray-950 rounded-2xl p-8 md:p-12 text-center">
+        <RelatedSolutions slugs={["trafikledning", "automatisk-orderhantering"]} />
+
+        <div className="mt-10 bg-gray-950 rounded-2xl p-8 md:p-12 text-center">
           <h2 className="text-2xl font-medium text-white mb-3">
             Vill ni se vilka TMS-system som passar svenska åkerier?
           </h2>

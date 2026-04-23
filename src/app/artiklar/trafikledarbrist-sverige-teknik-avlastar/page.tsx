@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
   title: "Trafikledarbrist i Sverige — hur teknik kan avlasta",
@@ -401,7 +402,9 @@ export default function TrafikledarbristArticle() {
             </div>
           </section>
 
-          <section className="rounded-2xl border border-black bg-black text-white p-6">
+          <RelatedSolutions slugs={["trafikledning", "automatisk-orderhantering"]} />
+
+          <section className="rounded-2xl border border-black bg-black text-white p-6 mt-10">
             <h2 className="text-2xl font-medium mb-3">
               Vill ni se vad som går att automatisera hos er?
             </h2>
