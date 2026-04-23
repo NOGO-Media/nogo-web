@@ -538,7 +538,7 @@ export default function DigitaliseringAkeri2026Article() {
                 <strong>60% mindre manuellt arbete</strong> hos
                 trafikledarna.{" "}
                 <Link
-                  href="/blogg/ai-trafikledning-2026"
+                  href="/artiklar/ai-trafikledning-2026"
                   className="underline"
                 >
                   Läs: Så kan svenska åkerier spara miljoner med AI.

@@ -7,6 +7,11 @@ export const metadata: Metadata = {
     "Interaktiv demo av NOGO Dispatch — ruttplanering och disponering för svenska åkerier.",
   keywords: ["dispatch demo", "ruttplanering demo", "åkeri demo", "NOGO dispatch"],
   alternates: { canonical: "/demo" },
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: { index: false, follow: false },
+  },
   openGraph: {
     title: "NOGO Dispatch — Interaktiv demo",
     description:
