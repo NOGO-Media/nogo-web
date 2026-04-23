@@ -168,20 +168,19 @@ export default function BloggPage() {
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-2xl mx-auto px-6 text-center">
-          <h2 className="text-2xl font-medium mb-3">Håll er uppdaterade</h2>
+          <h2 className="text-2xl font-medium mb-3">
+            Vill ni höra om nya artiklar?
+          </h2>
           <p className="text-gray-500 mb-8">
-            Få nya artiklar och branschinsikter direkt i er inbox.
+            Hör av er så lägger vi er på listan för branschinsikter direkt i
+            inboxen.
           </p>
-          <div className="flex gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="er@email.se"
-              className="flex-1 px-4 py-3 rounded-full border border-gray-200 text-sm focus:outline-none focus:border-gray-400"
-            />
-            <button className="bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors">
-              Prenumerera
-            </button>
-          </div>
+          <Link
+            href="/kontakt"
+            className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
+          >
+            Kontakta oss <ArrowRight size={14} />
+          </Link>
         </div>
       </section>
     </>

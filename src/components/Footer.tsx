@@ -3,10 +3,11 @@ import Logo from "./Logo";
 
 const footerLinks = {
   Lösningar: [
-    { name: "Ruttoptimering", href: "/losningar#ruttoptimering" },
-    { name: "TMS-integration", href: "/losningar#tms-integration" },
-    { name: "Trafikledning", href: "/losningar#trafikledning" },
-    { name: "Orderhantering", href: "/losningar#orderhantering" },
+    { name: "Ruttoptimering", href: "/losningar/ruttoptimering" },
+    { name: "TMS-integration", href: "/losningar/tms-integration" },
+    { name: "Trafikledning", href: "/losningar/trafikledning" },
+    { name: "Automatisk orderhantering", href: "/losningar/automatisk-orderhantering" },
+    { name: "Rapport & analys", href: "/losningar/rapport-och-analys" },
   ],
   Resurser: [
     { name: "Blogg", href: "/blogg" },
@@ -16,7 +17,6 @@ const footerLinks = {
   Företag: [
     { name: "Om oss", href: "/om-oss" },
     { name: "Kontakt", href: "/kontakt" },
-    { name: "Karriär", href: "/kontakt" },
   ],
 };
 

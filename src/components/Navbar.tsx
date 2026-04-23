@@ -43,8 +43,12 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
+          type="button"
           className="md:hidden p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label={mobileOpen ? "Stäng meny" : "Öppna meny"}
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-nav"
         >
           {mobileOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -52,7 +56,10 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-b border-gray-100 px-6 pb-6">
+        <div
+          id="mobile-nav"
+          className="md:hidden bg-white border-b border-gray-100 px-6 pb-6"
+        >
           {navigation.map((item) => (
             <Link
               key={item.name}

@@ -13,6 +13,11 @@ const nextConfig: NextConfig = {
         destination: "/artiklar/digitalisering-akerinaring-var-borjar-man",
         permanent: true,
       },
+      {
+        source: "/artiklar",
+        destination: "/blogg",
+        permanent: true,
+      },
     ];
   },
 };
