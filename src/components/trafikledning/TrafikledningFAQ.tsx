@@ -72,18 +72,24 @@ export default function TrafikledningFAQ() {
           {faqs.map((faq, i) => (
             <div key={i} className="bg-white rounded-xl border border-gray-200">
               <button
+                type="button"
                 onClick={() => setOpen(open === i ? null : i)}
+                aria-expanded={open === i}
+                aria-controls={`trafikledning-faq-${i}`}
                 className="w-full flex items-center justify-between px-6 py-5 text-left"
               >
                 <span className="font-medium text-sm">{faq.q}</span>
                 {open === i ? (
-                  <Minus size={16} className="text-gray-400 shrink-0 ml-4" />
+                  <Minus size={16} aria-hidden="true" className="text-gray-400 shrink-0 ml-4" />
                 ) : (
-                  <Plus size={16} className="text-gray-400 shrink-0 ml-4" />
+                  <Plus size={16} aria-hidden="true" className="text-gray-400 shrink-0 ml-4" />
                 )}
               </button>
               {open === i && (
-                <div className="px-6 pb-5 text-sm text-gray-500 leading-relaxed">
+                <div
+                  id={`trafikledning-faq-${i}`}
+                  className="px-6 pb-5 text-sm text-gray-500 leading-relaxed"
+                >
                   {faq.a}
                 </div>
               )}

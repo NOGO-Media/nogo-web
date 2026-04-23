@@ -82,18 +82,24 @@ export default function FAQSection() {
               className="bg-white rounded-xl border border-gray-200"
             >
               <button
+                type="button"
                 onClick={() => setOpen(open === i ? null : i)}
+                aria-expanded={open === i}
+                aria-controls={`faq-answer-${i}`}
                 className="w-full flex items-center justify-between px-6 py-5 text-left"
               >
                 <span className="font-medium text-sm">{faq.q}</span>
                 {open === i ? (
-                  <Minus size={16} className="text-gray-400 shrink-0" />
+                  <Minus size={16} className="text-gray-400 shrink-0" aria-hidden="true" />
                 ) : (
-                  <Plus size={16} className="text-gray-400 shrink-0" />
+                  <Plus size={16} className="text-gray-400 shrink-0" aria-hidden="true" />
                 )}
               </button>
               {open === i && (
-                <div className="px-6 pb-5 text-sm text-gray-500 leading-relaxed">
+                <div
+                  id={`faq-answer-${i}`}
+                  className="px-6 pb-5 text-sm text-gray-500 leading-relaxed"
+                >
                   {faq.a}
                 </div>
               )}
