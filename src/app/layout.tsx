@@ -98,7 +98,7 @@ function OrganizationJsonLd() {
     "@type": "Organization",
     name: "NOGO Media AB",
     url: SITE_URL,
-    logo: `${SITE_URL}/logo.svg`,
+    logo: `${SITE_URL}/logo.png`,
     description:
       "AI-automation för svenska åkerier och transportbolag. Ruttoptimering, orderhantering och trafikledning.",
     address: {
@@ -140,6 +140,7 @@ function OrganizationJsonLd() {
       "Logistik-automation",
       "AI-agenter för åkerier",
       "Rapport och analys för transport",
+      "Automatisk orderhantering",
     ],
   };
 
@@ -193,6 +194,16 @@ function ServiceJsonLd() {
       areaServed: { "@type": "Country", name: "Sweden" },
       url: `${SITE_URL}/losningar/rapport-och-analys`,
     },
+    {
+      "@type": "Service",
+      name: "Automatisk orderhantering",
+      description:
+        "Automatiserad orderhantering för åkerier — från inkommande orderflöde till planerad körning. AI tolkar mail, PDF och EDI, skapar uppdrag och tilldelar fordon utan manuellt arbete.",
+      provider: { "@type": "Organization", name: "NOGO Media AB" },
+      serviceType: "Order Management Automation",
+      areaServed: { "@type": "Country", name: "Sweden" },
+      url: `${SITE_URL}/losningar/automatisk-orderhantering`,
+    },
   ];
 
   const schema = {
@@ -221,7 +232,7 @@ function LocalBusinessJsonLd() {
     "@id": `${SITE_URL}/#business`,
     name: "NOGO Media AB",
     url: SITE_URL,
-    image: `${SITE_URL}/logo.svg`,
+    image: `${SITE_URL}/logo.png`,
     description:
       "AI-automation för svenska åkerier. Vi effektiviserar trafikledning, ruttoptimering och orderhantering — utan att ni byter system.",
     address: {
