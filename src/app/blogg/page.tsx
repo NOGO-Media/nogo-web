@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/blogg" },
   openGraph: {
+    type: "website",
     title: "Blogg — Insikter för svenska transportföretag",
     description:
       "Guider, analyser och praktiska tips om trafikledning, digitalisering och AI-automation i åkeribranschen.",

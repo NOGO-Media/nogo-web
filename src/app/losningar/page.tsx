@@ -28,6 +28,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/losningar" },
   openGraph: {
+    type: "website",
     title: "AI-lösningar för åkerier & transport | NOGO Media",
     description:
       "AI-automation anpassad för svensk transport. Ruttoptimering, automatisk orderhantering, TMS-integration, trafikledning och realtidsanalys.",

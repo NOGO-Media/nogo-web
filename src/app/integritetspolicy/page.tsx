@@ -6,6 +6,7 @@ export const metadata: Metadata = {
     "Så behandlar NOGO Media AB era personuppgifter enligt GDPR: rättslig grund, lagringstid, mottagare och era rättigheter. Kontakta hugo@nogomedia.se.",
   alternates: { canonical: "/integritetspolicy" },
   openGraph: {
+    type: "website",
     title: "Integritetspolicy | NOGO Media",
     description:
       "Så behandlar NOGO Media AB era personuppgifter enligt GDPR: rättslig grund, lagringstid, mottagare och era rättigheter. Kontakta hugo@nogomedia.se.",
