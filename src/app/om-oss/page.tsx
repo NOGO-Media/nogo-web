@@ -14,7 +14,7 @@ const SITE_URL = "https://nogomedia.se";
 export const metadata: Metadata = {
   title: "Om NOGO Media — AI-automation för åkerier | Norrköping",
   description:
-    "NOGO Media bygger AI-automation för svenska åkerier — ruttoptimering, trafikledning och TMS-integration. Grundat 2025 i Norrköping av ett team med bakgrund inom transport och tech.",
+    "NOGO Media bygger AI-automation för svenska åkerier — ruttoptimering, trafikledning och TMS-integration. Grundat 2025 i Norrköping.",
   keywords: [
     "NOGO Media",
     "om oss",
@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     description:
       "NOGO Media bygger AI-automation för svenska åkerier. Grundat 2025 i Norrköping av team med operativ transporterfarenhet.",
     url: "/om-oss",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "NOGO Media — Om oss" }],
   },
 };
 

@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     description:
       "Boka ett 30-minuters strategisamtal med NOGO Media. Vi visar hur AI-automation kan spara tid och pengar i just ert åkeri.",
     url: "/kontakt",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "NOGO Media — Kontakt" }],
   },
 };
 

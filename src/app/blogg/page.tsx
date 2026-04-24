@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     description:
       "Guider, analyser och praktiska tips om trafikledning, digitalisering och AI-automation i åkeribranschen.",
     url: "/blogg",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "NOGO Media — Blogg" }],
   },
 };
 

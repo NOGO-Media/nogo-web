@@ -32,10 +32,9 @@ const RapportAnalysFAQ = dynamic(
 const SITE_URL = "https://nogomedia.se";
 
 export const metadata: Metadata = {
-  title:
-    "Rapport & analys för åkerier — realtidsstatistik för ruttoptimering | NOGO Media",
+  title: "Rapport & analys för åkerier",
   description:
-    "AI-driven rapport och analys för transportbolag i Sverige. Fyllnadsgrad, arbetstid, returflöden, linjeanalys och ekipagestatistik — i realtid, direkt i planeringsgränssnittet.",
+    "AI-driven rapport och analys för svenska transportbolag. Fyllnadsgrad, arbetstid, returflöden och ekipagestatistik i realtid — direkt i planeringen.",
   keywords: [
     "ruttoptimering",
     "transportplanering",
@@ -52,8 +51,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/losningar/rapport-och-analys" },
   openGraph: {
-    title:
-      "Rapport & analys — realtidsstatistik för ruttoptimering | NOGO Media",
+    title: "Rapport & analys för åkerier | NOGO Media",
     description:
       "AI-driven rapport och analys för transportbolag. Fyllnadsgrad, arbetstid, returflöden och linjeanalys — i realtid.",
     url: "/losningar/rapport-och-analys",
@@ -71,8 +69,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Rapport & analys — realtidsstatistik för ruttoptimering | NOGO Media",
+    title: "Rapport & analys för åkerier | NOGO Media",
     description:
       "AI-driven rapport och analys för transportbolag. Fyllnadsgrad, arbetstid, returflöden och linjeanalys.",
     images: ["/og-image.png"],

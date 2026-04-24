@@ -31,7 +31,7 @@ const SITE_URL = "https://nogomedia.se";
 export const metadata: Metadata = {
   title: "AI-trafikledning för åkerier — Frigör 3+ timmar per dag",
   description:
-    "AI-driven trafikledning som automatiserar orderhantering, förartilldelning och fordonsplanering. Minska manuellt arbete med 60% — era trafikledare fokuserar på det som kräver erfarenhet.",
+    "AI-driven trafikledning som automatiserar orderhantering, förartilldelning och fordonsplanering. Minska manuellt arbete med 60%.",
   keywords: [
     "trafikledning",
     "AI trafikledning",

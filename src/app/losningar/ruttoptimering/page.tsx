@@ -31,7 +31,7 @@ const SITE_URL = "https://nogomedia.se";
 export const metadata: Metadata = {
   title: "Ruttoptimering för åkerier — Minska körsträckan med 23%",
   description:
-    "Minska körsträckan med 23% och öka leveranserna med 18% per dag. AI-driven ruttoptimering för svenska åkerier — med hänsyn till tidsfönster, ADR-krav och kör- och vilotider.",
+    "Minska körsträckan 23% och öka leveranserna 18% per dag. AI-driven ruttoptimering med hänsyn till tidsfönster, ADR och kör- och vilotider.",
   keywords: [
     "ruttoptimering",
     "ruttoptimering åkeri",

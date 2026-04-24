@@ -5,8 +5,7 @@ import ArticleJsonLd from "@/components/ArticleJsonLd";
 import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
-  title:
-    "Digitalisering av åkeri i siffror — så långt har svenska åkerier kommit 2026",
+  title: "Digitalisering av åkeri i siffror — 2026",
   description:
     "Nyckeltal, mognadsnivåer och branschjämförelse: var står svenska åkerier i digitaliseringen 2026? Benchmarka ert åkeri med konkreta KPI:er.",
   keywords: [
@@ -18,11 +17,11 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blogg/digitalisering-akeri-2026" },
   openGraph: {
     type: "article",
-    title:
-      "Digitalisering av åkeri i siffror — så långt har svenska åkerier kommit 2026",
+    title: "Digitalisering av åkeri i siffror — 2026",
     description:
       "Var står svenska åkerier i digitaliseringen? Nyckeltal, mognadsnivåer och branschjämförelse — så benchmarkar ni ert åkeri.",
     url: "/blogg/digitalisering-akeri-2026",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "NOGO Media — Digitalisering av åkeri 2026" }],
     publishedTime: "2026-04-02T00:00:00Z",
     authors: ["NOGO Media AB"],
     tags: [

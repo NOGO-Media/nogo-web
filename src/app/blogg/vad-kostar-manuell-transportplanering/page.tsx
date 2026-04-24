@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     description:
       "Så mycket kostar manuell transportplanering i praktiken: från lönedata till kostnad per bokning.",
     url: "/blogg/vad-kostar-manuell-transportplanering",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "NOGO Media — Vad kostar manuell transportplanering" }],
     publishedTime: "2026-04-02T00:00:00Z",
     authors: ["NOGO Media AB"],
     tags: ["transportplanering", "trafikledare", "åkeri", "kostnad"],

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: "AI-automation för åkerier & transport | NOGO Media",
-    template: "%s | AI-automation | NOGO Media",
+    template: "%s | NOGO Media",
   },
   description:
     "AI-automation som ger era trafikledare timmar tillbaka — varje dag. Ruttoptimering, orderhantering och fordonstilldelning utan att byta system. NOGO Media, Norrköping.",

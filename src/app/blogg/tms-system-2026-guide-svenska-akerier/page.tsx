@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     description:
       "Neutral TMS-guide för svenska åkerier: funktioner, målgrupper, prissättning och valkriterier.",
     url: "/blogg/tms-system-2026-guide-svenska-akerier",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "NOGO Media — TMS-guide 2026" }],
     publishedTime: "2026-04-02T00:00:00Z",
     authors: ["NOGO Media AB"],
     tags: ["TMS", "transporthanteringssystem", "åkeri", "ruttoptimering"],

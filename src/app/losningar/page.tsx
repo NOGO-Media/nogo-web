@@ -13,10 +13,9 @@ import {
 } from "lucide-react";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 export const metadata: Metadata = {
-  title:
-    "Lösningar — Ruttoptimering, orderhantering, TMS-integration, trafikledning & analys",
+  title: "AI-lösningar för åkerier & transport",
   description:
-    "AI-automation anpassad för svensk transport. Ruttoptimering, automatisk orderhantering, TMS-integration, trafikledning och realtidsanalys — utan att ni byter system.",
+    "AI-automation för svensk transport. Ruttoptimering, orderhantering, TMS-integration, trafikledning och realtidsanalys — utan byte av system.",
   keywords: [
     "ruttoptimering åkeri",
     "automatisk orderhantering",
@@ -29,11 +28,11 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/losningar" },
   openGraph: {
-    title:
-      "Lösningar — Ruttoptimering, orderhantering, TMS-integration, trafikledning & analys",
+    title: "AI-lösningar för åkerier & transport | NOGO Media",
     description:
       "AI-automation anpassad för svensk transport. Ruttoptimering, automatisk orderhantering, TMS-integration, trafikledning och realtidsanalys.",
     url: "/losningar",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "NOGO Media — Lösningar" }],
   },
 };
 

@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     description:
       "Testa NOGO:s AI-drivna dispatch-system. Ruttoptimering, orderhantering och fordonsplanering i en interaktiv demo.",
     url: "/demo",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "NOGO Dispatch demo" }],
   },
 };
 
