@@ -135,10 +135,10 @@ export default function SaJobbarViPage() {
                 >
                   <div className="flex items-center justify-between mb-6">
                     <Icon size={22} className="text-black" aria-hidden="true" />
-                    <span className="text-xs font-medium text-gray-400">{phase.number}</span>
+                    <span className="text-xs font-medium text-gray-500">{phase.number}</span>
                   </div>
                   <h2 className="text-xl font-medium mb-1">{phase.title}</h2>
-                  <p className="text-xs font-medium text-gray-400 mb-4">{phase.duration}</p>
+                  <p className="text-xs font-medium text-gray-500 mb-4">{phase.duration}</p>
                   <p className="text-sm text-gray-500 mb-5 leading-relaxed">{phase.summary}</p>
                   <ul className="space-y-2 text-sm text-gray-700 mt-auto">
                     {phase.bullets.map((b, i) => (
@@ -199,7 +199,7 @@ export default function SaJobbarViPage() {
               { week: "Vecka 4+", item: "Resultatmöte: tydlig ROI-siffra. Beslut om utrullning." },
             ].map((row, i) => (
               <div key={i} className="flex gap-6 pb-6 border-b border-gray-100 last:border-b-0">
-                <div className="w-24 flex-shrink-0 text-sm font-medium text-gray-400">
+                <div className="w-24 flex-shrink-0 text-sm font-medium text-gray-500">
                   {row.week}
                 </div>
                 <div className="text-gray-700">{row.item}</div>

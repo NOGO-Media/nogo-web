@@ -55,7 +55,7 @@ export default function DigitaliseringAkerinaringenArticle() {
             <span className="text-xs font-medium bg-gray-100 border border-gray-200 px-3 py-1 rounded-full">
               Guide
             </span>
-            <span className="text-xs text-gray-400">~7 min</span>
+            <span className="text-xs text-gray-500">~7 min</span>
           </div>
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.15]">

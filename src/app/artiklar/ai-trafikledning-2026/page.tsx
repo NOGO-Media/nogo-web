@@ -35,7 +35,7 @@ function ROICalculator() {
         </div>
         <div>
           <h3 className="font-medium">ROI-räknare: AI-trafikledning</h3>
-          <p className="text-xs text-gray-400">Räkna på er besparing på 30 sekunder</p>
+          <p className="text-xs text-gray-500">Räkna på er besparing på 30 sekunder</p>
         </div>
       </div>
 
@@ -67,7 +67,7 @@ function ROICalculator() {
         {/* Results */}
         <div className="space-y-4">
           <div className="bg-white rounded-xl border border-gray-200 p-5">
-            <p className="text-xs text-gray-400 mb-1">Nuvarande månadskostnad</p>
+            <p className="text-xs text-gray-500 mb-1">Nuvarande månadskostnad</p>
             <p className="text-2xl font-semibold">{monthlyCost.toLocaleString("sv-SE")} kr</p>
           </div>
           <div className="bg-white rounded-xl border border-green-200 p-5">
@@ -79,11 +79,11 @@ function ROICalculator() {
             <p className="text-2xl font-semibold text-green-700">{yearlySaving.toLocaleString("sv-SE")} kr</p>
           </div>
           <div className="bg-white rounded-xl border border-gray-200 p-5">
-            <p className="text-xs text-gray-400 mb-1">Tid frigjord per månad</p>
+            <p className="text-xs text-gray-500 mb-1">Tid frigjord per månad</p>
             <p className="text-2xl font-semibold">{hoursFreed} timmar</p>
           </div>
           <div className="flex items-center gap-3">
-            <button type="button" onClick={reset} className="text-xs text-gray-400 hover:text-gray-600 transition-colors">Reset till standard</button>
+            <button type="button" onClick={reset} className="text-xs text-gray-500 hover:text-gray-600 transition-colors">Reset till standard</button>
             <Link href="/kontakt" className="ml-auto inline-flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors">
               Få en ROI-analys <ArrowRight size={14} aria-hidden="true" />
             </Link>
@@ -91,7 +91,7 @@ function ROICalculator() {
         </div>
       </div>
 
-      <p className="text-xs text-gray-400 mt-4">
+      <p className="text-xs text-gray-500 mt-4">
         Beräkningen är en uppskattning. Faktisk effekt beror på processer, system och datakvalitet.
       </p>
     </div>
@@ -114,7 +114,7 @@ export default function AITrafikledningArticle() {
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-xs font-medium bg-gray-100 border border-gray-200 px-3 py-1 rounded-full">AI & Automation</span>
-              <span className="text-xs text-gray-400">12 min</span>
+              <span className="text-xs text-gray-500">12 min</span>
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.15]">
               AI Trafikledning 2026 – Så kan svenska åkerier spara miljoner med AI-automation

@@ -184,7 +184,7 @@ export default function BloggPage() {
                   <span className="text-xs font-medium bg-white border border-gray-200 px-3 py-1 rounded-full">
                     {article.category}
                   </span>
-                  <span className="text-xs text-gray-400">
+                  <span className="text-xs text-gray-500">
                     {article.readTime}
                   </span>
                 </div>
