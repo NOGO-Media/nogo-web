@@ -212,7 +212,7 @@ export default function TrafikledningPage() {
       <section className="pb-8">
         <div className="max-w-7xl mx-auto px-6">
           <aside className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 max-w-3xl">
-            <p className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">
+            <p className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-3">
               Sammanfattning
             </p>
             <p className="text-sm text-gray-700 leading-relaxed">

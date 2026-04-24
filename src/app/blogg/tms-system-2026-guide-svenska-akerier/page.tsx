@@ -91,7 +91,7 @@ export default function TMSGuideArticle() {
             <span className="text-xs font-medium bg-gray-100 border border-gray-200 px-3 py-1 rounded-full">
               Guide
             </span>
-            <span className="text-xs text-gray-400">11 min</span>
+            <span className="text-xs text-gray-500">11 min</span>
           </div>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.15]">
             TMS-system 2026: Komplett guide för svenska åkerier

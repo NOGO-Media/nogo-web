@@ -216,7 +216,7 @@ export default function DigitaliseringAkeri2026Article() {
               <span className="text-xs bg-gray-100 border border-gray-200 px-3 py-1 rounded-full">
                 Branschanalys
               </span>
-              <span className="text-xs text-gray-400">10 min</span>
+              <span className="text-xs text-gray-500">10 min</span>
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.15]">
               Digitalisering av åkeri i siffror — så långt har svenska åkerier
@@ -467,7 +467,7 @@ export default function DigitaliseringAkeri2026Article() {
                           className="text-left px-4 py-3 font-medium border-b border-gray-200"
                         >
                           {c.label}
-                          <span className="block text-xs text-gray-400 font-normal">
+                          <span className="block text-xs text-gray-500 font-normal">
                             {c.vehicles} fordon, {c.region}
                           </span>
                         </th>

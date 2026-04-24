@@ -120,7 +120,7 @@ export default function AiAgenterTransportArticle() {
               <span className="text-xs font-medium bg-gray-100 border border-gray-200 px-3 py-1 rounded-full">
                 AI &amp; Automation
               </span>
-              <span className="text-xs text-gray-400">~9 min</span>
+              <span className="text-xs text-gray-500">~9 min</span>
             </div>
 
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.15]">
