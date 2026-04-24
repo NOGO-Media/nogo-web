@@ -45,7 +45,7 @@ export default function DigitaliseringAkerinaringenArticle() {
       <div className="max-w-3xl mx-auto px-6">
         <Link
           href="/blogg"
-          className="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-black transition-colors mb-8"
+          className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-black transition-colors mb-8"
         >
           <ArrowLeft size={14} /> Tillbaka till bloggen
         </Link>
