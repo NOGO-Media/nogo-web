@@ -1,0 +1,41 @@
+# NOGO Media
+
+> NOGO Media bygger AI-automation för svenska åkerier och transportbolag. Ruttoptimering, trafikledning, TMS-integration och automatisk orderhantering — utan att kunden byter befintligt system. Grundat 2025, baserat i Norrköping.
+
+## Företaget
+
+- Namn: NOGO Media AB
+- Säte: Norrköping, Östergötland, Sverige
+- Marknad: Svenska åkerier, transportbolag, logistikoperatörer
+- Kontakt: hugo@nogomedia.se
+- Webbplats: https://nogomedia.se
+
+## Kärnerbjudande
+
+NOGO levererar AI-agenter och automation som integreras direkt i kundens befintliga TMS (Transport Management System) — Opter, AddSecure, Hogia, Barkfors m.fl. — via API, databaskoppling, filimport eller skärmautomation. Ingen systemmigration krävs.
+
+## Lösningar
+
+- [Ruttoptimering](https://nogomedia.se/losningar/ruttoptimering): AI-driven ruttplanering som i genomsnitt minskar körsträckan med 23 % och ökar antalet leveranser per dag med 18 %.
+- [Trafikledning](https://nogomedia.se/losningar/trafikledning): Automation tar över repetitivt arbete (tilldelning, matchning) så trafikledare kan fokusera på undantag och relationer.
+- [Automatisk orderhantering](https://nogomedia.se/losningar/automatisk-orderhantering): AI läser mail, PDF och EDI, skapar uppdrag och tilldelar fordon utan manuellt arbete.
+- [TMS-integration](https://nogomedia.se/losningar/tms-integration): Koppling mot befintliga TMS med eller utan öppet API.
+- [Rapport & analys](https://nogomedia.se/losningar/rapport-och-analys): Realtidsdashboards med 50+ nyckeltal i planeringsgränssnittet.
+
+## Artiklar och guider
+
+- [AI Trafikledning 2026 — Spara miljoner](https://nogomedia.se/artiklar/ai-trafikledning-2026)
+- [Digitalisering i åkerinäringen — var börjar man?](https://nogomedia.se/artiklar/digitalisering-akerinaring-var-borjar-man)
+- [eFTI och digitala fraktdokument](https://nogomedia.se/artiklar/efti-digitala-fraktdokument-akeri)
+- [Minska tomkörningar — 5 konkreta åtgärder](https://nogomedia.se/artiklar/minska-tomkorningar-konkreta-atgarder)
+- [ROI på automation i transport](https://nogomedia.se/artiklar/roi-automation-transport-kalkyl)
+- [TMS-jämförelse: Opter, AddSecure, eget](https://nogomedia.se/artiklar/tms-system-jamforelse-opter-addsecure)
+- [Trafikledarbrist i Sverige](https://nogomedia.se/artiklar/trafikledarbrist-sverige-teknik-avlastar)
+- [Vad kostar manuell transportplanering?](https://nogomedia.se/blogg/vad-kostar-manuell-transportplanering)
+- [TMS-guide 2026 för svenska åkerier](https://nogomedia.se/blogg/tms-system-2026-guide-svenska-akerier)
+- [Digitalisering av åkeri i siffror 2026](https://nogomedia.se/blogg/digitalisering-akeri-2026)
+
+## Kontakt
+
+- [Boka strategisamtal](https://nogomedia.se/kontakt)
+- [Om oss och teamet](https://nogomedia.se/om-oss)
