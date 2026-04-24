@@ -272,6 +272,8 @@ export default function RootLayout({
   return (
     <html lang="sv" className={`${inter.variable} h-full antialiased`}>
       <head>
+        <meta property="og:site_name" content="NOGO Media" />
+        <meta property="og:locale" content="sv_SE" />
         <OrganizationJsonLd />
         <LocalBusinessJsonLd />
         <ServiceJsonLd />
