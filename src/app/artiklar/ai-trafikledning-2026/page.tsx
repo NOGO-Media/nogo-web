@@ -106,7 +106,7 @@ export default function AITrafikledningArticle() {
       <article className="pt-32 pb-24 md:pt-44">
         <div className="max-w-3xl mx-auto px-6">
           {/* Back link */}
-          <Link href="/blogg" className="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-black transition-colors mb-8">
+          <Link href="/blogg" className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-black transition-colors mb-8">
             <ArrowLeft size={14} /> Tillbaka till bloggen
           </Link>
 
