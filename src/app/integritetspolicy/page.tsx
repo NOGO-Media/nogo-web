@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Integritetspolicy",
   alternates: { canonical: "/integritetspolicy" },
+  openGraph: { url: "/integritetspolicy" },
 };
 
 export default function IntegritetspolicyPage() {
