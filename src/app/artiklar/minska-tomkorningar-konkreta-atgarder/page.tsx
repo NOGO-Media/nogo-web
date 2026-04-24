@@ -376,6 +376,17 @@ export default function MinskaTomkorningarArticle() {
 
           <RelatedSolutions slugs={["ruttoptimering", "trafikledning"]} />
 
+          <section className="mt-10">
+            <p className="text-gray-700">
+              Vill ni fördjupa er i hur automatisk matchning av returlass
+              fungerar tekniskt?{" "}
+              <Link className="underline" href="/artiklar/backhaul-returlass-automatiserad-matchning">
+                Läs Backhaul och returlass — automatiserad matchning 2026
+              </Link>
+              .
+            </p>
+          </section>
+
           <section className="rounded-2xl border border-black bg-black text-white p-6 mt-10">
             <h2 className="text-2xl font-medium mb-3">
               Vill ni se hur mycket ni kör tomma idag?

@@ -125,6 +125,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${SITE_URL}/artiklar/backhaul-returlass-automatiserad-matchning`,
+      lastModified: new Date("2026-04-24"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${SITE_URL}/sa-jobbar-vi`,
       lastModified: new Date("2026-04-24"),
       changeFrequency: "monthly",
