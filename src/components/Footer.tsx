@@ -15,6 +15,7 @@ const footerLinks = {
     { name: "Kundcase", href: "/losningar#kundcase" },
   ],
   Företag: [
+    { name: "Så jobbar vi", href: "/sa-jobbar-vi" },
     { name: "Om oss", href: "/om-oss" },
     { name: "Kontakt", href: "/kontakt" },
   ],

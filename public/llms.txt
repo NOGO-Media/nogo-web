@@ -24,18 +24,37 @@ NOGO levererar AI-agenter och automation som integreras direkt i kundens befintl
 
 ## Artiklar och guider
 
+### AI och automation
+
 - [AI Trafikledning 2026 — Spara miljoner](https://nogomedia.se/artiklar/ai-trafikledning-2026)
-- [Digitalisering i åkerinäringen — var börjar man?](https://nogomedia.se/artiklar/digitalisering-akerinaring-var-borjar-man)
-- [eFTI och digitala fraktdokument](https://nogomedia.se/artiklar/efti-digitala-fraktdokument-akeri)
+- [AI-agenter för transport 2026 — vad de kan och inte kan](https://nogomedia.se/artiklar/ai-agenter-for-transport-2026)
+- [Så räknar du ROI på automation i transport](https://nogomedia.se/artiklar/roi-automation-transport-kalkyl)
+
+### Regelverk och compliance
+
+- [eFTI och digitala fraktdokument (2027)](https://nogomedia.se/artiklar/efti-digitala-fraktdokument-akeri)
+- [CSRD och CO2-rapportering för åkerier 2026](https://nogomedia.se/artiklar/csrd-co2-rapportering-akeri)
+- [Kör- och vilotider — automatiserad efterlevnad i TMS](https://nogomedia.se/artiklar/kor-vilotider-automatisera-efterlevnad)
+
+### Operations och effektivitet
+
 - [Minska tomkörningar — 5 konkreta åtgärder](https://nogomedia.se/artiklar/minska-tomkorningar-konkreta-atgarder)
-- [ROI på automation i transport](https://nogomedia.se/artiklar/roi-automation-transport-kalkyl)
-- [TMS-jämförelse: Opter, AddSecure, eget](https://nogomedia.se/artiklar/tms-system-jamforelse-opter-addsecure)
-- [Trafikledarbrist i Sverige](https://nogomedia.se/artiklar/trafikledarbrist-sverige-teknik-avlastar)
-- [Vad kostar manuell transportplanering?](https://nogomedia.se/blogg/vad-kostar-manuell-transportplanering)
+- [Backhaul och returlass — automatiserad matchning 2026](https://nogomedia.se/artiklar/backhaul-returlass-automatiserad-matchning)
+- [Trafikledarbrist i Sverige — hur teknik avlastar](https://nogomedia.se/artiklar/trafikledarbrist-sverige-teknik-avlastar)
+
+### TMS och systemval
+
 - [TMS-guide 2026 för svenska åkerier](https://nogomedia.se/blogg/tms-system-2026-guide-svenska-akerier)
+- [TMS-jämförelse: Opter, AddSecure, eget](https://nogomedia.se/artiklar/tms-system-jamforelse-opter-addsecure)
+- [Digitalisering i åkerinäringen — var börjar man?](https://nogomedia.se/artiklar/digitalisering-akerinaring-var-borjar-man)
+
+### Kostnadsanalys och benchmark
+
+- [Vad kostar manuell transportplanering?](https://nogomedia.se/blogg/vad-kostar-manuell-transportplanering)
 - [Digitalisering av åkeri i siffror 2026](https://nogomedia.se/blogg/digitalisering-akeri-2026)
 
 ## Kontakt
 
+- [Så jobbar vi — från upptäckt till produktion](https://nogomedia.se/sa-jobbar-vi)
 - [Boka strategisamtal](https://nogomedia.se/kontakt)
 - [Om oss och teamet](https://nogomedia.se/om-oss)
