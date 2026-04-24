@@ -21,6 +21,7 @@ import {
   Zap,
   CheckCircle2,
 } from "lucide-react";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const AnalyticsDashboardDemo = dynamic(
   () => import("@/components/rapport-analys/AnalyticsDashboardDemo"),
@@ -76,48 +77,15 @@ export const metadata: Metadata = {
   },
 };
 
-function BreadcrumbJsonLd() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Lösningar",
-        item: `${SITE_URL}/losningar`,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Rapport & analys",
-        item: `${SITE_URL}/losningar/rapport-och-analys`,
-      },
-    ],
-  };
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
-}
 
 function SoftwareJsonLd() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "Service",
     name: "NOGO Rapport & Analys",
-    applicationCategory: "BusinessApplication",
-    operatingSystem: "Web",
+    serviceType: "Business analytics",
     description:
       "AI-driven rapport och analys för transportbolag i Sverige. Fyllnadsgrad, arbetstid, returflöden, linjeanalys och ekipagestatistik — i realtid, direkt i planeringsgränssnittet.",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "SEK",
-      description: "Kostnadsfritt strategisamtal",
-    },
     provider: {
       "@type": "Organization",
       name: "NOGO Media AB",
@@ -240,7 +208,7 @@ const steps = [
 export default function RapportOchAnalysPage() {
   return (
     <>
-      <BreadcrumbJsonLd />
+      <BreadcrumbJsonLd items={[{ name: "Lösningar", path: "/losningar" }, { name: "Rapport & analys", path: "/losningar/rapport-och-analys" }]} />
       <SoftwareJsonLd />
 
       {/* Hero */}
