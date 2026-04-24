@@ -15,6 +15,7 @@ import {
   ClipboardList,
   CheckCircle2,
 } from "lucide-react";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const DispatchMatchingDemo = dynamic(
   () => import("@/components/trafikledning/DispatchMatchingDemo"),
@@ -77,48 +78,14 @@ export const metadata: Metadata = {
   },
 };
 
-function BreadcrumbJsonLd() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Lösningar",
-        item: `${SITE_URL}/losningar`,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Trafikledning",
-        item: `${SITE_URL}/losningar/trafikledning`,
-      },
-    ],
-  };
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
-}
-
 function SoftwareJsonLd() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "Service",
     name: "NOGO Trafikledning",
-    applicationCategory: "BusinessApplication",
-    operatingSystem: "Web",
+    serviceType: "Dispatch automation",
     description:
       "AI-driven trafikledning som automatiserar orderhantering, förartilldelning och fordonsplanering för svenska åkerier. Minskar manuellt arbete med 60%.",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "SEK",
-      description: "Kostnadsfritt strategisamtal",
-    },
     provider: {
       "@type": "Organization",
       name: "NOGO Media AB",
@@ -194,7 +161,7 @@ const steps = [
 export default function TrafikledningPage() {
   return (
     <>
-      <BreadcrumbJsonLd />
+      <BreadcrumbJsonLd items={[{ name: "Lösningar", path: "/losningar" }, { name: "Trafikledning", path: "/losningar/trafikledning" }]} />
       <SoftwareJsonLd />
 
       {/* Hero */}

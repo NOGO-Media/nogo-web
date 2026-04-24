@@ -113,13 +113,11 @@ function OrganizationJsonLd() {
       availableLanguage: ["Swedish", "English"],
       areaServed: "SE",
     },
-    foundingDate: "2025",
-    founders: [
-      {
-        "@type": "Person",
-        name: "Hugo Svensson",
-      },
-    ],
+    foundingDate: "2025-01-01",
+    founder: {
+      "@type": "Person",
+      name: "Hugo Svensson",
+    },
     areaServed: {
       "@type": "Country",
       name: "Sweden",
@@ -252,7 +250,7 @@ function LocalBusinessJsonLd() {
       opens: "08:00",
       closes: "17:00",
     },
-    serviceArea: {
+    areaServed: {
       "@type": "Country",
       name: "Sweden",
     },

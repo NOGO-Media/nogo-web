@@ -15,6 +15,7 @@ import {
   Cpu,
   CheckCircle2,
 } from "lucide-react";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const RouteOptimizationDemo = dynamic(
   () => import("@/components/route-optimization/RouteOptimizationDemo"),
@@ -76,48 +77,14 @@ export const metadata: Metadata = {
   },
 };
 
-function BreadcrumbJsonLd() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Lösningar",
-        item: `${SITE_URL}/losningar`,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Ruttoptimering",
-        item: `${SITE_URL}/losningar/ruttoptimering`,
-      },
-    ],
-  };
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
-}
-
 function SoftwareJsonLd() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "Service",
     name: "NOGO Ruttoptimering",
-    applicationCategory: "BusinessApplication",
-    operatingSystem: "Web",
+    serviceType: "Route optimization automation",
     description:
       "AI-driven ruttoptimering för svenska åkerier. Minskar körsträckan med 23% och ökar leveranser per dag med 18%.",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "SEK",
-      description: "Kostnadsfritt strategisamtal",
-    },
     provider: {
       "@type": "Organization",
       name: "NOGO Media AB",
@@ -193,7 +160,7 @@ const steps = [
 export default function RuttoptimeringPage() {
   return (
     <>
-      <BreadcrumbJsonLd />
+      <BreadcrumbJsonLd items={[{ name: "Lösningar", path: "/losningar" }, { name: "Ruttoptimering", path: "/losningar/ruttoptimering" }]} />
       <SoftwareJsonLd />
 
       {/* Hero */}

@@ -14,6 +14,7 @@ import {
   Repeat,
   Users,
 } from "lucide-react";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const SITE_URL = "https://nogomedia.se";
 
@@ -62,33 +63,6 @@ export const metadata: Metadata = {
   },
 };
 
-function BreadcrumbJsonLd() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Lösningar",
-        item: `${SITE_URL}/losningar`,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Automatisk orderhantering",
-        item: `${SITE_URL}/losningar/automatisk-orderhantering`,
-      },
-    ],
-  };
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
-}
 
 function ServiceJsonLd() {
   const schema = {
@@ -106,12 +80,6 @@ function ServiceJsonLd() {
       "@type": "Organization",
       name: "NOGO Media AB",
       url: SITE_URL,
-    },
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "SEK",
-      description: "Kostnadsfritt strategimöte",
     },
   };
 
@@ -261,7 +229,7 @@ const faq = [
 export default function AutomatiskOrderhanteringPage() {
   return (
     <>
-      <BreadcrumbJsonLd />
+      <BreadcrumbJsonLd items={[{ name: "Lösningar", path: "/losningar" }, { name: "Automatisk orderhantering", path: "/losningar/automatisk-orderhantering" }]} />
       <ServiceJsonLd />
       <FaqJsonLd />
 

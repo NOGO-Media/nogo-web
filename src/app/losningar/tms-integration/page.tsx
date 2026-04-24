@@ -15,6 +15,7 @@ import {
   Database,
   CheckCircle2,
 } from "lucide-react";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const IntegrationFlowDemo = dynamic(
   () => import("@/components/tms-integration/IntegrationFlowDemo"),
@@ -78,48 +79,14 @@ export const metadata: Metadata = {
   },
 };
 
-function BreadcrumbJsonLd() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Lösningar",
-        item: `${SITE_URL}/losningar`,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "TMS-integration",
-        item: `${SITE_URL}/losningar/tms-integration`,
-      },
-    ],
-  };
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
-}
-
 function SoftwareJsonLd() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "Service",
     name: "NOGO TMS-integration",
-    applicationCategory: "BusinessApplication",
-    operatingSystem: "Web",
+    serviceType: "System integration",
     description:
       "AI-automation som integreras direkt i befintliga TMS-system. Opter, AddSecure, Hogia, Barkfors och fler. Ingen migration krävs.",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "SEK",
-      description: "Kostnadsfritt strategisamtal",
-    },
     provider: {
       "@type": "Organization",
       name: "NOGO Media AB",
@@ -208,7 +175,7 @@ const supportedSystems = [
 export default function TMSIntegrationPage() {
   return (
     <>
-      <BreadcrumbJsonLd />
+      <BreadcrumbJsonLd items={[{ name: "Lösningar", path: "/losningar" }, { name: "TMS-integration", path: "/losningar/tms-integration" }]} />
       <SoftwareJsonLd />
 
       {/* Hero */}

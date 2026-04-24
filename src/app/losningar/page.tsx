@@ -134,45 +134,41 @@ function CollectionJsonLd() {
     },
     hasPart: [
       {
-        "@type": "SoftwareApplication",
+        "@type": "Service",
         name: "Ruttoptimering",
         url: `${SITE_URL}/losningar/ruttoptimering`,
         description:
           "Automatisk beräkning av optimala rutter. Minskar körsträckan med 23% och ökar leveranser med 18%.",
       },
       {
-        "@type": "SoftwareApplication",
+        "@type": "Service",
         name: "TMS-integration",
         url: `${SITE_URL}/losningar/tms-integration`,
         description:
           "AI-automation direkt i ert befintliga TMS. Med eller utan API — vi hittar alltid en väg in.",
       },
       {
-        "@type": "SoftwareApplication",
+        "@type": "Service",
         name: "Automatisk orderhantering",
         url: `${SITE_URL}/losningar/automatisk-orderhantering`,
         description:
           "Ladda upp Excel och få en färdig körplan med pass, ekipage, fyllnad och arbetstider på sekunder.",
       },
       {
-        "@type": "SoftwareApplication",
+        "@type": "Service",
         name: "Trafikledning",
         url: `${SITE_URL}/losningar/trafikledning`,
         description:
           "Automatiserad orderhantering och förartilldelning. Minskar manuellt arbete med 60%.",
       },
       {
-        "@type": "SoftwareApplication",
+        "@type": "Service",
         name: "Rapport & analys",
         url: `${SITE_URL}/losningar/rapport-och-analys`,
         description:
           "Realtidsstatistik för transportplanering. Tio analysvyer med över 50 nyckeltal, direkt i planeringsgränssnittet.",
       },
     ],
-    areaServed: {
-      "@type": "Country",
-      name: "Sweden",
-    },
   };
   return (
     <script
