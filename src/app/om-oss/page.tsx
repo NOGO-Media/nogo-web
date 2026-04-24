@@ -326,7 +326,7 @@ export default function OmOssPage() {
                 <div className="text-3xl md:text-4xl font-semibold">
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-500 mt-2">{stat.label}</div>
+                <div className="text-sm text-gray-400 mt-2">{stat.label}</div>
               </div>
             ))}
           </div>
