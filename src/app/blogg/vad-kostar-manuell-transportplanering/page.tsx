@@ -54,7 +54,7 @@ export default function ManuellTransportplaneringArticle() {
           href="/blogg"
           className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-black transition-colors mb-8"
         >
-          <ArrowLeft size={14} /> Tillbaka till bloggen
+          <ArrowLeft size={14} aria-hidden="true" /> Tillbaka till bloggen
         </Link>
 
         <header className="mb-10">
@@ -186,7 +186,7 @@ export default function ManuellTransportplaneringArticle() {
             href="/blogg/tms-system-2026-guide-svenska-akerier"
             className="inline-flex items-center gap-2 bg-white text-black px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors"
           >
-            Läs TMS-guiden <ArrowRight size={16} />
+            Läs TMS-guiden <ArrowRight size={16} aria-hidden="true" />
           </Link>
         </div>
       </div>

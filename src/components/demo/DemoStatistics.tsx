@@ -394,14 +394,14 @@ export default function DemoStatistics() {
           <span
             className={`inline-flex items-center gap-1 ${statusBadge(selectedDay.status)} text-xs font-medium px-2 py-0.5 rounded-full`}
           >
-            <Check size={12} /> {statusLabel(selectedDay.status)}
+            <Check size={12} aria-hidden="true" /> {statusLabel(selectedDay.status)}
           </span>
           <span className="inline-flex items-center gap-1.5 text-xs text-green-600 font-medium">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" /> Live
           </span>
         </div>
         <button className="inline-flex items-center justify-center gap-2 border border-gray-200 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
-          <Download size={14} />
+          <Download size={14} aria-hidden="true" />
           Exportera
         </button>
       </div>
@@ -415,7 +415,7 @@ export default function DemoStatistics() {
           </div>
         ))}
         <span className="ml-auto text-xs text-green-600 font-medium inline-flex items-center gap-1">
-          {isApproved ? <TrendingUp size={12} /> : <TrendingDown size={12} />}
+          {isApproved ? <TrendingUp size={12} aria-hidden="true" /> : <TrendingDown size={12} aria-hidden="true" />}
           {((s.planned.length / Math.max(s.dayOrders.length, 1)) * 100).toFixed(0)}% tilldelningsgrad
         </span>
       </div>
@@ -477,11 +477,11 @@ export default function DemoStatistics() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
         <div className="bg-white rounded-xl border border-gray-200 p-5">
           <h3 className="text-sm font-medium mb-4">Fyllnadsfördelning</h3>
-          <BarChart data={s.fillBuckets} colorClass="bg-green-500" />
+          <BarChart data={s.fillBuckets} colorClass="bg-green-500" aria-hidden="true" />
         </div>
         <div className="bg-white rounded-xl border border-gray-200 p-5">
           <h3 className="text-sm font-medium mb-4">Arbetstidsfördelning</h3>
-          <BarChart data={s.workBuckets} colorClass="bg-indigo-500" />
+          <BarChart data={s.workBuckets} colorClass="bg-indigo-500" aria-hidden="true" />
         </div>
       </div>
 

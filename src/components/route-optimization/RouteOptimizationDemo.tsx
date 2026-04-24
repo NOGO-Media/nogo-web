@@ -245,7 +245,7 @@ export default function RouteOptimizationDemo() {
                 onClick={startOptimization}
                 className="mt-auto flex items-center justify-center gap-2 bg-black text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors"
               >
-                <Zap size={16} />
+                <Zap size={16} aria-hidden="true" />
                 Optimera rutter
               </button>
             </>
@@ -272,27 +272,27 @@ export default function RouteOptimizationDemo() {
             <>
               <div className="flex items-center gap-2 mb-5">
                 <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
-                  <Check size={16} className="text-green-600" />
+                  <Check size={16} className="text-green-600" aria-hidden="true" />
                 </div>
                 <p className="text-sm font-medium">Optimering klar</p>
               </div>
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
-                  <Route size={16} className="text-green-600 shrink-0" />
+                  <Route size={16} className="text-green-600 shrink-0" aria-hidden="true" />
                   <div>
                     <p className="text-sm font-medium text-green-800">−{savingsPct}% körsträcka</p>
                     <p className="text-xs text-green-600">{Math.round(unoptDist - optDist)} km sparade</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
-                  <Clock size={16} className="text-blue-600 shrink-0" />
+                  <Clock size={16} className="text-blue-600 shrink-0" aria-hidden="true" />
                   <div>
                     <p className="text-sm font-medium text-blue-800">52 min sparad tid</p>
                     <p className="text-xs text-blue-600">Per fordon i genomsnitt</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 p-3 bg-purple-50 rounded-lg">
-                  <TrendingUp size={16} className="text-purple-600 shrink-0" />
+                  <TrendingUp size={16} className="text-purple-600 shrink-0" aria-hidden="true" />
                   <div>
                     <p className="text-sm font-medium text-purple-800">+18% leveranser/dag</p>
                     <p className="text-xs text-purple-600">Fler stopp med samma resurser</p>

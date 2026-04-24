@@ -103,9 +103,9 @@ export default function OptimizationProgress({
             {stepStates.map((s) => {
               const icon =
                 s.status === "done" ? (
-                  <Check size={14} className="text-green-600" />
+                  <Check size={14} className="text-green-600" aria-hidden="true" />
                 ) : s.status === "active" ? (
-                  <Loader2 size={14} className="text-blue-600 animate-spin" />
+                  <Loader2 size={14} className="text-blue-600 animate-spin" aria-hidden="true" />
                 ) : (
                   <span className="w-2 h-2 rounded-full bg-gray-300" />
                 );

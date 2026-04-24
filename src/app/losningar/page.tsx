@@ -189,7 +189,7 @@ export default function LosningarPage() {
                     className="inline-flex items-center gap-1.5 mt-6 text-sm font-medium hover:gap-2.5 transition-all"
                   >
                     Läs mer om {sol.title.toLowerCase()}{" "}
-                    <ArrowRight size={14} />
+                    <ArrowRight size={14} aria-hidden="true" />
                   </Link>
                 </div>
                 <div className="flex md:flex-col gap-4 md:justify-center">
@@ -246,13 +246,13 @@ export default function LosningarPage() {
               href="/kontakt"
               className="inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
             >
-              Boka strategisamtal <ArrowRight size={16} />
+              Boka strategisamtal <ArrowRight size={16} aria-hidden="true" />
             </Link>
             <Link
               href="/demo"
               className="inline-flex items-center justify-center gap-2 border border-gray-200 px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors"
             >
-              <Play size={14} />
+              <Play size={14} aria-hidden="true" />
               Testa demo
             </Link>
           </div>

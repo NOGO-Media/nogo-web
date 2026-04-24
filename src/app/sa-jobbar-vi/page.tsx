@@ -109,7 +109,7 @@ export default function SaJobbarViPage() {
                 href="/kontakt"
                 className="inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
               >
-                Boka upptäcktsmöte <ArrowRight size={16} />
+                Boka upptäcktsmöte <ArrowRight size={16} aria-hidden="true" />
               </Link>
               <Link
                 href="/losningar"
@@ -224,7 +224,7 @@ export default function SaJobbarViPage() {
             href="/kontakt"
             className="inline-flex items-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
           >
-            Boka upptäcktsmöte <ArrowRight size={16} />
+            Boka upptäcktsmöte <ArrowRight size={16} aria-hidden="true" />
           </Link>
         </div>
       </section>

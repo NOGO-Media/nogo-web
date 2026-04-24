@@ -92,7 +92,7 @@ export default function CompatibilityChecker() {
             {current.features.map((f) => (
               <div key={f} className="flex items-center gap-3 text-sm">
                 <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center shrink-0">
-                  <Check size={12} className="text-green-600" />
+                  <Check size={12} className="text-green-600" aria-hidden="true" />
                 </div>
                 <span>{f}</span>
               </div>
@@ -100,7 +100,7 @@ export default function CompatibilityChecker() {
             {current.status === "partial" && (
               <div className="flex items-center gap-3 text-sm text-gray-400">
                 <div className="w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center shrink-0">
-                  <HelpCircle size={12} className="text-gray-400" />
+                  <HelpCircle size={12} className="text-gray-400" aria-hidden="true" />
                 </div>
                 <span>Fler funktioner under utveckling</span>
               </div>

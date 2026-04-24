@@ -116,7 +116,7 @@ export default function TimeSavingsCalculator() {
               className={`p-5 bg-green-50 rounded-xl transition-all duration-500 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             >
               <div className="flex items-center gap-2 mb-2">
-                <Clock size={16} className="text-green-600" />
+                <Clock size={16} className="text-green-600" aria-hidden="true" />
                 <span className="text-xs font-medium text-green-700">Sparad tid per dag</span>
               </div>
               <p className="text-2xl font-semibold text-green-800">
@@ -131,7 +131,7 @@ export default function TimeSavingsCalculator() {
               className={`p-5 bg-blue-50 rounded-xl transition-all duration-500 delay-100 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             >
               <div className="flex items-center gap-2 mb-2">
-                <TrendingDown size={16} className="text-blue-600" />
+                <TrendingDown size={16} className="text-blue-600" aria-hidden="true" />
                 <span className="text-xs font-medium text-blue-700">Sparad tid per år</span>
               </div>
               <p className="text-2xl font-semibold text-blue-800">
@@ -146,7 +146,7 @@ export default function TimeSavingsCalculator() {
               className={`p-5 bg-purple-50 rounded-xl transition-all duration-500 delay-200 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             >
               <div className="flex items-center gap-2 mb-2">
-                <Users size={16} className="text-purple-600" />
+                <Users size={16} className="text-purple-600" aria-hidden="true" />
                 <span className="text-xs font-medium text-purple-700">Motsvarar heltidstjänst</span>
               </div>
               <p className="text-2xl font-semibold text-purple-800">

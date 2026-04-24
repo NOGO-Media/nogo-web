@@ -45,7 +45,7 @@ export default function KontaktPage() {
             <div className="mt-12 space-y-6">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center shrink-0">
-                  <Mail size={18} className="text-gray-500" />
+                  <Mail size={18} className="text-gray-500" aria-hidden="true" />
                 </div>
                 <div>
                   <div className="text-sm text-gray-500">E-post</div>
@@ -56,7 +56,7 @@ export default function KontaktPage() {
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center shrink-0">
-                  <MapPin size={18} className="text-gray-500" />
+                  <MapPin size={18} className="text-gray-500" aria-hidden="true" />
                 </div>
                 <div>
                   <div className="text-sm text-gray-500">Plats</div>

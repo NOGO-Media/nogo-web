@@ -66,7 +66,7 @@ export default function IntegrationFlowDemo() {
                         : "border-gray-200 text-gray-400"
                     }`}
                   >
-                    <Database size={14} style={{ color: activeTMS === i ? tms.color : "#d1d5db" }} />
+                    <Database size={14} style={{ color: activeTMS === i ? tms.color : "#d1d5db" }} aria-hidden="true" />
                     <span className="hidden sm:inline">{tms.name}</span>
                   </motion.button>
                 ))}
@@ -83,13 +83,13 @@ export default function IntegrationFlowDemo() {
                   >
                     <div className="flex items-center gap-1">
                       <div className="w-8 md:w-12 h-0.5 bg-green-500" />
-                      <ArrowRight size={12} className="text-green-500" />
+                      <ArrowRight size={12} className="text-green-500" aria-hidden="true" />
                     </div>
                   </motion.div>
                 ) : (
                   <div className="flex items-center gap-1">
                     <div className="w-8 md:w-12 h-0.5 bg-gray-200" />
-                    <ArrowRight size={12} className="text-gray-300" />
+                    <ArrowRight size={12} className="text-gray-300" aria-hidden="true" />
                   </div>
                 )}
               </div>
@@ -110,9 +110,9 @@ export default function IntegrationFlowDemo() {
                 }`}
               >
                 {step === "done" ? (
-                  <Check size={24} className="text-green-600" />
+                  <Check size={24} className="text-green-600" aria-hidden="true" />
                 ) : (
-                  <Cpu size={24} className={step === "syncing" ? "text-blue-600" : "text-gray-500"} />
+                  <Cpu size={24} className={step === "syncing" ? "text-blue-600" : "text-gray-500"} aria-hidden="true" />
                 )}
                 <span className="text-[10px] font-semibold mt-1 text-gray-600">NOGO</span>
               </motion.div>
@@ -128,13 +128,13 @@ export default function IntegrationFlowDemo() {
                   >
                     <div className="flex items-center gap-1">
                       <div className="w-8 md:w-12 h-0.5 bg-green-500" />
-                      <ArrowRight size={12} className="text-green-500" />
+                      <ArrowRight size={12} className="text-green-500" aria-hidden="true" />
                     </div>
                   </motion.div>
                 ) : (
                   <div className="flex items-center gap-1">
                     <div className="w-8 md:w-12 h-0.5 bg-gray-200" />
-                    <ArrowRight size={12} className="text-gray-300" />
+                    <ArrowRight size={12} className="text-gray-300" aria-hidden="true" />
                   </div>
                 )}
               </div>
@@ -200,7 +200,7 @@ export default function IntegrationFlowDemo() {
                 onClick={runDemo}
                 className="mt-auto flex items-center justify-center gap-2 bg-black text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors"
               >
-                <Zap size={16} />
+                <Zap size={16} aria-hidden="true" />
                 Simulera anslutning
               </button>
             </>
@@ -224,7 +224,7 @@ export default function IntegrationFlowDemo() {
             <>
               <div className="flex items-center gap-2 mb-5">
                 <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
-                  <Check size={16} className="text-green-600" />
+                  <Check size={16} className="text-green-600" aria-hidden="true" />
                 </div>
                 <p className="text-sm font-medium">Integration klar</p>
               </div>

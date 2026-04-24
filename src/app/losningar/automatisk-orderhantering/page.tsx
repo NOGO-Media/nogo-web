@@ -244,7 +244,7 @@ export default function AutomatiskOrderhanteringPage() {
               >
                 Lösningar
               </Link>
-              <ChevronRight size={14} />
+              <ChevronRight size={14} aria-hidden="true" />
               <span className="text-gray-600">Automatisk orderhantering</span>
             </nav>
 
@@ -265,13 +265,13 @@ export default function AutomatiskOrderhanteringPage() {
                 href="/kontakt"
                 className="inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
               >
-                Boka strategimöte <ArrowRight size={16} />
+                Boka strategimöte <ArrowRight size={16} aria-hidden="true" />
               </Link>
               <Link
                 href="/demo"
                 className="inline-flex items-center justify-center gap-2 border border-gray-200 px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors"
               >
-                <Play size={14} />
+                <Play size={14} aria-hidden="true" />
                 Testa demo
               </Link>
             </div>
@@ -433,17 +433,17 @@ export default function AutomatiskOrderhanteringPage() {
               href="/kontakt"
               className="inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
             >
-              Boka kostnadsfritt strategimöte <ArrowRight size={16} />
+              Boka kostnadsfritt strategimöte <ArrowRight size={16} aria-hidden="true" />
             </Link>
             <Link
               href="/losningar"
               className="inline-flex items-center justify-center gap-2 border border-gray-200 px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors"
             >
-              Se alla lösningar <Repeat size={15} />
+              Se alla lösningar <Repeat size={15} aria-hidden="true" />
             </Link>
           </div>
           <p className="mt-5 text-xs text-gray-400 inline-flex items-center gap-1.5">
-            <Users size={12} /> NOGO Media bygger autonoma AI-agenter för
+            <Users size={12} aria-hidden="true" /> NOGO Media bygger autonoma AI-agenter för
             transport och logistik i Sverige.
           </p>
           <div className="max-w-3xl mx-auto text-left mt-8">

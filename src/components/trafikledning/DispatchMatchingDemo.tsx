@@ -99,7 +99,7 @@ export default function DispatchMatchingDemo() {
                             : "border-gray-200"
                         }`}
                       >
-                        <User size={12} className={matched ? "text-green-600" : "text-gray-400"} />
+                        <User size={12} className={matched ? "text-green-600" : "text-gray-400"} aria-hidden="true" />
                         <span className="font-medium truncate">{d.name}</span>
                       </motion.div>
                     );
@@ -128,7 +128,7 @@ export default function DispatchMatchingDemo() {
                             : "border-gray-200"
                         }`}
                       >
-                        <Truck size={12} className={matched ? "text-green-600" : "text-gray-400"} />
+                        <Truck size={12} className={matched ? "text-green-600" : "text-gray-400"} aria-hidden="true" />
                         <span className="font-medium truncate">{v.type}</span>
                       </motion.div>
                     );
@@ -157,7 +157,7 @@ export default function DispatchMatchingDemo() {
                             : "border-gray-200"
                         }`}
                       >
-                        <Package size={12} className={matched ? "text-green-600" : "text-gray-400"} />
+                        <Package size={12} className={matched ? "text-green-600" : "text-gray-400"} aria-hidden="true" />
                         <span className="font-medium truncate">{o.from}</span>
                       </motion.div>
                     );
@@ -192,9 +192,9 @@ export default function DispatchMatchingDemo() {
                           className="flex items-center gap-2 text-xs bg-green-50 rounded-lg px-3 py-2"
                         >
                           <span className="font-medium text-green-800">{driver.name}</span>
-                          <ArrowRight size={10} className="text-green-400" />
+                          <ArrowRight size={10} className="text-green-400" aria-hidden="true" />
                           <span className="text-green-700">{vehicle.type}</span>
-                          <ArrowRight size={10} className="text-green-400" />
+                          <ArrowRight size={10} className="text-green-400" aria-hidden="true" />
                           <span className="text-green-700 truncate">
                             {order.from} → {order.to}
                           </span>
@@ -235,7 +235,7 @@ export default function DispatchMatchingDemo() {
                 onClick={runMatching}
                 className="mt-auto flex items-center justify-center gap-2 bg-black text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors"
               >
-                <Zap size={16} />
+                <Zap size={16} aria-hidden="true" />
                 Kör automatisk tilldelning
               </button>
             </>
@@ -255,7 +255,7 @@ export default function DispatchMatchingDemo() {
             <>
               <div className="flex items-center gap-2 mb-5">
                 <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
-                  <Check size={16} className="text-green-600" />
+                  <Check size={16} className="text-green-600" aria-hidden="true" />
                 </div>
                 <p className="text-sm font-medium">Tilldelning klar</p>
               </div>

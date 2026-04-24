@@ -321,7 +321,7 @@ function FyllnadView() {
       </div>
       <div className="bg-red-50 border border-red-200 rounded-xl p-4">
         <div className="flex items-center gap-2 mb-2">
-          <AlertTriangle size={14} className="text-red-500" />
+          <AlertTriangle size={14} className="text-red-500" aria-hidden="true" />
           <span className="text-xs font-medium text-red-700">Pass under 50% fyllnad</span>
         </div>
         <p className="text-sm text-red-600">
@@ -452,7 +452,7 @@ function ReturView() {
       </div>
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
         <div className="flex items-center gap-2 mb-2">
-          <AlertTriangle size={14} className="text-amber-500" />
+          <AlertTriangle size={14} className="text-amber-500" aria-hidden="true" />
           <span className="text-xs font-medium text-amber-700">11 pass utan returgods</span>
         </div>
         <p className="text-sm text-amber-600">

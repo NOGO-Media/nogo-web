@@ -22,7 +22,7 @@ export default function DemoYardOverview() {
       <div className="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
         <div>
           <h3 className="text-sm font-medium flex items-center gap-2">
-            <Layers size={14} /> Gårdsöversikt
+            <Layers size={14} aria-hidden="true" /> Gårdsöversikt
           </h3>
           <p className="text-xs text-gray-500 mt-0.5">
             Pre-fyllda enheter som väntar på hook-and-go
@@ -77,17 +77,17 @@ export default function DemoYardOverview() {
                       title="Ohanterad gårdsenhet"
                       className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-medium bg-amber-100 text-amber-700"
                     >
-                      <AlertTriangle size={10} /> Ohanterad
+                      <AlertTriangle size={10} aria-hidden="true" /> Ohanterad
                     </span>
                   )}
                 </div>
                 <div className="text-xs text-gray-600 mb-2 flex items-center gap-1">
                   {u.state === "waiting" ? (
-                    <ArrowUp size={11} className="text-green-600" />
+                    <ArrowUp size={11} className="text-green-600" aria-hidden="true" />
                   ) : u.state === "coupled" ? (
-                    <ArrowDown size={11} className="text-blue-600" />
+                    <ArrowDown size={11} className="text-blue-600" aria-hidden="true" />
                   ) : (
-                    <ArrowDown size={11} className="text-gray-400" />
+                    <ArrowDown size={11} className="text-gray-400" aria-hidden="true" />
                   )}
                   Destination: <span className="font-medium">{u.destinationArea}</span>
                 </div>

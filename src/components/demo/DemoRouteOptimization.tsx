@@ -63,7 +63,7 @@ export default function DemoRouteOptimization({ onGoPlanering }: Props = {}) {
             label="Övertidspass"
             value={overtimeCount.toString()}
             highlight
-            icon={<AlertTriangle size={12} className="text-red-500" />}
+            icon={<AlertTriangle size={12} className="text-red-500" aria-hidden="true" />}
           />
         )}
       </div>
@@ -74,7 +74,7 @@ export default function DemoRouteOptimization({ onGoPlanering }: Props = {}) {
           className="mt-auto flex items-center justify-center gap-2 bg-black text-white px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
         >
           Öppna planering
-          <ArrowRight size={14} />
+          <ArrowRight size={14} aria-hidden="true" />
         </button>
       ) : (
         <div className="mt-auto text-xs text-gray-500 flex items-center gap-1.5">
@@ -85,7 +85,7 @@ export default function DemoRouteOptimization({ onGoPlanering }: Props = {}) {
             </>
           ) : (
             <>
-              <Clock size={12} className="text-gray-400" />
+              <Clock size={12} className="text-gray-400" aria-hidden="true" />
               {selectedDay.label}
             </>
           )}
