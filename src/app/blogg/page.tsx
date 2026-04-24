@@ -92,6 +92,14 @@ const articles = [
     href: "/artiklar/backhaul-returlass-automatiserad-matchning",
   },
   {
+    title: "Digital orderintag — från mail, PDF och EDI till TMS",
+    description:
+      "Från 8 min till 90 sekunder per order. Flöde, träffsäkerhet per format och de 5 vanligaste fallgroparna när åkerier automatiserar orderintaget.",
+    category: "Operations",
+    readTime: "7 min",
+    href: "/artiklar/digital-orderintag-mail-pdf-edi",
+  },
+  {
     title: "Trafikledarbrist i Sverige — hur teknik kan avlasta",
     description:
       "Det blir allt svårare att rekrytera trafikledare. Automation kan avlasta befintlig personal och minska beroendet av nyanställningar.",
