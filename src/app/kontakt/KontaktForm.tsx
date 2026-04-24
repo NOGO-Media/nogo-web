@@ -39,7 +39,11 @@ export function KontaktForm() {
 
   if (status === "success") {
     return (
-      <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 flex flex-col items-center justify-center text-center min-h-[400px]">
+      <div
+        role="status"
+        aria-live="polite"
+        className="bg-gray-50 rounded-2xl p-8 border border-gray-100 flex flex-col items-center justify-center text-center min-h-[400px]"
+      >
         <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
           <Check size={24} className="text-green-600" aria-hidden="true" />
         </div>
@@ -140,7 +144,7 @@ export function KontaktForm() {
             )}
           </button>
           {status === "error" && (
-            <p className="text-sm text-red-500 text-center">
+            <p role="alert" className="text-sm text-red-600 text-center">
               Något gick fel. Försök igen eller maila oss direkt.
             </p>
           )}
