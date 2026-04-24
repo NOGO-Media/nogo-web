@@ -3,9 +3,11 @@ import Image from "next/image";
 export default function Logo({
   className = "h-8",
   variant = "dark",
+  priority = false,
 }: {
   className?: string;
   variant?: "dark" | "light";
+  priority?: boolean;
 }) {
   return (
     <Image
@@ -15,8 +17,7 @@ export default function Logo({
       height={32}
       sizes="150px"
       className={`${className} w-auto`}
-      priority
-      unoptimized
+      priority={priority}
     />
   );
 }
