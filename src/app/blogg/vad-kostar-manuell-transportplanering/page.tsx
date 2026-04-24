@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
@@ -34,6 +35,12 @@ const costRows = [
 export default function ManuellTransportplaneringArticle() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Blogg", path: "/blogg" },
+          { name: "Vad kostar manuell transportplanering", path: "/blogg/vad-kostar-manuell-transportplanering" },
+        ]}
+      />
       <ArticleJsonLd
         title="Vad kostar manuell transportplanering egentligen?"
         description="Räkneexempel för svenska åkerier: lön, arbetsgivarkostnad, kostnad per bokning och effekten av tomkörning."

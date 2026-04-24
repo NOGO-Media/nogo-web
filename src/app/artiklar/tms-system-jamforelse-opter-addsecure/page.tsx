@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
@@ -33,6 +34,12 @@ export const metadata: Metadata = {
 export default function TmsSystemJamforelseOpterAddsecurePage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Artiklar", path: "/blogg" },
+          { name: "TMS-jämförelse: Opter, AddSecure, eget", path: "/artiklar/tms-system-jamforelse-opter-addsecure" },
+        ]}
+      />
       <ArticleJsonLd
         title="Opter, AddSecure eller eget? Så väljer du TMS"
         description="Neutral jämförelse av TMS-system på den svenska marknaden."

@@ -22,6 +22,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import RelatedSolutions from "@/components/RelatedSolutions";
 
 const AnalyticsDashboardDemo = dynamic(
   () => import("@/components/rapport-analys/AnalyticsDashboardDemo"),
@@ -548,6 +549,9 @@ export default function RapportOchAnalysPage() {
               <Play size={14} />
               Testa demo
             </Link>
+          </div>
+          <div className="max-w-3xl mx-auto text-left">
+            <RelatedSolutions slugs={["trafikledning", "ruttoptimering", "tms-integration"]} />
           </div>
         </div>
       </section>

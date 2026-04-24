@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: { absolute: "AI Trafikledning 2026 – Spara miljoner | NOGO Media" },
@@ -32,6 +33,12 @@ export default function ArticleLayout({
 }) {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Artiklar", path: "/blogg" },
+          { name: "AI Trafikledning 2026", path: "/artiklar/ai-trafikledning-2026" },
+        ]}
+      />
       <ArticleJsonLd
         title="AI Trafikledning 2026 – Så kan svenska åkerier spara miljoner"
         description="Så kan svenska åkerier automatisera 85–95% av manuellt trafikledningsarbete med AI-automation."

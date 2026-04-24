@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
@@ -33,6 +34,12 @@ export const metadata: Metadata = {
 export default function EftiDigitalaFraktdokumentAkeriArticle() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Artiklar", path: "/blogg" },
+          { name: "eFTI och digitala fraktdokument", path: "/artiklar/efti-digitala-fraktdokument-akeri" },
+        ]}
+      />
       <ArticleJsonLd
         title="eFTI och digitala fraktdokument — är ditt åkeri redo?"
         description="EU kräver digitala fraktdokument senast 2027. Guide för svenska åkerier om eFTI-förordningen."

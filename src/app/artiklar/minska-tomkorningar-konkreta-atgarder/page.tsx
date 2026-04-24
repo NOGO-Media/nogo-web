@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
@@ -74,6 +75,12 @@ const faqSchema = {
 export default function MinskaTomkorningarArticle() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Artiklar", path: "/blogg" },
+          { name: "Minska tomkörningar", path: "/artiklar/minska-tomkorningar-konkreta-atgarder" },
+        ]}
+      />
       <ArticleJsonLd
         title="Minska tomkörningar — 5 konkreta åtgärder"
         description="Fem praktiska åtgärder som minskar tomkörningarna i ert åkeri."

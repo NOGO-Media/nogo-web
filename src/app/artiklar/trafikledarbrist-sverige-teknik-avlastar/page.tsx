@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
@@ -74,6 +75,12 @@ const faqSchema = {
 export default function TrafikledarbristArticle() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Artiklar", path: "/blogg" },
+          { name: "Trafikledarbrist i Sverige", path: "/artiklar/trafikledarbrist-sverige-teknik-avlastar" },
+        ]}
+      />
       <ArticleJsonLd
         title="Trafikledarbrist i Sverige — hur teknik kan avlasta"
         description="Så kan automation avlasta befintliga trafikledare och minska beroendet av nyanställningar."

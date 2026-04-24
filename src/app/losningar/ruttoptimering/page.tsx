@@ -16,6 +16,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import RelatedSolutions from "@/components/RelatedSolutions";
 
 const RouteOptimizationDemo = dynamic(
   () => import("@/components/route-optimization/RouteOptimizationDemo"),
@@ -373,6 +374,9 @@ export default function RuttoptimeringPage() {
               <Play size={14} />
               Testa demo
             </Link>
+          </div>
+          <div className="max-w-3xl mx-auto text-left">
+            <RelatedSolutions slugs={["trafikledning", "automatisk-orderhantering", "tms-integration"]} />
           </div>
         </div>
       </section>

@@ -15,6 +15,7 @@ import {
   Users,
 } from "lucide-react";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import RelatedSolutions from "@/components/RelatedSolutions";
 
 const SITE_URL = "https://nogomedia.se";
 
@@ -445,6 +446,9 @@ export default function AutomatiskOrderhanteringPage() {
             <Users size={12} /> NOGO Media bygger autonoma AI-agenter för
             transport och logistik i Sverige.
           </p>
+          <div className="max-w-3xl mx-auto text-left mt-8">
+            <RelatedSolutions slugs={["trafikledning", "ruttoptimering", "tms-integration"]} />
+          </div>
         </div>
       </section>
     </>

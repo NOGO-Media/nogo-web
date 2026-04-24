@@ -16,6 +16,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import RelatedSolutions from "@/components/RelatedSolutions";
 
 const IntegrationFlowDemo = dynamic(
   () => import("@/components/tms-integration/IntegrationFlowDemo"),
@@ -431,6 +432,9 @@ export default function TMSIntegrationPage() {
               <Play size={14} />
               Testa demo
             </Link>
+          </div>
+          <div className="max-w-3xl mx-auto text-left">
+            <RelatedSolutions slugs={["trafikledning", "ruttoptimering", "automatisk-orderhantering"]} />
           </div>
         </div>
       </section>

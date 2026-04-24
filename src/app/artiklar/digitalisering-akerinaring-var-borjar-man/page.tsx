@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
@@ -27,6 +28,12 @@ export const metadata: Metadata = {
 export default function DigitaliseringAkerinaringenArticle() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Artiklar", path: "/blogg" },
+          { name: "Digitalisering i åkerinäringen", path: "/artiklar/digitalisering-akerinaring-var-borjar-man" },
+        ]}
+      />
       <ArticleJsonLd
         title="Digitalisering i åkerinäringen — var börjar man?"
         description="Praktisk guide för små och medelstora åkerier som vill digitalisera."
