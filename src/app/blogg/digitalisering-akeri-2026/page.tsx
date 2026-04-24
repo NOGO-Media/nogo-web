@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
@@ -186,6 +187,12 @@ function FAQJsonLd() {
 export default function DigitaliseringAkeri2026Article() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Blogg", path: "/blogg" },
+          { name: "Digitalisering av åkeri 2026", path: "/blogg/digitalisering-akeri-2026" },
+        ]}
+      />
       <ArticleJsonLd
         title="Digitalisering av åkeri i siffror — så långt har svenska åkerier kommit 2026"
         description="Nyckeltal, mognadsnivåer och branschjämförelse: var står svenska åkerier i digitaliseringen 2026?"

@@ -16,6 +16,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import RelatedSolutions from "@/components/RelatedSolutions";
 
 const DispatchMatchingDemo = dynamic(
   () => import("@/components/trafikledning/DispatchMatchingDemo"),
@@ -427,6 +428,9 @@ export default function TrafikledningPage() {
               <Play size={14} />
               Testa demo
             </Link>
+          </div>
+          <div className="max-w-3xl mx-auto text-left">
+            <RelatedSolutions slugs={["ruttoptimering", "automatisk-orderhantering", "rapport-och-analys"]} />
           </div>
         </div>
       </section>

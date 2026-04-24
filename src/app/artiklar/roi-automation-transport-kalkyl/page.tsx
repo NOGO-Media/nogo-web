@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
@@ -32,6 +33,12 @@ export const metadata: Metadata = {
 export default function RoiAutomationTransportKalkylPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Artiklar", path: "/blogg" },
+          { name: "ROI på automation i transport", path: "/artiklar/roi-automation-transport-kalkyl" },
+        ]}
+      />
       <ArticleJsonLd
         title="Så räknar du ROI på automation i transport"
         description="Konkret kalkylmodell för att räkna ut vad automation kan spara ert åkeri."

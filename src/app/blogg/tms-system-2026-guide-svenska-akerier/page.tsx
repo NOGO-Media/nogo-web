@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import ArticleJsonLd from "@/components/ArticleJsonLd";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
@@ -63,6 +64,12 @@ const systems = [
 export default function TMSGuideArticle() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Blogg", path: "/blogg" },
+          { name: "TMS-system 2026 guide", path: "/blogg/tms-system-2026-guide-svenska-akerier" },
+        ]}
+      />
       <ArticleJsonLd
         title="TMS-system 2026: Komplett guide för svenska åkerier"
         description="Vad är ett TMS-system, vilka alternativ finns i Sverige och hur väljer åkerier rätt lösning?"
