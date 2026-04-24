@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
@@ -12,28 +13,48 @@ const navigation = [
   { name: "Om oss", href: "/om-oss" },
 ];
 
+function isActive(pathname: string, href: string): boolean {
+  if (href === "/blogg") {
+    // Also highlight blog link on article pages
+    return pathname === href || pathname.startsWith("/blogg/") || pathname.startsWith("/artiklar/");
+  }
+  if (href === "/losningar") {
+    return pathname === href || pathname.startsWith("/losningar/");
+  }
+  return pathname === href;
+}
+
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/">
+        <Link href="/" aria-label="NOGO Media — startsida">
           <Logo className="h-8" priority />
         </Link>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="text-sm text-gray-600 hover:text-black transition-colors"
-            >
-              {item.name}
-            </Link>
-          ))}
+          {navigation.map((item) => {
+            const active = isActive(pathname, item.href);
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                aria-current={active ? "page" : undefined}
+                className={`text-sm transition-colors ${
+                  active
+                    ? "text-black font-medium"
+                    : "text-gray-600 hover:text-black"
+                }`}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
           <Link
             href="/kontakt"
             className="text-sm bg-black text-white px-5 py-2.5 rounded-full hover:bg-gray-800 transition-colors"
@@ -61,16 +82,24 @@ export default function Navbar() {
           id="mobile-nav"
           className="md:hidden bg-white border-b border-gray-100 px-6 pb-6"
         >
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="block py-3 text-gray-600 hover:text-black transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ))}
+          {navigation.map((item) => {
+            const active = isActive(pathname, item.href);
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                aria-current={active ? "page" : undefined}
+                className={`block py-3 transition-colors ${
+                  active
+                    ? "text-black font-medium"
+                    : "text-gray-600 hover:text-black"
+                }`}
+                onClick={() => setMobileOpen(false)}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
           <Link
             href="/kontakt"
             className="block mt-4 text-center bg-black text-white px-5 py-2.5 rounded-full"
