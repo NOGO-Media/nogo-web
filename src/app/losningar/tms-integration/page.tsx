@@ -29,9 +29,9 @@ const TMSIntegrationFAQ = dynamic(
 const SITE_URL = "https://nogomedia.se";
 
 export const metadata: Metadata = {
-  title: "TMS-integration för åkerier — Automatisera utan att byta system",
+  title: "TMS-integration för åkerier",
   description:
-    "Integrera AI-automation direkt i ert befintliga TMS — med eller utan API. Opter, AddSecure, Hogia, Barkfors eller egenutvecklat. Vi integrerar via API, databas, filimport eller skärmautomation. Utan migration eller stillestånd.",
+    "AI-automation direkt i ert befintliga TMS — Opter, AddSecure, Hogia, Barkfors eller egenutvecklat. Med eller utan API, utan migration eller stillestånd.",
   keywords: [
     "TMS-integration",
     "TMS-system åkeri",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/losningar/tms-integration" },
   openGraph: {
-    title: "TMS-integration — Automatisera utan att byta system | NOGO Media",
+    title: "TMS-integration för åkerier | NOGO Media",
     description:
       "Integrera AI-automation direkt i ert befintliga TMS. Utan migration, omträning eller stillestånd.",
     url: "/losningar/tms-integration",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TMS-integration — Automatisera utan att byta system | NOGO Media",
+    title: "TMS-integration för åkerier | NOGO Media",
     description:
       "Integrera AI-automation direkt i ert befintliga TMS. Utan migration eller stillestånd.",
     images: ["/og-image.png"],

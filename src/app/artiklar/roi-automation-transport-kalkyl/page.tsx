@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     description:
       "En konkret kalkylmodell för att räkna ut vad automation kan spara ert åkeri — med siffror ni kan sätta in själva.",
     url: "/artiklar/roi-automation-transport-kalkyl",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "NOGO Media — ROI på automation i transport" }],
     publishedTime: "2026-04-02T00:00:00Z",
     authors: ["NOGO Media AB"],
     tags: [

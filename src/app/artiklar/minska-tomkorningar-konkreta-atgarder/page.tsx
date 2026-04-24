@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     description:
       "Fem praktiska åtgärder för att minska tomkörningar i åkeri med bättre planering, returlass och tydlig uppföljning.",
     url: "/artiklar/minska-tomkorningar-konkreta-atgarder",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "NOGO Media — Minska tomkörningar" }],
     publishedTime: "2026-04-02T00:00:00Z",
     authors: ["NOGO Media AB"],
     tags: [

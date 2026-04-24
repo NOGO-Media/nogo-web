@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     description:
       "EU kräver digitala fraktdokument senast 2027. Konkret guide för svenska åkerier om eFTI och hur ni förbereder er.",
     url: "/artiklar/efti-digitala-fraktdokument-akeri",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "NOGO Media — eFTI och digitala fraktdokument" }],
     publishedTime: "2026-04-02T00:00:00Z",
     authors: ["NOGO Media AB"],
     tags: [

@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     description:
       "En neutral jämförelse av TMS-system på den svenska marknaden. Styrkor, svagheter och vad som passar vilket åkeri — utan säljsnack.",
     url: "/artiklar/tms-system-jamforelse-opter-addsecure",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "NOGO Media — TMS-jämförelse" }],
     publishedTime: "2026-04-02T00:00:00Z",
     authors: ["NOGO Media AB"],
     tags: [

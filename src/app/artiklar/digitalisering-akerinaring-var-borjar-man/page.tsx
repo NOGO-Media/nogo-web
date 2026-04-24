@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     description:
       "Praktisk guide för små och medelstora åkerier som vill digitalisera. Steg-för-steg utan krångel.",
     url: "/artiklar/digitalisering-akerinaring-var-borjar-man",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "NOGO Media — Digitalisering i åkerinäringen" }],
     publishedTime: "2026-04-02T00:00:00Z",
     authors: ["NOGO Media AB"],
     tags: ["Guide", "digitalisering åkerinäringen", "TMS system åkeri"],

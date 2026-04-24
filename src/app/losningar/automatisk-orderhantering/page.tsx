@@ -18,10 +18,9 @@ import {
 const SITE_URL = "https://nogomedia.se";
 
 export const metadata: Metadata = {
-  title:
-    "Automatisk orderhantering för åkerier — AI-driven ruttplanering | NOGO Media",
+  title: "Automatisk orderhantering för åkerier",
   description:
-    "Automatiserad orderhantering för transportbolag i Sverige. Ladda upp Excel, få en komplett körplan med ekipage, fyllnad och arbetstider — utan manuellt arbete. Från order till plan på sekunder.",
+    "Automatiserad orderhantering för svenska transportbolag. Ladda upp Excel, få en körplan med ekipage, fyllnad och arbetstider på sekunder.",
   keywords: [
     "orderhantering åkeri",
     "automatisk transportplanering",
@@ -38,8 +37,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/losningar/automatisk-orderhantering" },
   openGraph: {
-    title:
-      "Automatisk orderhantering för åkerier — AI-driven ruttplanering | NOGO Media",
+    title: "Automatisk orderhantering för åkerier | NOGO Media",
     description:
       "Ladda upp Excel och få en komplett körplan på sekunder. AI-driven orderhantering för svenska transportbolag.",
     url: "/losningar/automatisk-orderhantering",
@@ -57,8 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Automatisk orderhantering för åkerier — AI-driven ruttplanering | NOGO Media",
+    title: "Automatisk orderhantering för åkerier | NOGO Media",
     description:
       "Från Excel till färdig plan på sekunder med AI-driven orderhantering.",
     images: ["/og-image.png"],

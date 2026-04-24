@@ -7,7 +7,7 @@ import RelatedSolutions from "@/components/RelatedSolutions";
 export const metadata: Metadata = {
   title: "Trafikledarbrist i Sverige — hur teknik kan avlasta",
   description:
-    "Det blir allt svårare att rekrytera trafikledare. Så kan automation avlasta befintlig personal, minska beroendet av nyanställningar och hålla verksamheten igång.",
+    "Det blir svårare att rekrytera trafikledare. Så kan automation avlasta personalen, minska nyanställningar och hålla verksamheten igång.",
   alternates: {
     canonical: "/artiklar/trafikledarbrist-sverige-teknik-avlastar",
   },
@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     description:
       "Branschanalys: varför trafikledarbrist växer och hur automation kan avlasta utan att ersätta den mänskliga trafikledaren.",
     url: "/artiklar/trafikledarbrist-sverige-teknik-avlastar",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "NOGO Media — Trafikledarbrist i Sverige" }],
     publishedTime: "2026-04-02T00:00:00Z",
     authors: ["NOGO Media AB"],
     tags: [
