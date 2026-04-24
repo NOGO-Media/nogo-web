@@ -412,20 +412,34 @@ export default function TrafikledarbristArticle() {
 
           <RelatedSolutions slugs={["trafikledning", "automatisk-orderhantering"]} />
 
-          <section className="rounded-2xl border border-black bg-black text-white p-6 mt-10">
-            <h2 className="text-2xl font-medium mb-3">
+          <section className="rounded-2xl border border-gray-200 bg-gray-50 p-6 mt-10">
+            <h2 className="text-xl font-medium text-black mb-3">
               Vill ni se vad som går att automatisera hos er?
             </h2>
-            <p className="text-white/80 mb-4">
-              Vi hjälper er identifiera var ni kan avlasta trafikledningen först,
-              med fokus på snabb effekt och bibehållen kontroll i driften.
+            <p>
+              Vi hjälper er identifiera var ni kan avlasta trafikledningen
+              först, med fokus på snabb effekt och bibehållen kontroll i driften.
             </p>
-            <Link
-              href="/kontakt"
-              className="inline-flex items-center rounded-full bg-white text-black px-5 py-2.5 text-sm font-medium hover:bg-gray-200 transition-colors"
-            >
-              Boka strategisamtal <ArrowRight className="w-4 h-4" />
-            </Link>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <Link
+                href="/losningar/trafikledning"
+                className="inline-flex items-center gap-1.5 text-sm font-medium bg-black text-white px-5 py-2.5 rounded-full hover:bg-gray-800 transition-colors"
+              >
+                Automatiserad trafikledning <ArrowRight size={14} />
+              </Link>
+              <Link
+                href="/sa-jobbar-vi"
+                className="inline-flex items-center gap-1.5 text-sm font-medium border border-gray-200 px-5 py-2.5 rounded-full hover:bg-white transition-colors"
+              >
+                Så jobbar vi
+              </Link>
+              <Link
+                href="/kontakt"
+                className="inline-flex items-center gap-1.5 text-sm font-medium border border-gray-200 px-5 py-2.5 rounded-full hover:bg-white transition-colors"
+              >
+                Boka strategisamtal
+              </Link>
+            </div>
           </section>
         </div>
       </div>
