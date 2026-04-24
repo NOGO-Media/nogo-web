@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Allmänna villkor",
   alternates: { canonical: "/villkor" },
+  openGraph: { url: "/villkor" },
 };
 
 export default function VillkorPage() {

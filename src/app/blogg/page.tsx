@@ -64,7 +64,7 @@ const articles = [
       "Praktisk guide för små och medelstora åkerier som vill digitalisera. Steg-för-steg utan krångel.",
     category: "Guide",
     readTime: "7 min",
-    slug: "digitalisering-akerinaring-var-borjar-man",
+    href: "/artiklar/digitalisering-akerinaring-var-borjar-man",
   },
   {
     title: "Minska tomkörningar — 5 konkreta åtgärder",
