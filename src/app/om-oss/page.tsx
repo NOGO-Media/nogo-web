@@ -12,7 +12,7 @@ import {
 const SITE_URL = "https://nogomedia.se";
 
 export const metadata: Metadata = {
-  title: "Om NOGO Media — AI-automation för åkerier | Norrköping",
+  title: "Om NOGO Media — AI-automation för åkerier",
   description:
     "NOGO Media bygger AI-automation för svenska åkerier — ruttoptimering, trafikledning och TMS-integration. Grundat 2025 i Norrköping.",
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/om-oss" },
   openGraph: {
     type: "website",
-    title: "Om NOGO Media — AI-automation för åkerier | Norrköping",
+    title: "Om NOGO Media — AI-automation för åkerier",
     description:
       "NOGO Media bygger AI-automation för svenska åkerier. Grundat 2025 i Norrköping av team med operativ transporterfarenhet.",
     url: "/om-oss",
@@ -156,7 +156,7 @@ export default function OmOssPage() {
       <section className="pt-32 pb-8 md:pt-44 md:pb-12">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
-            <p className="text-sm font-medium text-gray-400 mb-4">Om oss</p>
+            <p className="text-sm font-medium text-gray-500 mb-4">Om oss</p>
             <h1 className="text-4xl md:text-5xl font-medium tracking-tight leading-[1.1]">
               Vi bygger verktyg för de som{" "}
               <span className="text-gray-400">håller Sverige rullande.</span>
@@ -296,7 +296,7 @@ export default function OmOssPage() {
                   <User size={20} className="text-gray-500" />
                 </div>
                 <h3 className="text-lg font-medium">{member.name}</h3>
-                <p className="text-sm text-gray-400 mb-3">{member.role}</p>
+                <p className="text-sm text-gray-500 mb-3">{member.role}</p>
                 <p className="text-sm text-gray-500 leading-relaxed">
                   {member.description}
                 </p>

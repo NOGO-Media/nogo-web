@@ -13,7 +13,7 @@ const popular = [
 export default function NotFound() {
   return (
     <main className="flex min-h-[70vh] flex-col items-center justify-center text-center px-6 pt-32 pb-24">
-      <p className="text-sm font-medium text-gray-400 mb-4">404</p>
+      <p className="text-sm font-medium text-gray-500 mb-4">404</p>
       <h1 className="text-4xl md:text-5xl font-medium tracking-tight leading-[1.15] max-w-2xl">
         Sidan hittades inte.
       </h1>

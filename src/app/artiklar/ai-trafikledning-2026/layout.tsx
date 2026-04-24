@@ -5,7 +5,7 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 export const metadata: Metadata = {
   title: { absolute: "AI Trafikledning 2026 – Spara miljoner | NOGO Media" },
   description:
-    "AI-agenter för transportbranschen är inte längre framtidsteknik. Så kan svenska åkerier automatisera 85–95% av manuellt trafikledningsarbete. Inkl. ROI-räknare.",
+    "AI-agenter är inte framtidsteknik. Så automatiserar svenska åkerier 85–95 % av manuellt trafikledningsarbete 2026. Inkl. ROI-räknare.",
   alternates: { canonical: "/artiklar/ai-trafikledning-2026" },
   openGraph: {
     type: "article",

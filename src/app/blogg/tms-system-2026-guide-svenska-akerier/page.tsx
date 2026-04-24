@@ -6,13 +6,13 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
-  title: "TMS-system 2026: Komplett guide för svenska åkerier",
+  title: "TMS-system 2026 — guide för åkerier",
   description:
-    "Vad är ett TMS-system, vilka alternativ finns i Sverige och hur väljer åkerier rätt lösning? Jämförelse av Opter, AddSecure, Cargoson, nShift och pinDeliver.",
+    "Vad är ett TMS, vilka alternativ finns i Sverige och hur väljer åkerier rätt? Jämförelse av Opter, AddSecure, Cargoson, nShift och pinDeliver.",
   alternates: { canonical: "/blogg/tms-system-2026-guide-svenska-akerier" },
   openGraph: {
     type: "article",
-    title: "TMS-system 2026: Komplett guide för svenska åkerier",
+    title: "TMS-system 2026 — guide för åkerier",
     description:
       "Neutral TMS-guide för svenska åkerier: funktioner, målgrupper, prissättning och valkriterier.",
     url: "/blogg/tms-system-2026-guide-svenska-akerier",
@@ -255,7 +255,7 @@ export default function TMSGuideArticle() {
           <h2 className="text-2xl font-medium text-white mb-3">
             Undrar ni vad manuell planering kostar i kronor?
           </h2>
-          <p className="text-gray-400 mb-6">
+          <p className="text-gray-500 mb-6">
             Se vår steg-för-steg-kalkyl för trafikledarlön,
             arbetsgivarkostnad och kostnad per bokning.
           </p>

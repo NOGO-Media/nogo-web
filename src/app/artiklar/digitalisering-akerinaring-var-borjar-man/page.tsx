@@ -6,15 +6,15 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
-  title: "Digitalisering i åkerinäringen — var börjar man?",
+  title: "Digitalisering av åkeri — var börjar man?",
   description:
-    "Praktisk guide för små och medelstora åkerier som vill digitalisera. Steg-för-steg utan krångel. Lär dig var du ska börja och vad som faktiskt ger resultat.",
+    "Praktisk guide för små och medelstora åkerier som vill digitalisera. Steg-för-steg — var du ska börja och vad som faktiskt ger resultat.",
   alternates: {
     canonical: "/artiklar/digitalisering-akerinaring-var-borjar-man",
   },
   openGraph: {
     type: "article",
-    title: "Digitalisering i åkerinäringen — var börjar man?",
+    title: "Digitalisering av åkeri — var börjar man?",
     description:
       "Praktisk guide för små och medelstora åkerier som vill digitalisera. Steg-för-steg utan krångel.",
     url: "/artiklar/digitalisering-akerinaring-var-borjar-man",

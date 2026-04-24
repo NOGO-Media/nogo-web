@@ -4,9 +4,9 @@ import { ArrowRight, Search, Zap, Rocket, ShieldCheck, Users, Clock } from "luci
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "Så jobbar vi — från upptäckt till produktion",
+  title: "Så jobbar vi — från upptäckt till drift",
   description:
-    "Så bygger NOGO AI-automation i svenska åkerier: upptäcktsmöte, pilot, produktion. Tydlig process, 2–4 veckor till drift, utan systemmigration eller avtalsbindning under piloten.",
+    "Så bygger NOGO AI-automation i svenska åkerier: upptäcktsmöte, pilot, produktion. 2–4 veckor till drift, utan systemmigration eller avtalsbindning.",
   alternates: { canonical: "/sa-jobbar-vi" },
   openGraph: {
     type: "website",
@@ -93,7 +93,7 @@ export default function SaJobbarViPage() {
       <section className="pt-32 pb-12 md:pt-44 md:pb-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
-            <p className="text-sm font-medium text-gray-400 mb-4">Så jobbar vi</p>
+            <p className="text-sm font-medium text-gray-500 mb-4">Så jobbar vi</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1]">
               Från upptäckt till produktion{" "}
               <span className="text-gray-400">på 2–4 veckor.</span>

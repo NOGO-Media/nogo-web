@@ -151,7 +151,7 @@ export default function LosningarPage() {
       <section className="pt-32 pb-8 md:pt-44 md:pb-12">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
-            <p className="text-sm font-medium text-gray-400 mb-4">Lösningar</p>
+            <p className="text-sm font-medium text-gray-500 mb-4">Lösningar</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1]">
               Automation anpassad för{" "}
               <span className="text-gray-400">svensk transport.</span>

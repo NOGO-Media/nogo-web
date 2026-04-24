@@ -31,7 +31,7 @@ const TrafikledningFAQ = dynamic(
 const SITE_URL = "https://nogomedia.se";
 
 export const metadata: Metadata = {
-  title: "AI-trafikledning för åkerier — Frigör 3+ timmar per dag",
+  title: "AI-trafikledning — frigör timmar per dag",
   description:
     "AI-driven trafikledning som automatiserar orderhantering, förartilldelning och fordonsplanering. Minska manuellt arbete med 60%.",
   keywords: [

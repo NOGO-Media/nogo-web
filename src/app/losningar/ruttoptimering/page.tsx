@@ -31,7 +31,7 @@ const RouteOptFAQ = dynamic(
 const SITE_URL = "https://nogomedia.se";
 
 export const metadata: Metadata = {
-  title: "Ruttoptimering för åkerier — Minska körsträckan med 23%",
+  title: "Ruttoptimering — minska körsträckan",
   description:
     "Minska körsträckan 23% och öka leveranserna 18% per dag. AI-driven ruttoptimering med hänsyn till tidsfönster, ADR och kör- och vilotider.",
   keywords: [

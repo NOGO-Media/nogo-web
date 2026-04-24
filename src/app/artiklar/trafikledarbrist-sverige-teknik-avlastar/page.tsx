@@ -6,7 +6,7 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
-  title: "Trafikledarbrist i Sverige — hur teknik kan avlasta",
+  title: "Trafikledarbrist — hur teknik avlastar",
   description:
     "Det blir svårare att rekrytera trafikledare. Så kan automation avlasta personalen, minska nyanställningar och hålla verksamheten igång.",
   alternates: {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "article",
-    title: "Trafikledarbrist i Sverige — hur teknik kan avlasta",
+    title: "Trafikledarbrist — hur teknik avlastar",
     description:
       "Branschanalys: varför trafikledarbrist växer och hur automation kan avlasta utan att ersätta den mänskliga trafikledaren.",
     url: "/artiklar/trafikledarbrist-sverige-teknik-avlastar",

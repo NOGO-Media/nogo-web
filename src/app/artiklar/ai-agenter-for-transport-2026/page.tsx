@@ -6,15 +6,15 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
-  title: "AI-agenter för transport 2026 — vad de kan och inte kan",
+  title: "AI-agenter för transport — vad de kan 2026",
   description:
-    "Ärlig genomgång av vad AI-agenter faktiskt gör (och inte gör) i svenska åkerier 2026. Evidensbaserade användningsfall, gränser och vad som skiljer en AI-agent från ett klassiskt TMS.",
+    "Ärlig genomgång av vad AI-agenter faktiskt gör i svenska åkerier 2026. Användningsfall, gränser och vad som skiljer dem från ett klassiskt TMS.",
   alternates: {
     canonical: "/artiklar/ai-agenter-for-transport-2026",
   },
   openGraph: {
     type: "article",
-    title: "AI-agenter för transport 2026 — vad de kan och inte kan",
+    title: "AI-agenter för transport — vad de kan 2026",
     description:
       "Vad AI-agenter verkligen gör i svenska åkerier 2026: evidensbaserade användningsfall och gränser.",
     url: "/artiklar/ai-agenter-for-transport-2026",

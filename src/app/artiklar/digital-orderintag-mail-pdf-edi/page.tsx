@@ -6,15 +6,15 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
-  title: "Digital orderintag — från mail, PDF och EDI till TMS",
+  title: "Digital orderintag — mail, PDF och EDI",
   description:
-    "Så automatiserar svenska åkerier orderintag från mail, PDF, Excel och EDI till TMS. Konkret flöde, fallgropar och realistiska träffsäkerhetsnivåer för 2026.",
+    "Så automatiserar svenska åkerier orderintag från mail, PDF, Excel och EDI till TMS. Konkret flöde och realistiska träffsäkerhetsnivåer 2026.",
   alternates: {
     canonical: "/artiklar/digital-orderintag-mail-pdf-edi",
   },
   openGraph: {
     type: "article",
-    title: "Digital orderintag — från mail, PDF och EDI till TMS",
+    title: "Digital orderintag — mail, PDF och EDI",
     description:
       "Så ersätter svenska åkerier manuell ordermatning med automation som läser mail, PDF, Excel och EDI.",
     url: "/artiklar/digital-orderintag-mail-pdf-edi",

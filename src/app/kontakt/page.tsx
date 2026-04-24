@@ -4,7 +4,7 @@ import { KontaktForm } from "./KontaktForm";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "Kontakt — Boka ett kostnadsfritt strategisamtal",
+  title: "Kontakt — Boka strategisamtal",
   description:
     "Boka ett 30-minuters strategisamtal med NOGO Media. Vi visar hur AI-automation kan spara tid och pengar i just ert åkeri. Norrköping, Sverige.",
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/kontakt" },
   openGraph: {
     type: "website",
-    title: "Kontakt — Boka ett kostnadsfritt strategisamtal",
+    title: "Kontakt — Boka strategisamtal",
     description:
       "Boka ett 30-minuters strategisamtal med NOGO Media. Vi visar hur AI-automation kan spara tid och pengar i just ert åkeri.",
     url: "/kontakt",
@@ -32,7 +32,7 @@ export default function KontaktPage() {
         <div className="grid md:grid-cols-2 gap-16">
           {/* Left — Info */}
           <div>
-            <p className="text-sm font-medium text-gray-400 mb-4">Kontakt</p>
+            <p className="text-sm font-medium text-gray-500 mb-4">Kontakt</p>
             <h1 className="text-4xl md:text-5xl font-medium tracking-tight leading-[1.1]">
               Boka ett{" "}
               <span className="text-gray-400">strategi-samtal.</span>

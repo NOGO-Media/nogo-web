@@ -6,7 +6,7 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
-  title: "Backhaul och returlass — automatiserad matchning 2026",
+  title: "Backhaul och returlass — smart matchning 2026",
   description:
     "Så ersätter svenska åkerier manuell returlass-jakt med automatiserad backhaul-matchning. Från 17 % tomma km mot 10 % — med data ni redan samlar in.",
   alternates: {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "article",
-    title: "Backhaul och returlass — automatiserad matchning 2026",
+    title: "Backhaul och returlass — smart matchning 2026",
     description:
       "Så bygger svenska åkerier automatiserad backhaul-matchning som sänker tomkörningar från 17 % mot 10 %.",
     url: "/artiklar/backhaul-returlass-automatiserad-matchning",
