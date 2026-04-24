@@ -47,7 +47,7 @@ export default function DigitaliseringAkerinaringenArticle() {
           href="/blogg"
           className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-black transition-colors mb-8"
         >
-          <ArrowLeft size={14} /> Tillbaka till bloggen
+          <ArrowLeft size={14} aria-hidden="true" /> Tillbaka till bloggen
         </Link>
 
         <header className="mb-10">
@@ -373,7 +373,7 @@ export default function DigitaliseringAkerinaringenArticle() {
               er organisation.
               <span> </span>
               <Link href="/kontakt" className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors">
-                Boka strategisamtal <ArrowRight className="w-4 h-4" />
+                Boka strategisamtal <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Link>
             </p>
           </section>

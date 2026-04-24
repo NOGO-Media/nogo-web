@@ -38,7 +38,7 @@ export default function NotFound() {
         href="/"
         className="mt-10 inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
       >
-        Tillbaka till startsidan <ArrowRight size={14} />
+        Tillbaka till startsidan <ArrowRight size={14} aria-hidden="true" />
       </Link>
     </main>
   );

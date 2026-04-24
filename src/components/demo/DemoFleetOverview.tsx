@@ -23,13 +23,13 @@ export default function DemoFleetOverview() {
         <div className="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
           <h3 className="text-sm font-medium">Fordonsflotta</h3>
           <div className="flex gap-1">
-            <TabBtn active={tab === "cars"} onClick={() => setTab("cars")} icon={<Truck size={12} />}>
+            <TabBtn active={tab === "cars"} onClick={() => setTab("cars")} icon={<Truck size={12} aria-hidden="true" />}>
               Bilar ({cars.length})
             </TabBtn>
             <TabBtn active={tab === "flak"} onClick={() => setTab("flak")} icon={<Container size={12} />}>
               Flak ({flak.length})
             </TabBtn>
-            <TabBtn active={tab === "slap"} onClick={() => setTab("slap")} icon={<Package size={12} />}>
+            <TabBtn active={tab === "slap"} onClick={() => setTab("slap")} icon={<Package size={12} aria-hidden="true" />}>
               Släp ({slap.length})
             </TabBtn>
           </div>
@@ -98,7 +98,7 @@ function CarsList() {
         return (
           <div key={c.id} className="flex items-center gap-4 px-5 py-3 hover:bg-gray-50/50">
             <div className="w-9 h-9 rounded-lg bg-blue-50 flex items-center justify-center shrink-0">
-              <Truck size={15} className="text-blue-600" />
+              <Truck size={15} className="text-blue-600" aria-hidden="true" />
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2">
@@ -155,7 +155,7 @@ function SlapList() {
       {state.data.slap.map((s) => (
         <div key={s.id} className="flex items-center gap-4 px-5 py-3 hover:bg-gray-50/50">
           <div className="w-9 h-9 rounded-lg bg-purple-50 flex items-center justify-center shrink-0">
-            <Package size={15} className="text-purple-600" />
+            <Package size={15} className="text-purple-600" aria-hidden="true" />
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2">

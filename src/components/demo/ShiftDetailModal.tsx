@@ -121,7 +121,7 @@ export default function ShiftDetailModal({ shiftId, onClose }: Props) {
               </span>
               {stopFlow.map((area, i) => (
                 <span key={i} className="flex items-center gap-1">
-                  <ArrowRight size={12} className="text-gray-400" />
+                  <ArrowRight size={12} className="text-gray-400" aria-hidden="true" />
                   <span
                     className={`px-2.5 py-1 rounded-full text-xs font-medium ${
                       i % 2 === 0 ? "bg-blue-50 text-blue-700" : "bg-amber-50 text-amber-700"
@@ -131,7 +131,7 @@ export default function ShiftDetailModal({ shiftId, onClose }: Props) {
                   </span>
                 </span>
               ))}
-              <ArrowRight size={12} className="text-gray-400" />
+              <ArrowRight size={12} className="text-gray-400" aria-hidden="true" />
               <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-gray-900 text-white">
                 Hub
               </span>
@@ -144,12 +144,12 @@ export default function ShiftDetailModal({ shiftId, onClose }: Props) {
           <div className="px-5 pt-4 flex flex-wrap gap-2">
             {shift.hookGoIn && flak && (
               <span className="inline-flex items-center gap-1.5 bg-green-50 text-green-700 text-xs font-medium px-2.5 py-1 rounded-full">
-                <ArrowUp size={12} /> Hämta från gård ({flak.reg})
+                <ArrowUp size={12} aria-hidden="true" /> Hämta från gård ({flak.reg})
               </span>
             )}
             {shift.hookGoOut && (
               <span className="inline-flex items-center gap-1.5 bg-amber-50 text-amber-700 text-xs font-medium px-2.5 py-1 rounded-full">
-                <ArrowDown size={12} /> Lämna på gård (för imorgon)
+                <ArrowDown size={12} aria-hidden="true" /> Lämna på gård (för imorgon)
               </span>
             )}
             {shift.flakOrphan && (
@@ -240,7 +240,7 @@ function Table({
                 <tr key={s.id} className="border-b border-gray-50 last:border-0">
                   <td className="px-3 py-2 text-xs font-mono text-gray-600">{i + 1}</td>
                   <td className="px-3 py-2 text-xs text-gray-600 flex items-center gap-1">
-                    <Truck size={11} className="text-gray-400" />
+                    <Truck size={11} className="text-gray-400" aria-hidden="true" />
                     {s.unitId.startsWith("flak-") ? "Flak" : "Släp"}
                   </td>
                   <td className="px-3 py-2 text-xs font-mono">

@@ -173,7 +173,7 @@ export default function RuttoptimeringPage() {
               <Link href="/losningar" className="hover:text-gray-600 transition-colors">
                 Lösningar
               </Link>
-              <ChevronRight size={14} />
+              <ChevronRight size={14} aria-hidden="true" />
               <span className="text-gray-600">Ruttoptimering</span>
             </nav>
 
@@ -192,13 +192,13 @@ export default function RuttoptimeringPage() {
                 href="/kontakt"
                 className="inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
               >
-                Boka strategisamtal <ArrowRight size={16} />
+                Boka strategisamtal <ArrowRight size={16} aria-hidden="true" />
               </Link>
               <Link
                 href="/demo"
                 className="inline-flex items-center justify-center gap-2 border border-gray-200 px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors"
               >
-                <Play size={14} />
+                <Play size={14} aria-hidden="true" />
                 Testa demo
               </Link>
             </div>
@@ -365,13 +365,13 @@ export default function RuttoptimeringPage() {
               href="/kontakt"
               className="inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
             >
-              Boka strategisamtal <ArrowRight size={16} />
+              Boka strategisamtal <ArrowRight size={16} aria-hidden="true" />
             </Link>
             <Link
               href="/demo"
               className="inline-flex items-center justify-center gap-2 border border-gray-200 px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors"
             >
-              <Play size={14} />
+              <Play size={14} aria-hidden="true" />
               Testa demo
             </Link>
           </div>

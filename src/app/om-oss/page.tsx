@@ -293,7 +293,7 @@ export default function OmOssPage() {
                 className="p-8 rounded-2xl bg-white border border-gray-100 flex flex-col"
               >
                 <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mb-5">
-                  <User size={20} className="text-gray-500" />
+                  <User size={20} className="text-gray-500" aria-hidden="true" />
                 </div>
                 <h3 className="text-lg font-medium">{member.name}</h3>
                 <p className="text-sm text-gray-500 mb-3">{member.role}</p>
@@ -371,13 +371,13 @@ export default function OmOssPage() {
               href="/kontakt"
               className="inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
             >
-              Boka strategisamtal <ArrowRight size={16} />
+              Boka strategisamtal <ArrowRight size={16} aria-hidden="true" />
             </Link>
             <Link
               href="/losningar"
               className="inline-flex items-center justify-center gap-2 border border-gray-200 px-8 py-3.5 rounded-full text-sm font-medium hover:bg-white transition-colors"
             >
-              <Play size={14} />
+              <Play size={14} aria-hidden="true" />
               Se våra lösningar
             </Link>
           </div>

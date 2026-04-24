@@ -48,7 +48,7 @@ export default function OrderDetailModal({ orderId, onClose }: Props) {
               </span>
               {order.shipmentBlockId && (
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-purple-50 text-purple-700">
-                  <Link2 size={11} /> Block ×{blockSiblings.length + 1}
+                  <Link2 size={11} aria-hidden="true" /> Block ×{blockSiblings.length + 1}
                 </span>
               )}
               {order.duplicate && (
@@ -76,7 +76,7 @@ export default function OrderDetailModal({ orderId, onClose }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div className="bg-gray-50 rounded-lg border border-gray-100 p-4">
               <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
-                <MapPin size={13} /> Avsändare
+                <MapPin size={13} aria-hidden="true" /> Avsändare
               </div>
               <div className="text-sm font-medium">{order.pickup}</div>
               <div className="text-xs text-gray-500 mt-0.5">{order.pickupAddress}</div>
@@ -84,7 +84,7 @@ export default function OrderDetailModal({ orderId, onClose }: Props) {
             </div>
             <div className="bg-gray-50 rounded-lg border border-gray-100 p-4">
               <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
-                <MapPin size={13} /> Mottagare
+                <MapPin size={13} aria-hidden="true" /> Mottagare
               </div>
               <div className="text-sm font-medium">{order.delivery}</div>
               <div className="text-xs text-gray-500 mt-0.5">{order.deliveryAddress}</div>
@@ -104,7 +104,7 @@ export default function OrderDetailModal({ orderId, onClose }: Props) {
           {order.specialRules.length > 0 && (
             <div>
               <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
-                <AlertCircle size={13} /> Specialregler
+                <AlertCircle size={13} aria-hidden="true" /> Specialregler
               </div>
               <div className="flex flex-wrap gap-1.5">
                 {order.specialRules.map((r) => (

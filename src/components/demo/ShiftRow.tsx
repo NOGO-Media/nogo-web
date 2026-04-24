@@ -55,7 +55,7 @@ export default function ShiftRow({ shift, onClick, isDraft }: Props) {
       {/* Bil */}
       <div className="text-xs text-gray-700">
         <div className="flex items-center gap-1">
-          <Truck size={11} className="text-gray-400" />
+          <Truck size={11} className="text-gray-400" aria-hidden="true" />
           {car?.reg || "—"}
         </div>
         <div className="text-[10px] text-gray-500 truncate">{car?.driver}</div>
@@ -66,8 +66,8 @@ export default function ShiftRow({ shift, onClick, isDraft }: Props) {
         {flak ? (
           <div className="flex items-center gap-1">
             <span>{flak.reg}</span>
-            {shift.hookGoIn && <ArrowUp size={10} className="text-green-600" />}
-            {shift.hookGoOut && <ArrowDown size={10} className="text-amber-600" />}
+            {shift.hookGoIn && <ArrowUp size={10} className="text-green-600" aria-hidden="true" />}
+            {shift.hookGoOut && <ArrowDown size={10} className="text-amber-600" aria-hidden="true" />}
           </div>
         ) : (
           <span className="text-gray-400">—</span>
@@ -82,8 +82,8 @@ export default function ShiftRow({ shift, onClick, isDraft }: Props) {
         {slap ? (
           <div className="flex items-center gap-1">
             <span>{slap.reg}</span>
-            {shift.hookGoIn && <ArrowUp size={10} className="text-green-600" />}
-            {shift.hookGoOut && <ArrowDown size={10} className="text-amber-600" />}
+            {shift.hookGoIn && <ArrowUp size={10} className="text-green-600" aria-hidden="true" />}
+            {shift.hookGoOut && <ArrowDown size={10} className="text-amber-600" aria-hidden="true" />}
           </div>
         ) : (
           <span className="text-gray-400">—</span>

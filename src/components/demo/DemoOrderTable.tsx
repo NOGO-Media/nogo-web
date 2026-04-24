@@ -90,7 +90,7 @@ export default function DemoOrderTable({ compact }: Props) {
             onClick={() => setShowFilters(true)}
             className="inline-flex items-center gap-1.5 border border-gray-200 px-3 py-1.5 rounded-md text-xs font-medium hover:bg-gray-50"
           >
-            <Filter size={12} />
+            <Filter size={12} aria-hidden="true" />
             Filter
             {activeFilterCount > 0 && (
               <span className="ml-1 bg-gray-900 text-white text-[10px] font-semibold px-1.5 py-0.5 rounded-full">
@@ -131,7 +131,7 @@ export default function DemoOrderTable({ compact }: Props) {
                             title="Samordnad leverans"
                             className="inline-flex items-center gap-0.5 px-1.5 py-0.5 bg-purple-50 text-purple-700 text-[10px] rounded"
                           >
-                            <Link2 size={9} /> Block
+                            <Link2 size={9} aria-hidden="true" /> Block
                           </span>
                         )}
                       </div>
@@ -198,7 +198,7 @@ function HeaderCell({
       <span className={`inline-flex items-center gap-1 ${active ? "text-gray-900" : ""}`}>
         {label}
         {active ? (
-          dir === "asc" ? <ArrowUp size={10} /> : <ArrowDown size={10} />
+          dir === "asc" ? <ArrowUp size={10} aria-hidden="true" /> : <ArrowDown size={10} aria-hidden="true" />
         ) : null}
       </span>
     </th>

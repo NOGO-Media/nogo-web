@@ -86,7 +86,7 @@ export default function DemoStatus() {
         <div className="flex items-center justify-between mb-3">
           <div>
             <h3 className="text-sm font-medium flex items-center gap-2">
-              <Activity size={15} /> Optimering
+              <Activity size={15} aria-hidden="true" /> Optimering
             </h3>
             <p className="text-xs text-gray-500 mt-0.5">
               Typisk körtid: ~2 minuter · Senast: {state.data.history[0].durationSec}s ({state.data.history[0].status})
@@ -96,7 +96,7 @@ export default function DemoStatus() {
             onClick={() => setShowProgress(true)}
             className="inline-flex items-center gap-1.5 bg-black text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-gray-800"
           >
-            <Play size={13} /> Kör optimering
+            <Play size={13} aria-hidden="true" /> Kör optimering
           </button>
         </div>
       </div>
@@ -128,9 +128,9 @@ export default function DemoStatus() {
                 {c.status === "ok" ? (
                   <CheckCircle2 size={15} className="text-green-600" />
                 ) : c.status === "warn" ? (
-                  <AlertTriangle size={15} className="text-amber-600" />
+                  <AlertTriangle size={15} className="text-amber-600" aria-hidden="true" />
                 ) : (
-                  <XCircle size={15} className="text-red-600" />
+                  <XCircle size={15} className="text-red-600" aria-hidden="true" />
                 )}
               </div>
             </div>
@@ -141,7 +141,7 @@ export default function DemoStatus() {
       {/* Orderstatus snapshot */}
       <div className="bg-white rounded-xl border border-gray-200 p-5">
         <h3 className="text-sm font-medium mb-4 flex items-center gap-2">
-          <Package size={14} /> Orderstatus för {selectedDay.label}
+          <Package size={14} aria-hidden="true" /> Orderstatus för {selectedDay.label}
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           <SnapshotCard label="Totalt" value={dayOrders.length} color="text-gray-900" />

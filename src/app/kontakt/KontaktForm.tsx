@@ -41,7 +41,7 @@ export function KontaktForm() {
     return (
       <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 flex flex-col items-center justify-center text-center min-h-[400px]">
         <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
-          <Check size={24} className="text-green-600" />
+          <Check size={24} className="text-green-600" aria-hidden="true" />
         </div>
         <h2 className="text-xl font-medium mb-2">Tack för er förfrågan!</h2>
         <p className="text-gray-500">
@@ -130,12 +130,12 @@ export function KontaktForm() {
             {status === "loading" ? (
               <>
                 Skickar...
-                <Loader2 size={16} className="animate-spin" />
+                <Loader2 size={16} className="animate-spin" aria-hidden="true" />
               </>
             ) : (
               <>
                 Skicka förfrågan
-                <ArrowRight size={16} />
+                <ArrowRight size={16} aria-hidden="true" />
               </>
             )}
           </button>

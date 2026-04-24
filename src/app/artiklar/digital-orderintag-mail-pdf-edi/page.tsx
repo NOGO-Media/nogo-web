@@ -112,7 +112,7 @@ export default function DigitalOrderintagArticle() {
             href="/blogg"
             className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-black transition-colors mb-8"
           >
-            <ArrowLeft size={14} /> Tillbaka till bloggen
+            <ArrowLeft size={14} aria-hidden="true" /> Tillbaka till bloggen
           </Link>
 
           <header className="mb-10">
@@ -432,7 +432,7 @@ export default function DigitalOrderintagArticle() {
                   href="/losningar/automatisk-orderhantering"
                   className="inline-flex items-center gap-1.5 text-sm font-medium bg-black text-white px-5 py-2.5 rounded-full hover:bg-gray-800 transition-colors"
                 >
-                  Automatisk orderhantering <ArrowRight size={14} />
+                  Automatisk orderhantering <ArrowRight size={14} aria-hidden="true" />
                 </Link>
                 <Link
                   href="/sa-jobbar-vi"

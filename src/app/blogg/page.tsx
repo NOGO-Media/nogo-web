@@ -195,7 +195,7 @@ export default function BloggPage() {
                   {article.description}
                 </p>
                 <div className="flex items-center gap-1.5 text-sm font-medium text-gray-900 group-hover:gap-2.5 transition-all">
-                  Läs artikel <ArrowRight size={14} />
+                  Läs artikel <ArrowRight size={14} aria-hidden="true" />
                 </div>
                 </>
               );
@@ -223,7 +223,7 @@ export default function BloggPage() {
             href="/kontakt"
             className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
           >
-            Kontakta oss <ArrowRight size={14} />
+            Kontakta oss <ArrowRight size={14} aria-hidden="true" />
           </Link>
         </div>
       </section>

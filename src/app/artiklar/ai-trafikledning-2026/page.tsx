@@ -85,7 +85,7 @@ function ROICalculator() {
           <div className="flex items-center gap-3">
             <button type="button" onClick={reset} className="text-xs text-gray-400 hover:text-gray-600 transition-colors">Reset till standard</button>
             <Link href="/kontakt" className="ml-auto inline-flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors">
-              Få en ROI-analys <ArrowRight size={14} />
+              Få en ROI-analys <ArrowRight size={14} aria-hidden="true" />
             </Link>
           </div>
         </div>
@@ -107,7 +107,7 @@ export default function AITrafikledningArticle() {
         <div className="max-w-3xl mx-auto px-6">
           {/* Back link */}
           <Link href="/blogg" className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-black transition-colors mb-8">
-            <ArrowLeft size={14} /> Tillbaka till bloggen
+            <ArrowLeft size={14} aria-hidden="true" /> Tillbaka till bloggen
           </Link>
 
           {/* Header */}
@@ -283,7 +283,7 @@ export default function AITrafikledningArticle() {
               href="/kontakt"
               className="inline-flex items-center gap-2 bg-white text-black px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors"
             >
-              Boka strategisamtal <ArrowRight size={16} />
+              Boka strategisamtal <ArrowRight size={16} aria-hidden="true" />
             </Link>
           </div>
         </div>

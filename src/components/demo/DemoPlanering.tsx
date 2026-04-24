@@ -107,7 +107,7 @@ export default function DemoPlanering() {
         {/* Orphan banner */}
         {orphanYardUnits.length > 0 && (
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 flex items-start gap-3">
-            <AlertTriangle size={18} className="text-amber-600 shrink-0 mt-0.5" />
+            <AlertTriangle size={18} className="text-amber-600 shrink-0 mt-0.5" aria-hidden="true" />
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium text-amber-800">
                 {orphanYardUnits.length} ohanterad gårdsenhet{orphanYardUnits.length > 1 ? "er" : ""}
@@ -150,7 +150,7 @@ export default function DemoPlanering() {
                   onClick={handleCreatePlan}
                   className="inline-flex items-center gap-1.5 bg-black text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-gray-800"
                 >
-                  <Play size={14} />{" "}
+                  <Play size={14} aria-hidden="true" />{" "}
                   {hasExistingPlan ? "Skapa om planeringsförslag" : "Skapa planeringsförslag"}
                 </button>
               )}
@@ -233,7 +233,7 @@ export default function DemoPlanering() {
             </div>
             <div className="px-3 py-2 border-b border-gray-100">
               <div className="relative">
-                <Search size={13} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400" />
+                <Search size={13} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true" />
                 <input
                   type="text"
                   placeholder="Sök order / kund / till"

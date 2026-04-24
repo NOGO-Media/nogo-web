@@ -207,7 +207,7 @@ export default function DigitaliseringAkeri2026Article() {
             href="/blogg"
             className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-black transition-colors mb-8"
           >
-            <ArrowLeft size={14} /> Tillbaka till bloggen
+            <ArrowLeft size={14} aria-hidden="true" /> Tillbaka till bloggen
           </Link>
 
           {/* Header */}
@@ -606,13 +606,13 @@ export default function DigitaliseringAkeri2026Article() {
                   href="/kontakt"
                   className="inline-flex items-center justify-center gap-2 bg-white text-black px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors"
                 >
-                  Boka strategisamtal <ArrowRight size={14} />
+                  Boka strategisamtal <ArrowRight size={14} aria-hidden="true" />
                 </Link>
                 <Link
                   href="/blogg/vad-kostar-manuell-transportplanering"
                   className="inline-flex items-center justify-center gap-2 border border-gray-700 text-gray-300 px-6 py-3 rounded-full text-sm font-medium hover:border-gray-500 hover:text-white transition-colors"
                 >
-                  Läs: Vad kostar manuell planering? <ArrowRight size={14} />
+                  Läs: Vad kostar manuell planering? <ArrowRight size={14} aria-hidden="true" />
                 </Link>
               </div>
             </section>
