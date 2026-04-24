@@ -399,7 +399,7 @@ export default function MinskaTomkorningarArticle() {
               href="/kontakt"
               className="inline-flex items-center rounded-full bg-white text-black px-5 py-2.5 text-sm font-medium hover:bg-gray-200 transition-colors"
             >
-              Boka strategi-samtal <ArrowRight className="w-4 h-4" />
+              Boka strategisamtal <ArrowRight className="w-4 h-4" />
             </Link>
           </section>
         </div>

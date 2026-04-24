@@ -38,7 +38,7 @@ export default function Navbar() {
             href="/kontakt"
             className="text-sm bg-black text-white px-5 py-2.5 rounded-full hover:bg-gray-800 transition-colors"
           >
-            Boka strategi-samtal
+            Boka strategisamtal
           </Link>
         </div>
 
@@ -76,7 +76,7 @@ export default function Navbar() {
             className="block mt-4 text-center bg-black text-white px-5 py-2.5 rounded-full"
             onClick={() => setMobileOpen(false)}
           >
-            Boka strategi-samtal
+            Boka strategisamtal
           </Link>
         </div>
       )}

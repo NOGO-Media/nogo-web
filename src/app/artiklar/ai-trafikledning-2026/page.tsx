@@ -283,7 +283,7 @@ export default function AITrafikledningArticle() {
               href="/kontakt"
               className="inline-flex items-center gap-2 bg-white text-black px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors"
             >
-              Boka strategi-samtal <ArrowRight size={16} />
+              Boka strategisamtal <ArrowRight size={16} />
             </Link>
           </div>
         </div>

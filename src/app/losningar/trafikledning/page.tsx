@@ -33,7 +33,7 @@ const SITE_URL = "https://nogomedia.se";
 export const metadata: Metadata = {
   title: "AI-trafikledning — frigör timmar per dag",
   description:
-    "AI-driven trafikledning som automatiserar orderhantering, förartilldelning och fordonsplanering. Minska manuellt arbete med 60%.",
+    "AI-driven trafikledning som automatiserar orderhantering, förartilldelning och fordonsplanering. Minska manuellt arbete med 60 %.",
   keywords: [
     "trafikledning",
     "AI trafikledning",
@@ -52,10 +52,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/losningar/trafikledning" },
   openGraph: {
-    title:
-      "Automatiserad trafikledning — Frigör 3+ timmar per dag | NOGO Media",
+    title: "AI-trafikledning — frigör timmar per dag | NOGO Media",
     description:
-      "AI-driven trafikledning som automatiserar orderhantering och förartilldelning. Minska manuellt arbete med 60%.",
+      "AI-driven trafikledning som automatiserar orderhantering och förartilldelning. Minska manuellt arbete med 60 %.",
     url: "/losningar/trafikledning",
     type: "website",
     locale: "sv_SE",
@@ -71,8 +70,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Automatiserad trafikledning — Frigör 3+ timmar per dag | NOGO Media",
+    title: "AI-trafikledning — frigör timmar per dag | NOGO Media",
     description:
       "AI-driven trafikledning som automatiserar orderhantering och förartilldelning.",
     images: ["/og-image.png"],
@@ -169,7 +167,7 @@ export default function TrafikledningPage() {
       <section className="pt-32 pb-12 md:pt-44 md:pb-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
-            <nav className="flex items-center gap-1.5 text-sm text-gray-400 mb-6">
+            <nav className="flex items-center gap-1.5 text-sm text-gray-500 mb-6">
               <Link
                 href="/losningar"
                 className="hover:text-gray-600 transition-colors"
@@ -196,7 +194,7 @@ export default function TrafikledningPage() {
                 href="/kontakt"
                 className="inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
               >
-                Boka strategi-samtal <ArrowRight size={16} />
+                Boka strategisamtal <ArrowRight size={16} />
               </Link>
               <Link
                 href="/demo"
@@ -419,7 +417,7 @@ export default function TrafikledningPage() {
               href="/kontakt"
               className="inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
             >
-              Boka strategi-samtal <ArrowRight size={16} />
+              Boka strategisamtal <ArrowRight size={16} />
             </Link>
             <Link
               href="/demo"

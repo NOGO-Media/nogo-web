@@ -35,7 +35,7 @@ export default function KontaktPage() {
             <p className="text-sm font-medium text-gray-500 mb-4">Kontakt</p>
             <h1 className="text-4xl md:text-5xl font-medium tracking-tight leading-[1.1]">
               Boka ett{" "}
-              <span className="text-gray-400">strategi-samtal.</span>
+              <span className="text-gray-400">strategisamtal.</span>
             </h1>
             <p className="mt-6 text-lg text-gray-500 leading-relaxed">
               30 minuter. Kostnadsfritt. Vi visar hur automation kan spara tid
@@ -48,7 +48,7 @@ export default function KontaktPage() {
                   <Mail size={18} className="text-gray-500" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-400">E-post</div>
+                  <div className="text-sm text-gray-500">E-post</div>
                   <a href="mailto:hugo@nogomedia.se" className="font-medium hover:underline">
                     hugo@nogomedia.se
                   </a>
@@ -59,7 +59,7 @@ export default function KontaktPage() {
                   <MapPin size={18} className="text-gray-500" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-400">Plats</div>
+                  <div className="text-sm text-gray-500">Plats</div>
                   <div className="font-medium">Norrköping, Sverige</div>
                 </div>
               </div>
