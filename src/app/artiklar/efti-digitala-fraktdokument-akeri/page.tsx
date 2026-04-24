@@ -273,6 +273,13 @@ export default function EftiDigitalaFraktdokumentAkeriArticle() {
               </Link>
               .
             </p>
+            <p className="mt-3">
+              Ett annat EU-krav som kräver datadisciplin är hållbarhets­rapportering:{" "}
+              <Link className="underline" href="/artiklar/csrd-co2-rapportering-akeri">
+                CSRD och CO2-rapportering för åkerier 2026
+              </Link>
+              .
+            </p>
           </section>
 
           <section>
