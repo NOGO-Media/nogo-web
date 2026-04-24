@@ -2,8 +2,16 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Allmänna villkor",
+  description:
+    "Allmänna villkor för NOGO Media AB:s tjänster. Kontakta hugo@nogomedia.se för frågor.",
   alternates: { canonical: "/villkor" },
-  openGraph: { url: "/villkor" },
+  openGraph: {
+    title: "Allmänna villkor | NOGO Media",
+    description:
+      "Allmänna villkor för NOGO Media AB:s tjänster. Kontakta hugo@nogomedia.se för frågor.",
+    url: "/villkor",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "NOGO Media — Allmänna villkor" }],
+  },
 };
 
 export default function VillkorPage() {

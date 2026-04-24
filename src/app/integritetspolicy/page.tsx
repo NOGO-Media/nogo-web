@@ -2,8 +2,16 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Integritetspolicy",
+  description:
+    "Vi behandlar era personuppgifter enligt GDPR. Kontakta hugo@nogomedia.se om ni har frågor om er data.",
   alternates: { canonical: "/integritetspolicy" },
-  openGraph: { url: "/integritetspolicy" },
+  openGraph: {
+    title: "Integritetspolicy | NOGO Media",
+    description:
+      "Vi behandlar era personuppgifter enligt GDPR. Kontakta hugo@nogomedia.se om ni har frågor om er data.",
+    url: "/integritetspolicy",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "NOGO Media — Integritetspolicy" }],
+  },
 };
 
 export default function IntegritetspolicyPage() {
