@@ -608,7 +608,7 @@ export default function TmsSystemJamforelseOpterAddsecurePage() {
             </p>
             <p className="mt-3">
               <Link href="/kontakt" className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors">
-                Boka strategi-samtal <ArrowRight className="w-4 h-4" />
+                Boka strategisamtal <ArrowRight className="w-4 h-4" />
               </Link>
             </p>
           </section>

@@ -33,7 +33,7 @@ const SITE_URL = "https://nogomedia.se";
 export const metadata: Metadata = {
   title: "Ruttoptimering — minska körsträckan",
   description:
-    "Minska körsträckan 23% och öka leveranserna 18% per dag. AI-driven ruttoptimering med hänsyn till tidsfönster, ADR och kör- och vilotider.",
+    "Minska körsträckan 23 % och öka leveranserna 18 % per dag. AI-driven ruttoptimering med hänsyn till tidsfönster, ADR och kör- och vilotider.",
   keywords: [
     "ruttoptimering",
     "ruttoptimering åkeri",
@@ -53,9 +53,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/losningar/ruttoptimering" },
   openGraph: {
-    title: "Ruttoptimering för åkerier — AI-optimerade rutter | NOGO Media",
+    title: "Ruttoptimering — minska körsträckan | NOGO Media",
     description:
-      "Minska körsträckan med 23% och öka leveranserna med 18% per dag. AI-driven ruttoptimering för svenska åkerier.",
+      "Minska körsträckan 23 % och öka leveranserna 18 % per dag. AI-driven ruttoptimering för svenska åkerier.",
     url: "/losningar/ruttoptimering",
     type: "website",
     locale: "sv_SE",
@@ -71,9 +71,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ruttoptimering för åkerier — AI-optimerade rutter | NOGO Media",
+    title: "Ruttoptimering — minska körsträckan | NOGO Media",
     description:
-      "Minska körsträckan med 23% och öka leveranserna med 18% per dag.",
+      "Minska körsträckan 23 % och öka leveranserna 18 % per dag.",
     images: ["/og-image.png"],
   },
 };
@@ -169,7 +169,7 @@ export default function RuttoptimeringPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
             {/* Breadcrumb */}
-            <nav className="flex items-center gap-1.5 text-sm text-gray-400 mb-6">
+            <nav className="flex items-center gap-1.5 text-sm text-gray-500 mb-6">
               <Link href="/losningar" className="hover:text-gray-600 transition-colors">
                 Lösningar
               </Link>
@@ -192,7 +192,7 @@ export default function RuttoptimeringPage() {
                 href="/kontakt"
                 className="inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
               >
-                Boka strategi-samtal <ArrowRight size={16} />
+                Boka strategisamtal <ArrowRight size={16} />
               </Link>
               <Link
                 href="/demo"
@@ -365,7 +365,7 @@ export default function RuttoptimeringPage() {
               href="/kontakt"
               className="inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
             >
-              Boka strategi-samtal <ArrowRight size={16} />
+              Boka strategisamtal <ArrowRight size={16} />
             </Link>
             <Link
               href="/demo"

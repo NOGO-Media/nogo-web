@@ -216,7 +216,7 @@ export default function RapportOchAnalysPage() {
       <section className="pt-32 pb-12 md:pt-44 md:pb-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
-            <nav className="flex items-center gap-1.5 text-sm text-gray-400 mb-6">
+            <nav className="flex items-center gap-1.5 text-sm text-gray-500 mb-6">
               <Link
                 href="/losningar"
                 className="hover:text-gray-600 transition-colors"
@@ -242,7 +242,7 @@ export default function RapportOchAnalysPage() {
                 href="/kontakt"
                 className="inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
               >
-                Boka strategi-samtal <ArrowRight size={16} />
+                Boka strategisamtal <ArrowRight size={16} />
               </Link>
               <Link
                 href="/demo"
@@ -540,7 +540,7 @@ export default function RapportOchAnalysPage() {
               href="/kontakt"
               className="inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
             >
-              Boka strategi-samtal <ArrowRight size={16} />
+              Boka strategisamtal <ArrowRight size={16} />
             </Link>
             <Link
               href="/demo"

@@ -606,7 +606,7 @@ export default function DigitaliseringAkeri2026Article() {
                   href="/kontakt"
                   className="inline-flex items-center justify-center gap-2 bg-white text-black px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors"
                 >
-                  Boka strategi-samtal <ArrowRight size={14} />
+                  Boka strategisamtal <ArrowRight size={14} />
                 </Link>
                 <Link
                   href="/blogg/vad-kostar-manuell-transportplanering"

@@ -246,7 +246,7 @@ export default function LosningarPage() {
               href="/kontakt"
               className="inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
             >
-              Boka strategi-samtal <ArrowRight size={16} />
+              Boka strategisamtal <ArrowRight size={16} />
             </Link>
             <Link
               href="/demo"

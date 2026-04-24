@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/sa-jobbar-vi" },
   openGraph: {
     type: "website",
-    title: "Så jobbar vi — från upptäckt till produktion | NOGO Media",
+    title: "Så jobbar vi — från upptäckt till drift | NOGO Media",
     description:
       "NOGO:s process för att bygga AI-automation i åkeriers befintliga TMS. Tre faser, 2–4 veckor till drift, pilot utan bindning.",
     url: "/sa-jobbar-vi",

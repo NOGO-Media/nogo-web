@@ -237,7 +237,7 @@ export default function AutomatiskOrderhanteringPage() {
       <section className="pt-32 pb-12 md:pt-44 md:pb-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-5xl">
-            <nav className="flex items-center gap-1.5 text-sm text-gray-400 mb-6">
+            <nav className="flex items-center gap-1.5 text-sm text-gray-500 mb-6">
               <Link
                 href="/losningar"
                 className="hover:text-gray-600 transition-colors"
