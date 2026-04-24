@@ -111,7 +111,7 @@ function DonutChart({
 
   return (
     <div className="flex items-center gap-6">
-      <svg width={100} height={100} viewBox="0 0 100 100">
+      <svg width={100} height={100} viewBox="0 0 100 100" aria-hidden="true">
         {segments.map((seg, i) => {
           const pct = seg.value / total;
           const offset = offsets[i];

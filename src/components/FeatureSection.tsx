@@ -66,7 +66,7 @@ export function FeatureGrid1() {
               className="group relative bg-gray-50 rounded-2xl p-8 hover:bg-gray-100/80 transition-colors border border-transparent hover:border-gray-200"
             >
               <div className="w-10 h-10 bg-white rounded-xl border border-gray-200 flex items-center justify-center mb-5">
-                <feature.icon size={20} className="text-gray-700" />
+                <feature.icon size={20} className="text-gray-700" aria-hidden="true" />
               </div>
               <h3 className="text-lg font-medium mb-2">{feature.title}</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
@@ -114,6 +114,7 @@ export function FeatureRealtime() {
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                       strokeWidth={3}
+                      aria-hidden="true"
                     >
                       <path
                         strokeLinecap="round"
@@ -129,7 +130,10 @@ export function FeatureRealtime() {
           </div>
 
           {/* Mock data visual */}
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+          <div
+            className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6"
+            aria-hidden="true"
+          >
             <div className="space-y-3">
               {[
                 { time: "14:32", event: "ORD-2847 tilldelad Erik L.", type: "success" },
@@ -213,7 +217,7 @@ export function FeatureTeam() {
               className="text-center p-8 rounded-2xl border border-gray-100 hover:border-gray-200 hover:shadow-sm transition-all"
             >
               <div className="w-12 h-12 bg-gray-50 rounded-xl border border-gray-200 flex items-center justify-center mx-auto mb-5">
-                <card.icon size={22} className="text-gray-700" />
+                <card.icon size={22} className="text-gray-700" aria-hidden="true" />
               </div>
               <h3 className="text-lg font-medium mb-2">{card.title}</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
@@ -258,7 +262,7 @@ export function FeatureSecurity() {
               className="text-center p-6"
             >
               <div className="w-12 h-12 bg-gray-800 rounded-xl border border-gray-700 flex items-center justify-center mx-auto mb-4">
-                <item.icon size={20} className="text-gray-300" />
+                <item.icon size={20} className="text-gray-300" aria-hidden="true" />
               </div>
               <h3 className="font-medium mb-1">{item.title}</h3>
               <p className="text-sm text-gray-400">{item.desc}</p>
@@ -342,7 +346,7 @@ export function MoreFeatures() {
           {extras.map((item) => (
             <div key={item.title} className="text-center">
               <div className="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <item.icon size={18} className="text-gray-600" />
+                <item.icon size={18} className="text-gray-600" aria-hidden="true" />
               </div>
               <h3 className="font-medium text-sm mb-1">{item.title}</h3>
               <p className="text-xs text-gray-500">{item.desc}</p>

@@ -49,7 +49,11 @@ export default function Hero() {
         </div>
 
         {/* Hero visual — mock dashboard */}
-        <div className="mt-16 md:mt-20 relative animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
+        <div
+          className="mt-16 md:mt-20 relative animate-fade-in-up"
+          style={{ animationDelay: "0.5s" }}
+          aria-hidden="true"
+        >
           <div className="bg-gray-950 rounded-2xl border border-gray-800 shadow-2xl overflow-hidden max-w-5xl mx-auto">
             {/* Window controls */}
             <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-800">
