@@ -119,6 +119,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${SITE_URL}/artiklar/kor-vilotider-automatisera-efterlevnad`,
+      lastModified: new Date("2026-04-24"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${SITE_URL}/om-oss`,
       lastModified: new Date(),
       changeFrequency: "monthly",

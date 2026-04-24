@@ -108,6 +108,14 @@ const articles = [
     href: "/artiklar/csrd-co2-rapportering-akeri",
   },
   {
+    title: "Kör- och vilotider — automatiserad efterlevnad i TMS",
+    description:
+      "En missad rast kan kosta 40 000 kr. Så håller svenska åkerier ordning på EU:s kör- och vilotider med automation — och vad som ändras 2026.",
+    category: "Regelverk",
+    readTime: "7 min",
+    href: "/artiklar/kor-vilotider-automatisera-efterlevnad",
+  },
+  {
     title: "Opter, AddSecure eller eget? Så väljer du TMS",
     description:
       "En neutral jämförelse av TMS-system på den svenska marknaden — styrkor, svagheter och vad som passar vilket åkeri.",
