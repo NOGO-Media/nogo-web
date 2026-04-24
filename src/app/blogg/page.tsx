@@ -100,6 +100,14 @@ const articles = [
     href: "/artiklar/efti-digitala-fraktdokument-akeri",
   },
   {
+    title: "CSRD och CO2-rapportering för åkerier 2026",
+    description:
+      "CSRD påverkar svenska åkerier från 2025-2028. Guide om Scope 1-3, datakrav och hur automation gör rapporteringen hanterbar.",
+    category: "Regelverk",
+    readTime: "8 min",
+    href: "/artiklar/csrd-co2-rapportering-akeri",
+  },
+  {
     title: "Opter, AddSecure eller eget? Så väljer du TMS",
     description:
       "En neutral jämförelse av TMS-system på den svenska marknaden — styrkor, svagheter och vad som passar vilket åkeri.",
