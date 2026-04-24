@@ -8,6 +8,16 @@ const securityHeaders = [
     key: "Permissions-Policy",
     value: "camera=(), microphone=(), geolocation=(), interest-cohort=()",
   },
+  {
+    key: "Content-Security-Policy",
+    value: [
+      "base-uri 'self'",
+      "frame-ancestors 'self'",
+      "object-src 'none'",
+      "form-action 'self'",
+      "upgrade-insecure-requests",
+    ].join("; "),
+  },
 ];
 
 const nextConfig: NextConfig = {
