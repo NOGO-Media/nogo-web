@@ -36,6 +36,14 @@ const articles = [
     featured: true,
   },
   {
+    title: "AI-agenter för transport 2026 — vad de kan och inte kan",
+    description:
+      "Ärlig genomgång av vad AI-agenter faktiskt gör (och inte gör) i svenska åkerier 2026. Evidensbaserade användningsfall, gränser och en utvärderings­checklista.",
+    category: "AI & Automation",
+    readTime: "9 min",
+    href: "/artiklar/ai-agenter-for-transport-2026",
+  },
+  {
     title: "Vad kostar manuell transportplanering egentligen?",
     description:
       "En trafikledare lägger 12 min per bokning. Med 40 bokningar/dag blir det 8 timmar. Vi räknar på vad manuell planering kostar ert åkeri.",
