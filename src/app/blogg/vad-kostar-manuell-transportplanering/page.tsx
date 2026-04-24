@@ -6,13 +6,13 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
-  title: "Vad kostar manuell transportplanering egentligen?",
+  title: "Vad kostar manuell transportplanering?",
   description:
     "Räkneexempel för svenska åkerier: lön för trafikledare, total arbetsgivarkostnad, kostnad per bokning och effekten av tomkörning.",
   alternates: { canonical: "/blogg/vad-kostar-manuell-transportplanering" },
   openGraph: {
     type: "article",
-    title: "Vad kostar manuell transportplanering egentligen?",
+    title: "Vad kostar manuell transportplanering?",
     description:
       "Så mycket kostar manuell transportplanering i praktiken: från lönedata till kostnad per bokning.",
     url: "/blogg/vad-kostar-manuell-transportplanering",
@@ -178,7 +178,7 @@ export default function ManuellTransportplaneringArticle() {
           <h2 className="text-2xl font-medium text-white mb-3">
             Vill ni se vilka TMS-system som passar svenska åkerier?
           </h2>
-          <p className="text-gray-400 mb-6">
+          <p className="text-gray-500 mb-6">
             Läs vår kompletta jämförelse av TMS-system, funktioner och typiska
             användningsfall.
           </p>

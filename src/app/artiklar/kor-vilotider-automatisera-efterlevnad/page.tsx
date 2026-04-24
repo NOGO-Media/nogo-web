@@ -6,15 +6,15 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
-  title: "Kör- och vilotider — automatiserad efterlevnad i TMS",
+  title: "Kör- och vilotider — automation i TMS",
   description:
-    "Så håller svenska åkerier ordning på EU:s kör- och vilotider med automatiserade regler i TMS. Körkortskontroll, färdskrivare, planering och rapportering utan manuell hantering.",
+    "Så håller svenska åkerier ordning på EU:s kör- och vilotider med TMS-automation. Färdskrivare, planering och rapportering utan manuell hantering.",
   alternates: {
     canonical: "/artiklar/kor-vilotider-automatisera-efterlevnad",
   },
   openGraph: {
     type: "article",
-    title: "Kör- och vilotider — automatiserad efterlevnad i TMS",
+    title: "Kör- och vilotider — automation i TMS",
     description:
       "Så håller svenska åkerier ordning på EU:s kör- och vilotider med automatiserade regler i TMS och integrerad färdskrivardata.",
     url: "/artiklar/kor-vilotider-automatisera-efterlevnad",

@@ -8,7 +8,7 @@ import RelatedSolutions from "@/components/RelatedSolutions";
 export const metadata: Metadata = {
   title: "CSRD och CO2-rapportering för åkerier 2026",
   description:
-    "CSRD trädde i kraft 2024 och påverkar transportbranschen från 2025-2028. Här är vad svenska åkerier behöver veta om Scope 1-3-utsläpp, datainsamling och rapporteringskrav.",
+    "CSRD trädde i kraft 2024 och påverkar transportbranschen 2025–2028. Så hanterar svenska åkerier Scope 1-3, datainsamling och rapportering.",
   alternates: {
     canonical: "/artiklar/csrd-co2-rapportering-akeri",
   },

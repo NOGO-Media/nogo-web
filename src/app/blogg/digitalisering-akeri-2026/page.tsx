@@ -595,7 +595,7 @@ export default function DigitaliseringAkeri2026Article() {
               <h2 className="text-2xl md:text-3xl font-medium mb-4">
                 Vill ni veta var ert åkeri står — och vad nästa steg är?
               </h2>
-              <p className="text-gray-400 mb-8 max-w-xl leading-relaxed">
+              <p className="text-gray-500 mb-8 max-w-xl leading-relaxed">
                 Vi hjälper er att mäta era nyckeltal och identifiera var den
                 största potentialen finns. Boka ett kostnadsfritt
                 strategisamtal — 30 minuter som kan spara er hundratusentals

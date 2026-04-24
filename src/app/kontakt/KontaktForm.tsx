@@ -144,7 +144,7 @@ export function KontaktForm() {
               Något gick fel. Försök igen eller maila oss direkt.
             </p>
           )}
-          <p className="text-xs text-gray-400 text-center">
+          <p className="text-xs text-gray-500 text-center">
             Vi svarar inom 24 timmar. Ingen bindning.
           </p>
         </div>

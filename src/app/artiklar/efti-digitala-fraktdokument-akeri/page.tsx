@@ -6,7 +6,7 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import RelatedSolutions from "@/components/RelatedSolutions";
 
 export const metadata: Metadata = {
-  title: "eFTI och digitala fraktdokument — är ditt åkeri redo?",
+  title: "eFTI och digitala fraktdokument 2027",
   description:
     "EU kräver digitala fraktdokument senast 2027. Här är vad svenska åkerier behöver veta om eFTI-förordningen och vad ni behöver göra redan nu.",
   alternates: {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "article",
-    title: "eFTI och digitala fraktdokument — är ditt åkeri redo?",
+    title: "eFTI och digitala fraktdokument 2027",
     description:
       "EU kräver digitala fraktdokument senast 2027. Konkret guide för svenska åkerier om eFTI och hur ni förbereder er.",
     url: "/artiklar/efti-digitala-fraktdokument-akeri",

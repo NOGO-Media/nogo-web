@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "Blogg — Insikter för svenska transportföretag",
+  title: "Blogg — Insikter för svenska åkerier",
   description:
     "Guider, analyser och praktiska tips om trafikledning, digitalisering och AI-automation i åkeribranschen. Från NOGO Media.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blogg" },
   openGraph: {
     type: "website",
-    title: "Blogg — Insikter för svenska transportföretag",
+    title: "Blogg — Insikter för svenska åkerier",
     description:
       "Guider, analyser och praktiska tips om trafikledning, digitalisering och AI-automation i åkeribranschen.",
     url: "/blogg",
@@ -156,7 +156,7 @@ export default function BloggPage() {
       <section className="pt-32 pb-16 md:pt-44 md:pb-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium text-gray-400 mb-4">Blogg</p>
+            <p className="text-sm font-medium text-gray-500 mb-4">Blogg</p>
             <h1 className="text-4xl md:text-5xl font-medium tracking-tight leading-[1.1]">
               Insikter för svenska{" "}
               <span className="text-gray-400">transportföretag.</span>
