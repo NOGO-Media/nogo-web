@@ -18,6 +18,32 @@ const nextConfig: NextConfig = {
         destination: "/blogg",
         permanent: true,
       },
+      { source: "/om", destination: "/om-oss", permanent: true },
+      { source: "/tjanster", destination: "/losningar", permanent: true },
+      { source: "/prismodell", destination: "/kontakt", permanent: true },
+      { source: "/begrepp", destination: "/", permanent: true },
+      {
+        source: "/losningar/logistik-transport",
+        destination: "/losningar/ruttoptimering",
+        permanent: true,
+      },
+      {
+        source: "/losningar/kontor-administration",
+        destination: "/losningar/automatisk-orderhantering",
+        permanent: true,
+      },
+      {
+        source: "/losningar/tillverkning-industri",
+        destination: "/losningar",
+        permanent: true,
+      },
+      { source: "/branscher/:path*", destination: "/losningar", permanent: true },
+      { source: "/regioner/:path*", destination: "/", permanent: true },
+      {
+        source: "/blogg/valja-forsta-dispatchflode",
+        destination: "/blogg",
+        permanent: true,
+      },
     ];
   },
 };
