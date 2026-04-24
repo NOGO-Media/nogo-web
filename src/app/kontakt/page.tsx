@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/kontakt" },
   openGraph: {
+    type: "website",
     title: "Kontakt — Boka ett kostnadsfritt strategisamtal",
     description:
       "Boka ett 30-minuters strategisamtal med NOGO Media. Vi visar hur AI-automation kan spara tid och pengar i just ert åkeri.",

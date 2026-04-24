@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/om-oss" },
   openGraph: {
+    type: "website",
     title: "Om NOGO Media — AI-automation för åkerier | Norrköping",
     description:
       "NOGO Media bygger AI-automation för svenska åkerier. Grundat 2025 i Norrköping av team med operativ transporterfarenhet.",

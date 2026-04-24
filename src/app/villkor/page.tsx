@@ -6,6 +6,7 @@ export const metadata: Metadata = {
     "Allmänna villkor för NOGO Media AB:s tjänster — avtalsvillkor, ansvar, immaterialrätt och uppsägning. Kontakta hugo@nogomedia.se för frågor.",
   alternates: { canonical: "/villkor" },
   openGraph: {
+    type: "website",
     title: "Allmänna villkor | NOGO Media",
     description:
       "Allmänna villkor för NOGO Media AB:s tjänster — avtalsvillkor, ansvar, immaterialrätt och uppsägning. Kontakta hugo@nogomedia.se för frågor.",
