@@ -124,7 +124,7 @@ export default function RouteOptimizationDemo() {
           </div>
 
           <div className="bg-white rounded-xl border border-gray-200 p-4 relative">
-            <svg viewBox="0 0 620 420" className="w-full h-auto">
+            <svg viewBox="0 0 620 420" className="w-full h-auto" aria-hidden="true">
               {/* Grid lines */}
               {[0, 1, 2, 3, 4].map((i) => (
                 <line

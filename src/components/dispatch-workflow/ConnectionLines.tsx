@@ -50,6 +50,7 @@ export function ConnectionLines({
       width={containerSize.width}
       height={containerSize.height}
       style={{ zIndex: 0 }}
+      aria-hidden="true"
     >
       <defs>
         <marker
