@@ -255,7 +255,7 @@ export default function TMSGuideArticle() {
           <h2 className="text-2xl font-medium text-white mb-3">
             Undrar ni vad manuell planering kostar i kronor?
           </h2>
-          <p className="text-gray-500 mb-6">
+          <p className="text-gray-400 mb-6">
             Se vår steg-för-steg-kalkyl för trafikledarlön,
             arbetsgivarkostnad och kostnad per bokning.
           </p>
