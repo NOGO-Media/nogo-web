@@ -76,6 +76,14 @@ const articles = [
     href: "/artiklar/minska-tomkorningar-konkreta-atgarder",
   },
   {
+    title: "Backhaul och returlass — automatiserad matchning 2026",
+    description:
+      "Från 17 % tomma km mot 10 %. Så bygger svenska åkerier automatiserad backhaul-matchning i tre nivåer — med data ni redan har.",
+    category: "Operations",
+    readTime: "6 min",
+    href: "/artiklar/backhaul-returlass-automatiserad-matchning",
+  },
+  {
     title: "Trafikledarbrist i Sverige — hur teknik kan avlasta",
     description:
       "Det blir allt svårare att rekrytera trafikledare. Automation kan avlasta befintlig personal och minska beroendet av nyanställningar.",
