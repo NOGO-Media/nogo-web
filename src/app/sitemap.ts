@@ -143,6 +143,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${SITE_URL}/artiklar/ai-automation-akeri-sverige-guide-2026`,
+      lastModified: new Date("2026-04-28"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${SITE_URL}/artiklar/ruttoptimering-mjukvara-sverige-jamforelse-2026`,
+      lastModified: new Date("2026-04-28"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${SITE_URL}/sa-jobbar-vi`,
       lastModified: new Date("2026-04-24"),
       changeFrequency: "monthly",
